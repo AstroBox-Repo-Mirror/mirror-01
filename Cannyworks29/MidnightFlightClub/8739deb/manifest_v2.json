@@ -1,0 +1,94 @@
+{
+  "item": {
+    "id": "979899954909",
+    "restype": "watchface",
+    "name": "午夜飞行俱乐部",
+    "description": "欢迎各位机长来到「午夜飞行俱乐部」。\n\n这里提供免费的餐食、饮料、酒水，以及 24 小时开放的淋浴间、桑拿房和按摩室，只为了让你能在每一次航班间隙，都拥有一点真正放松的时刻。\n\n哈哈哈哈～\n\n大家好呀～\n\n几个月前，我设计了这款「午夜飞行俱乐部」表盘。当时率先上架了小米手环 10 和 9，没想到收到了很多朋友的喜欢，也看到不少人留言，希望能适配更多设备。\n\n于是这段时间，我陆续开始制作更多版本。经过漫长的审核、测试和反复修改后，现在终于正式上架小米运动健康，已经覆盖了大多数小米穿戴设备。\n\n这个表盘的灵感，其实来自波音飞机上的 EICAS 仪表系统。那些原本用于监测发动机转速、温度、状态的数据结构，被我稍微“挪用”了一下，重新变成了日常生活里的时间、步数、心率和天气信息。\n\n我一直很喜欢飞机驾驶舱那种感觉——复杂、理性，但又带着一种安静的浪漫。尤其是夜航的时候，舱内灯光压得很低，整个空间很安静，只有仪表在发光。\n\n所以这次我也特意做了四种不同的配色：橘、白、绿、粉。\n\n有的更接近传统驾驶舱的仪表色彩，有的带一点 HUD 的味道，也有一点点偏霓虹的夜间感。特别是在暗光环境下，它会比白天更有氛围一点。\n\n因为这次很多设备的屏幕显示面积更大了，所以我也加入了非常丰富的数据模块和自定义显示。基本上，大家日常会关注的信息都能看到。\n\n无论是今天走了多少路、消耗了多少卡路里，还是空气质量、实时心率、压力状态、手表电量等等，都可以直接显示在表盘上。部分设备甚至还支持秒针显示，整体的动态感会更完整一些。\n\n这应该是我目前做过功能数据最多、自由度最高的一款表盘了。既希望它看起来像一个深夜机场里的休息大厅，也希望它真的能在你低头看时间的时候，提供一点陪伴感。\n\\--\n\n祝大家飞行愉快 ✈︎\n\n\\--\n\n目前表盘支持：\n\n小米手环 10/9\n\n小米手环 10Pro/9Pro/8Pro \n\n红米 Watch6/5 \n\n小米 Watch5/S5 \n\n小米 WatchS4/WatchS4 Sport/S4 41mm/S4 esim",
+    "preview": [
+      "media/_4035701.jpg",
+      "media/_4035711.jpg",
+      "media/_4035713.jpg",
+      "media/_4035717.jpg",
+      "media/_4035722.jpg",
+      "media/_4035732.jpg",
+      "media/_4035736.jpg",
+      "media/_K010213.jpg",
+      "media/Gemini_Generated_Image_eiu1coeiu1coeiu1 (1).jpg",
+      "media/Gemini_Generated_Image_tsnt3vtsnt3vtsnt.jpg",
+      "media/_6026428.JPG",
+      "media/_6026431.JPG",
+      "media/_6026432.JPG",
+      "media/_6026410.jpg",
+      "media/_6026419.jpg",
+      "media/Gemini_Generated_Image_je9cklje9cklje9c.jpg"
+    ],
+    "icon": "media/Gemini_Generated_Image_je9cklje9cklje9c_副本.jpg",
+    "cover": "media/Gemini_Generated_Image_je9cklje9cklje9c.jpg",
+    "author": [
+      {
+        "name": "Cannyworks",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "小红书",
+      "url": "https://www.xiaohongshu.com/user/profile/654afda900000000300325dc",
+      "icon": ""
+    }
+  ],
+  "downloads": {
+    "xmrw5": {
+      "version": "",
+      "file_name": "downloads/午夜飞行俱乐部-红米 Watch5.bin"
+    },
+    "xmrw5xring": {
+      "version": "",
+      "file_name": "downloads/午夜飞行俱乐部-红米 Watch5.bin"
+    },
+    "xmrw6": {
+      "version": "",
+      "file_name": "downloads/午夜飞行俱乐部-红米 Watch6.bin"
+    },
+    "xmb10": {
+      "version": "",
+      "file_name": "downloads/午夜飞行俱乐部-环 10.bin"
+    },
+    "xmb10nfc": {
+      "version": "",
+      "file_name": "downloads/午夜飞行俱乐部-环 10.bin"
+    },
+    "xmb10p": {
+      "version": "",
+      "file_name": "downloads/午夜飞行俱乐部-环 10Pro-1.1（修复重启）.bin"
+    },
+    "xmb9": {
+      "version": "",
+      "file_name": "downloads/午夜飞行俱乐部-环 9.bin"
+    },
+    "xmb9p": {
+      "version": "",
+      "file_name": "downloads/午夜飞行俱乐部-环 9Pro.bin"
+    },
+    "xmws5": {
+      "version": "",
+      "file_name": "downloads/午夜飞行俱乐部-小米 Watch S5.bin"
+    },
+    "xmws4": {
+      "version": "",
+      "file_name": "downloads/午夜飞行俱乐部-小米 Watch S4.bin"
+    },
+    "xmws441": {
+      "version": "",
+      "file_name": "downloads/午夜飞行俱乐部-小米 Watch S4 41mm.bin"
+    },
+    "xmws4xring": {
+      "version": "",
+      "file_name": "downloads/午夜飞行俱乐部-小米 Watch S4.bin"
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

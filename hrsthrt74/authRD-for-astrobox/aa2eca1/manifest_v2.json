@@ -1,0 +1,42 @@
+{
+  "item": {
+    "id": "979808740600",
+    "restype": "watchface",
+    "name": "authRD",
+    "description": "《明日方舟》通行证风格表盘",
+    "preview": [
+      "preview0.png",
+      "preview1.png",
+      "preview2.png",
+      "preview3.png",
+      "preview4.png"
+    ],
+    "icon": "icon.png",
+    "cover": "cover.png",
+    "author": [
+      {
+        "name": "hrsthrt74",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "icon": "chats-circle",
+      "title": "交流群",
+      "url": "https://qun.qq.com/universal-share/share?ac=1&authKey=g6XligIthhyyHK3vdtJERLTHuHcL6FA18DTvcoHFtgBdZ4F3IyuLPtM%2FVoFF9euZ&busi_data=eyJncm91cENvZGUiOiI2MDg4MTE0MDciLCJ0b2tlbiI6ImYrdW1JYnhDU3BxUk1QSnVWdFVjQW9VbUN4dmdnam5MT05XK1gwVHNVUVVEd3J1U1ltNUY5bnphK3Bud0Q0MEgiLCJ1aW4iOiIxOTMwMDA5NjEifQ%3D%3D&data=GeoMiGtLNaqPTer1fWNZqL5-4PXgigAMUJWTgD-AYmWOMTqTd6eCT_PX2aqATThqF-9KaXVPULmjwDyUkSzqKw&svctype=4&tempid=h5_group_info"
+    },
+    {
+      "icon": "hand-heart",
+      "title": "支持我",
+      "url": "https://afdian.com/a/hrsthrt74"
+    }
+  ],
+  "downloads": {
+    "xmb9p": {
+      "version": "1.0.0",
+      "file_name": "authRD for 9P v1.0 by hrsthrt74.bin"
+    }
+  },
+  "ext": {}
+}

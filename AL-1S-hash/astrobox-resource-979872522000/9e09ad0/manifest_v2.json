@@ -1,0 +1,55 @@
+{
+  "item": {
+    "id": "979872522000",
+    "restype": "watchface",
+    "name": "白夜",
+    "description": "「此处为预览版」「表盘特点」「12样式」「精美UI」「极简设计」「支持lua缓慢亮屏」「支持10p,9p,10,9,rw6」",
+    "preview": [
+      "media/Frame 13.png",
+      "media/Frame 14.png",
+      "media/Frame 15.png"
+    ],
+    "icon": "media/Group 88.png",
+    "cover": "media/Frame 8.png",
+    "author": [
+      {
+        "name": "sees",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "资源购买(3.5CNY)",
+      "url": "https://www.ifdian.net/item/0eeefc4a882c11f1992c5254001e7c00?utm_source=copylink&utm_medium=link",
+      "icon": "shopping-cart-simple"
+    }
+  ],
+  "downloads": {
+    "xmb10p": {
+      "version": "1.0",
+      "file_name": "downloads/resource.bin"
+    },
+    "xmb9p": {
+      "version": "1.0",
+      "file_name": "downloads/resource.bin"
+    },
+    "xmb10nfc": {
+      "version": "1.0",
+      "file_name": "downloads/resource.bin"
+    },
+    "xmb9": {
+      "version": "1.0",
+      "file_name": "downloads/resource.bin"
+    },
+    "xmb10": {
+      "version": "1.0",
+      "file_name": "downloads/resource.bin"
+    },
+    "xmrw6": {
+      "version": "1.0",
+      "file_name": "downloads/resource.bin"
+    }
+  },
+  "ext": {}
+}

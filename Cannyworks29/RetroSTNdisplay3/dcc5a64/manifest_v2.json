@@ -1,0 +1,73 @@
+{
+  "item": {
+    "id": "979899954912",
+    "restype": "watchface",
+    "name": "复古液晶显示",
+    "description": "Astrobox 首发！抢先体验～\n新鲜出炉～～\n特制的渐变色背景，让屏幕有了一种独特的通透立体感。填充了一些噪点肌理，配上像素数字，特别像以前的老手机的 STN 屏幕。\n这次做了两个颜色，一个蓝色一个绿色。\n对于小米 Watch5/S5 以及红米 Watch6 这种息屏显示能力更强的设备，制作了特别的息屏显示背景。\n欢迎大家试试～\n-\n当前提供\n小米手环 10Pro/9Pro\n小米手环 10/9\n红米 Watch 6/5\n小米 Watch 5/S5",
+    "preview": [
+      "media/_7146466.JPG",
+      "media/_7146453.JPG",
+      "media/_7146455.JPG",
+      "media/_7146457.jpg",
+      "media/_7146449.JPG",
+      "media/_7146461.jpg",
+      "media/_7146464.JPG",
+      "media/画板 1.png",
+      "media/_7146450 2.jpg"
+    ],
+    "icon": "media/画板 1 副本3.png",
+    "cover": "media/_7146450 2.jpg",
+    "author": [
+      {
+        "name": "Cannyworks",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "小红书",
+      "url": "https://www.xiaohongshu.com/user/profile/654afda900000000300325dc",
+      "icon": ""
+    }
+  ],
+  "downloads": {
+    "xmb10p": {
+      "version": "1.0.3",
+      "file_name": "downloads/像素渐变-环 10Pro.bin"
+    },
+    "xmb9p": {
+      "version": "1.0.3",
+      "file_name": "downloads/像素渐变-环 9Pro.bin"
+    },
+    "xmrw5": {
+      "version": "1.0.3",
+      "file_name": "downloads/像素渐变-红米 W5.bin"
+    },
+    "xmrw5xring": {
+      "version": "1.0.3",
+      "file_name": "downloads/像素渐变-红米 W5.bin"
+    },
+    "xmrw6": {
+      "version": "1.0.3",
+      "file_name": "downloads/像素渐变-红米 W6.bin"
+    },
+    "xmb10": {
+      "version": "1.0.3",
+      "file_name": "downloads/像素渐变-环 10.bin"
+    },
+    "xmb10nfc": {
+      "version": "1.0.3",
+      "file_name": "downloads/像素渐变-环 10.bin"
+    },
+    "xmb9": {
+      "version": "1.0.3",
+      "file_name": "downloads/像素渐变-环 9.bin"
+    },
+    "xmws5": {
+      "version": "1.0.3",
+      "file_name": "downloads/像素渐变-小米 WatchS5.bin"
+    }
+  },
+  "ext": {}
+}

@@ -1,0 +1,46 @@
+{
+  "item": {
+    "name": "『忆』UI",
+    "description": "此处传的是普拉娜版本,阿罗娜版本请购买后在爱发电内点击-查看我购买的-查看内容-数字内容进行下载与激活,此表盘支持缓慢亮屏,多样式切换,小组件编辑",
+    "preview": [
+      "tt.png",
+      "y1.png",
+      "y2.png",
+      "y3.png",
+      "y4.png",
+      "y5.png",
+      "y6.png",
+      "y7.png"
+    ],
+    "icon": "icon.png",
+    "source_url": "",
+    "author": [
+      {
+        "name": "sees",
+        "author_url": "https://www.bandbbs.cn/members/1576847/"
+      },
+      {
+        "name": "点我跳转购买页(2.5CNY)",
+        "author_url": "https://afdian.com/item/b4563f6679f211f087a752540025c377"
+      },
+      {
+        "name": "点我跳转『忆』UI捆绑包购买页(3.5CNY)",
+        "author_url": "https://afdian.com/bundle/9e448a4c79f811f0bfd852540025c377"
+      }
+    ]
+  },
+  "downloads": {
+    "n67": {
+      "version": "1.0.0",
+      "file_name": "「忆」UI-普拉娜9p.face"
+    },
+    "o66": {
+      "version": "1.0.0",
+      "file_name": "「忆」UI-普拉娜10.face"
+    },
+    "o66nfc": {
+      "version": "1.0.0",
+      "file_name": "「忆」UI-普拉娜10.face"
+    }
+  }
+}

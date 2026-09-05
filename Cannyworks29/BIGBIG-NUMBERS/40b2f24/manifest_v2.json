@@ -1,0 +1,75 @@
+{
+  "item": {
+    "id": "979855569274",
+    "restype": "watchface",
+    "name": "大大数字",
+    "description": "把时间拨回到 1903 年。\n那是一个属于报纸和铅字的时代。当时的美国印刷业面临一个难题：突发的新闻太多，但报纸头版的标题版面太有限。如何在窄小的空间里，排出最显眼、最震撼的标题？\n字体设计大师 Morris Fuller Benton 顶着这个压力，设计出了 Alternate Gothic——一款窄距等宽字体。它凭借极高的空间利用率，一度统治了 20 世纪初美国各大报纸的头条。\n一百多年后，英国设计师 Vernon Adams 接过了接力棒。为了不让经典在数字时代埋没，他延续了这种窄距逻辑，并针对现代数字屏幕重新绘制了每一个字母，这就有了开源免费字体 Oswald。\n而我在考虑如何制作一款大数字表盘时，突然发现自己陷入了和当年排字工人一模一样的境地：手腕上这块狭窄的屏幕空间太有限了，尤其是跑道形屏幕的小米手环 10，我既想让时间数字尽可能大、清晰直观，又不想让整个版面显得拥挤。\n于是，我毫不犹豫地选择了 Oswald。\n得益于它天生的紧凑感，两行四个巨大的时间数字可以完美、饱满地铺满屏幕。\n至于剩下的日期、电量和星期，对于方形屏幕，我做了一个尝试——将它们整体旋转 90° 紧凑地排列在屏幕右侧。\n这样一来，信息层级变得非常清晰。抬腕时第一眼是巨大的时间，轻轻转动手腕，视线就能自然得读取其他数据。空间的彻底利用，换来的是克制、高效且有趣的体验。\n最后在色彩上，这次我带来了 2 种样式和 5 款限定配色。你既可以选择超大的数字占满整个屏幕，也可以选择多一些信息来让日常体验更顺畅。\n配色的灵感全部来自最近的日常，鲜切芒果、冰镇青提、海盐气泡等各种能消解暑气的夏日细节。整体风格非常明快，很适合夏天。\n把百年前的报纸美学带到现代的智能手腕上，希望在这个逐渐变热的天气里，这款表盘能给你带来一丝新意。嘿嘿～\n祝大家玩的开心！\n—\n单次付费可以买断所有型号的表盘，包括未来可能的功能优化、新设备适配、更新。\n\n由于是第三方安装形式，难免会遇到 BUG，如果遇到了任何问题，欢迎第一时间联系肯尼～\n在爱发电的公告板有肯尼的联系方式，我看到后会尽快提供协助！\n\n创作不易，购买后请勿二次分发，6 元已经是非常低廉的价格，非常感谢你的支持！\n\n爱你们💗",
+    "preview": [
+      "media/Artboard1.png",
+      "media/Artboard1_2.png",
+      "media/056B4C92-5320-4FC9-9CAC-1AB9D8FA4071.JPG",
+      "media/AE454EB2-A622-4D70-AB35-364F8256D87E.JPG",
+      "media/5BA559F0-5DC5-4B1D-9264-92053C4D5948.JPG",
+      "media/544B6D6D-570C-4860-BE01-0343A8302588.JPG",
+      "media/571D8C65-5074-4231-8048-BF7762307FAC.JPG",
+      "media/A85E12F0-C2CA-4639-BB36-A3882BC76403.JPG",
+      "media/EBAB46A8-9F5E-4F0F-9D39-348F7B88AA94.JPG",
+      "media/9DD4582B-048B-479B-9F07-0837CC94E72E.JPG",
+      "media/60B7EB85-3FF9-4419-86C7-34AB5DA41765.JPG",
+      "media/B3651F8A-B8B3-4084-8286-A538DF4AAB7C.JPG",
+      "media/DSCF2411 封面.jpg"
+    ],
+    "icon": "media/付费版 osward 字体 数字表盘 01.png",
+    "cover": "media/DSCF2411 封面.jpg",
+    "author": [
+      {
+        "name": "Cannyworks",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "小红书",
+      "url": "https://www.xiaohongshu.com/user/profile/654afda900000000300325dc",
+      "icon": ""
+    }
+  ],
+  "downloads": {
+    "xmb10nfc": {
+      "version": "1.0.0",
+      "file_name": "downloads/大大数字-环 10.bin"
+    },
+    "xmb10": {
+      "version": "1.0.0",
+      "file_name": "downloads/大大数字-环 10.bin"
+    },
+    "xmrw5": {
+      "version": "1.0.0",
+      "file_name": "downloads/大大数字-红米 Watch5.bin"
+    },
+    "xmrw5xring": {
+      "version": "1.0.0",
+      "file_name": "downloads/大大数字-红米 Watch5.bin"
+    },
+    "xmrw6": {
+      "version": "1.0.0",
+      "file_name": "downloads/大大数字-红米 Watch6.bin"
+    },
+    "xmb10p": {
+      "version": "1.0.0",
+      "file_name": "downloads/大大数字-环 10Pro-1.1.bin"
+    },
+    "xmb9": {
+      "version": "1.0.0",
+      "file_name": "downloads/大大数字-环 9.bin"
+    },
+    "xmb9p": {
+      "version": "1.0.0",
+      "file_name": "downloads/大大数字-环 9Pro.bin"
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

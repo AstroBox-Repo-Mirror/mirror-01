@@ -1,0 +1,70 @@
+{
+  "item": {
+    "name": "ABGirl动态表盘",
+    "description": "哒哒~AB娘来啦~ 这是 AstroBox 官方“吉祥物”动态表盘，全设备适配，深浅色双主题，欢迎购买体验。此处下载的为试用版表盘，仅包括动态效果，时间固定且带有水印。",
+    "preview": [
+      "preview0.png",
+      "preview1.png",
+      "preview2.png",
+      "preview3.png"
+    ],
+    "icon": "icon.png",
+    "source_url": "",
+    "author": [
+      {
+        "name": "hrsthrt74",
+        "author_url": "https://www.bandbbs.cn/members/296762/"
+      },
+      {
+        "name": "安龙Aurysian",
+        "author_url": "https://www.bandbbs.cn/members/418071/"
+      },
+      {
+        "name": "直达购买",
+        "author_url": "https://afdian.com/item/c90bb970fcee11f0b2b052540025c377"
+      }
+    ]
+  },
+  "downloads": {
+    "n66": {
+      "version": "1.0.0",
+      "file_name": "n66.bin"
+    },
+    "n67": {
+      "version": "1.0.0",
+      "file_name": "n67.bin"
+    },
+    "o66": {
+      "version": "1.0.0",
+      "file_name": "o66.bin"
+    },
+    "o66nfc": {
+      "version": "1.0.0",
+      "file_name": "o66.bin"
+    },
+    "n62": {
+      "version": "1.0.0",
+      "file_name": "x62.bin"
+    },
+    "o62": {
+      "version": "1.0.0",
+      "file_name": "x62.bin"
+    },
+    "o65": {
+      "version": "1.0.0",
+      "file_name": "x65.bin"
+    },
+    "o62m": {
+      "version": "1.0.0",
+      "file_name": "x62.bin"
+    },
+    "o65m": {
+      "version": "1.0.0",
+      "file_name": "x65.bin"
+    },
+    "p65": {
+      "version": "1.0.0",
+      "file_name": "x65.bin"
+    }
+  }
+}

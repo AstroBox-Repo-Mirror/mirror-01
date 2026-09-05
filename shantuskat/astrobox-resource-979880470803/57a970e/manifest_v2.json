@@ -1,0 +1,75 @@
+{
+  "item": {
+    "id": "979880470803",
+    "restype": "watchface",
+    "name": "「时影」- 相册表盘",
+    "description": "「时行有迹，尘影留光」",
+    "preview": [
+      "media/画板 77.png",
+      "media/画板 78.png",
+      "media/画板 79.png"
+    ],
+    "icon": "media/画板 81.png",
+    "cover": "media/画板 77.png",
+    "author": [
+      {
+        "name": "skat",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "底图编辑",
+      "url": "https://poolux.top/tools/watch-face/edit-template/14",
+      "icon": ""
+    }
+  ],
+  "downloads": {
+    "xmb10nfc": {
+      "version": "1.0.0",
+      "file_name": "downloads/10「时影」- 相册.bin"
+    },
+    "xmb10": {
+      "version": "1.0.0",
+      "file_name": "downloads/10「时影」- 相册.bin"
+    },
+    "xmb9p": {
+      "version": "1.0.0",
+      "file_name": "downloads/9p「时影」- 相册.bin"
+    },
+    "xmb10p": {
+      "version": "1.0.0",
+      "file_name": "downloads/10p「时影」- 相册.bin"
+    },
+    "xmrw6": {
+      "version": "1.0.0",
+      "file_name": "downloads/rw6「时影」- 相册.bin"
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true,
+    "trialDownloads": {
+      "xmb10nfc": {
+        "version": "1.0.0",
+        "file_name": "downloads/trial/10「时影」- 预览.bin"
+      },
+      "xmb10": {
+        "version": "1.0.0",
+        "file_name": "downloads/trial/10「时影」- 预览.bin"
+      },
+      "xmb9p": {
+        "version": "1.0.0",
+        "file_name": "downloads/trial/9p「时影」-预览.bin"
+      },
+      "xmb10p": {
+        "version": "1.0.0",
+        "file_name": "downloads/trial/10p「时影」-预览.bin"
+      },
+      "xmrw6": {
+        "version": "1.0.0",
+        "file_name": "downloads/trial/rw6「时影」-预览.bin"
+      }
+    }
+  }
+}

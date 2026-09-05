@@ -1,0 +1,77 @@
+{
+  "item": {
+    "id": "979899954914",
+    "restype": "watchface",
+    "name": "圆饼三指针",
+    "description": "一开始只是想试试看，怎么最大的利用小米手环 10 的跑道形屏幕，能不能不用传统指针组合形式？\n\n于是我把时间数据，分别放进几个相互重叠的圆里，分别表示小时与分种，来最大化利用屏幕的显示。根据不同表盘的版式，圆的数量也会有所变化，但它们共同组成了一套用来表达时间的视觉语言。\n\n当这些圆叠在一起的时候，有的像四叶草，有的像糖葫芦。很有意思，于是，这个设计就延伸到更多形状的屏幕上了～即有功能性又很好看。\n\n虽然刚上手的时候，看起来有一点复杂，但熟悉之后，很直观。不同的信息都有自己固定的位置，视线会很自然地找到对应的内容，尤其圆盘刻度的指向性，一眼就可以看个大概。\n\n这次一共做了 6 种配色，每一种都重新调整了层次和颜色，同时也都制作了对应的 AOD 息屏显示。息屏之后，只留下简洁的轮廓，整体会更安静一点。\n\n另外还有一个我觉得挺有意思的小尝试。\n\n在 Astrobox 的版本里，我把其中几个圆的区域做成了可以自定义的快捷区域，你可以根据自己的习惯，设置成天气、音乐、支付或者其他常用应用。算是一次实验性的功能，官方商店版本并没有这个功能，只有在这里可以提前体验～\n因为跳转功能做起来极其复杂，并且不同设备软件情况都不一样，所以无法适配所有的设备。比如跑道屏幕的环 10 环 9 暂不支持跳转功能。目前方形表盘与圆形表盘均支持跳转，可能偶尔存在一些冷门的app无法跳转， 请见谅～\n\n希望能给你的每一天带来一点点好运。",
+    "preview": [
+      "media/_2134638.jpg",
+      "media/_2134660.jpg",
+      "media/_2134670.jpg",
+      "media/_4245913.jpg",
+      "media/_4245893.jpg",
+      "media/_4245922.jpg",
+      "media/_4245929.jpg",
+      "media/Artboard1_3.png",
+      "media/Artboard1.png",
+      "media/画板 13.png",
+      "media/画板 23.png",
+      "media/IMG_6174.JPG",
+      "media/封面图 横构图_4245899.jpg"
+    ],
+    "icon": "media/画板 2523.png",
+    "cover": "media/封面图 横构图_4245899.jpg",
+    "author": [
+      {
+        "name": "Cannyworks",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "小红书",
+      "url": "https://www.xiaohongshu.com/user/profile/654afda900000000300325dc",
+      "icon": ""
+    }
+  ],
+  "downloads": {
+    "xmb10p": {
+      "version": "1.0.2",
+      "file_name": "downloads/环 10Pro-圆饼三指针.bin"
+    },
+    "xmb9p": {
+      "version": "1.0.2",
+      "file_name": "downloads/环 9Pro-圆饼三指针.bin"
+    },
+    "xmrw5": {
+      "version": "1.0.2",
+      "file_name": "downloads/红米 Watch5-圆饼三指针 .bin"
+    },
+    "xmrw5xring": {
+      "version": "1.0.2",
+      "file_name": "downloads/红米 Watch5-圆饼三指针 .bin"
+    },
+    "xmrw6": {
+      "version": "1.0.2",
+      "file_name": "downloads/红米 Watch6-圆饼三指针 .bin"
+    },
+    "xmb10": {
+      "version": "1.0.2",
+      "file_name": "downloads/环 10-圆饼三指针 带复杂版.bin"
+    },
+    "xmb10nfc": {
+      "version": "1.0.2",
+      "file_name": "downloads/环 10-圆饼三指针 带复杂版.bin"
+    },
+    "xmb9": {
+      "version": "1.0.2",
+      "file_name": "downloads/环 9-圆饼三指针.bin"
+    },
+    "xmws5": {
+      "version": "1.0.2",
+      "file_name": "downloads/小米 WatchS5-圆饼三指针.bin"
+    }
+  },
+  "ext": {}
+}

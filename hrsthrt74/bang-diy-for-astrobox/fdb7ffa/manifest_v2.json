@@ -1,0 +1,70 @@
+{
+  "item": {
+    "id": "979808744500",
+    "restype": "watchface",
+    "name": "邦！盘 DIY · 相册表盘",
+    "description": "BanG Dream 风格 相册表盘\n\n自定义壁纸 !! DIY !!\n\n更换壁纸方式请见介绍图。\n\n免费的「邦！盘」将于近期推出，敬请期待。\n\n小米手环 10 暂不支持，将于后续支持。",
+    "preview": [
+      "media/preB0.png",
+      "media/preB1.png",
+      "media/preB2.png",
+      "media/preB3.png"
+    ],
+    "icon": "media/iconB.png",
+    "cover": "media/coverB.png",
+    "author": [
+      {
+        "name": "hrsthrt74",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "交流群",
+      "url": "https://qun.qq.com/universal-share/share?ac=1&authKey=g6XligIthhyyHK3vdtJERLTHuHcL6FA18DTvcoHFtgBdZ4F3IyuLPtM/VoFF9euZ&busi_data=eyJncm91cENvZGUiOiI2MDg4MTE0MDciLCJ0b2tlbiI6ImYrdW1JYnhDU3BxUk1QSnVWdFVjQW9VbUN4dmdnam5MT05XK1gwVHNVUVVEd3J1U1ltNUY5bnphK3Bud0Q0MEgiLCJ1aW4iOiIxOTMwMDA5NjEifQ==&data=GeoMiGtLNaqPTer1fWNZqL5-4PXgigAMUJWTgD-AYmWOMTqTd6eCT_PX2aqATThqF-9KaXVPULmjwDyUkSzqKw&svctype=4&tempid=h5_group_info",
+      "icon": "chat-circle"
+    }
+  ],
+  "downloads": {
+    "xmrw5": {
+      "version": "1.0",
+      "file_name": "downloads/邦！盘 DIY for RW v1.0 by hrsthrt74.bin"
+    },
+    "xmrw5xring": {
+      "version": "1.0",
+      "file_name": "downloads/邦！盘 DIY for RW v1.0 by hrsthrt74.bin"
+    },
+    "xmrw6": {
+      "version": "1.0",
+      "file_name": "downloads/邦！盘 DIY for RW v1.0 by hrsthrt74.bin"
+    },
+    "xmb10p": {
+      "version": "1.0",
+      "file_name": "downloads/邦！盘 DIY for 10P v1.0 by hrsthrt74.bin"
+    },
+    "xmb9p": {
+      "version": "1.0",
+      "file_name": "downloads/邦！盘 DIY for 10P v1.0 by hrsthrt74.bin"
+    },
+    "xmws4xring": {
+      "version": "1.0",
+      "file_name": "downloads/邦！盘 DIY for S4 v1.0 by hrsthrt74.bin"
+    },
+    "xmws441": {
+      "version": "1.0",
+      "file_name": "downloads/邦！盘 DIY for S4 v1.0 by hrsthrt74.bin"
+    },
+    "xmws4": {
+      "version": "1.0",
+      "file_name": "downloads/邦！盘 DIY for S4 v1.0 by hrsthrt74.bin"
+    },
+    "xmws5": {
+      "version": "1.0",
+      "file_name": "downloads/邦！盘 DIY for S5 v1.0 by hrsthrt74.bin"
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

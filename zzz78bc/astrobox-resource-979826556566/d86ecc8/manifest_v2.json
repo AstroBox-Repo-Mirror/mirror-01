@@ -1,0 +1,34 @@
+{
+  "item": {
+    "id": "979826556566",
+    "restype": "watchface",
+    "name": "Color游戏开发部",
+    "description": "一个关于游戏开发部的多样式动态表盘\n该表盘仅为二创，素材均收集于https://kivo.wiki\n如有侵权我会立即删除",
+    "preview": [
+      "media/画板 1.png",
+      "media/画板 4.png",
+      "media/画板 9.png",
+      "media/animation.webp"
+    ],
+    "icon": "media/分组 1.png",
+    "cover": "media/画板 1.png",
+    "author": [
+      {
+        "name": "zzz78",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [],
+  "downloads": {
+    "xmrw5": {
+      "version": "1.0.0",
+      "file_name": "downloads/Color游戏开发部 (2).bin"
+    },
+    "xmrw6": {
+      "version": "1.0.0",
+      "file_name": "downloads/color游戏开发部.bin"
+    }
+  },
+  "ext": {}
+}

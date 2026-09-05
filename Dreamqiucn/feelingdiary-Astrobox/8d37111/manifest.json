@@ -1,0 +1,25 @@
+{
+  "item": {
+    "name": "心情日记",
+    "description": "记录您每天的心情，为生活留下美好的回忆",
+        "preview": [
+            "preview1.png",
+            "preview2.png",
+            "preview3.png"
+        ],
+    "icon": "logo.png",
+    "source_url": "",
+    "author": [
+      {
+        "name": "Dreamqiu",
+        "author_url": "https://github.com/Dreamqiucn"
+      }
+    ]
+  },
+  "downloads": {
+    "n67": {
+      "version": "1.1.0",
+      "file_name": "com.Dreamqiu.feelingdiary.release.1.1.0.rpk"
+    }
+  }
+}

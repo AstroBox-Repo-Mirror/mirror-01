@@ -1,0 +1,144 @@
+{
+  "item": {
+    "id": "cn.galgaoshou.qihe",
+    "restype": "quick_app",
+    "name": "难道你是GAL高手",
+    "description": "# 《难道你是gal高手》完整移植版\n\n## ✨ 移植特性\n\n- 🖼️ **全CG收录**，支持**左右拖动**浏览\n- 💾 **自动存档**功能，进度无忧\n- ⌨️ **打字机动画**效果，沉浸式体验\n- 📦 **文本框可拖动**，自由调整布局\n\n---\n\n## 📢 玩家交流\n\n**QQ群**：`1105166284`\n\n> 群内会抽取**原作Steam CDK**，欢迎加入！\n\n---\n\n## 📖 作品简介\n玩了多年游戏还是负KD的无口少女、顶级水平却不擅长画大雷的美少女画师，想打一辈子旮旯的富家千金、努力理解二次元为何物的现充妹妹——玩家将成为她们的男主，在名为“掐楼之家”的周边店里一同努力让店铺爆火，感情逐渐升温...废萌恋爱作、堂堂连载！\n\n> 优化尽力了，不怎么重启。\n> 但切换图片和场景时**还会是小卡一下**，敬请谅解。\n> 环10pro，9，9pro只经过模拟器测试，如有问题可以在评论区或qq群内反馈，一定会修的！",
+    "preview": [
+      "media/Vela_Virtual_Device-2026-08-19-15-56-17.png",
+      "media/Vela_Virtual_Device-2026-08-19-17-43-21.png",
+      "media/Vela_Virtual_Device-2026-08-19-17-43-01.png",
+      "media/Vela_Virtual_Device-2026-08-19-20-48-21.png",
+      "media/Vela_Virtual_Device-2026-08-19-20-48-37.png",
+      "media/Vela_Virtual_Device-2026-08-19-20-48-42.png",
+      "media/bandpro-4-2026-08-23-02-39-29.png",
+      "media/bandpro-4-2026-08-23-02-40-03.png"
+    ],
+    "icon": "media/5-modified.png",
+    "cover": "media/原图 - 副本.png",
+    "author": [
+      {
+        "name": "1146298",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "爱来自爱发电",
+      "url": "https://ifdian.net/item/c2cd6ed89ba311f1b8cc52540025c377",
+      "icon": "Archive"
+    }
+  ],
+  "downloads": {
+    "xmb10nfc": {
+      "version": "1.2",
+      "file_name": "downloads/环10.rpk"
+    },
+    "xmb10": {
+      "version": "1.2",
+      "file_name": "downloads/环10.rpk"
+    },
+    "xmb10p": {
+      "version": "1.2",
+      "file_name": "downloads/环10PRO.rpk"
+    },
+    "xmb9": {
+      "version": "1.2",
+      "file_name": "downloads/环9.rpk"
+    },
+    "xmb9p": {
+      "version": "1.2",
+      "file_name": "downloads/环9PRO.rpk"
+    },
+    "xmrw6": {
+      "version": "1.2",
+      "file_name": "downloads/红米6-5.rpk"
+    },
+    "xmrw5xring": {
+      "version": "1.2",
+      "file_name": "downloads/红米6-5.rpk"
+    },
+    "xmrw5": {
+      "version": "1.2",
+      "file_name": "downloads/红米6-5.rpk"
+    },
+    "xmws3": {
+      "version": "1.2",
+      "file_name": "downloads/手表S3.rpk"
+    },
+    "xmws4xring": {
+      "version": "1.2",
+      "file_name": "downloads/手表S4.rpk"
+    },
+    "xmws441": {
+      "version": "1.2",
+      "file_name": "downloads/手表S4.rpk"
+    },
+    "xmws4": {
+      "version": "1.2",
+      "file_name": "downloads/手表S4.rpk"
+    },
+    "xmws5": {
+      "version": "1.2",
+      "file_name": "downloads/手表S5.rpk"
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true,
+    "trialDownloads": {
+      "xmb10nfc": {
+        "version": "1.2",
+        "file_name": "downloads/trial/环10试玩版.rpk"
+      },
+      "xmb10": {
+        "version": "1.2",
+        "file_name": "downloads/trial/环10试玩版.rpk"
+      },
+      "xmb10p": {
+        "version": "1.2",
+        "file_name": "downloads/trial/环10PRO试玩版.rpk"
+      },
+      "xmb9": {
+        "version": "1.2",
+        "file_name": "downloads/trial/环9试玩版.rpk"
+      },
+      "xmb9p": {
+        "version": "1.2",
+        "file_name": "downloads/trial/环9PRO试玩版.rpk"
+      },
+      "xmrw6": {
+        "version": "1.2",
+        "file_name": "downloads/trial/红米6-5试玩版.rpk"
+      },
+      "xmrw5xring": {
+        "version": "1.2",
+        "file_name": "downloads/trial/红米6-5试玩版.rpk"
+      },
+      "xmrw5": {
+        "version": "1.2",
+        "file_name": "downloads/trial/红米6-5试玩版.rpk"
+      },
+      "xmws3": {
+        "version": "1.2",
+        "file_name": "downloads/trial/手表S3试玩版.rpk"
+      },
+      "xmws4xring": {
+        "version": "1.2",
+        "file_name": "downloads/trial/手表S4试玩版.rpk"
+      },
+      "xmws441": {
+        "version": "1.2",
+        "file_name": "downloads/trial/手表S4试玩版.rpk"
+      },
+      "xmws5": {
+        "version": "1.2",
+        "file_name": "downloads/trial/手表S5试玩版.rpk"
+      },
+      "xmws4": {
+        "version": "1.2",
+        "file_name": "downloads/trial/手表S4试玩版.rpk"
+      }
+    }
+  }
+}

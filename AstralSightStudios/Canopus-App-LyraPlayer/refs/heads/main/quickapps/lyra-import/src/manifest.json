@@ -1,0 +1,28 @@
+{
+  "package": "com.canopus.lyraimport",
+  "name": "Lyra Import",
+  "versionName": "1.2.2",
+  "versionCode": 6,
+  "minPlatformVersion": 1200,
+  "icon": "/common/logo.png",
+  "simulationVersion": "default",
+  "deviceTypeList": ["watch"],
+  "features": [
+    { "name": "system.interconnect" },
+    { "name": "system.file" },
+    { "name": "system.brightness" }
+  ],
+  "config": {
+    "logLevel": "log",
+    "designWidth": "device-width"
+  },
+  "display": {
+    "backgroundColor": "#000000"
+  },
+  "router": {
+    "entry": "pages/index",
+    "pages": {
+      "pages/index": { "component": "index" }
+    }
+  }
+}

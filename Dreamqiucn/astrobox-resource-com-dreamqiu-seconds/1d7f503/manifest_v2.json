@@ -1,0 +1,78 @@
+{
+  "item": {
+    "id": "com.Dreamqiu.seconds",
+    "restype": "quick_app",
+    "name": "60秒避难所",
+    "description": "一款核灾难生存决策游戏：玩家需在60秒内搜集物资、营救家人并进入避难所。之后通过分配食物和水、应对随机事件、使用装备，帮助家人尽可能存活。游戏提供不同角色与难度，并包含多种结局、成就和生存总结。\n\n激活教程：https://www.bilibili.com/opus/1235544512057573379\n注意此应用不再使用爱发电激活码购买，使用的是微信扫码在线购买，详细过程查看上方b站教程\n如果设备是小米手环9 9Pro 10 10Pro，请点击外链下载同步器来进行激活操作\n欢迎加入腾讯频道 点击链接加入腾讯频道【Dreamqiu老窝大本营】：https://pd.qq.com/s/6r4dbjuk2\nQQ交流群 群1：383388239 群2：937539675",
+    "preview": [
+      "media/60秒避难所.png",
+      "media/xiaomi_band_pro-2026-08-12-12-21-28.png",
+      "media/xiaomi_band_pro-2026-08-03-16-28-51.png",
+      "media/xiaomi_band_pro-2026-08-12-12-21-45.png",
+      "media/xiaomi_band_pro-2026-08-03-16-32-50.png",
+      "media/xiaomi_band_pro-2026-08-03-16-33-03.png",
+      "media/xiaomi_band_pro-2026-08-03-16-33-08.png",
+      "media/xiaomi_band_pro-2026-08-03-16-34-27.png",
+      "media/xiaomi_band_pro-2026-08-03-16-34-07.png",
+      "media/xiaomi_band_pro-2026-08-12-12-22-04.png",
+      "media/xiaomi_band_pro-2026-08-12-12-22-12.png",
+      "media/xiaomi_band_pro-2026-08-03-16-34-46.png",
+      "media/xiaomi_band_pro-2026-08-03-16-34-55.png"
+    ],
+    "icon": "media/logo.png",
+    "cover": "media/60秒避难所.png",
+    "author": [
+      {
+        "name": "Dreamqiu",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "教程",
+      "url": "https://www.bilibili.com/opus/1235544512057573379",
+      "icon": "BookOpen"
+    },
+    {
+      "title": "同步器下载",
+      "url": "https://shop.dreamqiu.cn/",
+      "icon": "AndroidLogo"
+    }
+  ],
+  "downloads": {
+    "xmrw5": {
+      "version": "1.4",
+      "file_name": "downloads/rw_com.Dreamqiu.seconds.release.1.4.rpk"
+    },
+    "xmrw5xring": {
+      "version": "1.4",
+      "file_name": "downloads/rw_com.Dreamqiu.seconds.release.1.4.rpk"
+    },
+    "xmrw6": {
+      "version": "1.4",
+      "file_name": "downloads/rw_com.Dreamqiu.seconds.release.1.4.rpk"
+    },
+    "xmb10": {
+      "version": "1.4",
+      "file_name": "downloads/10_com.Dreamqiu.seconds.release.1.4.rpk"
+    },
+    "xmb10nfc": {
+      "version": "1.4",
+      "file_name": "downloads/10_com.Dreamqiu.seconds.release.1.4.rpk"
+    },
+    "xmb10p": {
+      "version": "1.4",
+      "file_name": "downloads/pro_com.Dreamqiu.seconds.release.1.4.rpk"
+    },
+    "xmb9p": {
+      "version": "1.4",
+      "file_name": "downloads/pro_com.Dreamqiu.seconds.release.1.4.rpk"
+    },
+    "xmb9": {
+      "version": "1.4",
+      "file_name": "downloads/9_com.Dreamqiu.seconds.release.1.4.rpk"
+    }
+  },
+  "ext": {}
+}

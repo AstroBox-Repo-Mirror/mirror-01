@@ -1,0 +1,48 @@
+{
+    "item": {
+        "id": "com.Dreamqiu.CyberGua",
+        "restype": "quick_app",
+        "name": "赛博算卦",
+        "description": "原理为通过抛硬币得到卦象，当然也不知道电子的算卦算不算真正的算卦，不过心诚则灵，卦象的解读可以去使用米坛社区里@Tseleung的《64卦》小程序解读。",
+        "preview": [
+            "preview1.png",
+            "preview2.png",
+            "preview3.png",
+            "preview4.png"
+        ],
+        "icon": "logo.png",
+        "cover": "preview1.png",
+        "author": [
+            {
+                "name": "Dreamqiu",
+                "bindABAccount": true
+            }
+        ]
+    },
+    "links": [
+        {
+            "icon": "",
+            "title": "官方网站",
+            "url": "https://dreamqiu.cn"
+        }
+    ],
+    "downloads": {
+        "xmrw5xring": {
+            "version": "1.0.0",
+            "file_name": "com.Dreamqiu.CyberGua.release.1.0.0.rpk"
+        },
+        "xmb9p": {
+            "version": "1.0.0",
+            "file_name": "com.Dreamqiu.CyberGua.release.1.0.0.rpk"
+        },
+        "xmrw5": {
+            "version": "1.0.0",
+            "file_name": "com.Dreamqiu.CyberGua.release.1.0.0.rpk"
+        },
+        "xmrw6": {
+            "version": "1.0.0",
+            "file_name": "com.Dreamqiu.CyberGua.release.1.0.0.rpk"
+        }
+    },
+    "ext": {}
+}

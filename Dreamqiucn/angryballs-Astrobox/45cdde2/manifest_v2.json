@@ -1,0 +1,68 @@
+{
+    "item": {
+        "id": "com.Dreamqiu.AngryBalls",
+        "restype": "quick_app",
+        "name": "愤怒的小球",
+        "description": "一款2D物理引擎游戏，玩家需要通过控制小球的发射角度和力度，击倒场景中的敌人。游戏玩法与《愤怒的小鸟》类似，共有6种小球类型，红球，蓝球，黄球，黑球，白球与大红球，它们的特性不同，比如加速，分裂，爆炸等。游戏内置自带40关的同时，玩家可以下载安卓端创意工坊软件进行DIY关卡编辑与分享到社区和下载其他玩家制作的关卡，创意工坊+排行榜同步器安卓端下载链接请前往米坛资源帖子或官方网站 https://dreamqiu.cn 下载。售价3.5元，购买请前往爱发电。",
+        "preview": [
+            "preview1.png",
+            "preview2.png",
+            "preview3.png",
+            "preview4.png",
+            "preview5.png",
+            "preview6.png",
+            "preview7.png"
+        ],
+        "icon": "logo.png",
+        "cover": "preview1.png",
+        "author": [
+            {
+                "name": "Dreamqiu",
+                "bindABAccount": true
+            }
+        ]
+    },
+    "links": [
+        {
+            "icon": "",
+            "title": "官方网站",
+            "url": "https://dreamqiu.cn"
+        },
+        {
+            "icon": "",
+            "title": "爱发电购买链接",
+            "url": "https://ifdian.net/item/59995eba6d5d11f09c6e5254001e7c00"
+        }
+    ],
+    "downloads": {
+        "xmrw5xring": {
+            "version": "1.3.2",
+            "file_name": "rw_com.Dreamqiu.AngryBalls.release.1.3.2.rpk"
+        },
+        "xmb9p": {
+            "version": "1.3.2",
+            "file_name": "9p_com.Dreamqiu.AngryBalls.release.1.3.2.rpk"
+        },
+        "xmb9": {
+            "version": "1.3.2",
+            "file_name": "9_com.Dreamqiu.AngryBalls.release.1.3.2.rpk"
+        },
+        "xmb10": {
+            "version": "1.3.2",
+            "file_name": "10_com.Dreamqiu.AngryBalls.release.1.3.2.rpk"
+        },
+        "xmb10nfc": {
+            "version": "1.3.2",
+            "file_name": "10_com.Dreamqiu.AngryBalls.release.1.3.2.rpk"
+        },
+        "xmrw5": {
+            "version": "1.3.3",
+            "file_name": "rw_com.Dreamqiu.AngryBalls.release.1.3.3.rpk"
+        },
+        "xmrw6": {
+            "version": "1.3.3",
+            "file_name": "rw_com.Dreamqiu.AngryBalls.release.1.3.3.rpk"
+        }
+    },
+    "ext": {}
+}

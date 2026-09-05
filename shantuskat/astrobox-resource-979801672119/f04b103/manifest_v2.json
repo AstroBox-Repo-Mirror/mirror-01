@@ -1,0 +1,69 @@
+{
+  "item": {
+    "id": "979801672119",
+    "restype": "watchface",
+    "name": "『凝』-罗小黑24节气2024",
+    "description": "这是一个24张图的多样式表盘喵\n\n食用说明：1.长按表盘，点击右下角齿轮进入编辑界面\n2.上下滑动以切换样式（春夏秋冬）\n3.左划进入组件编辑（左下角和右下角为跳转，点击上方可切换该季节内的节气图）\n\n素材源于罗小黑战记官方，请勿进行二次售卖\n\n附表盘交流、讨论Q群：498544791\\273793080\n\n喜欢可以到爱发电支持我吗谢谢，感谢使用我的表盘(★≧▽^))★☆",
+    "preview": [
+      "media/画板 32.png",
+      "media/画板 31.png",
+      "media/画板 34.png",
+      "media/画板 35.png",
+      "media/画板 33.png"
+    ],
+    "icon": "media/画板 1.png",
+    "cover": "media/画板 32.png",
+    "author": [
+      {
+        "name": "skat",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "赞助山荼喵",
+      "url": "https://www.ifdian.net/a/shantu_skat?utm_source=copylink&utm_medium=link",
+      "icon": "https://bee-reg-ab.imagency.cn/p/9469016de755834bc5c0a91e151c6062.png"
+    }
+  ],
+  "downloads": {
+    "xmb10": {
+      "version": "1.0.0",
+      "file_name": "downloads/10『凝』罗小黑24节气2024.bin"
+    },
+    "xmb10nfc": {
+      "version": "1.0.0",
+      "file_name": "downloads/10『凝』罗小黑24节气2024.bin"
+    },
+    "xmb10p": {
+      "version": "1.0.0",
+      "file_name": "downloads/userupload_9888bcca1f404c90ac4a6c16b8708180_（免费）『.bin"
+    },
+    "xmb9p": {
+      "version": "1.0.0",
+      "file_name": "downloads/9p『凝』-罗小黑24节气2024.bin"
+    },
+    "xmrw5": {
+      "version": "1.0.0",
+      "file_name": "downloads/rw5『凝』罗小黑24节气2024.bin"
+    },
+    "xmrw5xring": {
+      "version": "1.0.0",
+      "file_name": "downloads/rw5『凝』罗小黑24节气2024.bin"
+    },
+    "xmws5": {
+      "version": "1.0.0",
+      "file_name": "downloads/S5『凝』罗小黑24节气2024.bin"
+    },
+    "xmrw6": {
+      "version": "1.0.0",
+      "file_name": "downloads/rw6『凝』-罗小黑24节气2024.bin"
+    },
+    "xmb9": {
+      "version": "1.0.0",
+      "file_name": "downloads/9『凝』罗小黑24节气2024.bin"
+    }
+  },
+  "ext": {}
+}

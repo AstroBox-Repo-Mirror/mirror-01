@@ -1,0 +1,36 @@
+{
+  "item": {
+    "name": "A.R.O.N.A.",
+    "description": "动态、可互动的 蔚蓝档案「阿罗娜」表盘",
+    "preview": [
+      "preview0.png",
+      "preview1.webp",
+      "preview2.webp",
+      "preview3.webp",
+      "preview4.png",
+      "preview5.png",
+      "preview6.png",
+      "preview7.png",
+      "preview8.png",
+      "preview9.png"
+    ],
+    "icon": "icon.png",
+    "source_url": "",
+    "author": [
+      {
+        "name": "hrsthrt74",
+        "author_url": "https://www.bandbbs.cn/members/296762/"
+      },
+      {
+        "name": "支持我",
+        "author_url": "https://afdian.com/a/hrsthrt74"
+      }
+    ]
+  },
+  "downloads": {
+    "p62": {
+      "version": "1.1",
+      "file_name": "A.R.O.N.A for S5 v1.1 by hrsthrt74.bin"
+    }
+  }
+}

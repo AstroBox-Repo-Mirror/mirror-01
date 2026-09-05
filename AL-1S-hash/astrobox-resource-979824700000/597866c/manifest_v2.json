@@ -1,0 +1,39 @@
+{
+  "item": {
+    "id": "979824700000",
+    "restype": "watchface",
+    "name": "24/7-相册表盘",
+    "description": "「表盘特点」「相册表盘」「精美UI」「极简设计」「轻拟物风格」「支持lua缓慢亮屏」「支持10p,9p」",
+    "preview": [
+      "media/Frame 7.png"
+    ],
+    "icon": "media/Group 68.png",
+    "cover": "media/Frame 8.png",
+    "author": [
+      {
+        "name": "sees",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "底图处理工具",
+      "url": "https://evoa.top/album",
+      "icon": "images"
+    }
+  ],
+  "downloads": {
+    "xmb10p": {
+      "version": "1.0",
+      "file_name": "downloads/resource.bin"
+    },
+    "xmb9p": {
+      "version": "1.0",
+      "file_name": "downloads/resource.bin"
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "item": {
+    "id": "979875862688",
+    "restype": "watchface",
+    "name": "绝区零AngelUI-妄想天使-",
+    "description": "✨「羽」你幻想，万「千」可「爱」✨\n「绝区零」妄想天使表盘\n\n适配：小米手环10、小米手环9/10Pro、红米手表6\n\n✨免费\n✨支持多样式（3）\n✨可编辑跳转组件（12）\n✨可切换ID卡头像组件（6）\n✨步数、卡路里、电量数据显示\n✨本表盘禁止搬运、二次售卖\n\n感谢使用我的表盘(★≧▽^))★☆",
+    "preview": [
+      "media/画板 4.png",
+      "media/画板 5.png",
+      "media/Image_1784892403153_312.png"
+    ],
+    "icon": "media/封面.png",
+    "cover": "media/画板 4.png",
+    "author": [
+      {
+        "name": "skat",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "赞助山荼",
+      "url": "https://www.ifdian.net/a/shantu_skat",
+      "icon": ""
+    }
+  ],
+  "downloads": {
+    "xmb10": {
+      "version": "1.0.0",
+      "file_name": "downloads/AngelUI-妄想天使-10.bin"
+    },
+    "xmb10nfc": {
+      "version": "1.0.0",
+      "file_name": "downloads/AngelUI-妄想天使-10.bin"
+    },
+    "xmb9p": {
+      "version": "1.0.0",
+      "file_name": "downloads/AngelUI—妄想天使—9p-（2）.bin"
+    },
+    "xmb10p": {
+      "version": "1.0.0",
+      "file_name": "downloads/AngelUI—妄想天使—10p.bin"
+    },
+    "xmrw6": {
+      "version": "1.0.0",
+      "file_name": "downloads/AngelUI—妄想天使—rw6—1.0.1.bin"
+    }
+  },
+  "ext": {}
+}

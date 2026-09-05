@@ -1,0 +1,44 @@
+{
+  "item": {
+    "id": "979849779401",
+    "restype": "watchface",
+    "name": "横版的复古数字",
+    "description": "欢迎来到肯尼的 CannyWorks 罐头厂研发室～\n这里有制作的 各种Demo小样～欢迎随意尝试～\n-\n这个表盘有点像老的显像管电视\n可以配合桌搭变成横版的时钟\n也可以放在充电底座上做座钟\n-\n特别制作的息屏显示让体验更整体～",
+    "preview": [
+      "media/_K010023.JPG",
+      "media/_K010028.JPG",
+      "media/_K010029.JPG",
+      "media/_K010024.JPG",
+      "media/IMG_8873.jpg",
+      "media/_K010026.JPG",
+      "media/_K010033.JPG",
+      "media/_K010030_副本.jpg"
+    ],
+    "icon": "media/_K010023_副本.jpg",
+    "cover": "media/_K010030_副本.jpg",
+    "author": [
+      {
+        "name": "Cannyworks",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "小红书",
+      "url": "https://www.xiaohongshu.com/user/profile/654afda900000000300325dc",
+      "icon": ""
+    }
+  ],
+  "downloads": {
+    "xmb10nfc": {
+      "version": "1.0.0",
+      "file_name": "downloads/复古倾斜数字-横- 环 10 .bin"
+    },
+    "xmb10": {
+      "version": "1.0.0",
+      "file_name": "downloads/复古倾斜数字-横- 环 10 .bin"
+    }
+  },
+  "ext": {}
+}

@@ -1,0 +1,65 @@
+{
+  "item": {
+    "id": "979851021027",
+    "restype": "watchface",
+    "name": "Rainbow",
+    "description": "一个多样式相册的表盘",
+    "preview": [
+      "media/画板 11.webp",
+      "media/画板 12.webp",
+      "media/画板 14.webp",
+      "media/画板 15.webp",
+      "media/画板 16.webp",
+      "media/画板 17.webp",
+      "media/画板 18.webp"
+    ],
+    "icon": "media/分组 1.png",
+    "cover": "media/画板 3.webp",
+    "author": [
+      {
+        "name": "zzz78",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "欢迎来爱发电赞助我，谢谢！",
+      "url": "https://www.ifdian.net/a/zzz78",
+      "icon": "LinkSimple"
+    }
+  ],
+  "downloads": {
+    "xmrw5": {
+      "version": "1.0.0",
+      "file_name": "downloads/Rainbow r5.bin"
+    },
+    "xmrw5xring": {
+      "version": "1.0.0",
+      "file_name": "downloads/Rainbow r5e.bin"
+    },
+    "xmrw6": {
+      "version": "1.0.0",
+      "file_name": "downloads/Rainbow r6.bin"
+    },
+    "xmb10p": {
+      "version": "1.0.2",
+      "file_name": "downloads/Rainbow 10p1.0.2.bin"
+    },
+    "xmb10": {
+      "version": "1.0.0",
+      "file_name": "downloads/Rainbow 环10.bin"
+    },
+    "xmb10nfc": {
+      "version": "1.0.0",
+      "file_name": "downloads/Rainbow 环10.bin"
+    },
+    "xmb9p": {
+      "version": "1.0.2",
+      "file_name": "downloads/Rainbow 9p1.0.2.bin"
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

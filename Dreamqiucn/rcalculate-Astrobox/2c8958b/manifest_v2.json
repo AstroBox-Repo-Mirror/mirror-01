@@ -1,0 +1,49 @@
+{
+    "item": {
+        "id": "com.Dreamqiu.Rcalculate",
+        "restype": "quick_app",
+        "name": "经验回归方程计算",
+        "description": "帮助您完成繁琐的经验回归方程计算",
+        "preview": [
+            "preview1.png",
+            "preview2.png",
+            "preview3.png",
+            "preview4.png",
+            "preview5.png"
+        ],
+        "icon": "logo.png",
+        "cover": "preview1.png",
+        "author": [
+            {
+                "name": "Dreamqiu",
+                "bindABAccount": true
+            }
+        ]
+    },
+    "links": [
+        {
+            "icon": "",
+            "title": "官方网站",
+            "url": "https://dreamqiu.cn"
+        }
+    ],
+    "downloads": {
+        "xmb10": {
+            "version": "1.1.0",
+            "file_name": "10_com.Dreamqiu.Rcalculate.release.1.1.0.rpk"
+        },
+        "xmb10nfc": {
+            "version": "1.1.0",
+            "file_name": "10_com.Dreamqiu.Rcalculate.release.1.1.0.rpk"
+        },
+        "xmb9": {
+            "version": "1.1.0",
+            "file_name": "10_com.Dreamqiu.Rcalculate.release.1.1.0.rpk"
+        },
+        "xmb9p": {
+            "version": "1.1.0",
+            "file_name": "com.Dreamqiu.Rcalculate.release.1.1.0.rpk"
+        }
+    },
+    "ext": {}
+}

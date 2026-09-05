@@ -1,0 +1,75 @@
+{
+  "item": {
+    "id": "979860689210",
+    "restype": "watchface",
+    "name": "「如初」-相册表盘",
+    "description": "「光影留藏，岁月如初」",
+    "preview": [
+      "media/画板 18.png",
+      "media/画板 57.png",
+      "media/画板 49.png"
+    ],
+    "icon": "media/爱发电_1784820776860.jpg",
+    "cover": "media/画板 18.png",
+    "author": [
+      {
+        "name": "skat",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "底图编辑",
+      "url": "https://poolux.top/tools/watch-face/edit-template/13",
+      "icon": ""
+    }
+  ],
+  "downloads": {
+    "xmb10": {
+      "version": "1.0.0",
+      "file_name": "downloads/10『如初』-相册.bin"
+    },
+    "xmb10nfc": {
+      "version": "1.0.0",
+      "file_name": "downloads/10『如初』-相册.bin"
+    },
+    "xmb9p": {
+      "version": "1.0.0",
+      "file_name": "downloads/9p『如初』-相册.bin"
+    },
+    "xmb10p": {
+      "version": "1.0.0",
+      "file_name": "downloads/10p『如初』-相册.bin"
+    },
+    "xmrw6": {
+      "version": "1.0.0",
+      "file_name": "downloads/rw6『如初』-相册.bin"
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true,
+    "trialDownloads": {
+      "xmb10": {
+        "version": "1.0.0",
+        "file_name": "downloads/trial/10『如初』-预览.bin"
+      },
+      "xmb10nfc": {
+        "version": "1.0.0",
+        "file_name": "downloads/trial/10『如初』-预览.bin"
+      },
+      "xmb9p": {
+        "version": "1.0.0",
+        "file_name": "downloads/trial/9p『如初』-预览.bin"
+      },
+      "xmb10p": {
+        "version": "1.0.0",
+        "file_name": "downloads/trial/10p『如初』-预览.bin"
+      },
+      "xmrw6": {
+        "version": "1.0.0",
+        "file_name": "downloads/trial/rw6『如初』-预览.bin"
+      }
+    }
+  }
+}

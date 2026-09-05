@@ -1,0 +1,68 @@
+{
+  "item": {
+    "id": "979812768106",
+    "restype": "watchface",
+    "name": "彩虹大大数字",
+    "description": "Hello 啊～\n\n我发现小米手环里，彩虹色风格的表盘其实不算多，所以就做了这个～\n\n它算是我之前设计的的「大大数字」表盘的兄弟款，沿用了同样的 Oswald font 开源字体。\n\n目前这个版本，我加入了两个自定义跳转区域，可以一键打开自己常用的 app。这个功能，目前只有 Astrobox下载版才支持。\n\n祝大家玩得开心呀～～！",
+    "preview": [
+      "media/DSCF2409.jpg",
+      "media/_5106107.jpg",
+      "media/_5106120.jpg",
+      "media/DSCF2467.jpg",
+      "media/DSCF2505.jpg",
+      "media/DSCF2481.jpg",
+      "media/DSCF2506.jpg",
+      "media/_5106105.png"
+    ],
+    "icon": "media/_5106105.jpg",
+    "cover": "media/_5106105.png",
+    "author": [
+      {
+        "name": "Cannyworks",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "小红书",
+      "url": "https://www.xiaohongshu.com/user/profile/654afda900000000300325dc",
+      "icon": ""
+    }
+  ],
+  "downloads": {
+    "xmb10p": {
+      "version": "1.0.2",
+      "file_name": "downloads/彩虹大大数字-环 10Pro.bin"
+    },
+    "xmb9p": {
+      "version": "1.0.2",
+      "file_name": "downloads/彩虹大大数字-环 9Pro.bin"
+    },
+    "xmrw5": {
+      "version": "1.0.2",
+      "file_name": "downloads/彩虹大大数字-红米 W5.bin"
+    },
+    "xmrw5xring": {
+      "version": "1.0.2",
+      "file_name": "downloads/彩虹大大数字-红米 W5.bin"
+    },
+    "xmrw6": {
+      "version": "1.0.2",
+      "file_name": "downloads/彩虹大大数字-红米 W6.bin"
+    },
+    "xmb10": {
+      "version": "1.0.2",
+      "file_name": "downloads/彩虹大大数字-环 10.bin"
+    },
+    "xmb10nfc": {
+      "version": "1.0.2",
+      "file_name": "downloads/彩虹大大数字-环 10.bin"
+    },
+    "xmb9": {
+      "version": "1.0.2",
+      "file_name": "downloads/彩虹大大数字-环 9.bin"
+    }
+  },
+  "ext": {}
+}

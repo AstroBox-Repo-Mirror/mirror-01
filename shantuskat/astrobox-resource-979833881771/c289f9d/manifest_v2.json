@@ -1,0 +1,54 @@
+{
+  "item": {
+    "id": "979833881771",
+    "restype": "watchface",
+    "name": "「终旅」- 终末地风格相册表盘",
+    "description": "「墟野寻根，终旅归航」\n该表盘为AstroBox独享资源",
+    "preview": [
+      "media/画板 3.png"
+    ],
+    "icon": "media/画板 4.png",
+    "cover": "media/画板 3.png",
+    "author": [
+      {
+        "name": "skat",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "赞助山荼谢谢喵~",
+      "url": "https://www.ifdian.net/a/shantu_skat?utm_source=copylink&utm_medium=link",
+      "icon": "https://bee-reg-ab.imagency.cn/p/0bab5ae4d8eb33ed096e89d0912170f3.png"
+    },
+    {
+      "title": "底图编辑",
+      "url": "https://poolux.top/tools/watch-face/edit-template/15",
+      "icon": "https://bee-reg-ab.imagency.cn/p/70f111edffc1224ff0bc4f8b9d0c6114.png"
+    }
+  ],
+  "downloads": {
+    "xmb10": {
+      "version": "1.0.0",
+      "file_name": "downloads/10「终旅」- 终末地风格相册表盘.bin"
+    },
+    "xmb10nfc": {
+      "version": "1.0.0",
+      "file_name": "downloads/10「终旅」- 终末地风格相册表盘.bin"
+    },
+    "xmb9p": {
+      "version": "1.0.0",
+      "file_name": "downloads/9p「终旅」- 终末地风格相册表盘.bin"
+    },
+    "xmb10p": {
+      "version": "1.0.0",
+      "file_name": "downloads/10p「终旅」-终末地风格相册表盘.bin"
+    },
+    "xmrw6": {
+      "version": "1.0.0",
+      "file_name": "downloads/rw6「终旅」- 终末地风格相册表盘.bin"
+    }
+  },
+  "ext": {}
+}

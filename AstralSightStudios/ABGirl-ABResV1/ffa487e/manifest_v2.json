@@ -1,0 +1,115 @@
+{
+  "item": {
+    "id": "979897989798",
+    "restype": "watchface",
+    "name": "ABGirl动态表盘",
+    "description": "哒哒~AB娘来啦~ 这是 AstroBox 官方“吉祥物”动态表盘，全设备适配，深浅色双主题，欢迎购买体验。",
+    "preview": [
+      "preview0.png",
+      "preview1.png",
+      "preview2.png",
+      "preview3.png"
+    ],
+    "icon": "icon.png",
+    "cover": "preview0.png",
+    "author": [
+      {
+        "name": "aurysian.yan@qq.com",
+        "bindABAccount": true
+      },
+      {
+        "name": "hrsthrt74",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [],
+  "downloads": {
+    "xmb9": {
+      "version": "1.0.0",
+      "file_name": "n66_full.bin.enc"
+    },
+    "xmb9p": {
+      "version": "1.0.0",
+      "file_name": "n67_full.bin.enc"
+    },
+    "xmb10": {
+      "version": "1.0.0",
+      "file_name": "o66_full.bin.enc"
+    },
+    "xmb10nfc": {
+      "version": "1.0.0",
+      "file_name": "o66_full.bin.enc"
+    },
+    "xmws3": {
+      "version": "1.0.0",
+      "file_name": "x62_full.bin.enc"
+    },
+    "xmws4": {
+      "version": "1.0.0",
+      "versionCode": 65537,
+      "file_name": "x62_full.bin.enc"
+    },
+    "xmrw5": {
+      "version": "1.0.0",
+      "file_name": "x65_full.bin.enc"
+    },
+    "xmws4xring": {
+      "version": "1.0.0",
+      "file_name": "x62_full.bin.enc"
+    },
+    "xmrw5xring": {
+      "version": "1.0.0",
+      "file_name": "x65_full.bin.enc"
+    },
+    "xmrw6": {
+      "version": "1.0.0",
+      "file_name": "x65_full.bin.enc"
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true,
+    "trialDownloads": {
+      "xmb9": {
+        "version": "1.0.0",
+        "file_name": "n66.bin"
+      },
+      "xmb9p": {
+        "version": "1.0.0",
+        "file_name": "n67.bin"
+      },
+      "xmb10": {
+        "version": "1.0.0",
+        "file_name": "o66.bin"
+      },
+      "xmb10nfc": {
+        "version": "1.0.0",
+        "file_name": "o66.bin"
+      },
+      "xmws3": {
+        "version": "1.0.0",
+        "file_name": "x62.bin"
+      },
+      "xmws4": {
+        "version": "1.0.0",
+        "file_name": "x62.bin"
+      },
+      "xmrw5": {
+        "version": "1.0.0",
+        "file_name": "x65.bin"
+      },
+      "xmws4xring": {
+        "version": "1.0.0",
+        "file_name": "x62.bin"
+      },
+      "xmrw5xring": {
+        "version": "1.0.0",
+        "file_name": "x65.bin"
+      },
+      "xmrw6": {
+        "version": "1.0.0",
+        "file_name": "x65.bin"
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "item": {
+    "id": "com.Dreamqiu.9way",
+    "restype": "quick_app",
+    "name": "九号出口",
+    "description": "这是一款类似于《八番出口》的2D悬疑恐怖小游戏。你将扮演一名被困在无限循环教学楼中的学生，唯一的逃脱的生路就是进入 「九号出口」。\n\n核心玩法：\n普通模式：你将在9个看似相同的教学楼走廊中前进。每个房间都遵循着固定的模式：几幅海报，一位迎面走来的老师，两个墙上的防火门与昏暗的环境。\n异常现象： 每个房间都有概况出现异常现象！例如海报被更换、老师面容恐怖、环境出现异象、方向键出现问题等等。\n如果你选择错误，那么将回到最初始的0号房间。\n最终目标： 成功通过所有9个房间，抵达最终的 「九号出口」 即可获胜。\n无尽模式：你进入了无限循环的教学楼，你只能向前进！\n请保持警惕，相信你的直觉，任何细微的异常都可能是你逃出生天的关键，也可能是让你陷入深渊的陷阱",
+    "preview": [
+      "media/九号出口 (1).png",
+      "media/pro-4-2025-10-04-22-05-53.webp",
+      "media/pro-4-2025-10-04-22-06-24.webp",
+      "media/pro-4-2025-10-04-22-06-03.webp",
+      "media/pro-4-2025-10-04-22-05-58.webp",
+      "media/九号出口.png"
+    ],
+    "icon": "media/logo.png",
+    "cover": "media/九号出口 (1).png",
+    "author": [
+      {
+        "name": "Dreamqiu",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "爱发电购买链接",
+      "url": "https://ifdian.net/item/7a856daea18c11f091e852540025c377",
+      "icon": ""
+    }
+  ],
+  "downloads": {
+    "xmrw5": {
+      "version": "1.4",
+      "file_name": "downloads/rw_com.Dreamqiu.9way.release.1.4.0.rpk"
+    },
+    "xmrw5xring": {
+      "version": "1.4",
+      "file_name": "downloads/rw_com.Dreamqiu.9way.release.1.4.0.rpk"
+    },
+    "xmrw6": {
+      "version": "1.4",
+      "file_name": "downloads/rw_com.Dreamqiu.9way.release.1.4.0.rpk"
+    },
+    "vivowgt2": {
+      "version": "1.5",
+      "file_name": "downloads/com.Dreamqiu.9way.release.production.1.5.rpk"
+    },
+    "xmb10": {
+      "version": "1.4",
+      "file_name": "downloads/com.Dreamqiu.9way.release.1.4.0.rpk"
+    },
+    "xmb10nfc": {
+      "version": "1.4",
+      "file_name": "downloads/com.Dreamqiu.9way.release.1.4.0.rpk"
+    },
+    "xmb10p": {
+      "version": "1.4",
+      "file_name": "downloads/9p_com.Dreamqiu.9way.release.1.4.0.rpk"
+    },
+    "xmb9": {
+      "version": "1.4",
+      "file_name": "downloads/com.Dreamqiu.9way.release.1.4.0.rpk"
+    },
+    "xmb9p": {
+      "version": "1.4",
+      "file_name": "downloads/9p_com.Dreamqiu.9way.release.1.4.0.rpk"
+    }
+  },
+  "ext": {}
+}

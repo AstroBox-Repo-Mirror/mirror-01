@@ -1,0 +1,31 @@
+{
+  "item": {
+    "id": "979885011981",
+    "restype": "watchface",
+    "name": "优香  动态",
+    "description": "一个关于优香的动态表盘\n欢迎加入我们的qq群进行讨论：129382009",
+    "preview": [
+      "media/画板 3.png"
+    ],
+    "icon": "media/圆形 8.png",
+    "cover": "media/画板 3.png",
+    "author": [
+      {
+        "name": "zzz78",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [],
+  "downloads": {
+    "xmb9p": {
+      "version": "1.0.0",
+      "file_name": "downloads/优香 9p.bin"
+    },
+    "xmb10p": {
+      "version": "1.0.0",
+      "file_name": "downloads/优香 10p.bin"
+    }
+  },
+  "ext": {}
+}

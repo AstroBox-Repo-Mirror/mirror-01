@@ -1,0 +1,64 @@
+{
+  "item": {
+    "name": "WF2",
+    "description": "Nintendo Switch 2 风格表盘",
+    "preview": [
+      "preview0.png",
+      "preview1.png",
+      "preview2.png",
+      "preview3.png",
+      "preview4.png",
+      "preview5.png"
+    ],
+    "icon": "icon.png",
+    "source_url": "",
+    "author": [
+      {
+        "name": "hrsthrt74",
+        "author_url": "https://www.bandbbs.cn/members/296762/"
+      }
+    ]
+  },
+  "downloads": {
+    "n67": {
+      "version": "v1.8.1",
+      "file_name": "WF2 for 9P v1.8.1 by hrsthrt74.bin"
+    },
+    "p67": {
+      "version": "v1.8.1",
+      "file_name": "WF2 for 10P v1.8.1 by hrsthrt74.bin"
+    },
+    "o66": {
+      "version": "v1.8",
+      "file_name": "WF2 for Band10 v1.8 by hrsthrt74.bin"
+    },
+    "o66nfc": {
+      "version": "v1.8",
+      "file_name": "WF2 for Band10 v1.8 by hrsthrt74.bin"
+    },
+    "o62": {
+      "version": "v1.8",
+      "file_name": "WF2 for S4 v1.8 by hrsthrt74.bin"
+    },
+    "o62m": {
+      "version": "v1.8",
+      "file_name": "WF2 for S4 v1.8 by hrsthrt74.bin"
+    },
+    "p62": {
+      "version": "v1.8",
+      "file_name": "WF2 for S5 v1.8 by hrsthrt74.bin"
+    },
+    "o65": {
+      "version": "v1.8",
+      "file_name": "WF2 for RW5 v1.8 by hrsthrt74.bin"
+    },
+    "p65": {
+      "version": "v1.8",
+      "file_name": "WF2 for RW6 v1.8 by hrsthrt74.bin"
+    },
+    "o65m": {
+      "version": "v1.8",
+      "file_name": "WF2 for RW5 v1.8 by hrsthrt74.bin"
+    }
+  }
+}
