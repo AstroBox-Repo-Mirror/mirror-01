@@ -1,0 +1,30 @@
+{
+  "item": {
+    "id": "979801230101",
+    "restype": "watchface",
+    "name": "留声光影",
+    "description": "一款免费的黑胶唱片风格小米手环 9 Pro 表盘。提供夜间与日间双主题，包含动态唱片光影、复古播放器布局、EQ 动画和跟随主题的 AOD 预览。",
+    "preview": [
+      "media/preview-night.png",
+      "media/preview-day.png",
+      "media/preview-night-aod.png",
+      "media/preview-day-aod.png"
+    ],
+    "icon": "media/icon.png",
+    "cover": "media/cover.png",
+    "author": [
+      {
+        "name": "A_WU",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [],
+  "downloads": {
+    "xmb9p": {
+      "version": "1.0.0",
+      "file_name": "downloads/vinyl-glow-dial-1.0.0.face"
+    }
+  },
+  "ext": {}
+}

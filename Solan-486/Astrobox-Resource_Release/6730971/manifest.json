@@ -1,0 +1,84 @@
+{
+  "item": {
+    "id": "com.SoDictionary.solan",
+    "name": "So词典[英-日-汉互译版]",
+    "description": "注意：此处为英汉互译版，日语版本rpk安装包请点击上方链接跳转米坛帖子进行下载~~\n\n这是米坛首个带有手机APP的词典软件，同时也是首个中日互译词典~[2￥]\n此快应用为了减少安装包占用空间，将英汉互译和日汉互译分为了两个单独的快应用，你可以通过在米坛资源搜索“So词典”来查找其他版本！\n\n--1.支持英汉互译和日汉互译；\n-- 2.涵盖高考英语高考日语的所有词汇+部分常见词汇；\n-- 3.支持快速搜索&全部搜索&模糊搜索&精确搜索；\n-- 4.支持在手机和手表端收藏和查看词汇；\n-- 5.支持在手机和手表端查看词汇统计数据；\n-- 6.手机端支持播放词汇朗读发音[需要手机系统带有相关原生组件]",
+    "preview": [
+      "Preview1.3.png",
+      "more1.3.jpg",
+      "image/Android/0 (4).png",
+      "image/Android/0 (1).png",
+      "image/Android/0 (5).png",
+      "image/Android/0 (3).png",
+      "image/9Pro/EN/Vela_9Pro-2026-07-17-12-13-29.png",
+      "image/9Pro/EN/Vela_9Pro-2026-07-17-12-13-50.png",
+      "image/9Pro/EN/Vela_9Pro-2026-07-17-12-14-17.png",
+      "image/9Pro/EN/Vela_9Pro-2026-07-17-12-14-23.png",
+      "image/9Pro/EN/Vela_9Pro-2026-07-17-12-14-50.png",
+      "image/Band10/JA/Vela_Band10-2026-07-17-11-50-16.png",
+      "image/Band10/JA/Vela_Band10-2026-07-17-11-51-12.png",
+      "image/Band10/JA/Vela_Band10-2026-07-17-11-52-00.png",
+      "image/Band10/JA/Vela_Band10-2026-07-17-11-52-12.png",
+      "image/Band10/JA/Vela_Band10-2026-07-17-11-54-40.png"
+    ],
+    "icon": "icon.png",
+    "cover": "Preview1.3.png",
+    "source_url": "https://github.com/Solan-486/Astrobox-Resource_Release",
+    "author": [
+      {
+        "name": "Solan",
+        "author_url": "https://www.bandbbs.cn/members/1417681/"
+      }
+    ]
+  },
+  "downloads": {
+    "n66": {
+      "version": "1.4.0",
+      "file_name": "So词典-英汉互译版V1.4.rpk"
+    },
+    "n67": {
+      "version": "1.4.0",
+      "file_name": "So词典-英汉互译版V1.4.rpk"
+    },
+    "o66": {
+      "version": "1.4.0",
+      "file_name": "So词典-英汉互译版V1.4.rpk"
+    },
+    "o66nfc": {
+      "version": "1.4.0",
+      "file_name": "So词典-英汉互译版V1.4.rpk"
+    },
+    "o65": {
+      "version": "1.4.0",
+      "file_name": "So词典-英汉互译版V1.4.rpk"
+    },
+    "o65m": {
+      "version": "1.4.0",
+      "file_name": "So词典-英汉互译版V1.4.rpk"
+    },
+    "p65": {
+      "version": "1.4.0",
+      "file_name": "So词典-英汉互译版V1.4.rpk"
+    },
+    "p67": {
+      "version": "1.4.0",
+      "file_name": "So词典-英汉互译版V1.4.rpk"
+    },
+        "n62": {
+      "version": "1.4.0",
+      "file_name": "So词典-英汉互译版V1.4.rpk"
+    },
+        "o62": {
+      "version": "1.4.0",
+      "file_name": "So词典-英汉互译版V1.4.rpk"
+    },
+        "o62m": {
+      "version": "1.4.0",
+      "file_name": "So词典-英汉互译版V1.4.rpk"
+    },
+        "p62": {
+      "version": "1.4.0",
+      "file_name": "So词典-英汉互译版V1.4.rpk"
+    }
+  }
+}

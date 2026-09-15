@@ -1,0 +1,52 @@
+{
+  "item": {
+    "id": "cn.seedsoft.express",
+    "name": "极物流",
+    "description": "掌上查快递，从未如此简单。\n极物流是一款 Xiaomi Vela 快递追踪 APP，设计初衷是让拥有 eSIM 设备的住校生能够在学校轻松追踪自己心心念念的快递。\n采用订阅制，订阅期内支持添加无限多个快递，不限查询次数。\n官网：express.seedsoft.cn\n定价：\n￥2.99/月 | ￥7.99/季 | ￥29.9/年",
+    "preview": [
+      "1.png",
+      "2.png",
+      "3.png",
+      "4.png"
+    ],
+    "icon": "Logo_HD.png",
+    "cover": "封面.png",
+    "source_url": "https://github.com/virelyx258/cn.seedsoft.express_AstroBox_Release",
+    "author": [
+      {
+        "name": "riseforever2026",
+        "author_url": "https://www.seedsoft.cn"
+      }
+    ]
+  },
+  "downloads": {
+    "n62": {
+      "version": "1.0.5",
+      "file_name": "cn.seedsoft.express.release.1.0.5.rpk"
+    },
+    "o62": {
+      "version": "1.0.5",
+      "file_name": "cn.seedsoft.express.release.1.0.5.rpk"
+    },
+    "o62m": {
+      "version": "1.0.5",
+      "file_name": "cn.seedsoft.express.release.1.0.5.rpk"
+    },
+    "o65m": {
+      "version": "1.0.5",
+      "file_name": "cn.seedsoft.express.release.1.0.5.rpk"
+    },
+    "o65": {
+      "version": "1.0.5",
+      "file_name": "cn.seedsoft.express.release.1.0.5.rpk"
+    },
+    "p65": {
+      "version": "1.0.5",
+      "file_name": "cn.seedsoft.express.release.1.0.5.rpk"
+    },
+    "p62": {
+      "version": "1.0.5",
+      "file_name": "cn.seedsoft.express.release.1.0.5.rpk"
+    }
+  }
+}

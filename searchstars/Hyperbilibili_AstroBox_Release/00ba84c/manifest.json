@@ -1,0 +1,31 @@
+{
+    "item": {
+        "name": "澎湃哔哩",
+        "description": "为Xiaomi Vela穿戴设备打造的第三方哔哩哔哩客户端",
+        "preview": ["preview.png", "preview2.png", "preview3.png"],
+        "icon": "icon.png",
+        "source_url": "https://github.com/Searchstars/Hyperbilibili",
+        "author": [{
+            "name": "Searchstars",
+            "author_url": "https://github.com/Searchstars"
+        }]
+    },
+    "downloads": {
+        "n62": {
+            "version": "2.5",
+            "file_name": "circle_com.searchstars.hyperbilibili.rpk"
+        },
+        "o62": {
+            "version": "2.5",
+            "file_name": "circle_com.searchstars.hyperbilibili.rpk"
+        },
+        "o65m": {
+            "version": "2.5",
+            "file_name": "rect_com.searchstars.hyperbilibili.rpk"
+        },
+        "n67": {
+            "version": "2.4",
+            "file_name": "narrow_rect_com.searchstars.hyperbilibili.rpk"
+        }
+    }
+}

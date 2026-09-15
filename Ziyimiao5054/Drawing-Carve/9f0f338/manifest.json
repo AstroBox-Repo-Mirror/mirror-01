@@ -1,0 +1,32 @@
+{
+  "item": {
+    "name": "绘刻系列",
+    "description": "测试一下池焕大姐姐开源的表盘设计喵（做出来还挺好看...?）\n更新（20250716）：修复小组件会被滑动的问题喵\n-更新息屏显示\n一共7样式喵，预览可以去下方米坛帖子喵\n原作者：池焕喵\n喜欢的话请在下方米坛帖子帮我刷点下载量谢谢喵！\n\n本作品采用 [CC BY-NC 4.0] 协议授权。\n您可以自由使用、修改和分享，但需：\n   1. 标明原作者（米坛社区 @池焕喵 ）及来源；\n   2. 不得用于商业用途。",
+    "preview": [
+      "preview.png",
+      "preview1.png",
+      "preview2.png",
+      "preview3.png",
+      "preview4.png",
+      "preview5.png"
+    ],
+    "icon": "icon.png",
+    "source_url": "",
+    "author": [
+      {
+        "name": "秭义",
+        "author_url": "https://www.bandbbs.cn/members/801184/"
+      }
+    ]
+  },
+  "downloads": {
+    "o66": {
+      "version": "1.0.0",
+      "file_name": "绘刻系列.bin"
+    },
+    "o66nfc": {
+      "version": "1.0.0",
+      "file_name": "绘刻系列.bin"
+    }
+  }
+}

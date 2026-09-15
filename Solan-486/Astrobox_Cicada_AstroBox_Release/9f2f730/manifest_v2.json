@@ -1,0 +1,63 @@
+{
+  "item": {
+    "id": "com.cicada.solan",
+    "restype": "quick_app",
+    "name": "竹知了",
+    "description": "中国传统妙妙玩具，快来体验吧！\n啊这个这个...内置多种音效可供选择，免费资源，我了个骚杠这么好的玩具怎么不早点告诉我",
+    "preview": [
+      "Preview.png",
+      "1.png",
+      "icon.png"
+    ],
+    "icon": "icon.png",
+    "cover": "Preview.png",
+    "author": [
+      {
+        "name": "Solan",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "icon": "package",
+      "title": "手机端同步器下载",
+      "url": "https://pan.quark.cn/s/36992994cd2e"
+    }
+  ],
+  "downloads": {
+    "xmb9": {
+      "version": "1.0.10",
+      "file_name": "竹知了.rpk"
+    },
+    "xmb10": {
+      "version": "1.0.10",
+      "file_name": "竹知了.rpk"
+    },
+    "xmb9p": {
+      "version": "1.0.10",
+      "file_name": "竹知了.rpk"
+    },
+    "xmb10nfc": {
+      "version": "1.0.10",
+      "file_name": "竹知了.rpk"
+    },
+    "xmrw5": {
+      "version": "1.0.10",
+      "file_name": "竹知了.rpk"
+    },
+    "xmrw5xring": {
+      "version": "1.0.10",
+      "file_name": "竹知了.rpk"
+    },
+    "xmrw6": {
+      "version": "1.0.10",
+      "file_name": "竹知了.rpk"
+    },
+    "xmb10p": {
+      "version": "1.0.10",
+      "file_name": "竹知了.rpk"
+    }
+  },
+  "ext": {}
+}

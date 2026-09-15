@@ -1,0 +1,13 @@
+{
+    "name": "喵喵电子书同步器",
+    "icon": "icon.png",
+    "version": "1.0.0",
+    "description": "在AstroBox中同步喵喵电子书",
+    "author": "Searchstars & lesetong",
+    "website": "https://www.bandbbs.cn/resources/3439/",
+    "entry": "ebooksync-ng.wasm",
+    "wasi_version": 2,
+    "api_level": 2,
+    "permissions": ["device", "interconnect", "register_interconnect_recv", "thirdpartyapp"],
+    "additional_files": []
+}

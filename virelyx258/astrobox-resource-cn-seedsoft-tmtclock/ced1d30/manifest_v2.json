@@ -1,0 +1,65 @@
+{
+  "item": {
+    "id": "cn.seedsoft.tmtclock",
+    "restype": "quick_app",
+    "name": "番茄钟",
+    "description": "为 Xiaomi S 系列手表、红米数字系列手表补全缺失的番茄钟体验。\n基于 WTFPL 协议开源。\n1.0.3 更新日志：新增⌈休息时间设置⌋功能，设置入口：设置时间页面横滑即可切换⌈专注时间⌋和⌈休息时间⌋。\n\n以下为历史版本更新日志。\n1.0.2 更新日志：新增⌈屏幕常亮⌋功能，入口：“专注中”页面上滑两次。\n1.0.1 更新日志：修复了息屏后计时异常的问题。",
+    "preview": [
+      "media/1.png",
+      "media/2.png",
+      "media/3.png",
+      "media/4.png",
+      "media/5.png"
+    ],
+    "icon": "media/193e095c-d954-4006-b424-4e4b5b94de38.png",
+    "cover": "media/0b339e30-9bc2-4946-b884-9ddb188ad80f.png",
+    "author": [
+      {
+        "name": "riseforever2026",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "开源仓库",
+      "url": "https://github.com/virelyx258/vela-tomato-clock",
+      "icon": "GithubLogo"
+    }
+  ],
+  "downloads": {
+    "xmrw5": {
+      "version": "1.0.3",
+      "file_name": "downloads/cn.seedsoft.tmtclock.release.1.0.3.rpk"
+    },
+    "xmrw5xring": {
+      "version": "1.0.3",
+      "file_name": "downloads/cn.seedsoft.tmtclock.release.1.0.3.rpk"
+    },
+    "xmrw6": {
+      "version": "1.0.3",
+      "file_name": "downloads/cn.seedsoft.tmtclock.release.1.0.3.rpk"
+    },
+    "xmws441": {
+      "version": "1.0.3",
+      "file_name": "downloads/cn.seedsoft.tmtclock.release.1.0.3.rpk"
+    },
+    "xmws4xring": {
+      "version": "1.0.3",
+      "file_name": "downloads/cn.seedsoft.tmtclock.release.1.0.3.rpk"
+    },
+    "xmws4": {
+      "version": "1.0.3",
+      "file_name": "downloads/cn.seedsoft.tmtclock.release.1.0.3.rpk"
+    },
+    "xmws5": {
+      "version": "1.0.3",
+      "file_name": "downloads/cn.seedsoft.tmtclock.release.1.0.3.rpk"
+    },
+    "xmws3": {
+      "version": "1.0.3",
+      "file_name": "downloads/cn.seedsoft.tmtclock.release.1.0.3.rpk"
+    }
+  },
+  "ext": {}
+}

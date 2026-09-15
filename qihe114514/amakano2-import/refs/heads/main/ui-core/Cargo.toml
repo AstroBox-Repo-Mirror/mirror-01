@@ -1,0 +1,16 @@
+[package]
+name = "amakano2-ui"
+version = "0.1.0"
+edition = "2024"
+description = "甜蜜女友2 导入插件的界面树（与宿主无关）"
+
+[dependencies]
+base64 = "0.22"
+serde_json = "1"
+# 手环回包解包（`src/saves.rs`）在「条数与数组长度不一致」这类情况下要留一条 warn。
+# 日志口径必须和插件侧同一套（同一份日志里能对着看），所以直接用 tracing，不自造一套。
+tracing = "0.1"
+
+[lib]
+name = "amakano2_ui"
+path = "src/lib.rs"

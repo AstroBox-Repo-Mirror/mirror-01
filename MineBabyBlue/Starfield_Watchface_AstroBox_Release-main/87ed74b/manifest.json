@@ -1,0 +1,21 @@
+{
+  "item": {
+    "name": "星空Starfield for Xiaomi Watch S4",
+    "description": "星空游戏的s4表盘，如果你喜欢我的作品，欢迎去米坛，或者我的BabyBlue爱发电逛逛，谢谢",
+    "preview": ["preview.png","more/S4.png"],
+    "icon": "icon.png",
+    "source_url": "",
+    "author": [
+      {
+        "name": "BabyBlue",
+        "author_url": "https://www.bandbbs.cn/members/398696/"
+      }
+    ]
+  },
+  "downloads": {
+    "o62": {
+      "version": "1.0",
+      "file_name": "s4.com.babyblue.starfield.release.bin"
+    }
+  }
+}

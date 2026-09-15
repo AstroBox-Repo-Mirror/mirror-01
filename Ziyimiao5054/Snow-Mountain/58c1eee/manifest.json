@@ -1,0 +1,30 @@
+{
+  "item": {
+    "name": "雪山动态表盘",
+    "description": "灵感来源：NEORUAA与xinghengCN在小米手环9上制作的雪山动态 素材全部是我自己截的喵 60帧满帧但因为手环性能问题可能中途会有点掉帧喵 如果您觉得这个表盘不错可以帮我在下方米坛帖子刷点下载量吗喵（卑微） 不要让我适配其他设备！！！（9Pro有计划做） 注意：此表盘可能会导致手环运行内存不足",
+    "preview": [
+      "preview2.png",
+      "preview3.png",
+      "preview4.png",
+      "preview5.png"
+    ],
+    "icon": "icon.png",
+    "source_url": "",
+    "author": [
+      {
+        "name": "秭义",
+        "author_url": "https://www.bandbbs.cn/members/801184/"
+      }
+    ]
+  },
+  "downloads": {
+    "o66": {
+      "version": "1.0.0",
+      "file_name": "雪山动态.bin"
+    },
+    "o66nfc": {
+      "version": "1.0.0",
+      "file_name": "雪山动态.bin"
+    }
+  }
+}

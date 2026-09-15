@@ -1,0 +1,143 @@
+{
+  "item": {
+    "id": "com.awu.watch.petpal",
+    "restype": "quick_app",
+    "name": "喵伴",
+    "description": "戴在手上的治愈小猫咪。轻养成、慢生活，每天花几分钟喂食、洗澡、玩耍，攒金币买补给、收集装饰，把小窝一点点布置起来。可搭配免费的喵伴表盘，同步小窝装饰、猫咪名字、等级和金币，在手腕上开启喵伴时刻任务，完成后回到应用查看收获。应用需使用购买的兑换码激活。",
+    "preview": [
+      "media/preview-decorate.png",
+      "media/preview-map.png",
+      "media/preview-clean.png",
+      "media/preview-blessing.png",
+      "media/preview-wonderland.png",
+      "media/preview-device-pro9.png",
+      "media/preview-device-rw6.png",
+      "media/preview-device-band10.png"
+    ],
+    "icon": "media/icon.png",
+    "cover": "media/cover.jpg",
+    "author": [
+      {
+        "name": "A_WU",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "购买兑换码",
+      "url": "https://www.ifdian.net/item/54971e167e8c11f1bb1e5254001e7c00",
+      "icon": "shopping-cart"
+    },
+    {
+      "title": "爱发电主页",
+      "url": "https://www.ifdian.net/a/a_wu__",
+      "icon": "house"
+    },
+    {
+      "title": "喵伴交流群",
+      "url": "https://qm.qq.com/q/nL1rGRAXi8",
+      "icon": "link"
+    }
+  ],
+  "downloads": {
+    "xmb9": {
+      "version": "2.0.1",
+      "file_name": "downloads/miaoban-2.0.1.rpk",
+      "versionCode": 9,
+      "updatelogs": [
+        {
+          "version": "2.0.1",
+          "content": "修复部分已知问题和部分性能优化，减少重启。"
+        }
+      ]
+    },
+    "xmb9p": {
+      "version": "2.0.1",
+      "file_name": "downloads/miaoban-2.0.1.rpk",
+      "versionCode": 9,
+      "updatelogs": [
+        {
+          "version": "2.0.1",
+          "content": "修复部分已知问题和部分性能优化，减少重启。"
+        }
+      ]
+    },
+    "xmb10": {
+      "version": "2.0.1",
+      "file_name": "downloads/miaoban-2.0.1.rpk",
+      "versionCode": 9,
+      "updatelogs": [
+        {
+          "version": "2.0.1",
+          "content": "修复部分已知问题和部分性能优化，减少重启。"
+        }
+      ]
+    },
+    "xmb10nfc": {
+      "version": "2.0.1",
+      "file_name": "downloads/miaoban-2.0.1.rpk",
+      "versionCode": 9,
+      "updatelogs": [
+        {
+          "version": "2.0.1",
+          "content": "修复部分已知问题和部分性能优化，减少重启。"
+        }
+      ]
+    },
+    "xmb10p": {
+      "version": "2.0.1",
+      "file_name": "downloads/miaoban-2.0.1.rpk",
+      "versionCode": 9,
+      "updatelogs": [
+        {
+          "version": "2.0.1",
+          "content": "修复部分已知问题和部分性能优化，减少重启。"
+        }
+      ]
+    },
+    "xmrw5": {
+      "version": "2.0.1",
+      "file_name": "downloads/miaoban-2.0.1.rpk",
+      "versionCode": 9,
+      "updatelogs": [
+        {
+          "version": "2.0.1",
+          "content": "修复部分已知问题和部分性能优化，减少重启。"
+        }
+      ]
+    },
+    "xmrw5xring": {
+      "version": "2.0.1",
+      "file_name": "downloads/miaoban-2.0.1.rpk",
+      "versionCode": 9,
+      "updatelogs": [
+        {
+          "version": "2.0.1",
+          "content": "修复部分已知问题和部分性能优化，减少重启。"
+        }
+      ]
+    },
+    "xmrw6": {
+      "version": "2.0.1",
+      "file_name": "downloads/miaoban-2.0.1.rpk",
+      "versionCode": 9,
+      "updatelogs": [
+        {
+          "version": "2.0.1",
+          "content": "修复部分已知问题和部分性能优化，减少重启。"
+        }
+      ]
+    }
+  },
+  "ext": {
+    "bundledResources": {
+      "recommend": [
+        {
+          "type": "resource",
+          "id": "979801230201"
+        }
+      ]
+    }
+  }
+}

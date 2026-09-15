@@ -1,0 +1,23 @@
+{
+  "item": {
+    "name": "时研Focus",
+    "description": "一款集众多功能于一起的专注时钟快应用，在这里你可以自定义时钟样式/壁纸、查看和同步专注总时长、参与云端时长排行榜、查看和撰写漂流瓶...购买链接：Solan.today ",
+    "preview": [
+      "preview.png"
+    ],
+    "icon": "icon.png",
+    "source_url": "",
+    "author": [
+      {
+        "name": "Solan",
+        "author_url": "https://github.com/Solan-486/"
+      }
+    ]
+  },
+  "downloads": {
+    "n67": {
+      "version": "2.5.5",
+      "file_name": "时研Focus-V2.5.5.rpk"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "item": {
+    "name": "AccessRD【Vol.1 岁】",
+    "description": "明日方舟 工牌风表盘【可定制】",
+    "preview": [
+      "preview0.png",
+      "preview1.png",
+      "preview2.png",
+      "preview3.png",
+      "preview4.png"
+    ],
+    "icon": "icon.png",
+    "source_url": "",
+    "author": [
+      {
+        "name": "hrsthrt74",
+        "author_url": "https://ifdian.net/a/hrsthrt74"
+      },
+      {
+        "name": "点击直达下单定制",
+        "author_url": "https://ifdian.net/item/cb9d69ea1ed111f192e652540025c377"
+      }
+    ]
+  },
+  "downloads": {
+    "n67": {
+      "version": "1.0.0",
+      "file_name": "AccessRD Vol.1 岁 for 9P v1.0 by hrsthrt74.bin"
+    }
+  }
+}

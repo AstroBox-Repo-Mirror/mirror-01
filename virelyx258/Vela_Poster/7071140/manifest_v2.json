@@ -1,0 +1,38 @@
+{
+  "item": {
+    "id": "com.virelyx258.poster",
+    "restype": "quick_app",
+    "name": "Poster",
+    "description": "腕上 POST 请求工具",
+    "preview": [
+      "preview.png",
+      "preview2.png",
+      "preview3.png",
+      "preview4.png"
+    ],
+    "icon": "icon.png",
+    "cover": "2233poster.png",
+    "author": [
+      {
+        "name": "riseforever2026",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [],
+  "downloads": {
+    "xmb9p": {
+      "version": "1.0.2",
+      "file_name": "poster_n67.rpk"
+    },
+    "xmrw5xring": {
+      "version": "1.0.2",
+      "file_name": "poster_o65m.rpk"
+    },
+    "xmrw5": {
+      "version": "1.0.2",
+      "file_name": "poster_o65.rpk"
+    }
+  },
+  "ext": {}
+}

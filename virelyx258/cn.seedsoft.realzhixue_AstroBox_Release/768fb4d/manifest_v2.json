@@ -1,0 +1,66 @@
+{
+  "item": {
+    "id": "cn.seedsoft.realzhixue",
+    "restype": "quick_app",
+    "name": "真智学",
+    "description": "持久登录，永久免费，腕上查分更方便。",
+    "preview": [
+      "1.png",
+      "2.png",
+      "3.png",
+      "4.png",
+      "5.png",
+      "6.png"
+    ],
+    "icon": "logo-hd.png",
+    "cover": "cover.png",
+    "author": [
+      {
+        "name": "riseforever2026",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "icon": "question",
+      "title": "软件登录教程",
+      "url": "https://blog.miyale.cc/posts/2026/07/rzx-tgt-get-method/"
+    }
+  ],
+  "downloads": {
+    "xmb9p": {
+      "version": "2.5.0",
+      "file_name": "cn.seedsoft.realzhixue.release.2.5.0.rpk"
+    },
+    "xmrw5xring": {
+      "version": "2.5.0",
+      "file_name": "cn.seedsoft.realzhixue.release.2.5.0.rpk"
+    },
+    "xmrw5": {
+      "version": "2.5.0",
+      "file_name": "cn.seedsoft.realzhixue.release.2.5.0.rpk"
+    },
+    "xmrw6": {
+      "version": "2.5.0",
+      "file_name": "cn.seedsoft.realzhixue.release.2.5.0.rpk"
+    },
+    "xmws441": {
+      "version": "2.5.0",
+      "file_name": "cn.seedsoft.realzhixue.release.2.5.0.rpk"
+    },
+    "xmws4": {
+      "version": "2.5.0",
+      "file_name": "cn.seedsoft.realzhixue.release.2.5.0.rpk"
+    },
+    "xmws4xring": {
+      "version": "2.5.0",
+      "file_name": "cn.seedsoft.realzhixue.release.2.5.0.rpk"
+    },
+    "xmws3": {
+      "version": "2.5.0",
+      "file_name": "cn.seedsoft.realzhixue.release.2.5.0.rpk"
+    }
+  },
+  "ext": {}
+}

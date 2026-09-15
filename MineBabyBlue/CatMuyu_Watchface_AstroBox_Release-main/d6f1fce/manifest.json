@@ -1,0 +1,29 @@
+{
+  "item": {
+    "name": "猫猫木鱼互动表盘（预览）",
+    "description": "可互动，可震动,多皮肤切换，大概14个皮肤目前，10的预览版由刹那娜制作，特此鸣谢。此表盘需要付费 9pro 4.9元 https://afdian.com/item/36995e304cbd11f0b1cc52540025c377，米环10 4.49元 https://afdian.com/item/335eddd25d5a11f0b4d752540025c377",
+    "preview": ["preview.png","more/preview.gif","more/9p1.png","more/9p2.png","more/9p3.png","more/101.png","more/102.png"],
+    "icon": "icon.png",
+    "source_url": "",
+    "author": [
+      {
+        "name": "BabyBlue",
+        "author_url": "https://www.bandbbs.cn/members/398696/"
+      }
+    ]
+  },
+  "downloads": {
+    "n67": {
+      "version": "1.0",
+      "file_name": "9pro.com.babyblue.catmuyu.release.bin"
+    },
+    "o66": {
+      "version": "1.0",
+      "file_name": "10.com.babyblue.catmuyu.release.bin"
+    },
+    "o66nfc": {
+      "version": "1.0",
+      "file_name": "10.com.babyblue.catmuyu.release.bin"
+    }
+  }
+}

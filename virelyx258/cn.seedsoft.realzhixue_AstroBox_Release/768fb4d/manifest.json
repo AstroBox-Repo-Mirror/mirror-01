@@ -1,0 +1,54 @@
+{
+  "item": {
+    "id": "cn.seedsoft.realzhixue",
+    "name": "真智学",
+    "description": "持久登录，永久免费，腕上查分更方便。",
+    "preview": [
+      "1.png",
+      "2.png",
+      "3.png",
+      "4.png",
+      "5.png",
+      "6.png"
+    ],
+    "icon": "logo-hd.png",
+    "cover": "cover.png",
+    "source_url": "https://github.com/virelyx258/cn.seedsoft.realzhixue_AstroBox_Release",
+    "author": [
+      {
+        "name": "SEEDSOFT",
+        "author_url": "https://www.seedsoft.cn"
+      }
+    ]
+  },
+  "downloads": {
+    "n67": {
+      "version": "2.5.0",
+      "file_name": "cn.seedsoft.realzhixue.release.2.5.0.rpk"
+    },
+    "o65m": {
+      "version": "2.5.0",
+      "file_name": "cn.seedsoft.realzhixue.release.2.5.0.rpk"
+    },
+    "o65": {
+      "version": "2.5.0",
+      "file_name": "cn.seedsoft.realzhixue.release.2.5.0.rpk"
+    },
+    "p65": {
+      "version": "2.5.0",
+      "file_name": "cn.seedsoft.realzhixue.release.2.5.0.rpk"
+    },
+    "o62": {
+      "version": "2.5.0",
+      "file_name": "cn.seedsoft.realzhixue.release.2.5.0.rpk"
+    },
+    "o62m": {
+      "version": "2.5.0",
+      "file_name": "cn.seedsoft.realzhixue.release.2.5.0.rpk"
+    },
+    "n62": {
+      "version": "2.5.0",
+      "file_name": "cn.seedsoft.realzhixue.release.2.5.0.rpk"
+    }
+  }
+}

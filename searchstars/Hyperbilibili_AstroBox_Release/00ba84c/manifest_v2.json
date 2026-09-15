@@ -1,0 +1,43 @@
+{
+  "item": {
+    "id": "com.searchstars.hyperbilibili",
+    "restype": "quick_app",
+    "name": "澎湃哔哩",
+    "description": "为Xiaomi Vela穿戴设备打造的第三方哔哩哔哩客户端",
+    "preview": ["preview.png", "preview2.png", "preview3.png"],
+    "icon": "icon.png",
+    "cover": "preview.png",
+    "author": [
+      {
+        "name": "Searchstars",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "icon": "",
+      "title": "官方网站",
+      "url": "https://hyperbili.astralsight.space"
+    }
+  ],
+  "downloads": {
+    "xmws3": {
+      "version": "2.5",
+      "file_name": "circle_com.searchstars.hyperbilibili.rpk"
+    },
+    "xmws4": {
+      "version": "2.5",
+      "file_name": "circle_com.searchstars.hyperbilibili.rpk"
+    },
+    "xmrw5xring": {
+      "version": "2.5",
+      "file_name": "rect_com.searchstars.hyperbilibili.rpk"
+    },
+    "xmb9p": {
+      "version": "2.6",
+      "file_name": "nr_com.searchstars.hyperbilibili.debug.2.6.0.rpk"
+    }
+  },
+  "ext": {}
+}

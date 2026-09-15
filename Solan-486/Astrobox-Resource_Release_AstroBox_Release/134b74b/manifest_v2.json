@@ -1,0 +1,64 @@
+{
+  "item": {
+    "id": "com.JumpEgg.solan",
+    "restype": "quick_app",
+    "name": "环间跳跳糖ProMax",
+    "description": "？！支持手机>远程遥控&声控<的跳跳糖？！\n--手机端支持10档调节+超激进模式；\n--手机端可远程遥控；\n--手机端可根据声音大小/音调高低/高低混合进行控制，配合上动物xx体验研究智能算法为您的每一次xx补给能量！\n--手环端支持智能防误触模式，只需在手环设置中关闭遮盖息屏即可实现永不停歇！",
+    "preview": [
+      "1 (1).png",
+      "1 (2).png",
+      "Vela_9Pro-2026-08-01-15-05-44.png",
+      "Vela_Band10-2026-08-01-15-04-51.png"
+    ],
+    "icon": "logo.png",
+    "cover": "Preview@1x.png",
+    "author": [
+      {
+        "name": "Solan",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "icon": "package",
+      "title": "手机端同步器下载",
+      "url": "https://pan.quark.cn/s/9a1c6ea3a142"
+    }
+  ],
+  "downloads": {
+    "xmb9": {
+      "version": "1.0.1",
+      "file_name": "环间跳跳糖ProMax.rpk"
+    },
+    "xmb9p": {
+      "version": "1.0.1",
+      "file_name": "环间跳跳糖ProMax.rpk"
+    },
+    "xmb10": {
+      "version": "1.0.1",
+      "file_name": "环间跳跳糖ProMax.rpk"
+    },
+    "xmb10nfc": {
+      "version": "1.0.1",
+      "file_name": "环间跳跳糖ProMax.rpk"
+    },
+    "xmrw5": {
+      "version": "1.0.1",
+      "file_name": "环间跳跳糖ProMax.rpk"
+    },
+    "xmrw5xring": {
+      "version": "1.0.1",
+      "file_name": "环间跳跳糖ProMax.rpk"
+    },
+    "xmrw6": {
+      "version": "1.0.1",
+      "file_name": "环间跳跳糖ProMax.rpk"
+    },
+    "xmb10p": {
+      "version": "1.0.1",
+      "file_name": "环间跳跳糖ProMax.rpk"
+    }
+  },
+  "ext": {}
+}

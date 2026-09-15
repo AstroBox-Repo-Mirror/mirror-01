@@ -1,0 +1,21 @@
+{
+  "item": {
+    "name": "米塔mita动态眨眼表盘",
+    "description": "将米塔装进手环永远陪伴你，如果你喜欢我的作品，欢迎去米坛，或者我的BabyBlue爱发电逛逛，谢谢",
+    "preview": ["preview.png","more/preview.png","more/9pro.png"],
+    "icon": "icon.png",
+    "source_url": "",
+    "author": [
+      {
+        "name": "BabyBlue",
+        "author_url": "https://www.bandbbs.cn/members/398696/"
+      }
+    ]
+  },
+  "downloads": {
+    "n67": {
+      "version": "1.0",
+      "file_name": "9pro.com.babyblue.mita.release.bin"
+    }
+  }
+}

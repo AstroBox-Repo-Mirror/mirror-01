@@ -1,0 +1,141 @@
+{
+  "item": {
+    "id": "979801230201",
+    "restype": "watchface",
+    "name": "喵伴表盘",
+    "description": "免费的治愈小猫互动表盘。不安装喵伴应用也可以正常使用天气、压力、步数、电量、日期时间、压力猫状态和陪你专注体验；安装并授权喵伴应用后，可同步小窝装饰、猫咪名字、等级和金币，解锁更多喵伴时刻任务与应用收获。",
+    "preview": [
+      "media/preview-9pro-10pro.png",
+      "media/preview-aod-9pro-10pro.png",
+      "media/preview-settings.png",
+      "media/preview-task.png",
+      "media/preview-rw5-rw6.png",
+      "media/preview-band10.png"
+    ],
+    "icon": "media/icon.png",
+    "cover": "media/cover.jpg",
+    "author": [
+      {
+        "name": "A_WU",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "了解喵伴应用",
+      "url": "https://www.ifdian.net/item/54971e167e8c11f1bb1e5254001e7c00",
+      "icon": "shopping-cart"
+    },
+    {
+      "title": "爱发电主页",
+      "url": "https://www.ifdian.net/a/a_wu__",
+      "icon": "house"
+    },
+    {
+      "title": "喵伴交流群",
+      "url": "https://qm.qq.com/q/nL1rGRAXi8",
+      "icon": "link"
+    }
+  ],
+  "downloads": {
+    "xmb9": {
+      "version": "1.1.0",
+      "file_name": "downloads/miaoban-watchface-band9-1.1.0.face",
+      "versionCode": 110,
+      "updatelogs": [
+        {
+          "version": "1.1.0",
+          "content": "新增息屏表盘。\n优化喵伴时刻任务体验。"
+        }
+      ]
+    },
+    "xmb9p": {
+      "version": "1.1.0",
+      "file_name": "downloads/miaoban-watchface-9pro-10pro-1.1.0.face",
+      "versionCode": 110,
+      "updatelogs": [
+        {
+          "version": "1.1.0",
+          "content": "新增息屏表盘。\n优化喵伴时刻任务体验。"
+        }
+      ]
+    },
+    "xmb10": {
+      "version": "1.1.0",
+      "file_name": "downloads/miaoban-watchface-band10-1.1.0.face",
+      "versionCode": 110,
+      "updatelogs": [
+        {
+          "version": "1.1.0",
+          "content": "新增息屏表盘。\n优化喵伴时刻任务体验。"
+        }
+      ]
+    },
+    "xmb10nfc": {
+      "version": "1.1.0",
+      "file_name": "downloads/miaoban-watchface-band10-1.1.0.face",
+      "versionCode": 110,
+      "updatelogs": [
+        {
+          "version": "1.1.0",
+          "content": "新增息屏表盘。\n优化喵伴时刻任务体验。"
+        }
+      ]
+    },
+    "xmb10p": {
+      "version": "1.1.0",
+      "file_name": "downloads/miaoban-watchface-9pro-10pro-1.1.0.face",
+      "versionCode": 110,
+      "updatelogs": [
+        {
+          "version": "1.1.0",
+          "content": "新增息屏表盘。\n优化喵伴时刻任务体验。"
+        }
+      ]
+    },
+    "xmrw5": {
+      "version": "1.1.0",
+      "file_name": "downloads/miaoban-watchface-rw5-rw6-1.1.0.face",
+      "versionCode": 110,
+      "updatelogs": [
+        {
+          "version": "1.1.0",
+          "content": "新增息屏表盘。\n优化喵伴时刻任务体验。"
+        }
+      ]
+    },
+    "xmrw5xring": {
+      "version": "1.1.0",
+      "file_name": "downloads/miaoban-watchface-rw5-rw6-1.1.0.face",
+      "versionCode": 110,
+      "updatelogs": [
+        {
+          "version": "1.1.0",
+          "content": "新增息屏表盘。\n优化喵伴时刻任务体验。"
+        }
+      ]
+    },
+    "xmrw6": {
+      "version": "1.1.0",
+      "file_name": "downloads/miaoban-watchface-rw5-rw6-1.1.0.face",
+      "versionCode": 110,
+      "updatelogs": [
+        {
+          "version": "1.1.0",
+          "content": "新增息屏表盘。\n优化喵伴时刻任务体验。"
+        }
+      ]
+    }
+  },
+  "ext": {
+    "bundledResources": {
+      "recommend": [
+        {
+          "type": "resource",
+          "id": "com.awu.watch.petpal"
+        }
+      ]
+    }
+  }
+}
