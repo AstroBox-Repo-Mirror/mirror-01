@@ -1,0 +1,35 @@
+{
+  "item": {
+    "name": "澄序课程表",
+    "description": "课程腕上抬手看 - 首个高度可用「Beta测试」版本｜!!! 安装前请在手环中预留 2MB 空间 !!!｜课程数据导入请前往插件商城下载传输插件｜测试交流群：1042873150",
+    "preview": [
+      "preview1.png",
+      "preview2.png",
+      "preview3.png",
+      "preview4.png",
+      "preview5.png"
+    ],
+    "icon": "logo.png",
+    "source_url": "",
+    "author": [
+      {
+        "name": "WaterFlames",
+        "author_url": "http://www.waterflames.cn/"
+      },
+      {
+        "name": "Yulimfish",
+        "author_url": "https://www.yuque.com/yulimfish"
+      },
+      {
+        "name": "nekomiyarinko",
+        "author_url": "https://gitee.com/nekomiyarinko"
+      }
+    ]
+  },
+  "downloads": {
+    "n67": {
+      "version": "0.4.1-Beta",
+      "file_name": "com.waterflames.clartime.release.0.4.1-beta.rpk"
+    }
+  }
+}

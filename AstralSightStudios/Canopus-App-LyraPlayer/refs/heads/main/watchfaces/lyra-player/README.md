@@ -1,0 +1,64 @@
+# Lyra Player 安装表盘
+
+这是一个一次性 Canopus 模块安装表盘。安装并打开表盘后，它会把经过
+CMI1 Ed25519 签名的 Lyra Player ELF 和 receipt 写入
+`/data/canopus/inbox/`，并把原生应用图标写入
+`/data/canopus/appicon_lyra.bin`，再通过 `/dev/canopus` 请求 supervisor 安装模块。
+模块安装后默认禁用，必须在 Canopus Manager 中审核并启用。
+
+## 前置条件
+
+设备上必须已经安装 Canopus supervisor 和原生 Manager，且
+`/dev/canopus` 可用。目标固件必须与构建时选择的 target pack 完全一致。
+
+## 构建并签名
+
+默认构建 Band 10 Pro 3.101.036：
+
+```sh
+scripts/build-install-watchface.sh
+```
+
+选择另一个已支持目标：
+
+```sh
+CANOPUS_TARGET=xiaomi-band-10-pro-3.101.043 \
+  scripts/build-install-watchface.sh
+```
+
+构建流程会：
+
+1. 使用对应 target feature 交叉编译 `lyra-player-device`。
+2. 加入 NuttX modlib constructor/destructor shim，链接为 ELF32 ET_REL。
+3. 使用 Canopus verifier 校验目标、重定位和固件地址。
+4. 从 `<CANOPUS_ROOT>/.canopus-local/module-installer-ed25519.pem` 复制一份
+   权限为 `0600` 的临时签名密钥，在临时目录中完成 CMI1 receipt 签名，
+   随后立即删除临时目录。
+5. 将 `module.bin`、`receipt.bin` 与 `appicon_lyra.bin` 放入本目录。图标由构建脚本从 `LYRA_PLAYER_ICON` 指定的 PNG 转换，默认读取 `/Volumes/EXT0/lyra-player-icon.png`。
+
+本地私钥不会复制到输出目录、表盘资源或 Git。可通过以下环境变量覆盖：
+
+- `CANOPUS_ROOT=/path/to/Canopus`
+- `MODULE_INSTALL_KEY=/secure/path/module-installer-ed25519.pem`
+- `CANOPUS_TARGET=<target-id>`
+- `CANOPUS_BUILD_OUT=/path/to/build-output`
+- `CANOPUS_WATCHFACE_OUT=/path/to/watchface-output`
+- `LYRA_PLAYER_ICON=/path/to/lyra-player-icon.png`
+
+`module.bin` 和 `receipt.bin` 是按目标固件生成的构建产物，不应跨固件复用。
+
+播放控制图标使用 Font Awesome Free 6.x 的 `backward-step`、`play`、`pause`
+和 `forward-step` SVG，图标按 CC BY 4.0 要求保留来源注释，转换为白色透明
+64×64 LVGL v9 BIN 后随表盘部署到 `/data/canopus/`。
+
+## 安装
+
+1. 构建当前设备精确固件对应的安装表盘。
+2. 将整个 `watchfaces/lyra-player` 目录作为普通表盘打包并安装。
+3. 打开表盘一次，等待显示安装结果。
+4. 在 Canopus Manager 中启用 `lyra_player`。
+5. 按 Manager/Canopus installer 的流程重启并执行 LOAD。
+6. 依次完成原生应用发布阶段，使 Lyra 页面和 Launcher 入口生效。
+
+失败时表盘会保留并显示诊断信息。receipt 会锁定 target ID、固件
+SHA-256、模块长度和模块 SHA-256；任一不匹配时 supervisor 应拒绝安装。

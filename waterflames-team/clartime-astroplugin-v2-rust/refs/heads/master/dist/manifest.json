@@ -1,0 +1,18 @@
+{
+    "name": "澄序课程配置器",
+    "icon": "icon.png",
+    "version": "2.0",
+    "description": "在AstroBox中发送与修改澄序课程表课程配置信息",
+    "author": "Yulimfish",
+    "website": "https://waterflames.cn/",
+    "entry": "clartime_astrobox_plugin_v2.wasm",
+    "wasi_version": 2,
+    "api_level": 2,
+    "permissions": [
+        "interconnect",
+        "thirdpartyapp",
+        "device",
+        "register_interconnect_recv"
+    ],
+    "additional_files": []
+}

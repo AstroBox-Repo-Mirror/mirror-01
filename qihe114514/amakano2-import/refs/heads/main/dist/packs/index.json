@@ -1,0 +1,155 @@
+{
+  "version": 2,
+  "packs": [
+    {
+      "file": "p01.pack",
+      "id": "共通线1·归乡",
+      "number": 1,
+      "title": "共通线 第一章·归乡",
+      "bytes": 735837,
+      "minutes": 54,
+      "scenes": 41,
+      "dialogues": 1066
+    },
+    {
+      "file": "p02.pack",
+      "id": "共通线2·转校生",
+      "number": 2,
+      "title": "共通线 第二章·转校生",
+      "bytes": 933961,
+      "minutes": 57,
+      "scenes": 56,
+      "dialogues": 1136
+    },
+    {
+      "file": "p03.pack",
+      "id": "共通线3·文化祭",
+      "number": 3,
+      "title": "共通线 第三章·文化祭",
+      "bytes": 744278,
+      "minutes": 54,
+      "scenes": 49,
+      "dialogues": 1067
+    },
+    {
+      "file": "p04.pack",
+      "id": "共通线4·心意",
+      "number": 4,
+      "title": "共通线 第四章·心意",
+      "bytes": 758138,
+      "minutes": 59,
+      "scenes": 54,
+      "dialogues": 1186
+    },
+    {
+      "file": "p05.pack",
+      "id": "共通线5·结缘",
+      "number": 5,
+      "title": "共通线 第五章·结缘",
+      "bytes": 890362,
+      "minutes": 54,
+      "scenes": 56,
+      "dialogues": 1081
+    },
+    {
+      "file": "p06.pack",
+      "id": "千岁线1·序章",
+      "number": 6,
+      "title": "千岁线 第一章·序章",
+      "bytes": 1433774,
+      "minutes": 76,
+      "scenes": 106,
+      "dialogues": 1517
+    },
+    {
+      "file": "p07.pack",
+      "id": "千岁线2·初恋",
+      "number": 7,
+      "title": "千岁线 第二章·初恋",
+      "bytes": 1046303,
+      "minutes": 91,
+      "scenes": 80,
+      "dialogues": 1827
+    },
+    {
+      "file": "p08.pack",
+      "id": "千岁线3·相伴",
+      "number": 8,
+      "title": "千岁线 第三章·相伴",
+      "bytes": 1402416,
+      "minutes": 95,
+      "scenes": 102,
+      "dialogues": 1897
+    },
+    {
+      "file": "p09.pack",
+      "id": "玲线1·序章",
+      "number": 9,
+      "title": "玲线 第一章·序章",
+      "bytes": 1528562,
+      "minutes": 178,
+      "scenes": 174,
+      "dialogues": 3618
+    },
+    {
+      "file": "p10.pack",
+      "id": "玲线2·初恋",
+      "number": 10,
+      "title": "玲线 第二章·初恋",
+      "bytes": 2679944,
+      "minutes": 251,
+      "scenes": 196,
+      "dialogues": 4952
+    },
+    {
+      "file": "p11.pack",
+      "id": "玲线3·相伴",
+      "number": 11,
+      "title": "玲线 第三章·相伴",
+      "bytes": 2092246,
+      "minutes": 317,
+      "scenes": 178,
+      "dialogues": 6116
+    },
+    {
+      "file": "p12.pack",
+      "id": "结灯线1·序章",
+      "number": 12,
+      "title": "结灯线 第一章·序章",
+      "bytes": 1742895,
+      "minutes": 143,
+      "scenes": 133,
+      "dialogues": 2732
+    },
+    {
+      "file": "p13.pack",
+      "id": "结灯线2·初恋",
+      "number": 13,
+      "title": "结灯线 第二章·初恋",
+      "bytes": 1601740,
+      "minutes": 129,
+      "scenes": 117,
+      "dialogues": 2434
+    },
+    {
+      "file": "p14.pack",
+      "id": "结灯线3·相伴",
+      "number": 14,
+      "title": "结灯线 第三章·相伴",
+      "bytes": 1714136,
+      "minutes": 102,
+      "scenes": 104,
+      "dialogues": 1944
+    },
+    {
+      "file": "p15.pack",
+      "id": "番外·结灯",
+      "number": 15,
+      "title": "番外·结灯",
+      "bytes": 155299,
+      "minutes": 10,
+      "scenes": 8,
+      "dialogues": 183
+    }
+  ]
+}
