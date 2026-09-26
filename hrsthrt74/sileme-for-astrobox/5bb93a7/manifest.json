@@ -1,0 +1,23 @@
+{
+  "item": {
+    "name": "死了么",
+    "description": "今天您死了么（划掉）",
+    "preview": [
+      "preview0.png"
+    ],
+    "icon": "icon.png",
+    "source_url": "",
+    "author": [
+      {
+        "name": "hrsthrt74",
+        "author_url": "https://www.bandbbs.cn/members/296762/"
+      }
+    ]
+  },
+  "downloads": {
+    "n67": {
+      "version": "1.0",
+      "file_name": "死了么 for 9P by hrsthrt74.bin"
+    }
+  }
+}

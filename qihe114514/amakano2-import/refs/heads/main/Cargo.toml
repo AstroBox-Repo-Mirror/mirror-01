@@ -1,0 +1,24 @@
+[package]
+name = "amakano2-import"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+amakano2-ui = { path = "ui-core" }
+astrobox-ng-wit = "0.2.1"
+base64 = "0.22"
+# 存档信封（`src/saves.rs`）要 derive Serialize/Deserialize：字段名必须逐字固定，
+# 手写 JSON 拼装迟早会跟 `parse_save_file` 漂开。
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tracing = "0.1"
+tracing-subscriber = "0.3"
+zip = { version = "2.2", default-features = false, features = ["deflate"] }
+
+# ui-core 是不含宿主的纯界面树，单独成成员后可以在宿主机上跑 `cargo test -p amakano2-ui`
+# （插件本体是 wasm 组件，宿主机上编不过）。
+[workspace]
+members = ["ui-core"]

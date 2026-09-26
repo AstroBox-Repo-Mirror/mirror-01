@@ -1,0 +1,95 @@
+{
+  "item": {
+    "id": "com.bandbbs.ebook.plus",
+    "restype": "quick_app",
+    "name": "弦电子书",
+    "description": "最强大的电子书小程序，支持封面、插图、章节等超多实用功能。\n\n支持导入的书籍格式：\nNVB、TXT、EPUB、MOBI、AZW3、DOC、DOCX、PDF、HTML、FB2、UMD\n\n本小程序需要与手机端配合使用，手机端需前往官网下载（手机端需在连接小米运动健康的情况下使用）。\n本小程序同时提供“无图标版”（即均为空白占位）和“天气图标版”（图标和名称均为天气），需前往官网下载。\n\n使用时手表自动重启是Vela的正常现象。",
+    "preview": [
+      "media/Frame 21_small.png",
+      "media/66F011762DAD658B925DEBB311DC39FD.png",
+      "media/xiaomi_band_pro-2026-08-18-00-54-25.png",
+      "media/redmi_watch-2026-08-13-15-36-41.png",
+      "media/xiaomi_s4-2026-08-18-01-21-20.png",
+      "media/xiaomi_band_10-2026-08-25-23-22-39.png",
+      "media/Frame 22_small.png"
+    ],
+    "icon": "media/icon.png",
+    "cover": "media/Frame 22_small.png",
+    "author": [
+      {
+        "name": "huicat28",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "官网",
+      "url": "https://vb.luoxe.cn",
+      "icon": "CodesandboxLogo"
+    }
+  ],
+  "downloads": {
+    "xmrw5": {
+      "version": "V26.5.4",
+      "file_name": "downloads/com.bandbbs.ebook.plus.release.V26.5.4.RW.rpk"
+    },
+    "xmrw5xring": {
+      "version": "V26.5.4",
+      "file_name": "downloads/com.bandbbs.ebook.plus.release.V26.5.4.RW.rpk"
+    },
+    "xmrw6": {
+      "version": "V26.5.4",
+      "file_name": "downloads/com.bandbbs.ebook.plus.release.V26.5.4.RW.rpk"
+    },
+    "xmb10": {
+      "version": "V26.5.4",
+      "file_name": "downloads/com.bandbbs.ebook.plus.release.V26.5.4.o66.rpk"
+    },
+    "xmb10nfc": {
+      "version": "V26.5.4",
+      "file_name": "downloads/com.bandbbs.ebook.plus.release.V26.5.4.o66.rpk"
+    },
+    "xmb10p": {
+      "version": "V26.5.4",
+      "file_name": "downloads/com.bandbbs.ebook.plus.release.V26.5.4.p67.rpk"
+    },
+    "xmb9": {
+      "version": "V26.5.4",
+      "file_name": "downloads/com.bandbbs.ebook.plus.release.V26.5.4.n66.rpk"
+    },
+    "xmb9p": {
+      "version": "V26.5.4",
+      "file_name": "downloads/com.bandbbs.ebook.plus.release.V26.5.4.BAND.rpk"
+    },
+    "xmws3": {
+      "version": "V26.5.4",
+      "file_name": "downloads/com.bandbbs.ebook.plus.release.V26.5.4.o62.rpk"
+    },
+    "xmws4xring": {
+      "version": "V26.5.4",
+      "file_name": "downloads/com.bandbbs.ebook.plus.release.V26.5.4.o62.rpk"
+    },
+    "xmws441": {
+      "version": "V26.5.4",
+      "file_name": "downloads/com.bandbbs.ebook.plus.release.V26.5.4.o62.rpk"
+    },
+    "xmws4": {
+      "version": "V26.5.4",
+      "file_name": "downloads/com.bandbbs.ebook.plus.release.V26.5.4.o62.rpk"
+    },
+    "xmws5": {
+      "version": "V26.5.4",
+      "file_name": "downloads/com.bandbbs.ebook.plus.release.V26.5.4.o62.rpk"
+    },
+    "xmb11": {
+      "version": "V26.5.4",
+      "file_name": "downloads/com.bandbbs.ebook.plus.release.V26.5.4.o66.rpk"
+    },
+    "xmb11nfc": {
+      "version": "V26.5.4",
+      "file_name": "downloads/com.bandbbs.ebook.plus.release.V26.5.4.o66.rpk"
+    }
+  },
+  "ext": {}
+}
