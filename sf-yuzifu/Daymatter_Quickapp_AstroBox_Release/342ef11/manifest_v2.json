@@ -1,0 +1,85 @@
+{
+  "item": {
+    "id": "com.yzf.daymatter",
+    "restype": "quick_app",
+    "name": "倒数日 快应用",
+    "description": "在手环快应用查看重要日子的倒计时",
+    "preview": [
+      "more/band.png",
+      "more/pro.png",      
+      "more/rw.png",
+      "more/s.png"
+    ],
+    "icon": "icon.png",
+    "cover": "preview.png",
+    "author": [
+      {
+        "name": "sf-yuzifu",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "icon": "github-logo",
+      "title": "GitHub",
+      "url": "https://github.com/sf-yuzifu/daymatter"
+    },
+    {
+      "icon": "house-line",
+      "title": "个人主页",
+      "url": "https://yzf.moe"
+    }
+  ],
+  "downloads": {
+    "xmb9": {
+      "version": "2.1",
+      "file_name": "com.yzf.daymatter.release.2.1.rpk"
+    },
+    "xmb9p": {
+      "version": "2.1",
+      "file_name": "com.yzf.daymatter.release.2.1.rpk"
+    },
+    "xmb10": {
+      "version": "2.1",
+      "file_name": "com.yzf.daymatter.release.2.1.rpk"
+    },
+    "xmb10nfc": {
+      "version": "2.1",
+      "file_name": "com.yzf.daymatter.release.2.1.rpk"
+    },
+    "xmb10p": {
+      "version": "2.1",
+      "file_name": "com.yzf.daymatter.release.2.1.rpk"
+    },
+    "xmrw5": {
+      "version": "2.1",
+      "file_name": "com.yzf.daymatter.release.2.1.rpk"
+    },
+    "xmrw5xring": {
+      "version": "2.1",
+      "file_name": "com.yzf.daymatter.release.2.1.rpk"
+    },
+    "xmrw6": {
+      "version": "2.1",
+      "file_name": "com.yzf.daymatter.release.2.1.rpk"
+    },
+    "xmws4": {
+      "version": "2.1",
+      "file_name": "com.yzf.daymatter.release.2.1.rpk"
+    },
+    "xmws441": {
+      "version": "2.1",
+      "file_name": "com.yzf.daymatter.release.2.1.rpk"
+    },
+    "xmws4xring": {
+      "version": "2.1",
+      "file_name": "com.yzf.daymatter.release.2.1.rpk"
+    },
+    "xmws5": {
+      "version": "2.1",
+      "file_name": "com.yzf.daymatter.release.2.1.rpk"
+    }
+  },
+  "ext": {}
+}

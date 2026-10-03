@@ -1,0 +1,66 @@
+{
+  "item": {
+    "id": "com.yzf.fireworkMaster",
+    "restype": "quick_app",
+    "name": "狂欢烟火大师赛",
+    "description": "森空岛网页小游戏简陋复刻",
+    "preview": [
+      "preview.png",
+      "pic/band9.png",
+      "pic/band9pro.png",
+      "pic/band10.png",
+      "pic/rw5.png"
+    ],
+    "icon": "icon.png",
+    "cover": "preview.png",
+    "author": [
+      {
+        "name": "sf-yuzifu",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "icon": "github-logo",
+      "title": "GitHub",
+      "url": "https://github.com/sf-yuzifu/firework-master"
+    },
+    {
+      "icon": "house-line",
+      "title": "个人主页",
+      "url": "https://yzf.moe"
+    }
+  ],
+  "downloads": {
+    "xmb9": {
+      "version": "1.6",
+      "file_name": "com.yzf.fireworkMaster.release.1.0.band9.rpk"
+    },
+    "xmb9p": {
+      "version": "1.6",
+      "file_name": "com.yzf.fireworkMaster.release.1.0.band9pro.rpk"
+    },
+    "xmb10": {
+      "version": "1.6",
+      "file_name": "com.yzf.fireworkMaster.release.1.0.band10.rpk"
+    },
+    "xmb10nfc": {
+      "version": "1.6",
+      "file_name": "com.yzf.fireworkMaster.release.1.0.band10.rpk"
+    },
+    "xmrw5": {
+      "version": "1.6",
+      "file_name": "com.yzf.fireworkMaster.release.1.0.rw5.rpk"
+    },
+    "xmrw5xring": {
+      "version": "1.6",
+      "file_name": "com.yzf.fireworkMaster.release.1.0.rw5.rpk"
+    },
+    "xmrw6": {
+      "version": "1.6",
+      "file_name": "com.yzf.fireworkMaster.release.1.0.rw5.rpk"
+    }
+  },
+  "ext": {}
+}

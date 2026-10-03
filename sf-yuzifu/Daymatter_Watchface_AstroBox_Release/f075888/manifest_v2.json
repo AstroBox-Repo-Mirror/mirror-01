@@ -1,0 +1,62 @@
+{
+  "item": {
+    "id": "979825266002",
+    "restype": "watchface",
+    "name": "倒数日 表盘",
+    "description": "在手环表盘查看重要日子的倒计时",
+    "preview": [
+      "preview.png"
+    ],
+    "icon": "icon.png",
+    "cover": "preview.png",
+    "author": [
+      {
+        "name": "sf-yuzifu",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "GitHub",
+      "url": "https://github.com/sf-yuzifu/daymatter",
+      "icon": "github-logo"
+    },
+    {
+      "title": "个人主页",
+      "url": "https://yzf.moe",
+      "icon": "house-line"
+    }
+  ],
+  "downloads": {
+    "xmb9": {
+      "version": "1.6",
+      "file_name": "band9.daymatter.bin"
+    },
+    "xmb9p": {
+      "version": "1.6",
+      "file_name": "band9pro.daymatter.bin"
+    },
+    "xmb10": {
+      "version": "1.6",
+      "file_name": "band10.daymatter.bin"
+    },
+    "xmb10nfc": {
+      "version": "1.6",
+      "file_name": "band10.daymatter.bin"
+    },
+    "xmws4": {
+      "version": "1.6",
+      "file_name": "s4.daymatter.bin"
+    },
+    "xmws4xring": {
+      "version": "1.6",
+      "file_name": "s4.daymatter.bin"
+    },
+    "xmws441": {
+      "version": "1.6",
+      "file_name": "downloads/s4.daymatter.bin"
+    }
+  },
+  "ext": {}
+}

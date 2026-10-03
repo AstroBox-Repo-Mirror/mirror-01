@@ -1,0 +1,2 @@
+# B2048_AstroBox_Release
+B2048o66适配版本发布仓库

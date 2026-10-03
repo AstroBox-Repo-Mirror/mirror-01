@@ -1,0 +1,57 @@
+{
+  "item": {
+    "name": "同位素2048",
+    "description": "同位素2048（Isotope2048）更有考验性和趣味性的2048，融合了化学元素的衰变特性的2048。合成你的元素，直到∞的出现。另外一些元素不稳定，在限定的步骤内无法完成合成就会消失，Try it！达到终极目标宇宙坍陷（∞）吧！",
+    "preview": [
+      "review/band/main-1.png",
+      "review/band/main-2.png",
+      "review/band/main-3.png",
+      "review/band/about-1.png",
+      "review/band/about-2.png",
+      "review/band-o66/o66-light-no.png",
+      "review/band-o66/o66-dark-no.png",
+      "review/band-o66/o66-about-no-1.png",
+      "review/band-o66/o66-about-no-2.png",
+      "review/band-o66/o66-dark-yes.png",
+      "review/band-o66/o66-light-yes.png",
+      "review/band-o66/o66-about-yes-1.png",
+      "review/band-o66/o66-about-yes-2.png",
+      "review/n67/n67-index-light-no.png",
+      "review/n67/n67-index-dark-no.png",
+      "review/n67/n67-about-no.png",
+      "review/n67/n67-index-light-yes.png",
+      "review/n67/n67-index-dark-yes.png",
+      "review/n67/n67-about-yes.png"
+    ],
+    "icon": "logo.png",
+    "source_url": "https://github.com/CheongSzesuen/Isotope2048",
+    "author": [
+      {
+        "name": "WaiJade",
+        "author_url": "https://github.com/CheongSzesuen"
+      },
+      {
+        "name": "JIFENG",
+        "author_url": "https://github.com/jfgege"
+      }
+    ]
+  },
+  "downloads": {
+    "n66": {
+      "version": "1.2",
+      "file_name": "rpk/band/com.isotope.2048.band.release.1.2.rpk"
+    },
+    "o66": {
+      "version": "1.2",
+      "file_name": "rpk/band-o66/com.isotope.2048.band.o66.release.1.2.rpk"
+    },
+    "o66nfc": {
+      "version": "1.2.",
+      "file_name": "rpk/band-o66/com.isotope.2048.band.o66.release.1.2.rpk"
+    },
+    "n67": {
+      "version": "1.2.2",
+      "file_name": "rpk/n67/com.isotope.2048.band.n67.release.1.2.2.rpk"
+    }
+  }
+}

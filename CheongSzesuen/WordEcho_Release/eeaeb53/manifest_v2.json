@@ -1,0 +1,55 @@
+{
+  "item": {
+    "id": "cn.waijade.wordecho",
+    "restype": "quick_app",
+    "name": "WordEcho",
+    "description": "抬手即记，忘词不易。\n你的腕上单词记忆助手，功能强大，界面美观，算法科学，双端互联。\n智能记忆算法融合艾宾浩斯曲线与 FSRS-6 模型，根据真实反馈动态规划复习间隔。三档学习强度与目标参数自由调节，让快学慢学完全贴合你的个人节奏。\n手环端支持完全离线独立运行，涵盖学习、复习、拼写及斩词速刷全流程，联网后数据自动无感同步。多词书并行存储且详情页信息完整，确保脱离手机也能获得不打折的学习体验。\n安卓端采用 Material Design 3 Expressive 设计，支持壁纸动态取色、倾斜浮动特效及沉浸式交互。配合 GitHub 贡献图样式的桌面小组件与手环自定义壁纸库，让每日学习进度兼具美感与直观。\n训练模式与过关标准支持自由组合设定，从全局主题动效到手环专属的跑马灯、语音等细节均可按需调节。丰富的全局开关让你能将 App 彻底调教成理想中的个性化学习工具。\n内置 260+ 全学段考试词书与 30+ 本名著阅读拓展，单词详情囊括音标、词频、柯林斯星级等 20+ 专业字段。支持分类搜索、正乱序浏览及多设备灵活切换，海量资源随手查阅不设限。\n（现在首月促销~）\n（对于在AstroBox发布过资源的创作者，可以下载安卓端后绑定提交资源的GitHub账号后获得免费授权）",
+    "preview": [
+      "media/0@1x.png",
+      "media/1@1x.png",
+      "media/2@1x.png",
+      "media/3@1x.png",
+      "media/4@1x.png",
+      "media/5@1x.png",
+      "media/6@1x.png",
+      "media/7@1x.png",
+      "media/8@1x.png"
+    ],
+    "icon": "media/logo.png",
+    "cover": "media/0@1x.png",
+    "author": [
+      {
+        "name": "WaiJade",
+        "bindABAccount": true
+      },
+      {
+        "name": "zaona",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "官网",
+      "url": "https://wordecho.waijade.cn/",
+      "icon": "Browser"
+    },
+    {
+      "title": "爱发电购买链接",
+      "url": "https://afdian.com/item/981d84ca448c11f1a91d52540025c377",
+      "icon": "Coins"
+    },
+    {
+      "title": "QQ群",
+      "url": "https://qm.qq.com/q/4ZqtcDAONy",
+      "icon": "Chats"
+    }
+  ],
+  "downloads": {
+    "xmrw6": {
+      "version": "26.0.0",
+      "file_name": "downloads/cn.waijade.wordecho.release.26.0.0.rpk"
+    }
+  },
+  "ext": {}
+}

@@ -1,0 +1,41 @@
+{
+  "item": {
+    "name": "倒数日 表盘",
+    "description": "在手环表盘查看重要日子的倒计时",
+    "preview": ["preview.png"],
+    "icon": "icon.png",
+    "source_url": "https://github.com/sf-yuzifu/daymatter",
+    "author": [
+      {
+        "name": "小鱼yuzifu",
+        "author_url": "https://yzf.moe"
+      }
+    ]
+  },
+  "downloads": {
+    "n66": {
+      "version": "1.6",
+      "file_name": "band9.daymatter.bin"
+    },
+    "n67": {
+      "version": "1.6",
+      "file_name": "band9pro.daymatter.bin"
+    },
+    "o66nfc": {
+      "version": "1.6",
+      "file_name": "band10.daymatter.bin"
+    },
+    "o66": {
+      "version": "1.6",
+      "file_name": "band10.daymatter.bin"
+    },
+    "o62": {
+      "version": "1.6",
+      "file_name": "s4.daymatter.bin"
+    },
+    "o62m": {
+      "version": "1.6",
+      "file_name": "s4.daymatter.bin"
+    }
+  }
+}

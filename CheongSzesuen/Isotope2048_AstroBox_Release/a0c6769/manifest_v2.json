@@ -1,0 +1,67 @@
+{
+  "item": {
+    "id": "cn.waijade.Isotope.2048",
+    "restype": "quick_app",
+    "name": "同位素2048",
+    "description": "同位素2048（Isotope2048）更有考验性和趣味性的2048，融合了化学元素的衰变特性的2048。合成你的元素，直到∞的出现。另外一些元素不稳定，在限定的步骤内无法完成合成就会消失，Try it！达到终极目标宇宙坍陷（∞）吧！",
+    "preview": [
+      "review/band/main-1.png",
+      "review/band/main-2.png",
+      "review/band/main-3.png",
+      "review/band/about-1.png",
+      "review/band/about-2.png",
+      "review/band-o66/o66-light-no.png",
+      "review/band-o66/o66-dark-no.png",
+      "review/band-o66/o66-about-no-1.png",
+      "review/band-o66/o66-about-no-2.png",
+      "review/band-o66/o66-dark-yes.png",
+      "review/band-o66/o66-light-yes.png",
+      "review/band-o66/o66-about-yes-1.png",
+      "review/band-o66/o66-about-yes-2.png",
+      "review/n67/n67-index-light-no.png",
+      "review/n67/n67-index-dark-no.png",
+      "review/n67/n67-about-no.png",
+      "review/n67/n67-index-light-yes.png",
+      "review/n67/n67-index-dark-yes.png",
+      "review/n67/n67-about-yes.png"
+    ],
+    "icon": "logo.png",
+    "cover": "head/Isotope2048.png",
+    "author": [
+      {
+        "name": "WaiJade",
+        "bindABAccount": true
+      },
+      {
+        "name": "JIFENG",
+        "bindABAccount": false
+      }
+    ]
+  },
+  "links": [
+    {
+      "icon": "",
+      "title": "开源地址",
+      "url": "https://github.com/CheongSzesuen/Isotope2048"
+    }
+  ],
+  "downloads": {
+    "xmb9": {
+      "version": "1.3.5",
+      "file_name": "rpk/band/cn.waijade.Isotope.2048.release.1.3.5.rpk"
+    },
+    "xmb10": {
+      "version": "1.3.5",
+      "file_name": "rpk/band-o66/cn.waijade.Isotope.2048.release.1.3.5.rpk"
+    },
+    "xmb10nfc": {
+      "version": "1.3.5",
+      "file_name": "rpk/band-o66/cn.waijade.Isotope.2048.release.1.3.5.rpk"
+    },
+    "xmb9p": {
+      "version": "1.3.5.2",
+      "file_name": "rpk/n67/cn.waijade.Isotope.2048.release.1.3.5.rpk"
+    }
+  },
+  "ext": {}
+}

@@ -1,0 +1,47 @@
+{
+  "item": {
+    "name": "狂欢烟火大师赛",
+    "description": "森空岛网页小游戏简陋复刻",
+    "preview": [
+      "preview.png",
+      "pic/band9.png",
+      "pic/band9pro.png",
+      "pic/band10.png",
+      "pic/rw5.png"
+    ],
+    "icon": "icon.png",
+    "source_url": "https://github.com/sf-yuzifu/firework-master",
+    "author": [
+      {
+        "name": "小鱼yuzifu",
+        "author_url": "https://yzf.moe"
+      }
+    ]
+  },
+  "downloads": {
+    "n66": {
+      "version": "1.0",
+      "file_name": "com.yzf.fireworkMaster.release.1.0.band9.rpk"
+    },
+    "n67": {
+      "version": "1.0",
+      "file_name": "com.yzf.fireworkMaster.release.1.0.band9pro.rpk"
+    },
+    "o65": {
+      "version": "1.0",
+      "file_name": "com.yzf.fireworkMaster.release.1.0.rw5.rpk"
+    },
+    "o65m": {
+      "version": "1.0",
+      "file_name": "com.yzf.fireworkMaster.release.1.0.rw5.rpk"
+    },
+    "o66nfc": {
+      "version": "1.0",
+      "file_name": "com.yzf.fireworkMaster.release.1.0.band10.rpk"
+    },
+    "o66": {
+      "version": "1.0",
+      "file_name": "com.yzf.fireworkMaster.release.1.0.band10.rpk"
+    }
+  }
+}

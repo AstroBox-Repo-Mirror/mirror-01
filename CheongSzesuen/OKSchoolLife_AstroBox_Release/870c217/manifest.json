@@ -1,0 +1,86 @@
+{
+  "item": {
+    "id": "cn.waijade.okschoollife",
+    "name": "OK School Life",
+    "description": "OK School Life 是一款文字类的校园生活模拟游戏，在游戏中，你会遇到各色的事件，做出你的选择，避免被开除而结束游戏！开源在GitHub，点击上方作者链接跳转GitHub。",
+    "preview": [
+      "review/NextGen/Band10-5-2026-04-18-12-36-21.png",
+      "review/NextGen/Band10-5-2026-04-18-12-36-36.png",
+      "review/NextGen/Band10-5-2026-04-18-12-36-55.png",
+      "review/NextGen/Band10-5-2026-04-18-12-37-05.png",
+      "review/NextGen/BandPro-5-2026-04-18-12-36-24.png",
+      "review/NextGen/BandPro-5-2026-04-18-12-36-39.png",
+      "review/NextGen/BandPro-5-2026-04-18-12-36-48.png",
+      "review/NextGen/BandPro-5-2026-04-18-12-37-24.png",
+      "review/NextGen/RW-5-2026-04-18-12-30-00.png",
+      "review/NextGen/RW-5-2026-04-18-12-30-41.png",
+      "review/NextGen/RW-5-2026-04-18-12-31-06.png",
+      "review/NextGen/RW-5-2026-04-18-12-31-31.png",
+      "review/NextGen/RW-5-2026-04-18-12-31-44.png",
+      "review/NextGen/RW-5-2026-04-18-12-32-03.png",
+      "review/NextGen/watch-5-2026-04-18-12-30-33.png",
+      "review/NextGen/watch-5-2026-04-18-12-30-54.png",
+      "review/NextGen/watch-5-2026-04-18-12-31-17.png",
+      "review/NextGen/watch-5-2026-04-18-12-31-27.png"
+    ],
+    "icon": "icon.png",
+    "cover": "https://raw.githubusercontent.com/CheongSzesuen/OKSchoolLife_AstroBox_Release/refs/heads/main/head/head%401x.png",
+    "source_url": "https://github.com/CheongSzesuen/OKSchoolLife_AstroBox_Release",
+    "author": [
+      {
+        "name": "WaiJade",
+        "author_url": "https://github.com/CheongSzesuen"
+      },
+      {
+        "name": "StillAlive",
+        "author_url": "https://github.com/still-alive-hhz"
+      }
+    ]
+  },
+  "downloads": {
+    "n66": {
+      "version": "1.0.0",
+      "file_name": "rpk/NextGen/cn.waijade.okschoollife.release.1.0.0.rpk"
+    },
+    "n67": {
+      "version": "1.0.0",
+      "file_name": "rpk/NextGen/cn.waijade.okschoollife.release.1.0.0.rpk"
+    },
+    "o66": {
+      "version": "1.0.0",
+      "file_name": "rpk/NextGen/cn.waijade.okschoollife.release.1.0.0.rpk"
+    },
+    "o66nfc": {
+      "version": "1.0.0",
+      "file_name": "rpk/NextGen/cn.waijade.okschoollife.release.1.0.0.rpk"
+    },
+    "n62": {
+      "version": "1.0.0",
+      "file_name": "rpk/NextGen/cn.waijade.okschoollife.release.1.0.0.rpk"
+    },
+    "o62": {
+      "version": "1.0.0",
+      "file_name": "rpk/NextGen/cn.waijade.okschoollife.release.1.0.0.rpk"
+    },
+    "o65": {
+      "version": "1.0.0",
+      "file_name": "rpk/NextGen/cn.waijade.okschoollife.release.1.0.0.rpk"
+    },
+    "p65": {
+      "version": "1.0.0",
+      "file_name": "rpk/NextGen/cn.waijade.okschoollife.release.1.0.0.rpk"
+    },
+    "o65m": {
+      "version": "1.0.0",
+      "file_name": "rpk/NextGen/cn.waijade.okschoollife.release.1.0.0.rpk"
+    },
+    "o62m": {
+      "version": "1.0.0",
+      "file_name": "rpk/NextGen/cn.waijade.okschoollife.release.1.0.0.rpk"
+    },
+    "p62": {
+      "version": "1.0.0",
+      "file_name": "rpk/NextGen/cn.waijade.okschoollife.release.1.0.0.rpk"
+    }
+  }
+}

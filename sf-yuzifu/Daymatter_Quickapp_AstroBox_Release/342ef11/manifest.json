@@ -1,0 +1,66 @@
+{
+  "item": {
+    "name": "倒数日 快应用",
+    "description": "在手环快应用查看重要日子的倒计时",
+    "preview": [
+      "more/band.png",
+      "more/pro.png",      
+      "more/rw.png",
+      "more/s.png"
+    ],
+    "icon": "icon.png",
+    "source_url": "https://github.com/sf-yuzifu/daymatter",
+    "author": [
+      {
+        "name": "小鱼yuzifu",
+        "author_url": "https://yzf.moe"
+      }
+    ]
+  },
+  "downloads": {
+    "n66": {
+      "version": "2.1",
+      "file_name": "com.yzf.daymatter.release.2.1.rpk"
+    },
+    "n67": {
+      "version": "2.1",
+      "file_name": "com.yzf.daymatter.release.2.1.rpk"
+    },
+    "o66": {
+      "version": "2.1",
+      "file_name": "com.yzf.daymatter.release.2.1.rpk"
+    },
+    "o66nfc": {
+      "version": "2.1",
+      "file_name": "com.yzf.daymatter.release.2.1.rpk"
+    },
+    "n62": {
+      "version": "2.1",
+      "file_name": "com.yzf.daymatter.release.2.1.rpk"
+    },
+    "o62": {
+      "version": "2.1",
+      "file_name": "com.yzf.daymatter.release.2.1.rpk"
+    },
+    "o62m": {
+      "version": "2.1",
+      "file_name": "com.yzf.daymatter.release.2.1.rpk"
+    },
+    "o65": {
+      "version": "2.1",
+      "file_name": "com.yzf.daymatter.release.2.1.rpk"
+    },
+    "p65": {
+      "version": "2.1",
+      "file_name": "com.yzf.daymatter.release.2.1.rpk"
+    },
+    "o65m": {
+      "version": "2.1",
+      "file_name": "com.yzf.daymatter.release.2.1.rpk"
+    },
+    "p62": {
+      "version": "2.1",
+      "file_name": "com.yzf.daymatter.release.2.1.rpk"
+    }
+  }
+}

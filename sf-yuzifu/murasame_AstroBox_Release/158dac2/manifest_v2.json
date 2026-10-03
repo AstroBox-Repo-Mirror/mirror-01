@@ -1,0 +1,58 @@
+{
+  "item": {
+    "id": "979825266003",
+    "restype": "watchface",
+    "name": "千恋＊万花 丛雨",
+    "description": "将千恋＊万花的丛雨带到小米手环上陪伴你吧！",
+    "preview": [
+      "media/pic1.png",
+      "media/pic2.png",
+      "media/pic3.png",
+      "media/pic4.png",
+      "media/pic5.png",
+      "media/pic6.png",
+      "media/pic7.png",
+      "media/pic8.png"
+    ],
+    "icon": "media/4495.jpg",
+    "cover": "media/容器 778 (1).png",
+    "author": [
+      {
+        "name": "sf-yuzifu",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "个人主页",
+      "url": "https://yzf.moe",
+      "icon": "house-line"
+    }
+  ],
+  "downloads": {
+    "xmb10": {
+      "version": "1.0",
+      "file_name": "downloads/band10.bin"
+    },
+    "xmb10nfc": {
+      "version": "1.0",
+      "file_name": "downloads/band10.bin"
+    },
+    "xmb9": {
+      "version": "1.0",
+      "file_name": "downloads/band9.face"
+    },
+    "xmb9p": {
+      "version": "1.0",
+      "file_name": "downloads/band9pro.face"
+    },
+    "xmrw6": {
+      "version": "1.0",
+      "file_name": "downloads/rw6.bin"
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}
