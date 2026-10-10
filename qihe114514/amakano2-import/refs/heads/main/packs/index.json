@@ -1,0 +1,66 @@
+{
+  "version": 2,
+  "packs": [
+    {
+      "file": "p00.pack",
+      "id": "公共资源",
+      "number": 0,
+      "title": "公共资源（先同步）",
+      "bytes": 5369366,
+      "minutes": 0,
+      "scenes": 0,
+      "dialogues": 0,
+      "kind": "resource"
+    },
+    {
+      "file": "p01.pack",
+      "id": "共通线",
+      "number": 1,
+      "title": "共通线 · 第1-5章",
+      "bytes": 404880,
+      "minutes": 362,
+      "scenes": 385,
+      "dialogues": 6991
+    },
+    {
+      "file": "p02.pack",
+      "id": "千岁线",
+      "number": 2,
+      "title": "千岁线 · 第6-8章",
+      "bytes": 2142298,
+      "minutes": 768,
+      "scenes": 1022,
+      "dialogues": 14700
+    },
+    {
+      "file": "p03.pack",
+      "id": "玲线",
+      "number": 3,
+      "title": "玲线 · 第9-11章",
+      "bytes": 2680393,
+      "minutes": 807,
+      "scenes": 709,
+      "dialogues": 15513
+    },
+    {
+      "file": "p04.pack",
+      "id": "结灯线",
+      "number": 4,
+      "title": "结灯线 · 第12-14章",
+      "bytes": 2939960,
+      "minutes": 860,
+      "scenes": 859,
+      "dialogues": 15542
+    },
+    {
+      "file": "p05.pack",
+      "id": "番外",
+      "number": 5,
+      "title": "番外 · 第15章",
+      "bytes": 224344,
+      "minutes": 58,
+      "scenes": 59,
+      "dialogues": 1034
+    }
+  ]
+}

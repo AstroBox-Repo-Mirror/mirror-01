@@ -1,0 +1,55 @@
+{
+  "item": {
+    "name": "WORDLE",
+    "description": "我想在学校玩WORDLE，于是它出现了",
+    "preview": [
+      "pre0.png",
+      "pre1.png",
+      "pre2.png",
+      "pre3.png"
+    ],
+    "icon": "icon.png",
+    "author": [{
+      "name": "沙文鱼Sarmon",
+      "author_url": "https://github.com/SarmonFish"
+    }]
+  },
+  "downloads": {
+    "n66": {
+      "version": "1.0",
+      "file_name": "WORDLE正式版1.0.rpk"
+    },
+    "n67": {
+      "version": "1.0",
+      "file_name": "WORDLE正式版1.0.rpk"
+    },
+    "o66": {
+      "version": "1.0",
+      "file_name": "WORDLE正式版1.0.rpk"
+    },
+    "o66nfc": {
+      "version": "1.0",
+      "file_name": "WORDLE正式版1.0.rpk"
+    },
+    "o65": {
+      "version": "1.0",
+      "file_name": "WORDLE正式版1.0.rpk"
+    },
+    "o65m": {
+      "version": "1.0",
+      "file_name": "WORDLE正式版1.0.rpk"
+    },
+    "o62": {
+      "version": "1.0",
+      "file_name": "WORDLE正式版1.0.rpk"
+    },
+    "o62m": {
+      "version": "1.0",
+      "file_name": "WORDLE正式版1.0.rpk"
+    },
+    "n62": {
+      "version": "1.0",
+      "file_name": "WORDLE正式版1.0.rpk"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "package": "com.cyberdice",
+  "name": "CyberDice",
+  "versionName": "1.2.0",
+  "versionCode": 11,
+  "minPlatformVersion": 1090,
+  "icon": "/common/images/icon-round-v2.png",
+  "deviceTypeList": ["watch"],
+  "features": [
+    { "name": "system.sensor" },
+    { "name": "system.brightness" },
+    { "name": "system.vibrator" },
+    { "name": "system.router" },
+    { "name": "system.storage" }
+  ],
+  "permissions": [],
+  "config": {
+    "logLevel": "debug",
+    "designWidth": 336
+  },
+  "display": {
+    "backgroundColor": "#000000",
+    "fullScreen": true
+  },
+  "router": {
+    "entry": "pages/home",
+    "pages": {
+      "pages/home": { "component": "home" },
+      "pages/dice-select": { "component": "dice-select" },
+      "pages/custom": { "component": "custom" },
+      "pages/history": { "component": "history" },
+      "pages/settings": { "component": "settings" },
+      "pages/theme": { "component": "theme" },
+      "pages/about": { "component": "about" }
+    }
+  }
+}

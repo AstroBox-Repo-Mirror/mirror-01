@@ -1,0 +1,55 @@
+{
+  "item": {
+    "name": "学习盒子-高中版",
+    "description": "V14 重要更新！ 修复重要问题。\n字体大小可调节，海量资源！可完全离线使用！\n超实用的学习工具！包含各科重要知识点，无水货！\n更新时注意不要卸载再重新下载，直接下载覆盖就行了。\n当前的功能列表如下:\n100+篇英语作文及翻译\n50+篇优秀语文作文\n3600个高考必背英语单词及翻译\n126条语文名言警句及解析\n化学元素及详细介绍\n中国宪法 最新版 （2018修正版）\n高中重点古诗词\n高中文言文必背内容\n高中必背物理公式\n高中必背数学公式\n高中必背历史事件\n高中重点生物考点\n高中重点政治考点\n高中重点地理考点",
+    "preview": [
+      "a1.png",
+      "a4.png",
+      "a5.png",
+      "a2.png",
+      "a3.png",
+      "a6.png",
+      "a7.png",
+      "a8.png",
+      "a9.png"
+    ],
+    "icon": "logo.png",
+    "source_url": "",
+    "author": [
+      {
+        "name": "HiXiaomi",
+        "author_url": "https://s.hi68.cn"
+      }
+    ]
+  },
+  "downloads": {
+    "n66": {
+      "version": "14.0",
+      "file_name": "14.rpk"
+    },
+    "o66": {
+      "version": "14.0",
+      "file_name": "14.rpk"
+    },
+    "o66nfc": {
+      "version": "14.0",
+      "file_name": "14.rpk"
+    },
+    "n67": {
+      "version": "14.0",
+      "file_name": "14.rpk"
+    },
+    "p65": {
+      "version": "14.0",
+      "file_name": "14.rpk"
+    },
+    "o65": {
+      "version": "14.0",
+      "file_name": "14.rpk"
+    },
+    "o65m": {
+      "version": "14.0",
+      "file_name": "14.rpk"
+    }
+  }
+}

@@ -1,0 +1,342 @@
+<style>
+@import '../../common/styles/style.css';
+
+/* 首页关键视觉完全归属本页：Vela 原生 Flex 布局，不依赖共享样式或 transform 位移。 */
+.home-dice-area {
+  flex: 1;
+  flex-shrink: 1;
+  min-height: 0;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.home-die-img {
+  width: 184px;
+  height: 184px;
+}
+
+.home-die-img-shake {
+  width: 184px;
+  height: 184px;
+  margin-left: -8px;
+}
+
+.home-result-wrap {
+  width: 276px;
+  height: 276px;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-result-ticks {
+  position: absolute;
+  width: 276px;
+  height: 276px;
+}
+
+.home-result-num {
+  font-size: 124px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.home-result-sub {
+  position: absolute;
+  margin-top: 136px;
+  font-size: 20px;
+  color: #9a9ca3;
+}
+
+.home-hint {
+  height: 48px;
+  font-size: 20px;
+  color: #9a9ca3;
+  text-align: center;
+  flex-shrink: 0;
+  margin: 0 16px 16px 16px;
+}
+
+@media (max-width: 120) {
+  .page {
+    position: relative;
+  }
+
+  .home-dice-area {
+    /* 提示在 Flex 流末端，骰子舞台可占用其余纵向安全空间。 */
+    margin-bottom: 0;
+  }
+
+  /* 胶囊屏顶部圆角留白更大：标题轻微下移，避免贴近屏幕边缘。 */
+  .home-topbar {
+    height: 72px;
+    padding: 12px 36px 0 36px;
+  }
+
+  .home-die-img,
+  .home-die-img-shake {
+    width: 164px;
+    height: 164px;
+  }
+
+  .home-die-img-shake {
+    margin-left: -7px;
+  }
+
+  .home-result-wrap,
+  .home-result-ticks {
+    width: 224px;
+    height: 224px;
+  }
+
+  .home-result-num {
+    font-size: 106px;
+  }
+
+  .home-result-sub {
+    margin-top: 108px;
+    font-size: 18px;
+  }
+
+  .home-hint {
+    height: 40px;
+    font-size: 17px;
+    /* 底部圆角与手势区较深，提示上移以保持完整可读。 */
+    margin: 0 28px 42px 28px;
+  }
+}
+</style>
+
+<template>
+  <div class="page" ontouchstart="onTouchStart" ontouchend="onTouchEnd">
+    <!-- 顶栏：应用名 + 时钟（概念图·首页） -->
+    <div class="topbar home-topbar">
+      <text class="app-name">CyberDice</text>
+    </div>
+
+    <!--
+      主骰子区域：直接使用页面元素，和浏览器模拟器保持同一树结构。
+      Vela 的自定义组件宿主不会自动继承 flex: 1，曾使骰子区域高度为 0。
+    -->
+    <div class="home-dice-area" onclick="onTapRoll">
+      <block if="{{ rollState === 'RESULT' }}">
+        <div class="home-result-wrap">
+          <!-- 主题色只用于结果环；最终点数始终以白色保证可读性。 -->
+          <block if="{{ accent === 'blue' }}"><image class="home-result-ticks" src="/common/images/result-ticks.png"></image></block>
+          <block if="{{ accent === 'green' }}"><image class="home-result-ticks" src="/common/images/result-ticks-green.png"></image></block>
+          <block if="{{ accent === 'purple' }}"><image class="home-result-ticks" src="/common/images/result-ticks-purple.png"></image></block>
+          <text class="home-result-num">{{ resultNum }}</text>
+          <text class="home-result-sub" show="{{ resultSub !== '' }}">{{ resultSub }}</text>
+        </div>
+      </block>
+      <block if="{{ rollState !== 'RESULT' }}">
+        <!-- Vela 对同一 image 的 class/src 连续更新偶发不重绘；交替节点可确保每帧提交。 -->
+        <block if="{{ jitter }}">
+          <image class="home-die-img-shake" src="{{ dieSrc }}"></image>
+        </block>
+        <block if="{{ !jitter }}">
+          <image class="home-die-img" src="{{ dieSrc }}"></image>
+        </block>
+      </block>
+    </div>
+
+    <!-- 功能页改由首页右滑进入；提示固定在页面下方。 -->
+    <text class="home-hint">{{ hint }}</text>
+  </div>
+</template>
+
+<script>
+const C = require('../../common/scripts/constants.js');
+const diceEngine = require('../../common/scripts/dice-engine.js');
+const sensorAdapterMod = require('../../common/scripts/sensor-adapter.js');
+const screenAdapterMod = require('../../common/scripts/screen-adapter.js');
+const touchSwipeMod = require('../../common/scripts/touch-swipe.js');
+const router = require('@system.router');
+
+const dieSrcOf = (v) => '/common/images/dice/die-' + v + '.png';
+const shakeSrcOf = (frame) => '/common/images/dice/shake-' + frame + '.png';
+const READY_SRC = '/common/images/dice/ready-reference.png';
+
+export default {
+  data: {
+    rollState: 'READY',
+    dieSrc: READY_SRC,
+    jitter: false,
+    sensorFallback: false,
+    hint: '摇一摇手腕 或 点击屏幕',
+    modeLabel: '1D6',
+    resultNum: '',
+    resultSub: '',
+    accent: 'blue',
+  },
+
+  onInit() {
+    this.sensor = sensorAdapterMod.createSensorAdapter();
+    this.screen = screenAdapterMod.createScreenAdapter();
+    this._animTimer = null;
+    this._tick = 0;
+    this._ignoreTapUntil = 0;
+    this.gesture = touchSwipeMod.createTouchSwipe((direction) => this._onGesture(direction));
+    this._unsub = null;
+    try {
+      this.app = this.$app.$def;
+      this._unsub = this.app.store.on((what) => {
+        if (what === 'rollState' || what === 'mode' || what === 'settings') {
+          this.syncFromStore();
+        }
+      });
+      this.syncFromStore();
+    } catch (err) {
+      // 平台的应用级服务不可用时，保留静态首页，避免整屏空白。
+      console.error('home init failed: ' + String(err));
+      this.sensorFallback = true;
+      this.hint = '点击屏幕掷骰';
+    }
+  },
+
+  onShow() {
+    // 首页前台保持屏幕常亮，避免息屏后应用转后台、加速度计回调停止。
+    this.screen.keepOn();
+    // 恢复前台：重置 Detector 并重新订阅传感器（第 14 节）
+    this.sensorFallback = false;
+    if (!this.app) {
+      this.sensorFallback = true;
+      this.hint = '点击屏幕掷骰';
+      return;
+    }
+    this.app.detector.reset();
+    this.sensor.start(
+      (s) => this._onSample(s),
+      (e) => this._onSensorError(e)
+    );
+    this.syncFromStore();
+  },
+
+  onHide() {
+    // 离开首页：恢复系统自动熄屏，取消订阅、动画及未完成掷骰（FR-009 / NFR-05）。
+    this.screen.release();
+    this.sensor.stop();
+    this._stopAnim();
+    if (this.app) {
+      this.app.detector.reset();
+      this.app.controller.cancel();
+    }
+  },
+
+  onDestroy() {
+    this.screen.release();
+    this.sensor.stop();
+    this._stopAnim();
+    if (this.app && this.app.controller) {
+      this.app.controller.cancel();
+    }
+    if (this._unsub) {
+      this._unsub();
+    }
+  },
+
+  // ---- 交互 ----
+
+  onTapRoll() {
+    if (Date.now() < this._ignoreTapUntil) {
+      return;
+    }
+    this.app.controller.trigger('tap');
+  },
+
+  onTouchStart(event) {
+    this.gesture.startTouch(event);
+  },
+
+  onTouchEnd(event) {
+    this.gesture.endTouch(event);
+  },
+
+  _onGesture(direction) {
+    if (this.rollState !== C.STATE_READY) {
+      return;
+    }
+    // 手势后的 click 不应同时触发一次掷骰。
+    this._ignoreTapUntil = Date.now() + 250;
+    // 左→右返回；右→左进入功能，下→上直达历史记录。
+    if (direction === 'left') {
+      router.push({ uri: '/pages/dice-select' });
+    } else if (direction === 'up') {
+      router.push({ uri: '/pages/history' });
+    } else if (direction === 'right') {
+      router.back();
+    }
+  },
+
+  // ---- 传感器 ----
+
+  _onSample(sample) {
+    const ev = this.app.detector.pushSample(sample);
+    if (ev === 'SHAKE_START') {
+      this.app.controller.onShakeStart();
+    } else if (ev === 'SHAKE_END') {
+      this.app.controller.onShakeEnd();
+    }
+  },
+
+  _onSensorError(err) {
+    console.error('sensor fail: ' + JSON.stringify(err));
+    this.sensorFallback = true;
+    // 摇骰途中传感器异常时不能等待永远不会到来的 SHAKE_END；取消流程并保留点击兜底。
+    if (this.app && this.app.controller) {
+      this.app.controller.cancel();
+    }
+    this.syncFromStore();
+  },
+
+  // ---- 渲染同步 ----
+
+  syncFromStore() {
+    const st = this.app.store.getState();
+    this.modeLabel = diceEngine.modeLabel(st.mode);
+    this.rollState = st.rollState;
+    this.accent = st.settings && st.settings.accent ? st.settings.accent : 'blue';
+
+    if (st.rollState === 'RESULT' && st.rollCtx && st.rollCtx.result) {
+      this._stopAnim();
+      const r = st.rollCtx.result;
+      // 结果态保持概念图中的单一大号结果，避免在手环上增加次级阅读负担。
+      this.resultNum = String(r.dice.length === 1 ? r.dice[0] : r.total);
+      this.resultSub = '';
+      this.dieSrc = dieSrcOf(r.dice[0]);
+      this.hint = '点击屏幕 或 摇一摇手腕';
+    } else if (st.rollState === 'SHAKING' || st.rollState === 'SETTLING') {
+      this._startAnim();
+      this.hint = '摇动中…';
+    } else {
+      this._stopAnim();
+      this.jitter = false;
+      this.dieSrc = READY_SRC;
+      this.hint = this.sensorFallback ? '传感器不可用 · 点击掷骰' : '摇一摇手腕 或 点击掷骰';
+    }
+  },
+
+  _startAnim() {
+    if (this._animTimer) {
+      return;
+    }
+    if (!this.app.store.getState().settings.animation) {
+      return; // 关闭动画效果：保持静态骰面直到结果
+    }
+    this._animTimer = setInterval(() => {
+      this._tick += 1;
+      this.jitter = this._tick % 2 === 0;
+      // 只切换预渲染残影帧；最终结果仅在 RESULT 进入时由 DiceEngine 生成。
+      this.dieSrc = shakeSrcOf(this._tick % 4 + 1);
+    }, C.ANIM_INTERVAL_MS);
+  },
+
+  _stopAnim() {
+    if (this._animTimer) {
+      clearInterval(this._animTimer);
+      this._animTimer = null;
+    }
+  },
+
+};
+</script>

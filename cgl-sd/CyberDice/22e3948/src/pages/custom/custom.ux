@@ -1,0 +1,129 @@
+<style>
+@import '../../common/styles/style.css';
+</style>
+
+<template>
+  <div class="page" ontouchstart="onTouchStart" ontouchend="onTouchEnd">
+    <div class="topbar">
+      <text class="nav-title">自定义骰子</text>
+    </div>
+
+    <div class="list">
+      <div class="stepper-row">
+        <text class="stepper-label">骰子数量</text>
+        <div class="stepper-ctrl">
+          <div class="stepper-btn" onclick="decCount">
+            <text class="stepper-btn-glyph">−</text>
+          </div>
+          <text class="stepper-value">{{ count }}</text>
+          <div class="stepper-btn" onclick="incCount">
+            <text class="stepper-btn-glyph">＋</text>
+          </div>
+        </div>
+      </div>
+
+      <div class="stepper-row">
+        <text class="stepper-label">骰子面数</text>
+        <div class="stepper-ctrl">
+          <div class="stepper-btn" onclick="prevSides">
+            <text class="stepper-btn-glyph">−</text>
+          </div>
+          <text class="stepper-value">D{{ sides }}</text>
+          <div class="stepper-btn" onclick="nextSides">
+            <text class="stepper-btn-glyph">＋</text>
+          </div>
+        </div>
+      </div>
+
+      <text class="preview-label">当前模式：{{ preview }}</text>
+
+      <block if="{{ accent === 'blue' }}"><div class="btn-primary" onclick="confirm"><text class="btn-primary-text">使用这个骰子</text></div></block>
+      <block if="{{ accent === 'green' }}"><div class="btn-primary theme-green" onclick="confirm"><text class="btn-primary-text">使用这个骰子</text></div></block>
+      <block if="{{ accent === 'purple' }}"><div class="btn-primary theme-purple" onclick="confirm"><text class="btn-primary-text">使用这个骰子</text></div></block>
+    </div>
+  </div>
+</template>
+
+<script>
+const router = require('@system.router');
+const touchSwipeMod = require('../../common/scripts/touch-swipe.js');
+
+const SIDE_OPTIONS = [4, 6, 8, 12, 20, 100];
+
+export default {
+  data: {
+    count: 2,
+    sides: 6,
+    sideIndex: 1,
+    preview: '2D6',
+    accent: 'blue',
+  },
+
+  onInit() {
+    this.app = this.$app.$def;
+    this.gesture = touchSwipeMod.createTouchSwipe((direction) => {
+      if (direction === 'right') router.back();
+    });
+    this._unsub = this.app.store.on((what) => {
+      if (what === 'settings' || what === 'load') {
+        this.accent = this.app.store.getState().settings.accent;
+      }
+    });
+    this.accent = this.app.store.getState().settings.accent;
+    // 已是自定义模式时回显
+    const mode = this.app.store.getState().mode;
+    if (mode && typeof mode === 'object') {
+      this.count = mode.count;
+      const i = SIDE_OPTIONS.indexOf(mode.sides);
+      this.sideIndex = i >= 0 ? i : 1;
+      this.sides = SIDE_OPTIONS[this.sideIndex];
+      this._syncPreview();
+    }
+  },
+
+  onDestroy() {
+    if (this._unsub) this._unsub();
+  },
+
+  _syncPreview() {
+    this.preview = this.count + 'D' + this.sides;
+  },
+
+  decCount() {
+    if (this.count > 1) {
+      this.count -= 1;
+      this._syncPreview();
+    }
+  },
+  incCount() {
+    if (this.count < 6) {
+      this.count += 1;
+      this._syncPreview();
+    }
+  },
+  prevSides() {
+    this.sideIndex = (this.sideIndex + SIDE_OPTIONS.length - 1) % SIDE_OPTIONS.length;
+    this.sides = SIDE_OPTIONS[this.sideIndex];
+    this._syncPreview();
+  },
+  nextSides() {
+    this.sideIndex = (this.sideIndex + 1) % SIDE_OPTIONS.length;
+    this.sides = SIDE_OPTIONS[this.sideIndex];
+    this._syncPreview();
+  },
+
+  confirm() {
+    this.app.selectMode({ count: this.count, sides: this.sides });
+    router.back();
+  },
+
+  onTouchStart(event) {
+    this.gesture.startTouch(event);
+  },
+
+  onTouchEnd(event) {
+    this.gesture.endTouch(event);
+  },
+
+};
+</script>

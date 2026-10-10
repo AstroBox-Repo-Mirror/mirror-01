@@ -1,0 +1,50 @@
+{
+  "item": {
+    "id": "com.tinyshadows.band",
+    "restype": "quick_app",
+    "name": "小小的身影，重叠的内心",
+    "description": "小米手环非官方移植的《小小的身影，重叠的内心》，现免费提供给大家游玩，欢迎大家的游玩，有bug请及时指出。\n\n>故事梗概：一个周六下午，林默在平时「专属」的座位上，遇见了一个趴在桌上用平板画画的小女孩。 一支滚落到脚边的触控笔，让两个人第一次说上了话。从咖啡馆到漫展，从直播间到日常的一来一往——小小的身影，一点一点重叠进彼此的生活里。\n\n**源代码可任由大家fork（可以的话求pr和star），感谢大家支持**",
+    "preview": [
+      "media/宣传拼图-1800x1200.jpg",
+      "media/01-主页.png",
+      "media/02-正文·立绘.png",
+      "media/03-正文·选项.png",
+      "media/04-正文·CG.png",
+      "media/05-CG鉴赏.png",
+      "media/06-CG鉴赏·大图.png"
+    ],
+    "icon": "media/icon.png",
+    "cover": "media/cover-1800x1200-简洁.jpg",
+    "author": [
+      {
+        "name": "MC",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "Github源码",
+      "url": "https://github.com/mcpotato1123/tinyshadows-band",
+      "icon": "github-logo"
+    },
+    {
+      "title": "QQ交流群",
+      "url": "https://qun.qq.com/universal-share/share?ac=1&authKey=GIA8Op10KxVj0XcOAsNTIg0PbrTMEbiypWzlPZ21oQblPzY5Ov9PepDRFSEEGaot&busi_data=eyJncm91cENvZGUiOiI2NjE1MzU1OTYiLCJ0b2tlbiI6InlsZDduQ21PbGcxYXEybldJWXd4a0JERmRlTDNpMzQ4UGhSVHN0Q01JSDBXS3g5NVFCeDFNTUdkTVZSQ3F5c1UiLCJ1aW4iOiIyNDM2MzcwMDgxIn0%3D&data=F8WMjKCp2u3zdj7CWvMPiR-VIbsW0199rYrXBC6td8uJ-DEEb0InUVHG3xSYNZAqgmV6s0YVxQhcPnGqVq6LCA&svctype=4&tempid=h5_group_info",
+      "icon": "chat"
+    },
+    {
+      "title": "项目主页",
+      "url": "https://mcpotato1123.github.io/",
+      "icon": "globe"
+    }
+  ],
+  "downloads": {
+    "xmb9p": {
+      "version": "2.5.2",
+      "file_name": "downloads/com.tinyshadows.band.release.2.5.2.rpk",
+      "versionCode": 50
+    }
+  },
+  "ext": {}
+}

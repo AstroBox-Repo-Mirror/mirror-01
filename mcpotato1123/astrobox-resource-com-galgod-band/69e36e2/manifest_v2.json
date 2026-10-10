@@ -1,0 +1,83 @@
+{
+  "item": {
+    "id": "com.galgod.band",
+    "restype": "quick_app",
+    "name": "GalGod",
+    "description": "小米手环非官方移植的Galgod（想成为Galgame领域大神！！！），现免费提供给大家游玩，欢迎大家的游玩，有bug请及时指出\n\n>故事梗概：在一个由「天选试」决定一切的世界里——国家每三年举办一次天选试，一次录取一千人， 考核内容全部是美少女游戏（Galgame）。通过者握有制定规则、影响国运的权力。故事从再平凡不过的上学路开始，很快就撞上「天选试」这道门槛—— 高考与天选试、现实与游戏、孤独与理解，全都压在这一个选择上。随着校园日常（间章、茶餐厅、街道、雨夜）的推进，他渐渐意识到： 自己正身处一部「现实的 Galgame」之中，而小涟就像是那个「真女主」。可身为废萌党，他偏偏认定——废萌不该有钦定的真女主。 所有女主，都应该是平等的。于是「选择」这两个字，变得越来越沉重。\n\n**源代码可任由大家fork（可以的话求pr和star），感谢大家支持**",
+    "preview": [
+      "media/宣传拼图-1800x1200.jpg",
+      "media/05-主页.png",
+      "media/01-正文.png",
+      "media/02-分支选项.png",
+      "media/03-CG插入.png",
+      "media/07-CG鉴赏.png",
+      "media/08-CG查看.png"
+    ],
+    "icon": "media/icon.png",
+    "cover": "media/1.png",
+    "author": [
+      {
+        "name": "MC",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "GitHub源码",
+      "url": "https://github.com/mcpotato1123/galgod-band",
+      "icon": "github-logo"
+    },
+    {
+      "title": "QQ交流群",
+      "url": "https://qun.qq.com/universal-share/share?ac=1&authKey=GIA8Op10KxVj0XcOAsNTIg0PbrTMEbiypWzlPZ21oQblPzY5Ov9PepDRFSEEGaot&busi_data=eyJncm91cENvZGUiOiI2NjE1MzU1OTYiLCJ0b2tlbiI6InlsZDduQ21PbGcxYXEybldJWXd4a0JERmRlTDNpMzQ4UGhSVHN0Q01JSDBXS3g5NVFCeDFNTUdkTVZSQ3F5c1UiLCJ1aW4iOiIyNDM2MzcwMDgxIn0%3D&data=F8WMjKCp2u3zdj7CWvMPiR-VIbsW0199rYrXBC6td8uJ-DEEb0InUVHG3xSYNZAqgmV6s0YVxQhcPnGqVq6LCA&svctype=4&tempid=h5_group_info",
+      "icon": "chat"
+    },
+    {
+      "title": "项目主页",
+      "url": "https://mcpotato1123.github.io/",
+      "icon": "globe"
+    }
+  ],
+  "downloads": {
+    "xmb9p": {
+      "version": "2.5.2",
+      "file_name": "downloads/com.galgod.band.release.2.5.2.rpk",
+      "versionCode": 50,
+      "updatelogs": [
+        {
+          "version": "2.5.2",
+          "content": "1.长按屏幕“隐藏ui”功能不再默认开启\n2.菜单里增加了快退按钮，并支持返回上一句的手势操作（右滑）\n3.修复了一些bug，并喝了一盒野生狗奶喵~\nPS：上课好累啊。（悲）"
+        },
+        {
+          "version": "2.5.1",
+          "content": "1.更改打开菜单方式为下滑，感谢群友们的建议\n2.修复了人物和背景不匹配的bug，并吃了一盒百奇饼干喵~\n3.增加了某个神秘彩蛋，感谢Yui猫娘的提议（我爱小鱼干，喵）"
+        },
+        {
+          "version": "2.4",
+          "content": "1.支持“长按游戏画面隐藏UI”功能的关闭，避免误触，感谢群友们的建议\n2.“打开菜单”的图标更大了，能够更好点击了\n3.修复了一些bug，并喝了一罐魔爪喵~\n4.增加对小米手环10Pro的支持"
+        },
+        {
+          "version": "2.3",
+          "content": "该版本为大版本更新，但不更新不影响正常游玩，且包体体积增加过大，更新请量力而为。\n1.更新对话背景，现为全景播放，因此包体积增大\n2.cg鉴赏现支持拖动，包体积增大\n3.支持屏幕常亮功能了\n4.更新了应用图标和主界面背景\n5.修复了一些bug，并吃了一包百奇饼干喵~"
+        }
+      ]
+    },
+    "xmb10p": {
+      "version": "2.5.2",
+      "file_name": "downloads/com.galgod.band.release.2.5.2.rpk",
+      "versionCode": 50,
+      "updatelogs": [
+        {
+          "version": "2.5.2",
+          "content": "1.长按屏幕“隐藏ui”功能不再默认开启\n2.菜单里增加了快退按钮，并支持返回上一句的手势操作（右滑）\n3.修复了一些bug，并喝了一盒野生狗奶喵~\nPS：上课好累啊。（悲）"
+        },
+        {
+          "version": "2.5.1",
+          "content": "1.更改打开菜单方式为下滑，感谢群友们的建议\n2.修复了人物和背景不匹配的bug，并吃了一盒百奇饼干喵~\n3.增加了某个神秘彩蛋，感谢Yui猫娘的提议（我爱小鱼干，喵）"
+        }
+      ]
+    }
+  },
+  "ext": {}
+}

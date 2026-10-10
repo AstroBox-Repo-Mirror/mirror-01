@@ -1,0 +1,31 @@
+{
+  "item": {
+    "name": "动感飞车",
+    "description": "一款体感游戏，通过倾斜手环控制车辆左右移动，在飞驰的赛道上灵活避开障碍物、收集金币，得分！利用小米手环的加速度传感器实现操控（倾斜设备控制车辆左右移动），将硬件能力与游戏玩法深度融合，更具沉浸感。支持断点续玩，自动记录最高分，传感器校准机制，激励反馈，兼顾趣味性、易用性和稳定性。",
+    "preview": [
+      "1.jpg"
+    ],
+    "icon": "logo.png",
+    "source_url": "",
+    "author": [
+      {
+        "name": "HiXiaomi",
+        "author_url": "https://aiqming.xyz"
+      }
+    ]
+  },
+  "downloads": {
+    "n66": {
+      "version": "1.0.0",
+      "file_name": "n66.bin"
+    },
+    "o66": {
+      "version": "1.0.0",
+      "file_name": "n66.bin"
+    },
+    "o66nfc": {
+      "version": "1.0.0",
+      "file_name": "n66.bin"
+    }
+  }
+}

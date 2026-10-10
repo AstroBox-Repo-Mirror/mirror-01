@@ -1,0 +1,48 @@
+{
+  "item": {
+    "name": "SMusic",
+    "description": "更美的音乐播放器",
+    "preview": [
+      "rwplay.png",
+      "rwgecim.png",
+      "rwgecia.png",
+      "rwgecis.png",
+      "rwset.png",
+      "splay.png",
+      "sgecia.png",
+      "sgecis.png",
+      "smenu.png"
+    ],
+    "icon": "icon.png",
+    "author": [{
+      "name": "沙文鱼Sarmon",
+      "author_url": "https://github.com/SarmonFish"
+    }]
+  },
+  "downloads": {
+    "n62": {
+      "version": "1.1.0",
+      "file_name": "SMusic1.1.0r.rpk"
+    },
+    "o62": {
+      "version": "1.1.0",
+      "file_name": "SMusic1.1.0r.rpk"
+    },
+    "o65": {
+      "version": "1.1.0",
+      "file_name": "SMusic1.1.0r.rpk"
+    },
+    "o65m": {
+      "version": "1.1.0",
+      "file_name": "SMusic1.1.0r.rpk"
+    },
+    "p65": {
+      "version": "1.1.0",
+      "file_name": "SMusic1.1.0r.rpk"
+    },
+    "o62m": {
+      "version": "1.1.0",
+      "file_name": "SMusic1.1.0r.rpk"
+    }
+  }
+}

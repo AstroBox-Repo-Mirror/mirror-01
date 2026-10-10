@@ -1,0 +1,54 @@
+<script>
+/**
+ * 应用级单例：store（设置/历史/模式/掷骰状态广播）+ RollController。
+ * 控制器放在 app 层，页面导航（选骰子/设置/历史）不会中断掷骰流程。
+ * 传感器订阅仍归 home 页生命周期管（NFR-05）。
+ */
+const storeMod = require('./common/scripts/store.js');
+const storageMod = require('./common/scripts/storage-adapter.js');
+const feedbackMod = require('./common/scripts/feedback-service.js');
+const detectorMod = require('./common/scripts/shake-detector.js');
+const controllerMod = require('./common/scripts/roll-controller.js');
+const diceEngine = require('./common/scripts/dice-engine.js');
+
+export default {
+  onCreate() {
+    this.store = storeMod.createStore(storageMod.createStorageAdapter());
+    this.feedback = feedbackMod.createFeedbackService();
+    this.detector = detectorMod.createShakeDetector();
+    this.controller = controllerMod.createRollController({
+      diceEngine: diceEngine,
+      feedback: {
+        vibrate: (mode) => {
+          if (this.store.getState().settings.vibration) {
+            return this.feedback.vibrate(mode);
+          }
+          return false;
+        },
+      },
+      onStateChange: (s, ctx) => {
+        this.store.setRollState(s, ctx);
+        if (s === 'RESULT' && ctx && ctx.result) {
+          this.store.pushHistory(ctx.result, this.store.getState().mode);
+        }
+      },
+    });
+    this.store.load(() => {
+      this.controller.setMode(this.store.getState().mode);
+    });
+  },
+
+  /** 选择骰子：写 store 并同步控制器（READY 时才允许，见 7.3 节） */
+  selectMode(mode) {
+    if (!this.controller.setMode(mode)) {
+      return false;
+    }
+    this.store.setMode(mode);
+    return true;
+  },
+
+  onDestroy() {
+    this.controller.destroy();
+  },
+};
+</script>

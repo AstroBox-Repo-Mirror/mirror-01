@@ -1,0 +1,38 @@
+{
+  "item": {
+    "name": "趣摇盲盒",
+    "description": "超有趣的环间工具！11大趣味功能，让每一次摇动都充满期待，解锁生活中的小确幸时刻。为生活增加一丝乐趣！支持摇一摇生成结果,可免费试用！",
+    "preview": [
+      "1.jpg",
+      "s1.png",
+      "s2.png",
+      "s3.png"
+    ],
+    "icon": "logo.png",
+    "source_url": "",
+    "author": [
+      {
+        "name": "HiXiaomi",
+        "author_url": "https://aiqming.xyz"
+      }
+    ]
+  },
+  "downloads": {
+    "n66": {
+      "version": "2.0",
+      "file_name": "n66.bin"
+    },
+    "n67": {
+      "version": "2.0",
+      "file_name": "n67.rpk"
+    },
+    "o66": {
+      "version": "2.0",
+      "file_name": "n66.bin"
+    },
+    "o66nfc": {
+      "version": "2.0",
+      "file_name": "n66.bin"
+    }
+  }
+}

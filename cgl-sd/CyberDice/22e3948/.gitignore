@@ -1,0 +1,25 @@
+# macOS metadata
+.DS_Store
+
+# Local editor and package-manager state
+.vscode/
+node_modules/
+.aiot/
+.vela/
+AGENTS.md
+
+# Local build outputs
+build/
+dist/
+*.rpk
+
+# Signing materials: retain only the directory placeholder in Git.
+sign/*
+!sign/.gitkeep
+*.pem
+
+# Local temporary material: tests, requirements, change history and diagnostics
+tmp/
+
+# Logs and AIoT local diagnostics
+*.log

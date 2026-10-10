@@ -1,0 +1,58 @@
+{
+  "item": {
+    "id": "com.cyberdice",
+    "restype": "quick_app",
+    "name": "CyberDice",
+    "description": "一个赛博骰子程序，用于线下聚会娱乐，按照顺序排排坐，比大小吃吃乐。",
+    "preview": [
+      "media/screenshot-home-ready.png",
+      "media/screenshot-home-result.png",
+      "media/screenshot-features.png",
+      "media/screenshot-settings.png",
+      "media/screenshot-about.png"
+    ],
+    "icon": "media/cyberdice-app-icon.png",
+    "cover": "media/cyberdice-cover.png",
+    "author": [
+      {
+        "name": "peter_cao",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "CyberDice",
+      "url": "https://github.com/cgl-sd/CyberDice",
+      "icon": "GithubLogo"
+    }
+  ],
+  "downloads": {
+    "xmb9": {
+      "version": "1.2.0",
+      "file_name": "downloads/com.cyberdice.release.1.2.0.rpk",
+      "versionCode": 11
+    },
+    "xmb10nfc": {
+      "version": "1.2.0",
+      "file_name": "downloads/com.cyberdice.release.1.2.0.rpk",
+      "versionCode": 11
+    },
+    "xmb10": {
+      "version": "1.2.0",
+      "file_name": "downloads/com.cyberdice.release.1.2.0.rpk",
+      "versionCode": 11
+    },
+    "xmb10p": {
+      "version": "1.2.0",
+      "file_name": "downloads/com.cyberdice.release.1.2.0.rpk",
+      "versionCode": 11
+    },
+    "xmb9p": {
+      "version": "1.2.0",
+      "file_name": "downloads/com.cyberdice.release.1.2.0.rpk",
+      "versionCode": 11
+    }
+  },
+  "ext": {}
+}

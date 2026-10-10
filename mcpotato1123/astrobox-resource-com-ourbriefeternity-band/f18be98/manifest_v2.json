@@ -1,0 +1,49 @@
+{
+  "item": {
+    "id": "com.ourbriefeternity.band",
+    "restype": "quick_app",
+    "name": "永恒与星辰与日常",
+    "description": "小米手环非官方移植的《永恒与星辰与日常》，现免费提供给大家游玩，欢迎大家的游玩，有bug请及时指出。\n\n>故事梗概：林小凑是个普通上班族，做的是恐怖游戏的音频验收。加完班回到家已经快十一点——屋子里还亮着灯。三个人（林小凑，时语和星弥）住在同一屋檐下，日子被拆成一段段的日常：一起打游戏、一起做饭、一起在小区里散步、一起看城市的灯火。可是随着相处越久，有些话就越来越难说出口——是继续把彼此当成「住在一起的人」，还是承认心里那点不一样的东西？选择落在小凑身上，而答案会把他们带向不同的以后。\n\n**源代码可任由大家fork（可以的话求pr和star），感谢大家的支持**",
+    "preview": [
+      "media/promo-1800x1200.png",
+      "media/shot-5.png",
+      "media/shot-1.png",
+      "media/shot-2.png",
+      "media/shot-4.png",
+      "media/shot-3.png"
+    ],
+    "icon": "media/icon.png",
+    "cover": "media/cover-1500x1000.jpg",
+    "author": [
+      {
+        "name": "MC",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "Github源码",
+      "url": "https://github.com/mcpotato1123/ourbriefeternity-band",
+      "icon": "github-logo"
+    },
+    {
+      "title": "QQ交流群",
+      "url": "https://qun.qq.com/universal-share/share?ac=1&authKey=GIA8Op10KxVj0XcOAsNTIg0PbrTMEbiypWzlPZ21oQblPzY5Ov9PepDRFSEEGaot&busi_data=eyJncm91cENvZGUiOiI2NjE1MzU1OTYiLCJ0b2tlbiI6InlsZDduQ21PbGcxYXEybldJWXd4a0JERmRlTDNpMzQ4UGhSVHN0Q01JSDBXS3g5NVFCeDFNTUdkTVZSQ3F5c1UiLCJ1aW4iOiIyNDM2MzcwMDgxIn0=&data=F8WMjKCp2u3zdj7CWvMPiR-VIbsW0199rYrXBC6td8uJ-DEEb0InUVHG3xSYNZAqgmV6s0YVxQhcPnGqVq6LCA&svctype=4&tempid=h5_group_info",
+      "icon": "chat"
+    },
+    {
+      "title": "项目主页",
+      "url": "https://mcpotato1123.github.io/",
+      "icon": "globe"
+    }
+  ],
+  "downloads": {
+    "xmb9p": {
+      "version": "2.5.2",
+      "file_name": "downloads/com.ourbriefeternity.band.release.2.5.2.rpk",
+      "versionCode": 52
+    }
+  },
+  "ext": {}
+}

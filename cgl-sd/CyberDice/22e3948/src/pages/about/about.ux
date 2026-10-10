@@ -1,0 +1,46 @@
+<style>
+@import '../../common/styles/style.css';
+</style>
+
+<template>
+  <div class="page" ontouchstart="onTouchStart" ontouchend="onTouchEnd">
+    <div class="topbar">
+      <text class="nav-title">关于</text>
+    </div>
+
+    <!-- 概念图·关于页面 -->
+    <div class="center-box">
+      <image class="about-glyph" src="/common/images/dice/ready-reference.png"></image>
+      <text class="about-name">CyberDice</text>
+      <text class="about-version">版本 v{{ version }}</text>
+      <text class="about-tagline">摇一摇，随时掷骰</text>
+    </div>
+  </div>
+</template>
+
+<script>
+const C = require('../../common/scripts/constants.js');
+const router = require('@system.router');
+const touchSwipeMod = require('../../common/scripts/touch-swipe.js');
+
+export default {
+  data: {
+    version: C.VERSION,
+  },
+
+  onInit() {
+    this.gesture = touchSwipeMod.createTouchSwipe((direction) => {
+      if (direction === 'right') router.back();
+    });
+  },
+
+  onTouchStart(event) {
+    this.gesture.startTouch(event);
+  },
+
+  onTouchEnd(event) {
+    this.gesture.endTouch(event);
+  },
+
+};
+</script>

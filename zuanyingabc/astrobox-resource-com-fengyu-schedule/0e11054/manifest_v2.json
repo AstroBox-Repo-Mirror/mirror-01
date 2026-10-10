@@ -1,0 +1,37 @@
+{
+  "item": {
+    "id": "com.fengyu.schedule",
+    "restype": "quick_app",
+    "name": "风屿课程表",
+    "description": "一款简洁免费的课程表，适配初高中课程 目前已更新国庆主题版本",
+    "preview": [
+      "media/20260831135726_2.webp",
+      "media/20260831135949_5.webp",
+      "media/20260831140152_6.webp",
+      "media/20260906210054_9.png",
+      "media/20261002184210_3.png"
+    ],
+    "icon": "media/cropped_circle_image_resized.png",
+    "cover": "media/头图_compressed.png",
+    "author": [
+      {
+        "name": "bandbbs_4503788",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [],
+  "downloads": {
+    "xmb10p": {
+      "version": "1.3.1",
+      "file_name": "downloads/com.fengyu.schedule.release.1.3.rpk",
+      "versionCode": 5
+    },
+    "xmb9p": {
+      "version": "1.3.1",
+      "file_name": "downloads/com.fengyu.schedule.release.1.3.rpk",
+      "versionCode": 5
+    }
+  },
+  "ext": {}
+}

@@ -1,0 +1,128 @@
+<style>
+@import '../../common/styles/style.css';
+
+.history-nav-title {
+  font-size: 30px;
+}
+
+.history-nav-action {
+  font-size: 26px;
+}
+
+.history-action-green {
+  color: #2fbf6b;
+}
+
+.history-action-purple {
+  color: #8a5cf6;
+}
+
+@media (max-width: 120) {
+  .history-nav-title {
+    font-size: 27px;
+  }
+
+  .history-nav-action {
+    font-size: 23px;
+  }
+}
+</style>
+
+<template>
+  <div class="page" ontouchstart="onTouchStart" ontouchend="onTouchEnd">
+    <div class="topbar">
+      <text class="nav-title history-nav-title">历史记录</text>
+      <block if="{{ items.length > 0 && accent === 'blue' }}">
+        <text class="nav-action history-nav-action" onclick="clearAll">清空</text>
+      </block>
+      <block if="{{ items.length > 0 && accent === 'green' }}"><text class="nav-action history-nav-action history-action-green" onclick="clearAll">清空</text></block>
+      <block if="{{ items.length > 0 && accent === 'purple' }}"><text class="nav-action history-nav-action history-action-purple" onclick="clearAll">清空</text></block>
+    </div>
+
+    <!-- 数据读取完成前不渲染空状态，避免上滑进入时闪现“暂无记录”。 -->
+    <block if="{{ historyReady && items.length === 0 }}">
+      <div class="center-box">
+        <image class="empty-glyph" src="/common/images/glyph-doc.png"></image>
+        <text class="empty-title">暂无记录</text>
+        <text class="empty-sub">开始你的第一次投掷吧</text>
+      </div>
+    </block>
+
+    <!-- 记录列表（概念图·历史记录） -->
+    <block if="{{ historyReady && items.length > 0 }}">
+      <div class="list">
+        <div class="history-item" for="{{ items }}">
+          <text class="history-value">{{ $item.total }}</text>
+          <div class="history-mid">
+            <text class="history-mode">{{ $item.label }}</text>
+          </div>
+          <text class="history-time">{{ $item.time }}</text>
+        </div>
+      </div>
+    </block>
+  </div>
+</template>
+
+<script>
+const router = require('@system.router');
+const touchSwipeMod = require('../../common/scripts/touch-swipe.js');
+
+export default {
+  data: {
+    items: [],
+    historyReady: false,
+    accent: 'blue',
+  },
+
+  onInit() {
+    this.app = this.$app.$def;
+    this.gesture = touchSwipeMod.createTouchSwipe((direction) => {
+      if (direction === 'right') router.back();
+    });
+    this._unsub = this.app.store.on((what) => {
+      if (what === 'history' || what === 'load') {
+        this.refresh();
+      }
+      if (what === 'settings' || what === 'load') {
+        this.accent = this.app.store.getState().settings.accent;
+      }
+    });
+    this.accent = this.app.store.getState().settings.accent;
+    this.refresh();
+  },
+
+  onShow() {
+    this.refresh();
+  },
+
+  onDestroy() {
+    if (this._unsub) {
+      this._unsub();
+    }
+  },
+
+  refresh() {
+    this.items = this.app.store.getState().history.map(function (h) {
+      return {
+        total: h.total,
+        label: h.label,
+        time: h.time,
+      };
+    });
+    this.historyReady = true;
+  },
+
+  clearAll() {
+    this.app.store.clearHistory();
+  },
+
+  onTouchStart(event) {
+    this.gesture.startTouch(event);
+  },
+
+  onTouchEnd(event) {
+    this.gesture.endTouch(event);
+  },
+
+};
+</script>

@@ -1,0 +1,136 @@
+<style>
+@import '../../common/styles/style.css';
+</style>
+
+<template>
+  <div class="page" ontouchstart="onTouchStart" ontouchend="onTouchEnd">
+    <!-- 与浏览器模拟器保持同一层级：标题和所有功能入口都是页面自身的直接子元素。 -->
+    <div class="topbar">
+      <text class="nav-title">功能</text>
+    </div>
+
+    <div class="list">
+      <!-- Vela 的 for 节点会复用样式节点；预设入口使用独立条件节点，避免旧选中态滞留。 -->
+      <div class="list-item" onclick="selectD6">
+        <text class="item-label">1D6</text>
+        <block if="{{ selectedLabel === '1D6' && accent === 'blue' }}"><div class="check-circle"><text class="check-glyph">✓</text></div></block>
+        <block if="{{ selectedLabel === '1D6' && accent === 'green' }}"><div class="check-circle theme-green"><text class="check-glyph">✓</text></div></block>
+        <block if="{{ selectedLabel === '1D6' && accent === 'purple' }}"><div class="check-circle theme-purple"><text class="check-glyph">✓</text></div></block>
+        <block if="{{ selectedLabel !== '1D6' }}"><div class="check-ring"></div></block>
+      </div>
+      <div class="list-item" onclick="select2D6">
+        <text class="item-label">2D6</text>
+        <block if="{{ selectedLabel === '2D6' && accent === 'blue' }}"><div class="check-circle"><text class="check-glyph">✓</text></div></block>
+        <block if="{{ selectedLabel === '2D6' && accent === 'green' }}"><div class="check-circle theme-green"><text class="check-glyph">✓</text></div></block>
+        <block if="{{ selectedLabel === '2D6' && accent === 'purple' }}"><div class="check-circle theme-purple"><text class="check-glyph">✓</text></div></block>
+        <block if="{{ selectedLabel !== '2D6' }}"><div class="check-ring"></div></block>
+      </div>
+      <div class="list-item" onclick="select3D6">
+        <text class="item-label">3D6</text>
+        <block if="{{ selectedLabel === '3D6' && accent === 'blue' }}"><div class="check-circle"><text class="check-glyph">✓</text></div></block>
+        <block if="{{ selectedLabel === '3D6' && accent === 'green' }}"><div class="check-circle theme-green"><text class="check-glyph">✓</text></div></block>
+        <block if="{{ selectedLabel === '3D6' && accent === 'purple' }}"><div class="check-circle theme-purple"><text class="check-glyph">✓</text></div></block>
+        <block if="{{ selectedLabel !== '3D6' }}"><div class="check-ring"></div></block>
+      </div>
+      <div class="list-item" onclick="selectD20">
+        <text class="item-label">1D20</text>
+        <block if="{{ selectedLabel === '1D20' && accent === 'blue' }}"><div class="check-circle"><text class="check-glyph">✓</text></div></block>
+        <block if="{{ selectedLabel === '1D20' && accent === 'green' }}"><div class="check-circle theme-green"><text class="check-glyph">✓</text></div></block>
+        <block if="{{ selectedLabel === '1D20' && accent === 'purple' }}"><div class="check-circle theme-purple"><text class="check-glyph">✓</text></div></block>
+        <block if="{{ selectedLabel !== '1D20' }}"><div class="check-ring"></div></block>
+      </div>
+      <div class="list-item" onclick="goCustom">
+        <text class="item-label">自定义</text>
+        <block if="{{ isCustom && accent === 'blue' }}"><div class="check-circle"><text class="check-glyph">✓</text></div></block>
+        <block if="{{ isCustom && accent === 'green' }}"><div class="check-circle theme-green"><text class="check-glyph">✓</text></div></block>
+        <block if="{{ isCustom && accent === 'purple' }}"><div class="check-circle theme-purple"><text class="check-glyph">✓</text></div></block>
+        <block if="{{ !isCustom }}"><div class="check-ring"></div></block>
+      </div>
+      <div class="list-item" onclick="goSettings">
+        <text class="item-label">偏好设置</text>
+        <text class="item-chevron">›</text>
+      </div>
+      <div class="list-item" onclick="goAbout">
+        <text class="item-label">关于</text>
+        <text class="item-chevron">›</text>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+const router = require('@system.router');
+const touchSwipeMod = require('../../common/scripts/touch-swipe.js');
+
+export default {
+  data: {
+    selectedLabel: '1D6',
+    isCustom: false,
+    accent: 'blue',
+  },
+
+  onInit() {
+    this.app = this.$app.$def;
+    this.gesture = touchSwipeMod.createTouchSwipe((direction) => {
+      if (direction === 'right') router.back();
+    });
+  },
+
+  onShow() {
+    this.refresh();
+  },
+
+  refresh() {
+    const mode = this.app.store.getState().mode;
+    const settings = this.app.store.getState().settings;
+    this.selectedLabel = typeof mode === 'string' ? mode : '';
+    this.isCustom = typeof mode === 'object';
+    this.accent = settings && settings.accent ? settings.accent : 'blue';
+  },
+
+  selectPreset(label) {
+    if (this.app.selectMode(label)) {
+      this.selectedLabel = label;
+      this.isCustom = false;
+      router.back();
+    }
+  },
+
+  selectD6() {
+    this.selectPreset('1D6');
+  },
+
+  select2D6() {
+    this.selectPreset('2D6');
+  },
+
+  select3D6() {
+    this.selectPreset('3D6');
+  },
+
+  selectD20() {
+    this.selectPreset('1D20');
+  },
+
+  goCustom() {
+    router.push({ uri: '/pages/custom' });
+  },
+
+  goSettings() {
+    router.push({ uri: '/pages/settings' });
+  },
+
+  goAbout() {
+    router.push({ uri: '/pages/about' });
+  },
+
+  onTouchStart(event) {
+    this.gesture.startTouch(event);
+  },
+
+  onTouchEnd(event) {
+    this.gesture.endTouch(event);
+  },
+
+};
+</script>

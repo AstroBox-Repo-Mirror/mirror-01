@@ -1,0 +1,94 @@
+<style>
+@import '../../common/styles/style.css';
+</style>
+
+<template>
+  <div class="page" ontouchstart="onTouchStart" ontouchend="onTouchEnd">
+    <div class="topbar">
+      <text class="nav-title">设置</text>
+    </div>
+
+    <div class="list">
+      <!-- 震动反馈 -->
+      <div class="list-item" onclick="toggleVibration">
+        <text class="item-label">震动反馈</text>
+        <!-- 独立颜色节点与独立类名，规避 Vela 条件节点复用时保留上一主题的样式。 -->
+        <block if="{{ settings.vibration && settings.accent === 'blue' }}"><div class="toggle toggle-on-blue"><div class="toggle-knob"></div></div></block>
+        <block if="{{ settings.vibration && settings.accent === 'green' }}"><div class="toggle toggle-on-green"><div class="toggle-knob"></div></div></block>
+        <block if="{{ settings.vibration && settings.accent === 'purple' }}"><div class="toggle toggle-on-purple"><div class="toggle-knob"></div></div></block>
+        <block if="{{ !settings.vibration }}"><div class="toggle toggle-off"><div class="toggle-knob"></div></div></block>
+      </div>
+      <!-- 动画效果 -->
+      <div class="list-item" onclick="toggleAnimation">
+        <text class="item-label">动画效果</text>
+        <block if="{{ settings.animation && settings.accent === 'blue' }}"><div class="toggle toggle-on-blue"><div class="toggle-knob"></div></div></block>
+        <block if="{{ settings.animation && settings.accent === 'green' }}"><div class="toggle toggle-on-green"><div class="toggle-knob"></div></div></block>
+        <block if="{{ settings.animation && settings.accent === 'purple' }}"><div class="toggle toggle-on-purple"><div class="toggle-knob"></div></div></block>
+        <block if="{{ !settings.animation }}"><div class="toggle toggle-off"><div class="toggle-knob"></div></div></block>
+      </div>
+      <!-- 主题 -->
+      <div class="list-item" onclick="goTheme">
+        <text class="item-label">主题</text>
+        <text class="item-chevron">›</text>
+      </div>
+      <!-- 关于 -->
+      <div class="list-item" onclick="goAbout">
+        <text class="item-label">关于</text>
+        <text class="item-chevron">›</text>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+const router = require('@system.router');
+const touchSwipeMod = require('../../common/scripts/touch-swipe.js');
+
+export default {
+  data: {
+    settings: { vibration: true, animation: true, accent: 'blue' },
+  },
+
+  onInit() {
+    this.app = this.$app.$def;
+    this.gesture = touchSwipeMod.createTouchSwipe((direction) => {
+      if (direction === 'right') router.back();
+    });
+    this._unsub = this.app.store.on((what) => {
+      if (what === 'settings' || what === 'load') {
+        this.settings = Object.assign({}, this.app.store.getState().settings);
+      }
+    });
+  },
+
+  onShow() {
+    this.settings = Object.assign({}, this.app.store.getState().settings);
+  },
+
+  onDestroy() {
+    if (this._unsub) {
+      this._unsub();
+    }
+  },
+
+  toggleVibration() {
+    this.app.store.setSetting('vibration', !this.settings.vibration);
+  },
+  toggleAnimation() {
+    this.app.store.setSetting('animation', !this.settings.animation);
+  },
+
+  goTheme() {
+    router.push({ uri: '/pages/theme' });
+  },
+  goAbout() {
+    router.push({ uri: '/pages/about' });
+  },
+  onTouchStart(event) {
+    this.gesture.startTouch(event);
+  },
+  onTouchEnd(event) {
+    this.gesture.endTouch(event);
+  },
+};
+</script>

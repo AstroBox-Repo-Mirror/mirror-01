@@ -1,0 +1,31 @@
+{
+    "item": {
+        "name": "奇阵防",
+        "description": "这是一个塔防策略类的游戏，玩家通过在地图部署防御，抵挡敌方的进攻,购买地址:shop.easejun.cn 购买后不退款 9Pro可以实现设备码验证,卸载后重装可以延续密钥 8Pro卸载重装密钥不延续,但可以联系作者获取密钥 QQ群:564555298 爱发电也可购买:https://afdian.com/a/zsxb666",
+        "preview": [
+            "preview.png"
+        ],
+        "icon": "icon.png",
+        "source_url": "",
+        "author": [
+            {
+                "name": "芝士雪豹(柚子厨蒸鹅心)",
+                "author_url": "https://github.com/easejun"
+            }
+        ]
+    },
+    "downloads": {
+        "n67": {
+            "version": "1.2.0",
+            "file_name": "com.zsxb.watch.arcaneArray.release.1.2.0.rpk"
+        },
+        "o65": {
+            "version": "1.2.0",
+            "file_name": "com.zsxb.watch.arcaneArray.release.1.2.0.rpk"
+        },
+        "o65m": {
+            "version": "1.2.0",
+            "file_name": "com.zsxb.watch.arcaneArray.release.1.2.0.rpk"
+        }
+    }
+}

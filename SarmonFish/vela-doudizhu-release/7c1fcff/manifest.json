@@ -1,0 +1,55 @@
+{
+  "item": {
+    "name": "斗地主",
+    "description": "在小米手环上玩到斗地主！(小恐龙表盘陆续上线，没有豆子了可以通过连续点击5次主页的豆子数量来恢复)",
+    "preview": [
+      "pre0.png",
+      "pre1.png",
+      "pre2.png",
+      "pre3.png"
+    ],
+    "icon": "icon.png",
+    "author": [{
+      "name": "沙文鱼Sarmon",
+      "author_url": "https://github.com/SarmonFish"
+    }]
+  },
+  "downloads": {
+    "n66": {
+      "version": "2.0",
+      "file_name": "斗地主2.0正式版fixed.rpk"
+    },
+    "n67": {
+      "version": "2.0",
+      "file_name": "斗地主2.0正式版fixed.rpk"
+    },
+    "o66": {
+      "version": "2.0",
+      "file_name": "斗地主2.0正式版fixed.rpk"
+    },
+    "o66nfc": {
+      "version": "2.0",
+      "file_name": "斗地主2.0正式版fixed.rpk"
+    },
+    "o65": {
+      "version": "2.0",
+      "file_name": "斗地主2.0正式版fixed.rpk"
+    },
+    "o65m": {
+      "version": "2.0",
+      "file_name": "斗地主2.0正式版fixed.rpk"
+    },
+    "o62": {
+      "version": "2.0",
+      "file_name": "斗地主2.0正式版fixed.rpk"
+    },
+    "o62m": {
+      "version": "2.0",
+      "file_name": "斗地主2.0正式版fixed.rpk"
+    },
+    "n62": {
+      "version": "2.0",
+      "file_name": "斗地主2.0正式版fixed.rpk"
+    }
+  }
+}

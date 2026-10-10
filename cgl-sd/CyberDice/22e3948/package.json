@@ -1,0 +1,16 @@
+{
+  "name": "cyberdice",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CyberDice：小米手环 9 / 9 Pro / 10 / 10 Pro 摇骰子应用（Vela JS 快应用）",
+  "scripts": {
+    "test": "node tmp/test/run.js",
+    "start": "aiot start --watch",
+    "build": "aiot build",
+    "release": "aiot release"
+  },
+  "devDependencies": {
+    "@aiot-toolkit/jsc": "^1.0.3",
+    "aiot-toolkit": "^2.0.5"
+  }
+}

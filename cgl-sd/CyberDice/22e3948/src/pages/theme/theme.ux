@@ -1,0 +1,85 @@
+<style>
+@import '../../common/styles/style.css';
+</style>
+
+<template>
+  <div class="page" ontouchstart="onTouchStart" ontouchend="onTouchEnd">
+    <div class="topbar">
+      <text class="nav-title">主题</text>
+    </div>
+
+    <div class="list">
+      <div class="list-item" onclick="pickBlue">
+        <text class="item-label">科技蓝</text>
+        <block if="{{ settings.accent === 'blue' }}">
+          <div class="check-circle theme-choice-circle theme-blue"><text class="check-glyph theme-choice-glyph">✓</text></div>
+        </block>
+        <block if="{{ settings.accent !== 'blue' }}"><div class="check-ring theme-choice-ring"></div></block>
+      </div>
+      <div class="list-item" onclick="pickGreen">
+        <text class="item-label">极客绿</text>
+        <block if="{{ settings.accent === 'green' }}">
+          <div class="check-circle theme-choice-circle theme-green"><text class="check-glyph theme-choice-glyph">✓</text></div>
+        </block>
+        <block if="{{ settings.accent !== 'green' }}"><div class="check-ring theme-choice-ring"></div></block>
+      </div>
+      <div class="list-item" onclick="pickPurple">
+        <text class="item-label">赛博紫</text>
+        <block if="{{ settings.accent === 'purple' }}">
+          <div class="check-circle theme-choice-circle theme-purple"><text class="check-glyph theme-choice-glyph">✓</text></div>
+        </block>
+        <block if="{{ settings.accent !== 'purple' }}"><div class="check-ring theme-choice-ring"></div></block>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+const router = require('@system.router');
+const touchSwipeMod = require('../../common/scripts/touch-swipe.js');
+
+export default {
+  data: {
+    settings: { vibration: true, animation: true, accent: 'blue' },
+  },
+
+  onInit() {
+    this.app = this.$app.$def;
+    this.gesture = touchSwipeMod.createTouchSwipe((direction) => {
+      if (direction === 'right') router.back();
+    });
+    this._unsub = this.app.store.on((what) => {
+      if (what === 'settings' || what === 'load') {
+        this.settings = Object.assign({}, this.app.store.getState().settings);
+      }
+    });
+  },
+
+  onShow() {
+    this.settings = Object.assign({}, this.app.store.getState().settings);
+  },
+
+  onDestroy() {
+    if (this._unsub) {
+      this._unsub();
+    }
+  },
+
+  pick(key) {
+    this.app.store.setSetting('accent', key);
+  },
+
+  pickBlue() { this.pick('blue'); },
+  pickGreen() { this.pick('green'); },
+  pickPurple() { this.pick('purple'); },
+
+  onTouchStart(event) {
+    this.gesture.startTouch(event);
+  },
+
+  onTouchEnd(event) {
+    this.gesture.endTouch(event);
+  },
+
+};
+</script>

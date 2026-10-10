@@ -1,0 +1,398 @@
+/* CyberDice UI 样式 —— 以 336px 宽为设计基准。
+ * Vela 会依据 manifest.config.designWidth 将 px 等比映射到手环 9/9 Pro/10；
+ * 页面本身使用 100% 高度，使胶囊屏额外的纵向空间由 Flex 布局承接。 */
+
+.page {
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  /* 页面外层不参与滚动；仅 .list 在顶部栏下方的可视区域内滚动。 */
+  overflow: hidden;
+}
+
+/* ---- 顶栏 ---- */
+.topbar {
+  height: 52px;
+  position: relative;
+  z-index: 1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  flex-shrink: 0;
+  /* 防止滚动卡片透过固定顶部栏。 */
+  background-color: #000000;
+}
+
+.app-name {
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.nav-title {
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.nav-action {
+  font-size: 22px;
+  color: #2f6bed;
+}
+
+/* ---- 通用列表页（80px 触控卡片，超出可纵向滚动） ---- */
+.list {
+  flex: 1;
+  min-height: 0;
+  /* Vela 容器默认不是浏览器的块级竖排流，列表必须显式纵向排列。 */
+  flex-direction: column;
+  /* 卡片抵达此滚动容器顶端即被裁切，不得侵入顶部栏。 */
+  overflow: scroll;
+  padding: 4px 16px 16px 16px;
+}
+
+.list-item {
+  /* 原 80px 与历史卡片 98px 的中间值，统一列表触控节奏。 */
+  height: 88px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1c1c21;
+  border-radius: 14px;
+  margin-bottom: 10px;
+  padding: 0 20px;
+}
+
+.item-label {
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.item-chevron {
+  font-size: 26px;
+  color: #6f7178;
+}
+
+.check-circle {
+  /* 功能页与主题页使用同一尺寸的主题确认圆点。 */
+  width: 38px;
+  height: 38px;
+  border-radius: 19px;
+  background-color: #2f6bed;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 主题页采用静态颜色类，避免 Vela 复用循环节点后保留上一项的内联颜色。 */
+.theme-blue {
+  background-color: #2f6bed;
+}
+
+.theme-green {
+  background-color: #2fbf6b;
+}
+
+.theme-purple {
+  background-color: #8a5cf6;
+}
+
+.check-glyph {
+  font-size: 22px;
+  color: #ffffff;
+}
+
+.check-ring {
+  width: 38px;
+  height: 38px;
+  border-radius: 19px;
+  border-width: 2px;
+  border-color: #4a4a50;
+}
+
+/* 主题选择是全局视觉语言的入口，使用比功能页选中态更清晰的确认标记。 */
+.theme-choice-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 19px;
+}
+
+.theme-choice-ring {
+  width: 38px;
+  height: 38px;
+  border-radius: 19px;
+  border-width: 2px;
+  border-color: #4a4a50;
+}
+
+.theme-choice-glyph {
+  font-size: 22px;
+}
+
+/* ---- 开关（自定义 toggle，68x40） ---- */
+.toggle {
+  width: 68px;
+  height: 40px;
+  border-radius: 20px;
+  flex-direction: row;
+  padding: 3px;
+}
+
+.toggle-on-blue {
+  justify-content: flex-end;
+  background-color: #2f6bed;
+}
+
+.toggle-on-green {
+  justify-content: flex-end;
+  background-color: #2fbf6b;
+}
+
+.toggle-on-purple {
+  justify-content: flex-end;
+  background-color: #8a5cf6;
+}
+
+.toggle-off {
+  justify-content: flex-start;
+  background-color: #3a3a3e;
+}
+
+.toggle-knob {
+  width: 34px;
+  height: 34px;
+  border-radius: 17px;
+  background-color: #ffffff;
+}
+
+/* ---- 步进器（自定义骰子）：标签在上、控件在下 ---- */
+.stepper-row {
+  flex-direction: column;
+  align-items: center;
+  background-color: #1c1c21;
+  border-radius: 14px;
+  margin-bottom: 14px;
+  padding: 14px 20px;
+}
+
+.stepper-label {
+  font-size: 22px;
+  color: #9a9ca3;
+  margin-bottom: 12px;
+}
+
+.stepper-ctrl {
+  flex-direction: row;
+  align-items: center;
+}
+
+.stepper-btn {
+  width: 64px;
+  height: 56px;
+  border-radius: 12px;
+  background-color: #2a2a30;
+  align-items: center;
+  justify-content: center;
+}
+
+.stepper-btn-glyph {
+  font-size: 32px;
+  color: #ffffff;
+  margin-top: -4px;
+}
+
+.stepper-value {
+  width: 110px;
+  text-align: center;
+  font-size: 32px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.btn-primary {
+  height: 64px;
+  border-radius: 16px;
+  background-color: #2f6bed;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6px;
+}
+
+.btn-primary.theme-green {
+  background-color: #2fbf6b;
+}
+
+.btn-primary.theme-purple {
+  background-color: #8a5cf6;
+}
+
+.btn-primary-text {
+  font-size: 26px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.preview-label {
+  text-align: center;
+  font-size: 22px;
+  color: #9a9ca3;
+  margin: 6px 0 16px 0;
+}
+
+/* ---- 历史记录 ---- */
+.history-item {
+  /* 原 78px 与增大后的 98px 取中值，并与通用列表行对齐。 */
+  height: 88px;
+  flex-direction: row;
+  align-items: center;
+  background-color: #1c1c21;
+  border-radius: 14px;
+  margin-bottom: 10px;
+  padding: 0 20px;
+}
+
+.history-value {
+  font-size: 37px;
+  color: #ffffff;
+  font-weight: bold;
+  width: 70px;
+}
+
+.history-mid {
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.history-mode {
+  font-size: 22px;
+  color: #8b9397;
+}
+
+.history-time {
+  font-size: 22px;
+  color: #8b9397;
+}
+
+/* ---- 空状态 / 关于 ---- */
+.center-box {
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.empty-glyph {
+  width: 96px;
+  height: 96px;
+  margin-bottom: 20px;
+}
+
+.empty-title {
+  font-size: 26px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.empty-sub {
+  font-size: 20px;
+  color: #9a9ca3;
+  margin-top: 8px;
+}
+
+.about-glyph {
+  width: 96px;
+  height: 96px;
+  margin-bottom: 20px;
+}
+
+.about-name {
+  font-size: 34px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.about-version {
+  font-size: 20px;
+  color: #9a9ca3;
+  margin-top: 6px;
+}
+
+.about-tagline {
+  font-size: 20px;
+  color: #9a9ca3;
+  margin-top: 14px;
+}
+
+/* 按宽度分两档：小屏约 96~106dp，大屏约 158dp 及以上；120dp 避免密度换算误命中。 */
+@media (max-width: 120) {
+  .topbar {
+    height: 68px;
+    justify-content: center;
+    padding: 8px 36px 0 36px;
+  }
+
+  .app-name {
+    font-size: 22px;
+  }
+
+  .list {
+    padding: 4px 28px 14px 28px;
+  }
+
+  .list-item {
+    height: 80px;
+    margin-bottom: 10px;
+    padding: 0 16px;
+  }
+
+  .history-item {
+    height: 80px;
+    margin-bottom: 10px;
+    padding: 0 16px;
+  }
+
+  .item-label {
+    font-size: 22px;
+  }
+
+  .check-circle {
+    width: 34px;
+    height: 34px;
+    border-radius: 17px;
+  }
+
+  .check-ring {
+    width: 34px;
+    height: 34px;
+    border-radius: 17px;
+  }
+
+  .check-glyph {
+    font-size: 20px;
+  }
+
+  .history-value {
+    font-size: 32px;
+    width: 58px;
+  }
+
+  .history-mode,
+  .history-time {
+    font-size: 20px;
+  }
+
+  .theme-choice-circle,
+  .theme-choice-ring {
+    width: 34px;
+    height: 34px;
+    border-radius: 17px;
+  }
+
+  .theme-choice-glyph {
+    font-size: 20px;
+  }
+
+
+}
