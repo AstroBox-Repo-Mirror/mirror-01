@@ -1,0 +1,33 @@
+{
+  "name": "daymatter",
+  "version": "2.1",
+  "description": "倒数日",
+  "author": "[小鱼yuzifu](https://www.bandbbs.cn/members/969142/)",
+  "email": "yzf@yzf.moe",
+  "license": "GPL-3.0-or-later",
+  "engines": {
+    "node": ">=8.10"
+  },
+  "scripts": {
+    "start": "aiot start --watch --enable-custom-component",
+    "build": "aiot build --enable-custom-component",
+    "release": "aiot release --enable-custom-component --enable-jsc",
+    "lint": "eslint --format codeframe --fix --ext .ux,.js src/"
+  },
+  "lint-staged": {
+    "*.{ux,js}": [
+      "prettier --write",
+      "eslint --format codeframe --fix",
+      "git add"
+    ],
+    "*.{less,css}": [
+      "prettier --write",
+      "stylelint --fix --custom-syntax postcss-less",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@aiot-toolkit/jsc": "^1.0.3",
+    "aiot-toolkit": "^2.0.5"
+  }
+}

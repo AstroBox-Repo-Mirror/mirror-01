@@ -1,0 +1,54 @@
+{
+  "item": {
+    "id": "979845270374",
+    "restype": "watchface",
+    "name": "Xr黑白质感表盘",
+    "description": "专为追求质感与高效的你打造的高效表盘，超多组件自由切换，欢迎获取~\n获取地址：https://wear.xunrix.com/shop/641.html/\n后续更新直接重新安装即可噢，有任何问题可以加入QQ交流群或添加客服联系方式！",
+    "preview": [
+      "media/画板 9.png",
+      "media/Xr极黑质感-环10 2.png",
+      "media/Xr极黑质感-环10 14.png",
+      "media/Xr极黑质感-环10 AOD 1.png"
+    ],
+    "icon": "media/画板 10.png500px.png",
+    "cover": "media/Xr黑白质感表盘-宣传海报-1200_800 1.png",
+    "author": [
+      {
+        "name": "ycfeller",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "资源获取",
+      "url": "https://wear.xunrix.com/shop/641.html",
+      "icon": "shopping-cart"
+    }
+  ],
+  "downloads": {
+    "xmb10": {
+      "version": "1.0.5",
+      "file_name": "downloads/Xr黑白质感表盘-环10-v104.bin",
+      "versionCode": 65541
+    },
+    "xmb10nfc": {
+      "version": "1.0.5",
+      "file_name": "downloads/Xr黑白质感表盘-环10-v104.bin",
+      "versionCode": 65541
+    },
+    "xmb11": {
+      "version": "1.0.2",
+      "file_name": "downloads/Xr黑白质感表盘-环11-v101.bin",
+      "versionCode": 65538
+    },
+    "xmb11nfc": {
+      "version": "1.0.2",
+      "file_name": "downloads/Xr黑白质感表盘-环11-v101.bin",
+      "versionCode": 65538
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

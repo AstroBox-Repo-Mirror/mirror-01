@@ -1,0 +1,32 @@
+{
+  "item": {
+    "name": "authRD - 凯尔希",
+    "description": "《明日方舟》通行证风格表盘",
+    "preview": [
+      "preview0.png",
+      "preview1.png",
+      "preview2.png",
+      "preview3.png",
+      "preview4.png",
+      "preview5.png"
+    ],
+    "icon": "icon.png",
+    "source_url": "",
+    "author": [
+      {
+        "name": "hrsthrt74",
+        "author_url": "https://afdian.com/a/hrsthrt74"
+      }
+    ]
+  },
+  "downloads": {
+    "o62": {
+      "version": "1.0.0",
+      "file_name": "authRD-凯尔希 for S4 v1.0 by hrsthrt74.bin"
+    },
+    "o62m": {
+      "version": "1.0.0",
+      "file_name": "authRD-凯尔希 for S4 v1.0 by hrsthrt74.bin"
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "item": {
+    "id": "com.haooz.chedule",
+    "restype": "quick_app",
+    "name": "Nexio课程表",
+    "description": "更轻盈，更优雅的课程表",
+    "preview": [
+      "media/cover-1-3.png",
+      "media/cover-1-4.png",
+      "media/cover-1-5.png",
+      "media/cover-1-1.png",
+      "media/cover-1-2.png"
+    ],
+    "icon": "media/show_icon.png",
+    "cover": "media/cover-1.png",
+    "author": [
+      {
+        "name": "bandbbs_83349",
+        "bindABAccount": true
+      },
+      {
+        "name": "aurysian",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "Neixo课程表手机端",
+      "url": "https://haozai000.github.io/NexioSchedule/",
+      "icon": "browser"
+    }
+  ],
+  "downloads": {
+    "xmb10p": {
+      "version": "2.0.1-release",
+      "file_name": "downloads/com.haooz.chedule.release.2.0.1-release.rpk",
+      "versionCode": 37,
+      "updatelogs": [
+        {
+          "version": "2.0.1-release",
+          "content": "1.优化首次连接手机时偶现无法传输课表的BUG\n2.增大侧滑返回区域"
+        },
+        {
+          "version": "2.0.0-release",
+          "content": "1.全新改版UI设计，更适合手环/手表端的设计交互体验\n2.优化冷启动体验\n3.新增更多机型适配"
+        }
+      ]
+    },
+    "xmb10": {
+      "version": "2.0.1-release",
+      "file_name": "downloads/com.haooz.chedule.release.2.0.1-release-xmb10.rpk",
+      "versionCode": 37,
+      "updatelogs": [
+        {
+          "version": "2.0.1-release",
+          "content": "1.优化上下滑动手感\n2.修复课程数不准确的问题\n3.优化课程的显示逻辑\n4.优化首次连接手机时偶现无法传输课表的BUG"
+        },
+        {
+          "version": "2.0.0-release",
+          "content": "1.全新改版UI设计，更适合手环/手表端的设计交互体验\n2.优化冷启动体验\n3.新增更多机型适配"
+        }
+      ]
+    },
+    "xmb11": {
+      "version": "2.0.1-release",
+      "file_name": "downloads/com.haooz.chedule.release.2.0.1-release-xmb10.rpk",
+      "versionCode": 37,
+      "updatelogs": [
+        {
+          "version": "2.0.1-release",
+          "content": "1.优化上下滑动手感\n2.修复课程数不准确的问题\n3.优化课程的显示逻辑\n4.优化首次连接手机时偶现无法传输课表的BUG"
+        },
+        {
+          "version": "2.0.0-release",
+          "content": "1.全新改版UI设计，更适合手环/手表端的设计交互体验\n2.优化冷启动体验\n3.新增更多机型适配"
+        }
+      ]
+    },
+    "xmb10nfc": {
+      "version": "2.0.1-release",
+      "file_name": "downloads/com.haooz.chedule.release.2.0.1-release-xmb10.rpk",
+      "versionCode": 37,
+      "updatelogs": [
+        {
+          "version": "2.0.1-release",
+          "content": "1.优化上下滑动手感\n2.修复课程数不准确的问题\n3.优化课程的显示逻辑\n4.优化首次连接手机时偶现无法传输课表的BUG"
+        },
+        {
+          "version": "2.0.0-release",
+          "content": "1.全新改版UI设计，更适合手环/手表端的设计交互体验\n2.优化冷启动体验\n3.新增更多机型适配"
+        }
+      ]
+    },
+    "xmb11nfc": {
+      "version": "2.0.1-release",
+      "file_name": "downloads/com.haooz.chedule.release.2.0.1-release-xmb10.rpk",
+      "versionCode": 37,
+      "updatelogs": [
+        {
+          "version": "2.0.1-release",
+          "content": "1.优化上下滑动手感\n2.修复课程数不准确的问题\n3.优化课程的显示逻辑\n4.优化首次连接手机时偶现无法传输课表的BUG"
+        },
+        {
+          "version": "2.0.0-release",
+          "content": "1.全新改版UI设计，更适合手环/手表端的设计交互体验\n2.优化冷启动体验\n3.新增更多机型适配"
+        }
+      ]
+    },
+    "xmrw5": {
+      "version": "2.0.1-release",
+      "file_name": "downloads/com.haooz.chedule.release.2.0.1-release.rpk",
+      "versionCode": 37,
+      "updatelogs": [
+        {
+          "version": "2.0.1-release",
+          "content": "1.优化首次连接手机时偶现无法传输课表的BUG\n2.增大侧滑返回区域"
+        }
+      ]
+    },
+    "xmrw6": {
+      "version": "2.0.1-release",
+      "file_name": "downloads/com.haooz.chedule.release.2.0.1-release.rpk",
+      "versionCode": 37,
+      "updatelogs": [
+        {
+          "version": "2.0.1-release",
+          "content": "1.优化首次连接手机时偶现无法传输课表的BUG\n2.增大侧滑返回区域"
+        }
+      ]
+    },
+    "xmrw5xring": {
+      "version": "2.0.1-release",
+      "file_name": "downloads/com.haooz.chedule.release.2.0.1-release.rpk",
+      "versionCode": 37,
+      "updatelogs": [
+        {
+          "version": "2.0.1-release",
+          "content": "1.优化首次连接手机时偶现无法传输课表的BUG\n2.增大侧滑返回区域"
+        }
+      ]
+    },
+    "xmb9": {
+      "version": "2.0.1-release",
+      "file_name": "downloads/com.haooz.chedule.release.2.0.1-release-xmb10.rpk",
+      "versionCode": 37,
+      "updatelogs": [
+        {
+          "version": "2.0.1-release",
+          "content": "1.优化上下滑动手感\n2.修复课程数不准确的问题\n3.优化课程的显示逻辑\n4.优化首次连接手机时偶现无法传输课表的BUG"
+        }
+      ]
+    },
+    "xmb9p": {
+      "version": "2.0.1-release",
+      "file_name": "downloads/com.haooz.chedule.release.2.0.1-release.rpk",
+      "versionCode": 37,
+      "updatelogs": [
+        {
+          "version": "2.0.1-release",
+          "content": "1.优化首次连接手机时偶现无法传输课表的BUG\n2.增大侧滑返回区域"
+        }
+      ]
+    }
+  },
+  "ext": {}
+}

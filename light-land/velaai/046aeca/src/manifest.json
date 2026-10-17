@@ -1,0 +1,73 @@
+{
+  "package": "com.lightland.velaai",
+  "name": "Vela AI",
+  "versionName": "1.0.0",
+  "versionCode": 0,
+  "minPlatformVersion": 1000,
+  "icon": "/common/logo.png",
+  "deviceTypeList": [
+    "watch"
+  ],
+  "features": [
+    {
+      "name": "system.device"
+    },
+    {
+      "name": "system.router"
+    },
+    {
+      "name": "system.app"
+    },
+    {
+      "name": "system.prompt"
+    },
+    {
+      "name": "system.vibrator"
+    },
+    {
+      "name": "system.file"
+    },
+    {
+      "name": "system.fetch"
+    },
+    {
+      "name": "system.storage"
+    }
+  ],
+  "config": {
+    "logLevel": "log",
+    "designWidth": "device-width"
+  },
+  "router": {
+    "entry": "pages/chat",
+    "pages": {
+      "pages/about": {
+        "component": "about"
+      },
+      "pages/money": {
+        "component": "money"
+      },
+      "pages/history": {
+        "component": "history"
+      },
+      "pages/setting": {
+        "component": "setting"
+      },
+      "pages/model": {
+        "component": "model"
+      },
+      "pages/advanced": {
+        "component": "advanced"
+      },
+      "pages/chat": {
+        "component": "chat"
+      },
+      "pages/textinput": {
+        "component": "textinput"
+      }
+    }
+  },
+  "display": {
+    "backgroundColor": "#000000"
+  }
+}

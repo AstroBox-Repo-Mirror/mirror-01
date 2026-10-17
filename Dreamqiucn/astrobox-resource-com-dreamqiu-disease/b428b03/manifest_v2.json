@@ -1,0 +1,198 @@
+{
+  "item": {
+    "id": "com.Dreamqiu.disease",
+    "restype": "quick_app",
+    "name": "瘟疫公司",
+    "description": "你是一个控制瘟疫的公司，操控病毒进化，一步一步感染全世界！\n从一位零号病人开始，让疫情蔓延世界。选择细菌、病毒、朊病毒、新冠病毒等八种病原体，决定爆发的起点，用有限的 DNA 进化传播途径、症状和能力。疾病越强，人类的警觉也越高；解药完成之前，每一步都要算准。\n \n飞机、轮船和陆路将疫情带往新的地区，人类则会研究疾病、限制交通。留意世界快讯，查看各地的感染与死亡人数，在关键时刻进化、退化或发动病种专属行动。一次过早暴露，可能让整局形势逆转。\n \n在经典、速战、竞速和场景四种模式中，挑战新手到极限四档难度。装配局前基因，尝试不同起始地区，也可以创建自己的场景。每次开局，都是一条不同的传播路线。\n \n当世界开始封锁，你还能让疫情走多远？\n首发两周中秋国庆双节优惠2.99，原价3.99\n\n小米手环9 10 11 10Pro激活请下载同步器！！！\nQQ交流群 群1：383388239 群2：937539675 群3：1121706406\n\n注意：小米手环9、10、10 Pro、11的iPhone用户请不要购买该游戏，当前暂不支持iOS同步器。虚拟物品不支持退款！",
+    "preview": [
+      "media/10pro-2026-09-25-15-06-01.png",
+      "media/10pro-2026-09-25-15-06-25.png",
+      "media/10pro-2026-09-25-15-07-25.png",
+      "media/10pro-2026-09-25-15-06-29.png",
+      "media/10pro-2026-09-25-15-07-38.png",
+      "media/10pro-2026-09-25-15-06-34.png",
+      "media/10pro-2026-09-25-15-06-20.png",
+      "media/10pro-2026-09-25-15-06-17.png",
+      "media/10pro-2026-09-25-15-06-11.png",
+      "media/10pro-2026-09-25-15-06-08.png",
+      "media/10pro-2026-09-25-15-06-05.png",
+      "media/10-2026-09-25-15-30-21.png",
+      "media/10-2026-09-25-15-30-57.png",
+      "media/10-2026-09-25-15-30-53.png",
+      "media/10-2026-09-25-15-30-39.png"
+    ],
+    "icon": "media/logo.png",
+    "cover": "media/瘟疫公司 (2) 2.png",
+    "author": [
+      {
+        "name": "Dreamqiu",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "同步器下载",
+      "url": "https://dreamhub.dreamqiu.cn",
+      "icon": "android-logo"
+    },
+    {
+      "title": "激活教程",
+      "url": "https://www.bilibili.com/opus/1235544512057573379",
+      "icon": "book-open-text"
+    }
+  ],
+  "downloads": {
+    "xmrw5": {
+      "version": "1.3",
+      "file_name": "downloads/rw_com.Dreamqiu.disease.release.1.3.rpk",
+      "versionCode": 130,
+      "updatelogs": [
+        {
+          "version": "1.3",
+          "content": "更新每日挑战模式，每日刷新随机任务增加全局效果"
+        },
+        {
+          "version": "1.2",
+          "content": "新增治愈模式，支持十种病原体；"
+        }
+      ]
+    },
+    "xmrw5xring": {
+      "version": "1.3",
+      "file_name": "downloads/rw_com.Dreamqiu.disease.release.1.3.rpk",
+      "versionCode": 130,
+      "updatelogs": [
+        {
+          "version": "1.3",
+          "content": "更新每日挑战模式，每日刷新随机任务增加全局效果"
+        },
+        {
+          "version": "1.2",
+          "content": "新增治愈模式，支持十种病原体；"
+        }
+      ]
+    },
+    "xmrw6": {
+      "version": "1.3",
+      "file_name": "downloads/rw_com.Dreamqiu.disease.release.1.3.rpk",
+      "versionCode": 130,
+      "updatelogs": [
+        {
+          "version": "1.3",
+          "content": "更新每日挑战模式，每日刷新随机任务增加全局效果"
+        },
+        {
+          "version": "1.2",
+          "content": "新增治愈模式，支持十种病原体；"
+        }
+      ]
+    },
+    "xmb10": {
+      "version": "1.3",
+      "file_name": "downloads/10_com.Dreamqiu.disease.release.1.3.rpk",
+      "versionCode": 130,
+      "updatelogs": [
+        {
+          "version": "1.3",
+          "content": "更新每日挑战模式，每日刷新随机任务增加全局效果"
+        },
+        {
+          "version": "1.2",
+          "content": "新增治愈模式，支持十种病原体；"
+        }
+      ]
+    },
+    "xmb10nfc": {
+      "version": "1.3",
+      "file_name": "downloads/10_com.Dreamqiu.disease.release.1.3.rpk",
+      "versionCode": 130,
+      "updatelogs": [
+        {
+          "version": "1.3",
+          "content": "更新每日挑战模式，每日刷新随机任务增加全局效果"
+        },
+        {
+          "version": "1.2",
+          "content": "新增治愈模式，支持十种病原体；"
+        }
+      ]
+    },
+    "xmb11": {
+      "version": "1.3",
+      "file_name": "downloads/10_com.Dreamqiu.disease.release.1.3.rpk",
+      "versionCode": 130,
+      "updatelogs": [
+        {
+          "version": "1.3",
+          "content": "更新每日挑战模式，每日刷新随机任务增加全局效果"
+        },
+        {
+          "version": "1.2",
+          "content": "新增治愈模式，支持十种病原体；"
+        }
+      ]
+    },
+    "xmb10p": {
+      "version": "1.3",
+      "file_name": "downloads/pro_com.Dreamqiu.disease.release.1.3.rpk",
+      "versionCode": 130,
+      "updatelogs": [
+        {
+          "version": "1.3",
+          "content": "更新每日挑战模式，每日刷新随机任务增加全局效果"
+        },
+        {
+          "version": "1.2",
+          "content": "新增治愈模式，支持十种病原体；"
+        }
+      ]
+    },
+    "xmb11nfc": {
+      "version": "1.3",
+      "file_name": "downloads/10_com.Dreamqiu.disease.release.1.3.rpk",
+      "versionCode": 130,
+      "updatelogs": [
+        {
+          "version": "1.3",
+          "content": "更新每日挑战模式，每日刷新随机任务增加全局效果"
+        },
+        {
+          "version": "1.2",
+          "content": "新增治愈模式，支持十种病原体；"
+        }
+      ]
+    },
+    "xmb9": {
+      "version": "1.3",
+      "file_name": "downloads/9_com.Dreamqiu.disease.release.1.3.rpk",
+      "versionCode": 130,
+      "updatelogs": [
+        {
+          "version": "1.3",
+          "content": "更新每日挑战模式，每日刷新随机任务增加全局效果"
+        },
+        {
+          "version": "1.2",
+          "content": "新增治愈模式，支持十种病原体；"
+        }
+      ]
+    },
+    "xmb9p": {
+      "version": "1.3",
+      "file_name": "downloads/pro_com.Dreamqiu.disease.release.1.3.rpk",
+      "versionCode": 130,
+      "updatelogs": [
+        {
+          "version": "1.3",
+          "content": "更新每日挑战模式，每日刷新随机任务增加全局效果"
+        },
+        {
+          "version": "1.2",
+          "content": "新增治愈模式，支持十种病原体；"
+        }
+      ]
+    }
+  },
+  "ext": {}
+}

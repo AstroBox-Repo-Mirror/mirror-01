@@ -1,0 +1,128 @@
+<template>
+  <div class="list-page">
+    <text class="time">{{ time }}</text>
+    <text class="title">模型选择</text>
+    <img class="top leftButton" src="/common/back_rect.png" @click="back" />
+
+    <div class="picker-box">
+      <!-- Vela 原生滚动选择器：type=text 普通选择器 -->
+      <picker
+        class="picker"
+        type="text"
+        range="{{ models }}"
+        selected="{{ selected }}"
+        onchange="onPick"
+      ></picker>
+      <text if="{{ errText }}" class="current err">{{ errText }}</text>
+      <text if="{{ !errText }}" class="current">当前模型：{{ current }}</text>
+    </div>
+  </div>
+</template>
+
+<script>
+import router from "@system.router"
+import vibrator from "@system.vibrator"
+import * as settings from "../../common/settings.js"
+import * as api from "../../common/api.js"
+
+export default {
+  private: {
+    time: "",
+    models: [],
+    selected: 0,
+    current: "",
+    errText: ""
+  },
+
+  onInit() {
+    this.time = global.getTime()
+    const that = this
+    settings.load().then(function (all) {
+      that.current = all.model || ""
+      if (!all.apiKey) {
+        that.errText = "请先设置 API Key"
+        return
+      }
+      // 每次进页自动请求最新模型列表；失败不做兜底，直接提示（无网/无列表都会走到这里）
+      api
+        .listModels(all.apiKey)
+        .then(function (ids) {
+          if (ids && ids.length) {
+            that.models = ids
+            const i = ids.indexOf(all.model)
+            that.selected = i >= 0 ? i : 0
+          } else {
+            that.errText = "未获取到模型列表"
+          }
+        })
+        .catch(function (e) {
+          that.errText = "模型列表获取失败"
+          console.error("模型列表获取失败:" + (e.message || e))
+        })
+    })
+  },
+
+  // 滚动确定即保存
+  onPick(e) {
+    vibrator.vibrate({mode: "short"})
+    this.current = e.newValue
+    settings.update({model: e.newValue})
+  },
+
+  back() {
+    router.back()
+  }
+}
+</script>
+
+<style>
+@import "../../common/app.css";
+
+.list-page {
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  background-color: black;
+}
+
+.picker-box {
+  width: 90%;
+  margin-top: 110px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.picker {
+  width: 100%;
+  color: #999999;
+  font-size: 24px;
+  selected-color: #ffffff;
+  selected-font-size: 28px;
+  selected-background-color: #262626;
+}
+
+.current {
+  margin-top: 16px;
+  font-size: 20px;
+  color: #999999;
+}
+
+.err {
+  color: #dc3545;
+}
+
+@media (device-type: band) and (shape: rect) {
+  .picker-box {
+    margin-top: 100px;
+    width: 83%;
+  }
+}
+
+@media (device-type: watch) and (shape: rect) {
+  .picker-box {
+    margin-top: 110px;
+    width: 75%;
+  }
+}
+</style>

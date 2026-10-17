@@ -1,0 +1,44 @@
+{
+  "item": {
+    "id": "979814719338",
+    "restype": "watchface",
+    "name": "CuteeeS UI",
+    "description": "CuteeeS UI——圆润的多组件腕上个性化设计；\n目前仅支持小米手环9Pro，其他设备后续支持~\nQQ交流群：758279876；\n壁纸生成器：https://wear.xunrix.com/dial-canvas/",
+    "preview": [
+      "media/CuteeeS-UI作品封面 3.png",
+      "media/CuteeeS UI 主设计 方屏.png",
+      "media/CuteeeS UI 主设计 方屏3.png",
+      "media/style_1_aod.png"
+    ],
+    "icon": "media/logo-500x.png",
+    "cover": "media/CuteeeS-UI作品封面 5.png",
+    "author": [
+      {
+        "name": "ycfeller",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "赞助获取",
+      "url": "https://wear.xunrix.com/shop/633.html",
+      "icon": "shopping-cart"
+    },
+    {
+      "title": "壁纸生成器",
+      "url": "https://wear.xunrix.com/dial-canvas/",
+      "icon": "video"
+    }
+  ],
+  "downloads": {
+    "xmb9p": {
+      "version": "1.0.3",
+      "file_name": "downloads/CuteeeS_UI_V1.0.3.bin",
+      "versionCode": 65539
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

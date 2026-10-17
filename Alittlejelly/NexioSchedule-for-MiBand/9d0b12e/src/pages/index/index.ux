@@ -1,0 +1,1382 @@
+<template>
+  <div class="page">
+    <stack class="page-stack">
+    <div class="body-layer">
+    <!-- 单层常驻结构：切日只换数据、不重建任何节点。
+         Vela 3.6（小米手环 9 Pro）上重建带 scroll 的层节点会导致整屏黑且点不动，
+         所以这里没有双层、没有 for 复用、没有动画，切日只更新下面这些绑定。 -->
+    <scroll class="body" scroll-y="true" bounces="{{scrollBounces}}" if="{{isHome}}">
+      <div class="screen screen-home" onswipe="onSwipe" ontouchstart="onTouchStart">
+        <!-- 头部已移到滚动层外面固定住（见文件末尾 .hd 那一块），
+             这里用 .screen-home 的 padding-top 给固定头部让出高度 -->
+
+        <!-- 主卡：正在上课（蓝）/ 快上课了（红）/ 下节课（蓝）。
+             渐变底是烘焙好的 PNG：设计稿的渐变末端是「透明」，而设备上带透明
+             stop 的 background 渐变不渲染（底部遮罩、状态卡都踩过），所以合成到
+             #222 之后再出图，只保留不透明像素。
+             图标绝对定位挂在 .hero 上，而 .hero 自己不设内边距（内边距由 .hero-body 承担），
+             这样 right/top 的参照系无论按 padding box 还是 border box 解释都一致。 -->
+        <div class="hero-wrap" if="{{day.hasFocus}}">
+          <div class="hero">
+            <image class="hero-bg" src="{{day.heroBg}}"></image>
+            <image class="hero-icon" src="{{day.heroIcon}}"></image>
+            <div class="hero-body">
+              <text class="hero-label">{{day.heroLabel}}</text>
+              <div class="hero-info">
+                <text class="hero-name">{{day.nextName}}</text>
+                <text class="hero-cd {{day.heroCdClass}}">{{day.nextCountdown}}</text>
+              </div>
+              <text class="hero-meta">{{day.nextMeta}}</text>
+            </div>
+          </div>
+        </div>
+
+        <!-- 分组：上午课程 / 下午课程 / 晚上课程 -->
+        <block for="{{(groupIndex, group) in day.groups}}">
+          <div class="sec">
+            <div class="sec-line"></div>
+            <text class="sec-label">{{group.label}}</text>
+            <div class="sec-line"></div>
+          </div>
+          <div class="card-wrap" for="{{(courseIndex, course) in group.courses}}">
+            <div class="card">
+              <text class="card-stat {{course.statusClass}}">{{course.status}}</text>
+              <text class="card-name">{{course.name}}</text>
+              <text class="card-time">{{course.timeText}}</text>
+              <text class="card-meta">{{course.meta}}</text>
+            </div>
+          </div>
+        </block>
+
+        <!-- 空状态：没有课程啦 / 好好休息吧（宽屏用 empty-wide 上移） -->
+        <div class="{{clsEmpty}}" if="{{day.showEmpty}}">
+          <text class="empty-text">{{day.emptyTitle}}</text>
+          <text class="empty-text" if="{{day.showEmptySub}}">{{day.emptySub}}</text>
+        </div>
+
+        <!-- 列表末尾：「关于」与「今」并排（设计稿 32:205）。
+             回到今天时「今」不渲染，只剩「关于」，由 .actions 的居中自动归位。
+             无课时它跟在空态后面，空态上移它自然跟着上移，无需单独变体。 -->
+        <div class="actions">
+          <div class="pill pill-about" onclick="onTabAbout">
+            <text class="pill-text">关于</text>
+          </div>
+          <div class="pill pill-today" if="{{day.showToday}}" onclick="onBackToday">
+            <text class="pill-text">今</text>
+          </div>
+        </div>
+      </div>
+    </scroll>
+
+    <scroll class="body" scroll-y="true" bounces="true" if="{{isAbout}}">
+    <div class="screen screen-about">
+      <!-- 头部（设计稿 38:418）：返回 + 应用状态 + 当前时间 -->
+      <div class="{{clsAbHead}}">
+        <div class="ab-back" onclick="onTabHome">
+          <image class="ab-caret" src="/common/caret_left.png"></image>
+        </div>
+        <text class="ab-title">应用状态</text>
+        <text class="ab-clock">{{day.clockText}}</text>
+      </div>
+
+      <!-- 应用信息（38:423）：黑底直排，无卡片背景 -->
+      <div class="ab-app">
+        <image class="ab-app-icon" src="/common/about_icon_round.png"></image>
+        <div class="ab-app-text">
+          <text class="ab-app-name">Nexio课程表</text>
+          <text class="ab-app-ver">v{{versionName}}</text>
+        </div>
+      </div>
+
+      <!-- 手机连接状态卡（38:441 未连接 / 38:506 已连接）：
+           卡片常驻，按连接态换渐变底、时间颜色与右上角状态图标 -->
+      <div class="card status-card">
+        <image class="st-bg" src="{{diagBg}}"></image>
+        <div class="st-row1">
+          <text class="st-title">{{diagStatus}}</text>
+        </div>
+        <image class="st-icon" src="{{diagIcon}}"></image>
+        <text class="st-time {{diagTimeCls}}">{{diagTime}}</text>
+        <text class="st-label">最后一次本地更新时间</text>
+      </div>
+
+      <div class="sec-wrap">
+        <text class="section-label">开发人员名单</text>
+      </div>
+
+      <!-- 人员卡（38:456）：3 行 64 头像 + 姓名/职能 -->
+      <div class="card people-card">
+        <div class="person p1">
+          <image class="avatar" src="/common/photo1.png"></image>
+          <div class="person-text">
+            <text class="person-name">一個小果冻</text>
+            <text class="person-role">快应用开发设计</text>
+          </div>
+        </div>
+        <div class="person p2">
+          <image class="avatar" src="/common/photo3.png"></image>
+          <div class="person-text">
+            <text class="person-name">安龙 Aurysian</text>
+            <text class="person-role">快应用 UI 设计</text>
+          </div>
+        </div>
+        <div class="person p3">
+          <image class="avatar" src="/common/photo2.png"></image>
+          <div class="person-text">
+            <text class="person-name">Sunlight</text>
+            <text class="person-role">原应用开发设计</text>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec-wrap">
+        <text class="section-label">打赏支持</text>
+      </div>
+
+      <!-- 打赏（38:480）：二维码固定展示；按需求不提供点击放大/跳页 -->
+      <div class="card rw-card">
+        <div class="rw-block">
+          <image class="rw-qr" src="/common/reward_qr.png"></image>
+          <image class="rw-band" src="/common/rw_band.png"></image>
+          <text class="rw-band-text">微信</text>
+        </div>
+      </div>
+    </div>
+    </scroll>
+
+    <div class="sys-back-edge" if="{{isHome}}"></div>
+    </div>
+    </stack>
+
+    <!-- 固定头部下缘的渐隐带：整张图 = 实心 95（藏在 .hd 黑底后）+ 渐隐 10（头下缘），
+         用 top:0 零偏移挂（RW6 实机证明带非零 top/bottom 的绝对定位 <image> 会错位/消失，
+         零偏移层 hd/daybar/hero-bg 都正常）。实心段与 .hd 黑底同色重叠不可见，
+         渐隐段正好落在头部下缘，观感与旧方案一致。
+         必须排在 .hd 之前：渲染顺序 = 堆叠顺序，实心段要垫在头部文字下层。 -->
+    <image class="headmask-img" src="/common/headmask.png" show="{{isHome}}"></image>
+
+    <!-- ===== 固定头部（滚动时不跟着走） =====
+         放在滚动层外面、绝对定位贴顶，并铺不透明黑底：课程列表从它下面滚过去。
+         用 show 而不是 if —— 常驻节点只切换可见性，避免 Vela 3.6 重建节点。
+         高度定死 95px（headmask 的实心段与 .screen-home 的 padding-top 都依赖它）。
+         结构照设计稿：时钟只占第一行的高度，所以「日期 + 时钟」同行、
+         「今日概览」单独占一行吃满整屏宽度（否则会被时钟挤到折行）。 -->
+    <div class="{{clsHd}}" show="{{isHome}}">
+      <div class="hd-row1">
+        <text class="hd-date">{{day.dateShort}}</text>
+        <text class="hd-clock">{{day.clockText}}</text>
+      </div>
+      <text class="hd-sum">{{day.summary}}</text>
+    </div>
+
+    <!-- ===== 底部渐隐遮罩 =====
+         整张图 = 渐隐 20（底栏上缘）+ 实心（藏在翻日栏/返回栏黑底后），
+         用 bottom:0 零偏移挂（理由同 headmask）。首页用 60px 图（实心 40 配翻日栏），
+         关于页用 75px 图（实心 55 配返回栏），靠 barMaskCls 切高度、barMaskSrc 切图。 -->
+    <image class="barmask-img {{barMaskCls}}" src="{{barMaskSrc}}"></image>
+
+    <!-- ===== 底部翻日栏（设计稿）：「‹ 第6周 周三 ›」 ===== -->
+    <div class="{{clsDaybar}}" if="{{isHome}}">
+      <div class="daybar-btn" onclick="onPrevDay">
+        <image class="caret" src="/common/caret_left.png"></image>
+      </div>
+      <text class="daybar-text">{{day.barText}}</text>
+      <div class="daybar-btn" onclick="onNextDay">
+        <image class="caret" src="/common/caret_right.png"></image>
+      </div>
+    </div>
+
+    <!-- 关于页的返回（设计稿头部已有 ‹，底部药丸沿用原交互保留） -->
+    <div class="backbar" if="{{isAbout}}">
+      <div class="pill pill-about" onclick="onTabHome">
+        <text class="pill-text">返回</text>
+      </div>
+    </div>
+
+    <!-- 连接提示：常驻节点只切换可见性（Vela 3.6 避免重建节点），位置在底部栏上方 -->
+    <div class="toast" show="{{toastVisible}}">
+      <text class="toast-text">{{toastText}}</text>
+    </div>
+  </div>
+</template>
+
+<script>
+import sync from '../../common/sync'
+import schedule from '../../common/schedule'
+import util from '../../common/util'
+import device from '@system.device'
+
+/** 左缘留给系统「右滑回桌面」的宽度，与 .sys-back-edge 保持一致 */
+const EDGE_W = 14
+/** 设计稿主卡图标：正在上课 / 下节课 用纸飞机，快上课了 用喇叭 */
+const ICON_PLANE = '/common/hero_plane.png'
+const ICON_MEGAPHONE = '/common/hero_megaphone.png'
+/** 主卡渐变底（已按设计稿合成成不透明 PNG，见 hero_bg_*.png 的生成说明） */
+const HERO_BG_BLUE = '/common/hero_bg_blue.png'
+const HERO_BG_RED = '/common/hero_bg_red.png'
+
+/** 距 startTime（HH:mm）还有多少分钟；同一天内比较 */
+function minutesToStart(startTime, now) {
+  if (!startTime) return 99999
+  const parts = startTime.split(':')
+  const start = new Date(now.getFullYear(), now.getMonth(), now.getDate())
+  start.setHours(parseInt(parts[0], 10) || 0, parseInt(parts[1], 10) || 0, 0, 0)
+  return Math.round((start.getTime() - now.getTime()) / 60000)
+}
+
+export default {
+  private: {
+    isHome: true,
+    isAbout: false,
+    /* 底部渐隐带：类决定高度（bm-home 60 / bm-about 75 = 渐隐 20 + 对应底栏高），
+       src 决定用哪张图（实心段长度配对应底栏）。切页时成对切换。 */
+    barMaskCls: 'bm-home',
+    barMaskSrc: '/common/barmask_home.png',
+    /* 宽屏（Redmi Watch 6 等 screenWidth>=400）运行时变体类：
+       默认窄屏（手环 9 Pro）只用基础类；probePlatform 探测到宽屏后追加 -wide 变体。
+       用运行时探测而不是只靠 CSS 媒体查询：设备是否支持 @import 媒体查询不确定。 */
+    clsHd: 'hd',
+    clsDaybar: 'daybar',
+    clsEmpty: 'empty',
+    clsAbHead: 'ab-head',
+    /* 宽屏标记：probePlatform 探测 screenWidth>=400 后置 true。
+       宽屏同时关掉 scroll 的 bounces（scrollBounces=false）：RW6 的横向回弹
+       是"卡半屏"的冻结源头，关掉后横滑切日可以即时执行、不再与回弹打架。
+       窄屏（手环 9 Pro）保持 bounces=true + 横滑即时切换。 */
+    _isWide: false,
+    scrollBounces: true,
+    /* 冷启动缓存恢复中：只抑制空态与概览文案（避免闪"请连接手机"/闪错误概览），
+       头部日期/时钟照常渲染（见 buildDay）。settle 通知里清 false。 */
+    bootPending: false,
+    /* 「关于」这一支（打赏已并入关于页，不再单开页面） */
+    aboutActive: false,
+    /* 当前展示的那一天（单层常驻，切日只换这个对象） */
+    day: {},
+    viewDateTs: 0,
+    /* 与 manifest.json 的 versionName 保持一致 */
+    versionName: '2.0.1-release',
+    /* 手机连接状态卡（常驻）：按连接态换渐变底 / 图标 / 时间颜色 */
+    diagStatus: '',
+    diagTime: '',
+    diagBg: '/common/st_bg_off.png',
+    diagIcon: '/common/icon_seal_hd.png',
+    diagTimeCls: '',
+    /* 页面内连接提示（底部栏上方） */
+    toastText: '',
+    toastVisible: false
+  },
+  onInit() {
+    this.unsubscribe = sync.onScheduleChange(() => {
+      // 缓存 settle 的第一次通知：解除空态/概览抑制，再正常刷新
+      this.bootPending = false
+      this.refreshHome()
+      this.refreshDiagnostics()
+      // 冷启动缓存 settle 后的第一次通知：补上 pending 期间跳过的拉新
+      if (this._needFreshOnSettle) {
+        this._needFreshOnSettle = false
+        sync.ensureFresh('show-settle')
+      }
+    })
+    this.unsubscribeToast = sync.onToast((message) => {
+      this.showPageToast(message)
+    })
+    sync.init()
+    this.probePlatform()
+    // 冷启动本地缓存异步恢复中：照常渲染（头部日期/时钟立即出现），
+    // 但用 bootPending 抑制空态与概览文案，避免闪"请连接手机"/闪错误概览。
+    this.bootPending = sync.isCachePending()
+    this.refreshHome()
+    this.refreshDiagnostics()
+    this._refreshTimer = setInterval(() => {
+      this.refreshHome()
+    }, 60000)
+  },
+  onShow() {
+    this.bootPending = sync.isCachePending()
+    this.refreshHome()
+    this.refreshDiagnostics()
+    // 缓存恢复中：settle 通知里补拉新；恢复已完成则直接拉
+    if (this.bootPending) {
+      this._needFreshOnSettle = true
+    } else {
+      // 数据过期就主动向手机拉一次，别等手机那边点推送
+      sync.ensureFresh('show')
+    }
+  },
+  onDestroy() {
+    if (this._refreshTimer) {
+      clearInterval(this._refreshTimer)
+      this._refreshTimer = null
+    }
+    if (this.unsubscribe) {
+      this.unsubscribe()
+      this.unsubscribe = null
+    }
+    if (this.unsubscribeToast) {
+      this.unsubscribeToast()
+      this.unsubscribeToast = null
+    }
+    if (this._toastTimer) {
+      clearTimeout(this._toastTimer)
+      this._toastTimer = null
+    }
+  },
+  /**
+   * 页面内 toast：系统 showToast 固定居中且不可定位，
+   * 这里用常驻节点切换可见性，落在底部栏上方。
+   */
+  showPageToast(message) {
+    this.toastText = message
+    this.toastVisible = true
+    if (this._toastTimer) clearTimeout(this._toastTimer)
+    this._toastTimer = setTimeout(() => {
+      this.toastVisible = false
+      this._toastTimer = null
+    }, 2000)
+  },
+  getViewDate() {
+    return this.viewDateTs ? new Date(this.viewDateTs) : new Date()
+  },
+  /**
+   * 手机连接状态卡（设计稿 38:441 未连接 / 38:506 已连接）：
+   * 卡片常驻，按连接态切换——渐变底（琥珀/微信绿，已烘焙成 PNG 规避
+   * 设备上「透明 stop 渐变不渲染」）、状态图标（印章/对勾）、时间颜色。
+   */
+  refreshDiagnostics() {
+    const s = sync.getStatus()
+    const on = !!s.ready
+    this.diagStatus = on ? '手机已连接' : '手机未连接'
+    this.diagTime = s.lastAt ? util.formatClock(new Date(s.lastAt)) : '--:--'
+    this.diagBg = on ? '/common/st_bg_on.png' : '/common/st_bg_off.png'
+    this.diagIcon = on ? '/common/icon_check_hd.png' : '/common/icon_seal_hd.png'
+    // 未连接时时间是琥珀色（设计稿 #FFC160），已连接为白
+    this.diagTimeCls = on ? '' : 'st-amber'
+  },
+  /**
+   * 组装首页视图对象（设计稿 336x480）：
+   *   头部  9月30日 / 今天还有 1 节课  +  9:28
+   *   主卡  正在上课 / 快上课了（渐变底 + 图标 + 倒计时）
+   *   分组  下午课程 —— 课程卡片（状态 / 课名 / 时间 / 节次·教室）
+   *   底栏  第6周 周三（‹ › 翻日）
+   */
+  buildDay(vm, now, viewDate) {
+    const isToday = vm.isToday
+    const nowClock = util.formatClock(now)
+    const groups = []
+    let total = 0
+    let remain = 0
+    for (let i = 0; i < vm.groups.length; i++) {
+      const g = vm.groups[i]
+      const items = []
+      for (let j = 0; j < g.courses.length; j++) {
+        const c = g.courses[j]
+        total++
+        if (c.endTime && c.endTime > nowClock) remain++
+        items.push({
+          name: c.name,
+          timeText: c.timeText,
+          meta: c.meta,
+          status: c.status,
+          /* 进行中的课状态行用高亮蓝，其余为半透明白 */
+          statusClass: c.status === '进行中' ? 'card-stat-on' : ''
+        })
+      }
+      groups.push({ label: g.label, courses: items })
+    }
+
+    // 今天看还剩几节没上完；其它日期看当天共几节
+    let summary
+    if (isToday) {
+      summary = remain > 0 ? '今天还有 ' + remain + ' 节课' : '今天没有课啦'
+    } else {
+      summary = total > 0 ? '这天有 ' + total + ' 节课' : '这天没有课程'
+    }
+
+    // 主卡：正在上课 → 蓝；进入课前提醒窗口 → 红；其余下节课 → 蓝
+    let hasFocus = false
+    let heroBg = ''
+    let heroIcon = ''
+    let heroLabel = ''
+    let heroCdClass = ''
+    let nextName = ''
+    let nextCountdown = ''
+    let nextMeta = ''
+    if (vm.nextCourse) {
+      hasFocus = true
+      nextName = vm.nextCourse.name
+      nextCountdown = vm.nextCourse.countdown
+      nextMeta = vm.nextCourse.meta
+      if (vm.nextCourse.label === '正在上课') {
+        heroLabel = '正在上课'
+      } else if (minutesToStart(vm.nextCourse.startTime, now) <= schedule.preClassLeadMinutes()) {
+        // 提前量：手机下发 settings.pre_class_reminder_minutes 时跟随手机，
+        // 否则用 band 端的固定值 15 分钟（见 schedule.preClassLeadMinutes）
+        heroLabel = '快上课了'
+      } else {
+        heroLabel = '下节课'
+      }
+      if (heroLabel === '快上课了') {
+        heroBg = HERO_BG_RED
+        heroIcon = ICON_MEGAPHONE
+        heroCdClass = 'hero-cd-red'
+      } else {
+        heroBg = HERO_BG_BLUE
+        heroIcon = ICON_PLANE
+        heroCdClass = 'hero-cd-blue'
+      }
+    }
+
+    const emptyState = vm.emptyState
+    const needPhone = emptyState === 'need-phone'
+    // 冷启动缓存恢复中：概览与空态先留空（头部日期/时钟照常渲染），
+    // 避免首帧闪"请连接手机"或闪错误的"今天没有课啦"；settle 通知后正常刷新。
+    const pending = !!this.bootPending
+    return {
+      isToday: isToday,
+      showToday: !isToday,
+      dateShort: util.formatShortDate(viewDate),
+      clockText: util.formatClock(now),
+      summary: pending ? '' : summary,
+      barText: (vm.weekText ? vm.weekText + ' ' : '') + util.getWeekday(viewDate),
+      hasFocus: hasFocus,
+      heroBg: heroBg,
+      heroIcon: heroIcon,
+      heroLabel: heroLabel,
+      heroCdClass: heroCdClass,
+      nextName: nextName,
+      nextCountdown: nextCountdown,
+      nextMeta: nextMeta,
+      groups: groups,
+      showEmpty: !pending && !vm.hasCourses,
+      showEmptySub: !pending && !vm.hasCourses,
+      emptyTitle: needPhone
+        ? '请连接手机'
+        : emptyState === 'holiday'
+          ? '今天是假期'
+          : '没有课程啦',
+      emptySub: needPhone ? '打开Nexio课程表发送数据' : '好好休息吧'
+    }
+  },
+  refreshHome() {
+    const now = new Date()
+    const viewDate = this.getViewDate()
+    const vm = schedule.buildHomeViewModel(viewDate, util, now)
+    // 单层常驻：只替换这一个对象的内容，既不改节点结构也不做动画
+    this.day = this.buildDay(vm, now, viewDate)
+  },
+  /**
+   * 读平台版本（Vela）与 APILevel，仅用于关于页的「同步诊断」展示。
+   * 小米手环 9 Pro 是 Vela 3.6，平台信息能帮助定位机型差异。
+   * 顺带做宽屏探测：screenWidth >= 400（Redmi Watch 6 = 432）时给固定头部、
+   * 翻日栏、空态、关于按钮追加 -wide 变体类（圆角内缩 / 整体上移）。
+   */
+  probePlatform() {
+    this._platform = '-'
+    try {
+      device.getInfo({
+        success: (info) => {
+          const name = (info && (info.platformVersionName || info.osVersionName)) || ''
+          this._platform = name + (info && info.APILevel != null ? ' / api' + info.APILevel : '')
+          console.log('[page] platform=' + name)
+          const w = info && (info.screenWidth || 0)
+          if (w >= 400) {
+            console.log('[page] wide screen ' + w + ' -> -wide variants')
+            this._isWide = true
+            this.scrollBounces = false
+            this.clsHd = 'hd hd-wide'
+            this.clsDaybar = 'daybar daybar-wide'
+            this.clsEmpty = 'empty empty-wide'
+            this.clsAbHead = 'ab-head ab-head-wide'
+          }
+          this.refreshDiagnostics()
+        },
+        fail: () => {
+          this.refreshDiagnostics()
+        }
+      })
+    } catch (e) {
+      console.log('[page] device.getInfo fail', e)
+    }
+  },
+  /**
+   * 切日：只换数据，不重建节点、不做动画。
+   * Vela 3.6（小米手环 9 Pro）上重建带 scroll 的层节点会整屏黑且点不动，
+   * 因此这里彻底去掉双层与出入场动画 —— 兼容优先。
+   */
+  goDay(delta) {
+    this._swipeCount = (this._swipeCount || 0) + 1
+    const target = util.addDays(this.getViewDate(), delta)
+    // v4 整表含完整学期，翻到学期内任意一天都有课表，不再限制滑动范围。
+    // 未同步（无整表数据）时不限制，页面显示空态即可。
+    this.viewDateTs = target.getTime()
+    this.refreshHome()
+    this.refreshDiagnostics()
+  },
+  /** 底部翻日栏：前一天 / 后一天 */
+  onPrevDay() {
+    this.goDay(-1)
+  },
+  onNextDay() {
+    this.goDay(1)
+  },
+  onBackToday() {
+    this.viewDateTs = 0
+    this.refreshHome()
+  },
+  touchXY(t) {
+    if (!t) return null
+    const x = t.clientX != null ? t.clientX : t.pageX != null ? t.pageX : t.x
+    const y = t.clientY != null ? t.clientY : t.pageY != null ? t.pageY : t.y
+    if (x == null || y == null) return null
+    return { x: x, y: y }
+  },
+  onTouchStart(e) {
+    const t = e && e.touches && e.touches[0]
+    const p = this.touchXY(t)
+    // 左缘起手不切日，留给系统「右滑回桌面」
+    this._touchFromEdge = !!(p && p.x <= EDGE_W)
+    // 同一手势只允许触发一次切日（出入场双层都会挂 handler）
+    this._gestureSwiped = false
+  },
+  onSwipe(e) {
+    // 左缘起手的滑动交给系统返回，应用内不响应
+    if (this._touchFromEdge) {
+      this._touchFromEdge = false
+      return
+    }
+    if (this._gestureSwiped) return
+    this._gestureSwiped = true
+    const dir = e && e.direction
+    if (dir !== 'left' && dir !== 'right') return
+    // 宽屏（RW6）此前"卡半屏"的冻结源头是横向回弹：回弹期间/之后的切日重渲染
+    // 把视图冻在半屏偏移处（300ms 延迟实测无效）。现在宽屏关掉 scroll 的 bounces
+    // （scrollBounces=false，probePlatform 里置位），回弹不存在了，横滑即时切日安全。
+    // 窄屏（手环 9 Pro）bounces 保持 true，本就无回弹冻结问题，同样即时切换。
+    this.goDay(dir === 'left' ? 1 : -1)
+  },
+  onTabHome() {
+    this.isHome = true
+    this.isAbout = false
+    this.aboutActive = false
+    this.barMaskCls = 'bm-home'
+    this.barMaskSrc = '/common/barmask_home.png'
+    this.refreshHome()
+  },
+  onTabAbout() {
+    this.isHome = false
+    this.isAbout = true
+    this.aboutActive = true
+    this.barMaskCls = 'bm-about'
+    this.barMaskSrc = '/common/barmask_about.png'
+    // 进关于页时刷新一次连接状态（连接变化不一定伴随课表推送）
+    this.refreshDiagnostics()
+  }
+}
+</script>
+
+<style>
+  .page {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    background-color: #000000;
+  }
+
+  .page-stack {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* 固定两层：内容层在下、底部栏在上，避免 if/else 重建后层级颠倒 */
+  .body-layer {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    position: relative;
+  }
+
+  /* 左缘透明条：盖住应用横滑，系统「右滑回桌面」才能生效（宽度与 EDGE_W 一致） */
+  .sys-back-edge {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 14px;
+    height: 100%;
+    background-color: transparent;
+  }
+
+  /* 切日不再有整页滑动动画，也没有双层与裁切舞台（Vela 3.6 上重建 scroll 层会黑屏）。
+     现在只有一个常驻的 .body(滚动容器) + .screen(内容)，切日只更新数据绑定。 */
+
+  .body {
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+    flex-direction: column;
+  }
+
+  /* 设计稿：卡片左右各留 4px 出血；底部留出翻日栏 +「今」药丸的空间 */
+  .screen {
+    width: 100%;
+    flex-direction: column;
+    padding-bottom: 150px;
+    /* 保证可滚动/回弹：内容不足一屏时也有滚动高度 */
+    min-height: 520px;
+  }
+
+  /* ---------------- 头部 ----------------
+     设计稿：左「9月30日 / 今天还有 1 节课」两行 32px 白字，右上角 32px 时钟 */
+  /* 固定头部：贴在屏幕顶部、不随课程列表滚动。
+     高度定死 95px（两行 32px 文字 + 上下 10px 内边距），
+     必须与 .screen-home 的 padding-top 保持一致，否则会盖住首条内容或留出空隙。
+     铺不透明黑底，让列表从下面滚过去时被挡住。 */
+  .hd {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 95px;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-right: 14px;
+    padding-left: 14px;
+    background-color: #000000;
+  }
+
+  /* 首页滚动内容：顶部给固定头部 95px + 它下面的渐隐带让出高度，
+     静置时首条课程完整可见；滚动时内容在这段里淡出、不会被硬切。
+     底部同理要覆盖「翻日栏 40px + 渐隐带 40px」= 80px，
+     否则继承 .screen 的 150px 会在列表末尾留出一大段纯黑空隙。 */
+  .screen-home {
+    padding-top: 115px;
+    padding-bottom: 80px;
+  }
+
+  .hd-row1 {
+    width: 100%;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  /* 日期：可收缩（长日期让位给时钟），不会被压到换行 */
+  .hd-date {
+    flex-shrink: 1;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+    lines: 1;
+  }
+
+  /* 概览：吃满整屏宽度（336 - 28 = 308px），文案再长也不会折行 */
+  .hd-sum {
+    width: 100%;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+    lines: 1;
+  }
+
+  /* 时钟：不给固定宽度，按内容自适应并被顶到右缘；flex-shrink: 0 防止被压扁 */
+  .hd-clock {
+    flex-shrink: 0;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: right;
+    lines: 1;
+  }
+
+  /* ---------------- 主卡（正在上课 / 快上课了 / 下节课） ----------------
+     设计稿：圆角 22、内边距上 10 下 10 左 14 右 8.5；
+     图标 79x78 钉在卡片内容区右上角（右边缘与内容右边缘齐平，y=10）。
+     渐变末端 rgba(...,0) 折算成实色 #222222（透明端叠在 #222 上与渐隐到 #222 等价）。 */
+  .hero-wrap {
+    width: 100%;
+    flex-direction: column;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  /* 卡片本体不设内边距：内边距交给 .hero-body，
+     这样图标的绝对定位参照系（padding box / border box）无论怎么解释都落在同一点。
+     overflow: hidden 兼作兜底：渐变图若比卡片高，也不会溢出圆角。 */
+  .hero {
+    width: 100%;
+    flex-direction: column;
+    position: relative;
+    border-radius: 22px;
+    background-color: #222222;
+    overflow: hidden;
+  }
+
+  .hero-body {
+    width: 100%;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-right: 8.5px;
+    padding-bottom: 10px;
+    padding-left: 14px;
+  }
+
+  /* 渐变底：绝对定位铺满卡片，PNG 自带圆角 22 与合成后的不透明渐变。
+     设备上 background: linear-gradient(...) 连透明 stop 一起不渲染，故不用它。
+     object-fit: fill 必须有：卡片高度与 PNG 原图 197 不一致时，默认会按 cover
+     裁掉上下两端（表现出来就是「卡片上下被切」），fill 让它按卡片实际高度拉伸。 */
+  .hero-bg {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+
+  /* 设计稿：图标右边缘 = 卡片内容右边缘（328 - 8.5 = 319.5），顶边距卡片顶 10px */
+  .hero-icon {
+    position: absolute;
+    top: 10px;
+    right: 8.5px;
+    width: 79px;
+    height: 78px;
+  }
+
+  .hero-label {
+    font-size: 28px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.75);
+    lines: 1;
+  }
+
+  .hero-info {
+    width: 100%;
+    flex-direction: column;
+    margin-top: 4px;
+  }
+
+  .hero-name {
+    width: 100%;
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff;
+    lines: -1;
+  }
+
+  .hero-cd {
+    width: 100%;
+    font-size: 28px;
+    font-weight: bold;
+    lines: 1;
+  }
+
+  .hero-cd-blue {
+    color: #6CAFFF;
+  }
+
+  .hero-cd-red {
+    color: #FF6C6C;
+  }
+
+  .hero-meta {
+    width: 100%;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.75);
+    lines: -1;
+    margin-top: 10px;
+  }
+
+  /* ---------------- 分组标题 ----------------
+     设计稿：居中 22px，两侧细分隔线（Vela 无 letter-spacing，4.4px 字距略去） */
+  .sec {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 12px;
+    padding-right: 14px;
+    padding-bottom: 12px;
+    padding-left: 14px;
+  }
+
+  .sec-line {
+    flex-grow: 1;
+    flex-shrink: 1;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.22);
+  }
+
+  .sec-label {
+    flex-shrink: 0;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    lines: 1;
+  }
+
+  /* ---------------- 课程卡片 ----------------
+     设计稿：圆角 22、#222，上 10 下 10 左 14 右 9；
+     状态 / 课名 / 时间三行紧贴，空 10px 后接「节次｜教室」 */
+  .card-wrap {
+    width: 100%;
+    flex-direction: column;
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-bottom: 10px;
+  }
+
+  .card {
+    width: 100%;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-right: 9px;
+    padding-bottom: 10px;
+    padding-left: 14px;
+    background-color: #222222;
+    border-radius: 22px;
+    overflow: visible;
+  }
+
+  .card-stat {
+    width: 100%;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.5);
+    lines: 1;
+  }
+
+  /* 进行中：状态行用高亮蓝 */
+  .card-stat-on {
+    color: #6CAFFF;
+  }
+
+  .card-name {
+    width: 100%;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    lines: -1;
+  }
+
+  .card-time {
+    width: 100%;
+    font-size: 28px;
+    font-weight: bold;
+    color: #6CAFFF;
+    lines: 1;
+  }
+
+  .card-meta {
+    width: 100%;
+    font-size: 22px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.75);
+    lines: -1;
+    margin-top: 10px;
+  }
+
+  /* ---------------- 空状态 ----------------
+     设计稿：内容区 252px 居中，24px 半透明白两行。
+     这里把整块压到 204px、再用 40px 上内边距把文字顶回原来的垂直位置：
+     文字仍落在 y≈226（与设计稿一致），但下方的「关于/今」整排因此上移 48px，
+     无课程时不会压在底栏的渐隐上。 */
+  .empty {
+    width: 100%;
+    height: 204px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  .empty-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    lines: -1;
+  }
+
+  /* ---------------- 药丸按钮（关于 / 今 / 返回） ---------------- */
+  .actions {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* 上边距 15px：比设计稿的 10px 多 5px，让「关于/今」离底栏渐隐区再远一点 */
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  .pill {
+    height: 52px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 53px;
+  }
+
+  .pill-about {
+    width: 106px;
+    background-color: #222222;
+  }
+
+  /* 「今」跟在「关于」右侧，间距 10px（Vela 无 gap，用 margin 代替）。
+     它是条件渲染：回到今天就不存在，于是「关于」被 .actions 居中归位。 */
+  .pill-today {
+    width: 92px;
+    margin-left: 10px;
+    background-color: #1580FF;
+  }
+
+  .pill-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    lines: 1;
+  }
+
+  /* ---------------- 底部翻日栏 ----------------
+     设计稿：整条 62px，左右各留 44px 放 ‹ ›，中间文字居中。
+     上缘渐隐交给 .barmask-img（线性 alpha 渐变图），底栏本身不再挂黑投影——
+     投影会和渐变叠成一大团黑，就是之前"底部很宽"的观感来源（标准版也没用投影）。
+     文案往下移：靠 padding 把内容盒压低（原来上下各 14 居中）。 */
+  .daybar {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 40px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 24px;
+    padding-right: 44px;
+    padding-bottom: 6px;
+    padding-left: 44px;
+    background-color: #000000;
+  }
+
+  .daybar-btn {
+    width: 32px;
+    height: 34px;
+    flex-shrink: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .caret {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+  }
+
+  .daybar-text {
+    flex-grow: 1;
+    flex-shrink: 1;
+    font-size: 26px;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    lines: 1;
+  }
+
+  /* ---------------- 底部渐隐遮罩 ----------------
+     设计稿底栏上缘那块 blur(25.7px) 黑色矩形的等效实现。
+     做法：一张烘焙好真实 alpha 渐变的 PNG（线性 0→255，顶部透明、底部全黑）。
+     为什么不用 CSS：带透明 stop 的 background 渐变在设备上不渲染；
+     多条纯黑叠 opacity 又会有可见台阶（"渐变不自然"）。
+     图由 figma-assets/gen_masks_pro.py 生成，改 height 后必须重新出图。
+     bottom 必须等于对应底栏的高度，否则渐隐带会与底栏脱开、中间露出完整内容。 */
+  /* 底部渐隐带：整张图 = 渐隐段（底栏上缘）+ 实心段（藏在底栏黑底后），
+     用 bottom:0 零偏移挂（RW6 实机证明非零偏移的绝对定位 <image> 会错位/消失）。
+     高度由类决定，必须 = 渐隐 40 + 对应底栏高度：
+       bm-home 80 = 40 + 翻日栏 40；bm-about 95 = 40 + 返回栏 55。
+     渐隐段加宽到 40 是因为 RW6 上 20px 覆盖不全（实机反馈底缘内容透出）。 */
+  .barmask-img {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    width: 100%;
+  }
+
+  .bm-home {
+    height: 80px;
+  }
+
+  .bm-about {
+    height: 95px;
+  }
+
+  /* 固定头部下缘的渐隐带：整张图 = 实心 95 + 渐隐 20（y95..115），top:0 零偏移挂。
+     渐隐起点被头部黑底钉死在 y95（headmask 在 .hd 下层，y<95 的部分被黑底吞掉、
+     屏幕上渐隐直接消失——solid 90 那版就踩了这个坑）。渐隐曲线形状取自
+     用户手绘稿（figma-assets/headmask_user_edit.png），重采样到 20 行。 */
+  .headmask-img {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    width: 100%;
+    height: 115px;
+  }
+
+  /* 关于页：底部单颗返回药丸。
+     药丸高 52px，容器只有 55px —— 所以竖向不能再加 padding：
+     加了之后内容盒只剩 27px，52px 的药丸超出内容盒会被裁掉（返回按钮被切就是这个原因）。
+     改为 padding 0，让药丸直接在 55px 里居中（上下各 1.5px），不溢出即不裁切。 */
+  .backbar {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 55px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+  }
+
+  /* 仅增加可滚高度以触发回弹，不改变关于页内部布局。
+     padding-bottom 必须覆盖「返回栏 55px + 渐隐带 20px」= 75px：
+     原来继承 .screen 的 150px（那是给首页翻日栏 + 「今」药丸留的），
+     比关于页实际底栏高出一大截，滚到底时就会在最后一条内容和渐隐带之间
+     露出一段 95px 的纯黑空隙。 */
+  .screen-about {
+    min-height: 620px;
+    padding-bottom: 95px;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  /* ---------------- 关于页头部（38:418） ----------------
+     ‹ 返回(32) + 应用状态(28) + 右侧时钟(28)，整行高 62 */
+  .ab-head {
+    width: 100%;
+    height: 62px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .ab-back {
+    width: 32px;
+    height: 32px;
+    /* 屏内 x=0 对应设计稿 x=4，返回图标设计稿在 x=14 */
+    margin-left: 10px;
+  }
+
+  .ab-caret {
+    width: 32px;
+    height: 32px;
+  }
+
+  .ab-title {
+    flex: 1;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    lines: 1;
+    margin-left: 7px;
+  }
+
+  .ab-clock {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    lines: 1;
+    margin-right: 10px;
+  }
+
+  /* ---------------- 应用信息行（38:423，高 102，无卡片背景） ----------------
+     白圆图标 72 @ (14,10)，文字块 @ (98,13)：名称 28 / 版本 22 */
+  .ab-app {
+    width: 100%;
+    height: 102px;
+    flex-direction: row;
+  }
+
+  .ab-app-icon {
+    width: 72px;
+    height: 72px;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .ab-app-text {
+    flex-direction: column;
+    margin-top: 13px;
+    margin-left: 12px;
+  }
+
+  .ab-app-name {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    lines: 1;
+  }
+
+  .ab-app-ver {
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.7);
+    lines: 1;
+    margin-top: 4px;
+  }
+
+  /* ---------------- 手机连接状态卡（38:441 / 38:506） ----------------
+     328x138 圆角 22；渐变底是烘焙好的 PNG（st_bg_on/off），因为设备上
+     「带透明 stop 的 background 渐变」不渲染（底部遮罩已踩过坑）。
+     内部全部绝对定位，坐标取自 SVG：
+       标题行 0..48（32px）  图标 64x64 @(右15, 上17)
+       时间 28px @ (14,62)   说明 22px @ (14,99)
+     （选择器用单类：Vela 不保证支持 .a.b 复合写法，宽度/底色仍由 .card 提供） */
+  .status-card {
+    height: 138px;
+    padding: 0px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .st-bg {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .st-row1 {
+    position: absolute;
+    left: 14px;
+    top: 0px;
+    height: 48px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .st-title {
+    font-size: 32px;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    lines: 1;
+  }
+
+  /* 图标与主卡图标同尺寸（79x78），比设计稿的 64x64 放大；
+     中心点保持不动（原 64x64 @ top17/right15 的中心在 right47/top49） */
+  .st-icon {
+    position: absolute;
+    top: 10px;
+    right: 7.5px;
+    width: 79px;
+    height: 78px;
+  }
+
+  .st-time {
+    position: absolute;
+    left: 14px;
+    top: 62px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffffff;
+    lines: 1;
+  }
+
+  /* 未连接态：时间用设计稿的琥珀色 */
+  .st-amber {
+    color: #ffc160;
+  }
+
+  .st-label {
+    position: absolute;
+    left: 14px;
+    top: 99px;
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.75);
+    lines: 1;
+  }
+
+  /* ---------------- 分组标（高 57，居中 22px） ----------------
+     设计稿 letter-spacing 4.4px，Vela 不支持，此处只保留字号/字重 */
+  .sec-wrap {
+    width: 100%;
+    height: 57px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section-label {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+    lines: 1;
+  }
+
+  /* ---------------- 人员卡（38:456，328x260） ----------------
+     3 行 64px @ y=14/98/182（行距 20）；行内：64 头像 + 10 间隙 + 文字 */
+  .people-card {
+    height: 260px;
+    padding: 0px;
+    position: relative;
+  }
+
+  .person {
+    position: absolute;
+    left: 14px;
+    width: 300px;
+    height: 64px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .p1 { top: 14px; }
+  .p2 { top: 98px; }
+  .p3 { top: 182px; }
+
+  /* 图已预裁圆形透明边，勿再用 border-radius 二次硬裁 */
+  .avatar {
+    width: 64px;
+    height: 64px;
+    background-color: transparent;
+    margin-right: 10px;
+  }
+
+  .person-text {
+    flex-direction: column;
+  }
+
+  .person-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    lines: 1;
+  }
+
+  .person-role {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.75);
+    lines: 1;
+    margin-top: 2px;
+  }
+
+  /* ---------------- 连接提示 ----------------
+     底部翻日栏 62 +「今」药丸 52 + 间距 → toast 放在其上方 */
+  .toast {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 150px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .toast-text {
+    max-width: 240px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #242424;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    text-align: center;
+    lines: 1;
+  }
+
+  /* ---------------- 打赏卡（38:480，328x296） ----------------
+     卡内居中白块 206x268 @ (61,14)、圆角 10；二维码按宽度 186 居中放置，
+     底部绿带 206x84（上缘弧形取自 SVG path，烘成 rw_band.png）+「微信」。
+     按需求：二维码只展示，点击不放大也不跳页。 */
+  .rw-card {
+    height: 296px;
+    padding: 0px;
+    align-items: center;
+  }
+
+  .rw-block {
+    position: relative;
+    width: 206px;
+    height: 268px;
+    margin-top: 14px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .rw-qr {
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    width: 186px;
+    height: 202px;
+  }
+
+  .rw-band {
+    position: absolute;
+    left: 0px;
+    top: 184px;
+    width: 206px;
+    height: 84px;
+  }
+
+  .rw-band-text {
+    position: absolute;
+    left: 0px;
+    top: 232px;
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    lines: 1;
+  }
+
+  /* ---------------- 宽屏（Redmi Watch 6 等 432×514）运行时变体 ----------------
+     由 probePlatform 按 device.getInfo().screenWidth >= 400 追加 -wide 类，
+     窄屏（手环 9 Pro 336）不命中、完全不受影响。
+     为什么不用 CSS 媒体查询：实机验证 @import 媒体查询在 Vela 上不命中。
+     注意：-wide 变体一律不改 hd/daybar/backbar 的高度 —— 高度与渐隐 PNG 的
+     实心段严格咬合（headmask 实心 95 / barmask 实心 40、55），改高度会脱开露缝。
+     宽屏的位置微调只走内边距。 */
+
+  /* 头部：圆角矩形屏的顶部两角会裁切贴边文字 —— 左右内边距 14→30 往里缩，
+     padding-top 10→14 让首行离顶角更远。高度保持 95 不变（与 headmask 咬合）。 */
+  .hd-wide {
+    padding-top: 14px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  /* 翻日栏：贴底不变（与 barmask 实心段咬合），内容上移 —— padding-top 24→14，
+     星期与箭头整体抬高约 10px，远离底部圆角。 */
+  .daybar-wide {
+    padding-top: 14px;
+  }
+
+  /* 空态：整块压矮并上移（204→150、上内边距 40→10），
+     「请连接手机」文案与后面的关于按钮一起上移，不再沉在屏幕下半部。 */
+  .empty-wide {
+    height: 150px;
+    padding-top: 10px;
+  }
+
+  /* 关于页头部：右侧时钟贴边会被 RW6 的右圆角裁切（实机截图 09:12 被切）。
+     左右各加 20px 内边距（叠加返回/时钟自身的 10px margin = 距边 30px，
+     与首页 hd-wide 的 30px 内缩对齐）。 */
+  .ab-head-wide {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+</style>

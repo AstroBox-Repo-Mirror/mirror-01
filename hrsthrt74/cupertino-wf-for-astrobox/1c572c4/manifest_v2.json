@@ -1,0 +1,71 @@
+{
+  "item": {
+    "id": "979808744800",
+    "restype": "watchface",
+    "name": "相册表盘 Cupertino",
+    "description": "iOS6 风格 相册表盘 Cupertino\n\n* 本表盘当前仅适配以下设备：【小米手环 9Pro、10、10Pro、11】，购买前请知悉~ 虚拟商品，原则上不支持退款。其他设备后续更新\n\n- 可自定义壁纸\n- 预设经典壁纸\n- 9Pro / 10Pro 版本可选开启跳转（长按表盘点击⚙️编辑）\n\n- 建议配合「图标包」Cupertino 食用，效果更佳~ 见介绍图\n\n* 更换壁纸方法请见介绍图",
+    "preview": [
+      "media/preview_0.png",
+      "media/preview_1.png",
+      "media/preview_2.png",
+      "media/preview_3.png",
+      "media/preview_4.png",
+      "media/preview_5.png"
+    ],
+    "icon": "media/icon.png",
+    "cover": "media/cover.png",
+    "author": [
+      {
+        "name": "hrsthrt74",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "交流群",
+      "url": "https://qun.qq.com/universal-share/share?ac=1&authKey=g6XligIthhyyHK3vdtJERLTHuHcL6FA18DTvcoHFtgBdZ4F3IyuLPtM%2FVoFF9euZ&busi_data=eyJncm91cENvZGUiOiI2MDg4MTE0MDciLCJ0b2tlbiI6ImYrdW1JYnhDU3BxUk1QSnVWdFVjQW9VbUN4dmdnam5MT05XK1gwVHNVUVVEd3J1U1ltNUY5bnphK3Bud0Q0MEgiLCJ1aW4iOiIxOTMwMDA5NjEifQ%3D%3D&data=GeoMiGtLNaqPTer1fWNZqL5-4PXgigAMUJWTgD-AYmWOMTqTd6eCT_PX2aqATThqF-9KaXVPULmjwDyUkSzqKw&svctype=4&tempid=h5_group_info",
+      "icon": "chat-circle"
+    },
+    {
+      "title": "购买捆绑包",
+      "url": "https://ifdian.net/bundle/d6d7065ec16f11f19ba35254001e7c00",
+      "icon": "package"
+    }
+  ],
+  "downloads": {
+    "xmb10": {
+      "version": "1.0.1",
+      "file_name": "downloads/Cupertino for Band10 v1.0 by hrsthrt74.bin",
+      "versionCode": 65537
+    },
+    "xmb10nfc": {
+      "version": "1.0.1",
+      "file_name": "downloads/Cupertino for Band10 v1.0 by hrsthrt74.bin",
+      "versionCode": 65537
+    },
+    "xmb11": {
+      "version": "1.0.1",
+      "file_name": "downloads/Cupertino for Band11 v1.0 by hrsthrt74.bin",
+      "versionCode": 65537
+    },
+    "xmb11nfc": {
+      "version": "1.0.1",
+      "file_name": "downloads/Cupertino for Band11 v1.0 by hrsthrt74.bin",
+      "versionCode": 65537
+    },
+    "xmb10p": {
+      "version": "1.0.1",
+      "file_name": "downloads/Cupertino for 10P v1.0 by hrsthrt74.bin",
+      "versionCode": 65537
+    },
+    "xmb9p": {
+      "version": "1.0.1",
+      "file_name": "downloads/Cupertino for 9P v1.0 by hrsthrt74.bin",
+      "versionCode": 65537
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

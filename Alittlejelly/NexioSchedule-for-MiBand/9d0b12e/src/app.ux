@@ -1,0 +1,12 @@
+<script>
+import sync from './common/sync'
+
+export default {
+  onCreate() {
+    sync.init()
+  },
+  onDestroy() {
+    sync.teardown()
+  }
+}
+</script>

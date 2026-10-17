@@ -1,0 +1,94 @@
+{
+  "item": {
+    "id": "979808740500",
+    "restype": "watchface",
+    "name": "PoP☆P",
+    "description": "《星之卡比》风格表盘\n\n- 清晰息屏显示：AOD 描边加粗，提高可读性\n- 全设备适配：无论什么设备类型都支持~",
+    "preview": [
+      "preview0.png",
+      "preview1.png",
+      "preview2.png",
+      "preview3.png"
+    ],
+    "icon": "icon.png",
+    "cover": "cover.png",
+    "author": [
+      {
+        "name": "hrsthrt74",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "交流群",
+      "url": "https://qun.qq.com/universal-share/share?ac=1&authKey=g6XligIthhyyHK3vdtJERLTHuHcL6FA18DTvcoHFtgBdZ4F3IyuLPtM%2FVoFF9euZ&busi_data=eyJncm91cENvZGUiOiI2MDg4MTE0MDciLCJ0b2tlbiI6ImYrdW1JYnhDU3BxUk1QSnVWdFVjQW9VbUN4dmdnam5MT05XK1gwVHNVUVVEd3J1U1ltNUY5bnphK3Bud0Q0MEgiLCJ1aW4iOiIxOTMwMDA5NjEifQ%3D%3D&data=GeoMiGtLNaqPTer1fWNZqL5-4PXgigAMUJWTgD-AYmWOMTqTd6eCT_PX2aqATThqF-9KaXVPULmjwDyUkSzqKw&svctype=4&tempid=h5_group_info",
+      "icon": "chats-circle"
+    },
+    {
+      "title": "支持我",
+      "url": "https://afdian.com/a/hrsthrt74",
+      "icon": "hand-heart"
+    }
+  ],
+  "downloads": {
+    "xmb9": {
+      "version": "1.0.0",
+      "file_name": "PoP☆P for Band9 v1.0 by hrsthrt74.bin"
+    },
+    "xmb9p": {
+      "version": "1.0.0",
+      "file_name": "PoP☆P for Band9Pro v1.0 by hrsthrt74.bin"
+    },
+    "xmb10": {
+      "version": "1.0.0",
+      "file_name": "PoP☆P for Band10 v1.0 by hrsthrt74.bin"
+    },
+    "xmb10nfc": {
+      "version": "1.0.0",
+      "file_name": "PoP☆P for Band10 v1.0 by hrsthrt74.bin"
+    },
+    "xmws4": {
+      "version": "1.0.0",
+      "file_name": "PoP☆P for WatchS4 v1.0 by hrsthrt74.bin"
+    },
+    "xmrw5": {
+      "version": "1.0.0",
+      "file_name": "PoP☆P for RW5 v1.0 by hrsthrt74.bin"
+    },
+    "xmrw5xring": {
+      "version": "1.0.0",
+      "file_name": "PoP☆P for RW5 v1.0 by hrsthrt74.bin"
+    },
+    "xmrw6": {
+      "version": "1.0.0",
+      "file_name": "PoP☆P for RW5 v1.0 by hrsthrt74.bin"
+    },
+    "xmb11": {
+      "version": "1.0.0",
+      "file_name": "downloads/PoP☆P for Band10 v1.0 by hrsthrt74-xmb11.bin",
+      "versionCode": 65536
+    },
+    "xmb10p": {
+      "version": "1.0.0",
+      "file_name": "downloads/PoP☆P for Band9Pro v1.0 by hrsthrt74-xmb10p.bin",
+      "versionCode": 65536
+    },
+    "xmb11nfc": {
+      "version": "1.0.0",
+      "file_name": "downloads/PoP☆P for Band10 v1.0 by hrsthrt74-xmb11nfc.bin",
+      "versionCode": 65536
+    },
+    "xmws4xring": {
+      "version": "1.0.0",
+      "file_name": "downloads/PoP☆P for WatchS4 v1.0 by hrsthrt74-xmws4xring.bin",
+      "versionCode": 65536
+    },
+    "xmws441": {
+      "version": "1.0.0",
+      "file_name": "downloads/PoP☆P for WatchS4 v1.0 by hrsthrt74-xmws441.bin",
+      "versionCode": 65536
+    }
+  },
+  "ext": {}
+}

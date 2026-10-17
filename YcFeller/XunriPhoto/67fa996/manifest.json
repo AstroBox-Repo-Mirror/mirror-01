@@ -1,0 +1,51 @@
+{
+  "item": {
+    "name": "Xr图库",
+    "description": "Xr图库，米环图库应用新方向，多端互通，智能管理，让每一张照片都触手可及。下单地址：https://wear.xunrix.com/shop",
+    "preview": [
+      "fangx.png",
+      "Band10-2026-02-09-21-40-51.png",
+      "RedWatch-2026-02-09-21-15-01.png",
+      "RedWatch-2026-02-09-21-42-47.png",
+      "RedWatch-2026-02-09-22-24-31.png",
+      "Xiaomi_S4-2026-02-09-22-19-09.png"
+    ],
+    "icon": "icon.png",
+    "author": [
+      {
+        "name": "YcFeller",
+        "author_url": "https://wear.xunrix.com/author/1"
+      }
+    ]
+  },
+  "downloads": {
+    "n67": {
+      "version": "3.2.0",
+      "file_name": "xrphoto-v3.2.0.rpk"
+    },
+    "o66": {
+      "version": "3.2.0",
+      "file_name": "xrphoto-v3.2.0.rpk"
+    },
+    "o66nfc": {
+      "version": "3.2.0",
+      "file_name": "xrphoto-v3.2.0.rpk"
+    },
+    "o65": {
+      "version": "3.2.0",
+      "file_name": "xrphoto-v3.2.0.rpk"
+    },
+    "o65m": {
+      "version": "3.2.0",
+      "file_name": "xrphoto-v3.2.0.rpk"
+    },
+    "p65": {
+      "version": "3.2.0",
+      "file_name": "xrphoto-v3.2.0.rpk"
+    },
+    "o62": {
+      "version": "3.2.0",
+      "file_name": "xrphoto-v3.2.0.rpk"
+    }
+  }
+}

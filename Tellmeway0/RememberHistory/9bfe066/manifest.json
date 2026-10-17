@@ -1,0 +1,18 @@
+{
+  "item": {
+    "name": "赤旗破晓",
+    "description": "赤旗破晓是一款基于现实历史事件所构建的架空世界模拟游戏，玩家作为各种事件中的经历者，做出各种选择，沉浸的体验，让玩家铭记历史，记住历史。",
+    "preview": ["rh_cover.png","rh_preview.png"],
+    "icon": "logo.png",
+    "author": [{
+      "name": "Tellmeway",
+      "author_url": "tellmeway.cn"
+    }]
+  },
+  "downloads": {
+    "n67": {
+      "version": "1.0",
+      "file_name": "RemberHistroy_R_1.0.rpk"
+    }
+  }
+}

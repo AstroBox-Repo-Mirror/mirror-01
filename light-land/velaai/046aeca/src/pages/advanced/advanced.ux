@@ -1,0 +1,285 @@
+<template>
+  <div class="list-page">
+    <text class="time">{{ time }}</text>
+    <text class="title">高级设置</text>
+    <img class="top leftButton" src="/common/back_rect.png" @click="back" />
+
+    <div class="box">
+      <scroll scroll-y="true" bounces="true">
+        <!-- 总结功能 -->
+        <text class="set-title">总结功能（长对话节省 Token）</text>
+        <div class="set-group">
+          <div class="set-row" @click="toggle('summaryEnabled')">
+            <text class="set-label">长对话总结</text>
+            <img if="{{ summaryEnabled }}" class="set-img" src="/common/true.png" />
+            <img else class="set-img" src="/common/false.png" />
+          </div>
+          <div class="set-row" @click="editNumber('summaryEvery')">
+            <text class="set-label">总结回合</text>
+            <text class="set-value">每{{ summaryEvery }}回合</text>
+          </div>
+          <div class="set-row" @click="editNumber('summaryMaxTokens')">
+            <text class="set-label">总结最大 Token</text>
+            <text class="set-value">{{ summaryMaxTokens }}</text>
+          </div>
+        </div>
+
+        <!-- 标题功能 -->
+        <text class="set-title">标题功能</text>
+        <div class="set-group">
+          <div class="set-row" @click="toggle('titleEnabled')">
+            <text class="set-label">自动生成标题</text>
+            <img if="{{ titleEnabled }}" class="set-img" src="/common/true.png" />
+            <img else class="set-img" src="/common/false.png" />
+          </div>
+        </div>
+
+        <!-- 参数设置 -->
+        <text class="set-title">参数设置</text>
+        <div class="set-group">
+          <div class="set-row" @click="toggle('thinking')">
+            <text class="set-label">深度思考</text>
+            <img if="{{ thinking }}" class="set-img" src="/common/true.png" />
+            <img else class="set-img" src="/common/false.png" />
+          </div>
+          <div class="set-row" @click="editNumber('maxTokens')">
+            <text class="set-label">最大输出长度</text>
+            <text class="set-value">{{ maxTokens ? maxTokens : "默认" }}</text>
+          </div>
+          <div class="set-row" @click="editText('system')">
+            <text class="set-label">系统提示词</text>
+            <text class="set-value">{{ system ? system : "未设置" }}</text>
+          </div>
+          <div class="set-row" @click="editNumber('temperature')">
+            <text class="set-label">采样温度</text>
+            <text class="set-value">{{ temperatureText }}</text>
+          </div>
+        </div>
+      </scroll>
+    </div>
+  </div>
+</template>
+
+<script>
+import router from "@system.router"
+import {showToast} from "@system.prompt"
+import * as settings from "../../common/settings.js"
+
+// 正整数字段
+const NUMBER_FIELDS = ["summaryEvery", "summaryMaxTokens"]
+
+export default {
+  private: {
+    time: "",
+    summaryEnabled: true,
+    summaryEvery: 10,
+    summaryMaxTokens: 512,
+    titleEnabled: true,
+    thinking: false,
+    maxTokens: "",
+    system: "",
+    temperature: 1
+  },
+
+  computed: {
+    // 温度固定两位小数显示（0.00~2.00）
+    temperatureText() {
+      return Number(this.temperature).toFixed(2)
+    }
+  },
+
+  async onInit() {
+    await settings.load()
+    this.bindAll()
+  },
+
+  async onShow() {
+    this.time = global.getTime()
+    // textinput 用 router.back() 返回，只触发 onShow：消费中转值更新对应字段
+    const field = this._editingField
+    if (field) {
+      this._editingField = ""
+      // 仅当用户点了保存才写入（空值也会写入，用于清空字段）；返回取消则不修改
+      const saved = await settings.getTmpSaved()
+      if (saved) {
+        const value = await settings.getTmp()
+        await this.applyValue(field, value)
+      }
+      this.bindAll()
+    }
+  },
+
+  // 按字段类型校验并写入；非法输入 toast 提示且不修改
+  async applyValue(field, value) {
+    if (field === "temperature") {
+      const t = parseFloat(value)
+      if (isNaN(t) || t < 0 || t > 2) {
+        showToast({message: "温度需为 0.00~2.00", duration: 1500})
+        return
+      }
+      await settings.update({temperature: Math.round(t * 100) / 100})
+    } else if (field === "maxTokens") {
+      // 空 = 模型默认；非空必须是正整数
+      if (value === "") {
+        await settings.update({maxTokens: ""})
+      } else {
+        const n = parseInt(value)
+        if (isNaN(n) || n <= 0) {
+          showToast({message: "请输入正整数", duration: 1500})
+          return
+        }
+        await settings.update({maxTokens: n})
+      }
+    } else if (NUMBER_FIELDS.indexOf(field) >= 0) {
+      const n = parseInt(value)
+      if (isNaN(n) || n <= 0) {
+        showToast({message: "请输入正整数", duration: 1500})
+        return
+      }
+      await settings.update({[field]: n})
+    } else {
+      await settings.update({[field]: value})
+    }
+  },
+
+  bindAll() {
+    const s = settings.getAll()
+    this.summaryEnabled = s.summaryEnabled
+    this.summaryEvery = s.summaryEvery
+    this.summaryMaxTokens = s.summaryMaxTokens
+    this.titleEnabled = s.titleEnabled
+    this.thinking = s.thinking
+    this.maxTokens = s.maxTokens
+    this.system = s.system
+    this.temperature = s.temperature
+  },
+
+  async toggle(field) {
+    await settings.update({[field]: !this[field]})
+    this.bindAll()
+  },
+
+  editText(field) {
+    this._editingField = field
+    const labels = { system: "系统提示词" }
+    router.push({
+      uri: "/pages/textinput",
+      params: {
+        title: labels[field] || "输入",
+        field: field,
+        ret: "advanced",
+        value: this[field] ? String(this[field]) : ""
+      }
+    })
+  },
+
+  editNumber(field) {
+    this._editingField = field
+    const labels = {
+      summaryEvery: "总结回合",
+      summaryMaxTokens: "总结最大 Token",
+      maxTokens: "最大输出长度",
+      temperature: "采样温度 0.00~2.00"
+    }
+    router.push({
+      uri: "/pages/textinput",
+      params: { title: labels[field] || "输入数字", field: field, ret: "advanced", value: String(this[field]) }
+    })
+  },
+
+  back() {
+    router.back()
+  }
+}
+</script>
+
+<style>
+@import "../../common/app.css";
+
+.list-page {
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  background-color: black;
+}
+
+.box {
+  position: relative;
+  flex: 1;
+  width: 90%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+scroll {
+  flex: 1;
+  width: 100%;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.set-title {
+  font-size: 20px;
+  color: #999999;
+  margin: 14px 10px 2px 10px;
+  lines: 1;
+}
+
+.set-group {
+  width: 100%;
+  flex-direction: column;
+  margin: 6px 0;
+}
+
+.set-row {
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 66px;
+  margin-bottom: 8px;
+  padding: 0 16px;
+  border-radius: 14px;
+  background-color: #262626;
+  border: 3px solid rgba(255, 255, 255, 0.06);
+}
+
+.set-label {
+  flex: 1;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.set-value {
+  font-size: 22px;
+  color: #999999;
+  max-width: 55%;
+  lines: 1;
+  text-overflow: ellipsis;
+}
+
+/* 开关值图片 */
+.set-img {
+  height: 36px;
+}
+
+@media (device-type: band) and (shape: rect) {
+  .box {
+    margin-top: 92px;
+    width: 83%;
+  }
+}
+
+@media (device-type: watch) and (shape: rect) {
+  .box {
+    margin-top: 102px;
+    width: 75%;
+  }
+
+  .set-row {
+    height: 72px;
+  }
+}
+</style>

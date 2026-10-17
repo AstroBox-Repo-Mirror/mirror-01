@@ -1,0 +1,26 @@
+{
+  "item": {
+    "name": "高中古诗词",
+    "description": "内含高考必背72篇目，助力您成功上岸！\n项目已开源在：https://github.com/Dreamqiucn/poem\n（考试时别用捏）",
+    "preview": [
+      "preview1.png",
+      "preview4.png",
+      "preview2.png",
+      "preview3.png"
+    ],
+    "icon": "logo.png",
+    "source_url": "https://github.com/Dreamqiucn/poem",
+    "author": [
+      {
+        "name": "Dreamqiu",
+        "author_url": "https://github.com/Dreamqiucn"
+      }
+    ]
+  },
+  "downloads": {
+    "n67": {
+      "version": "1.1",
+      "file_name": "com.Dreamqiu.poem.release.1.1.rpk"
+    }
+  }
+}

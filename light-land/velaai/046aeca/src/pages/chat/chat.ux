@@ -1,0 +1,594 @@
+<template>
+  <div class="list-page">
+    <text class="time">{{ time }}</text>
+    <text class="title">{{ titleText }}</text>
+    <img class="top leftButton" src="/common/right.png" @click="goHistory" />
+    <!-- 右上角：默认不显示任何东西；正常输出完成后显示 again.png（再次请求） -->
+    <img if="{{ showAgain }}" class="top rightButton" src="/common/again.png" @click="sendAgain" />
+    <div class="box">
+      <scroll id="msgScroll" scroll-y="true" bounces="true">
+        <!-- 思考中：最新位置在列表最顶部；点击右下角 download 按钮停止 -->
+        <div if="{{ thinking }}" class="bubble-row">
+          <div class="msg-col msg-col-ai">
+            <text class="msg-name">{{ modelName }}</text>
+            <div class="bubble bubble-ai">
+              <text class="bubble-text thinking-text">正在思考…</text>
+            </div>
+          </div>
+        </div>
+        <!-- 消息倒序显示：最新在上，最久在下（displayMessages = messages 反转） -->
+        <div class="bubble-row" for="{{ displayMessages }}">
+          <!-- AI：靠左；错误消息显示"错误"红名 + 红色方框红字 -->
+          <div if="{{ $item.role === 'assistant' }}" class="msg-col msg-col-ai">
+            <text if="{{ $item.error }}" class="msg-name msg-name-error">错误</text>
+            <text elif="{{ $item.model }}" class="msg-name">{{ $item.model }}</text>
+            <div class="bubble {{ $item.error ? 'bubble-error' : 'bubble-ai' }}">
+              <text class="bubble-text {{ $item.error ? 'error-text' : '' }}">
+                {{ $item.content }}
+              </text>
+            </div>
+          </div>
+          <!-- 用户：靠右，用户名在气泡上方 -->
+          <div else class="msg-col msg-col-user">
+            <text class="msg-name">{{ username }}</text>
+            <div class="bubble bubble-user">
+              <text class="bubble-text">{{ $item.content }}</text>
+            </div>
+          </div>
+        </div>
+      </scroll>
+    </div>
+
+    <!-- 新对话欢迎语：纯文本，屏幕正中偏上；发出第一句话后消失 -->
+    <text if="{{ showWelcome }}" class="welcome-text">{{ welcomeText }}</text>
+
+    <!-- 底部输入区：请求中发送按钮变 download（点击停止） -->
+    <div class="input-bar">
+      <div class="bar-line" @click="goInput">
+        <text class="bar-text">{{ draft }}</text>
+      </div>
+      <img if="{{ thinking }}" class="send-btn" src="/common/download.png" @click="stopThinking" />
+      <img else class="send-btn" src="/common/upload.png" @click="send" />
+    </div>
+  </div>
+</template>
+
+<script>
+import router from "@system.router"
+import {showToast} from "@system.prompt"
+import * as settings from "../../common/settings.js"
+import * as api from "../../common/api.js"
+import * as store from "../../common/store.js"
+import {pick as pickWelcome} from "../../common/welcome.js"
+
+// 去除 Markdown 标记（手表屏阅读友好）：围栏/行内代码、标题、加粗斜体、链接图片、引用、列表符、分隔线
+function stripMd(text) {
+  let t = String(text)
+  t = t.replace(/```[a-zA-Z0-9_-]*\n?/g, "") // 代码围栏（保留内部内容）
+  t = t.replace(/~~([^~]*)~~/g, "$1") // 删除线
+  t = t.replace(/!\[([^\]]*)\]\([^)]*\)/g, "$1") // 图片 → alt
+  t = t.replace(/\[([^\]]*)\]\(([^)]*)\)/g, "$1($2)") // 链接 → 文本(地址)
+  t = t.replace(/\*\*([^*]+)\*\*/g, "$1") // 加粗
+  t = t.replace(/__([^_]+)__/g, "$1") // 加粗
+  t = t.replace(/(^|[^*])\*([^*\n]+)\*/g, "$1$2") // 斜体
+  t = t.replace(/`([^`]*)`/g, "$1") // 行内代码
+  const lines = t.split("\n").map(function (line) {
+    let l = line
+    l = l.replace(/^#{1,6}\s*/, "") // 标题井号
+    l = l.replace(/^>\s?/, "") // 引用符
+    l = l.replace(/^(\s*)[-*+]\s+/, "$1· ") // 列表符 → ·
+    if (/^\s*(-{3,}|\*{3,})\s*$/.test(l)) return "" // 水平线整行去除
+    return l
+  })
+  return lines
+    .join("\n")
+    .replace(/\n{3,}/g, "\n\n")
+    .trim()
+}
+
+// 字节长度：汉字/全角算 2 字节，ASCII 算 1 字节
+function byteLen(s) {
+  let n = 0
+  for (let i = 0; i < s.length; i++) {
+    n += s.charCodeAt(i) > 255 ? 2 : 1
+  }
+  return n
+}
+
+export default {
+  private: {
+    time: "",
+    titleText: "Vela AI",
+    username: "用户",
+    messages: [],
+    displayMessages: [],
+    draft: "",
+    thinking: false,
+    modelName: "DeepSeek",
+    // 请求序号：每次发送/停止/新对话自增，用于丢弃过期响应（取代共享布尔 stopFlag）
+    reqSeq: 0,
+    // 正常输出完成后右上角显示 again（再次请求）
+    showAgain: false,
+    showWelcome: false,
+    welcomeText: "",
+    // 总结功能状态：convSummary 为摘要文本，summarizedCount 为已并入摘要的消息条数
+    convSummary: "",
+    summarizedCount: 0,
+    // 最近一次总结尝试覆盖到的消息条数：失败后不再对同一批消息重试（不总结）
+    summaryTriedAt: 0
+  },
+
+  async onInit() {
+    const s = await settings.load()
+    // 未配置 API Key 不强制跳转设置页：用户可能只是来查看历史记录
+    this.modelName = s.model || "DeepSeek"
+    this.username = s.username || "用户"
+
+    // 从历史打开：只加载这一份对话的消息（对话间上下文互相隔离）
+    if (this.conversationId) {
+      const conv = await store.load(this.conversationId)
+      if (conv) {
+        this.messages = conv.messages
+        this.titleText = conv.title || "Vela AI"
+        this.convSummary = conv.summary || ""
+        this.summarizedCount = conv.summarizedCount || 0
+        this.summaryTriedAt = conv.summaryTriedAt || 0
+        this.syncDisplay()
+      } else {
+        // 文件已丢失：按新对话处理
+        this.conversationId = ""
+      }
+    }
+    // 没有任何消息 = 新对话：显示欢迎语
+    if (this.messages.length === 0) {
+      this.showWelcome = true
+      this.welcomeText = pickWelcome(this.username)
+    }
+    // 已有历史消息 = 旧对话：右上角显示重新思考按钮（可重新发送最后一条问题）
+    this.showAgain = this.messages.length > 0
+    router.clear()
+  },
+
+  async onShow() {
+    this.time = global.getTime()
+    // 每页可能是独立模块实例：从设置页返回时必须从 storage 重载，模型名/用户名才是最新值
+    await settings.load()
+    // 从设置页返回时同步最新模型名/用户名
+    this.modelName = settings.getValue("model") || "DeepSeek"
+    this.username = settings.getValue("username") || "用户"
+    // 仅当从 textinput 返回且点了保存时才拾取中转 draft（空值也生效=清空）
+    if (this._fromTextInput) {
+      this._fromTextInput = false
+      const saved = await settings.getTmpSaved()
+      if (saved) {
+        this.draft = await settings.getTmp()
+      }
+    }
+  },
+
+  goInput() {
+    this._fromTextInput = true
+    router.push({
+      uri: "/pages/textinput",
+      params: {title: "询问", value: this.draft}
+    })
+  },
+
+  async send() {
+    const text = this.draft
+    if (!text) {
+      showToast({message: "请输入问题", duration: 1200})
+      return
+    }
+    if (this.thinking) return // 防连点
+    // 未配置 API Key：提示但不强跳，用户可继续浏览历史
+    const s = settings.getAll()
+    if (!s.apiKey) {
+      showToast({message: "请先配置 API Key", duration: 2000})
+      return
+    }
+    // 发起新请求：右上角恢复更多菜单
+    this.showAgain = false
+    this.messages.push({role: "user", content: text})
+    this.syncDisplay()
+    this.draft = ""
+    // 第一句话发出，欢迎语消失
+    this.showWelcome = false
+    this.thinking = true
+    const seq = ++this.reqSeq // 本次请求的序号，停止/新对话/新请求都会使其失效
+
+    // 真实 API：上下文 = 摘要（并入 system）+ 未总结的新消息（总结功能节省 token）
+    const that = this
+    const ctx = that.messages.slice(that.summarizedCount)
+    const sys = that.convSummary ? s.system + "\n\n[此前对话摘要]：" + that.convSummary : s.system
+    try {
+      const ret = await api.chat({
+        apiKey: s.apiKey,
+        model: s.model,
+        system: sys,
+        temperature: s.temperature,
+        maxTokens: s.maxTokens,
+        thinking: s.thinking,
+        messages: ctx
+      })
+      if (seq !== that.reqSeq) return // 已被停止/新对话/新请求取代，丢弃过期结果
+      that.thinking = false
+      that.messages.push({
+        role: "assistant",
+        content: s.stripMarkdown ? stripMd(ret.content) : ret.content,
+        model: that.modelName
+      })
+      that.syncDisplay()
+      that.persist()
+      // 正常输出完成：右上角显示 again 供再次请求
+      that.showAgain = true
+      // 累计真实 token 用量（await 保证先落盘，再跳转设置页才能读到）
+      if (ret.usage) {
+        console.log("usage =", JSON.stringify(ret.usage))
+        const t = ret.usage.total_tokens || (ret.usage.prompt_tokens || 0) + (ret.usage.completion_tokens || 0)
+        if (t > 0) {
+          await settings.update({usedTokens: (s.usedTokens || 0) + t})
+        }
+      }
+      // 标题生成（仅第一轮）与周期总结，后台执行不阻塞
+      that.maybeTitle()
+      that.maybeSummarize()
+    } catch (e) {
+      if (seq !== that.reqSeq) return // 已被取代，不再报错
+      that.thinking = false
+      // 异常不弹窗：插入一条红色"错误"气泡（先查 key/网络，其余显示服务端信息）
+      that.messages.push({
+        role: "assistant",
+        content: that.errText(e),
+        model: "错误",
+        error: true
+      })
+      that.syncDisplay()
+      that.persist()
+    }
+  },
+
+  // 错误文案分类：API key / 网络 / 服务端原始信息
+  errText(e) {
+    if (e && e.kind === "apikey") return "API key 错误"
+    if (e && e.kind === "network") return "网络未连接"
+    return e && e.message ? e.message : "请求失败"
+  },
+
+  // 再次请求：先删除上一轮对话（最后一条用户消息及其 AI 回复），再重新发送
+  sendAgain() {
+    if (this.thinking) return
+    let last = ""
+    let lastIdx = -1
+    for (let i = this.messages.length - 1; i >= 0; i--) {
+      if (this.messages[i].role === "user") {
+        last = this.messages[i].content
+        lastIdx = i
+        break
+      }
+    }
+    if (!last) return
+    // 截断到结尾：同时移除最后一条用户消息及其后的 AI 回复
+    this.messages.splice(lastIdx)
+    // 计数修正：被删消息若已并入摘要，收紧计数避免越界
+    if (this.summarizedCount > this.messages.length) this.summarizedCount = this.messages.length
+    if (this.summaryTriedAt > this.messages.length) this.summaryTriedAt = this.messages.length
+    this.syncDisplay()
+    this.persist()
+    this.draft = last
+    this.send()
+  },
+
+  // 显示层倒序：最新消息在顶部；messages 本身保持时间顺序（供 API 上下文使用）
+  syncDisplay() {
+    this.displayMessages = this.messages.slice().reverse()
+  },
+
+  // 持久化当前对话：首次保存分配 id；标题取首条用户消息前 12 字（标题功能开启时由 maybeTitle 覆盖）
+  async persist() {
+    if (!this.conversationId) this.conversationId = store.newId()
+    let title = this.titleText
+    if (!title || title === "Vela AI") {
+      const first = this.messages[0]
+      title = first ? String(first.content).slice(0, 12) : "新对话"
+      this.titleText = title
+    }
+    try {
+      await store.save({
+        id: this.conversationId,
+        title: title,
+        updatedAt: Date.now(),
+        summary: this.convSummary,
+        summarizedCount: this.summarizedCount,
+        summaryTriedAt: this.summaryTriedAt,
+        messages: this.messages
+      })
+    } catch (e) {
+      console.error("对话保存失败:" + (e.message || e))
+    }
+  },
+
+  // 标题功能：第一轮回复后用 API 生成简短标题（正常请求，无 token 限制，靠系统提示词约束长度）
+  async maybeTitle() {
+    if (this.messages.length !== 2) return // 仅第一轮
+    const s = settings.getAll()
+    if (!s.titleEnabled) return
+    try {
+      const ret = await api.chat({
+        apiKey: s.apiKey,
+        model: s.model,
+        system:
+          "用户会输入一轮对话，请你为这一段对话总结一个标题。要求：最大长度不能超过 20 个字节（一个英文字母算一个字节，一个汉字算两个字节）。",
+        thinking: false,
+        messages: [
+          {
+            role: "user",
+            content: "用户：" + this.messages[0].content + "\n助手：" + this.messages[1].content
+          }
+        ]
+      })
+      let t = String(ret.content).trim()
+      // 客户端按 30 字节兜底截断（汉字2字节/字母1字节）：请求提示词约束 20 字节，此处放宽防模型略超
+      if (byteLen(t) > 30) {
+        let cut = ""
+        for (let i = 0; i < t.length; i++) {
+          const c = t.charAt(i)
+          if (byteLen(cut + c) > 30) break
+          cut += c
+        }
+        t = cut
+      }
+      if (t) {
+        this.titleText = t
+        await this.persist() // 更新标题并同步到历史索引
+      }
+    } catch (e) {
+      console.error("标题生成失败:" + (e.message || e))
+    }
+  },
+
+  // 总结功能：每当回合数达到总结回合的整数倍，把新消息并入摘要（总结最大token 控制摘要长度）
+  async maybeSummarize() {
+    const s = settings.getAll()
+    if (!s.summaryEnabled || !(s.summaryEvery > 0)) return
+    let turns = 0
+    for (let i = 0; i < this.messages.length; i++) {
+      if (this.messages[i].role === "user") turns++
+    }
+    if (turns % s.summaryEvery !== 0) return
+    if (this.messages.length <= this.summarizedCount) return
+    // 上一次尝试失败（含无法总结）：不再对同一批消息重试，直接放弃本次总结
+    if (this.messages.length <= this.summaryTriedAt) return
+    this.summaryTriedAt = this.messages.length
+    // 渲染待总结的新增消息
+    let text = ""
+    for (let i = this.summarizedCount; i < this.messages.length; i++) {
+      text +=
+        (this.messages[i].role === "user" ? "用户：" : "助手：") + this.messages[i].content + "\n"
+    }
+    const prompt = this.convSummary
+      ? "已有的对话摘要：\n" +
+        this.convSummary +
+        "\n\n新增对话：\n" +
+        text +
+        "\n请把新增对话合并进摘要，输出更新后的完整摘要（保留关键信息与未完成事项，忽略寒暄），直接输出正文。"
+      : "请将以下对话总结为一段简洁的中文摘要，保留关键信息与未完成事项，忽略寒暄，直接输出摘要正文：\n\n" +
+        text
+    try {
+      const ret = await api.chat({
+        apiKey: s.apiKey,
+        model: s.model,
+        system: "你是对话摘要助手，只输出摘要正文。",
+        maxTokens: s.summaryMaxTokens || 512,
+        thinking: false,
+        messages: [{role: "user", content: prompt}]
+      })
+      const sum = String(ret.content).trim()
+      if (sum) {
+        this.convSummary = sum
+        this.summarizedCount = this.messages.length
+        this.summaryTriedAt = 0 // 总结成功，清空防重试标记（新消息可继续触发）
+        await this.persist()
+      }
+    } catch (e) {
+      console.error("总结失败:" + (e.message || e))
+    }
+  },
+
+  stopThinking() {
+    this.reqSeq++ // 使进行中请求的响应失效
+    this.thinking = false
+    // 把刚发送、尚无回复的这条消息移除，并将其文本还原回输入框
+    const last = this.messages[this.messages.length - 1]
+    if (last && last.role === "user") {
+      this.draft = last.content
+      this.messages = this.messages.slice(0, this.messages.length - 1) // 新数组赋值，保证响应式更新
+      this.syncDisplay()
+      this.persist()
+    }
+    showToast({message: "已停止思考", duration: 1200})
+  },
+
+  goHistory() {
+    router.push({uri: "/pages/history"})
+  },
+
+  newConversation() {
+    this.conversationId = ""
+    this.messages = []
+    this.convSummary = ""
+    this.summarizedCount = 0
+    this.summaryTriedAt = 0
+    this.syncDisplay()
+    this.welcomeText = pickWelcome(this.username)
+    this.showWelcome = true
+    this.titleText = "Vela AI"
+    this.draft = ""
+    this.thinking = false
+    this.reqSeq++ // 使进行中请求的响应失效
+    showToast({message: "已新建对话", duration: 1000})
+  }
+}
+</script>
+
+<style>
+@import "../../common/app.css";
+
+.list-page {
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  background-color: black;
+}
+
+/* 与 list 页 .box 同款；margin-bottom 给底部输入条留位 */
+.box {
+  position: relative;
+  flex: 1;
+  width: 90%;
+  margin-bottom: 84px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+scroll {
+  flex: 1;
+  width: 100%;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.bubble-row {
+  width: 100%;
+  margin: 6px 0;
+}
+
+/* 消息列：标签 + 气泡；用父容器 align-items 控制左右，避免 align-self 失效 */
+.msg-col {
+  width: 100%;
+  flex-direction: column;
+}
+
+.msg-col-ai {
+  align-items: flex-start;
+}
+
+.msg-col-user {
+  align-items: flex-end;
+}
+
+.msg-name {
+  font-size: 18px;
+  color: #999999;
+  margin: 0 10px 4px 10px;
+  lines: 1;
+}
+
+.bubble {
+  max-width: 82%;
+  padding: 12px 16px;
+  border-radius: 20px;
+}
+
+.bubble-ai {
+  background-color: #262626;
+  border: 3px solid rgba(255, 255, 255, 0.06);
+  border-bottom-left-radius: 6px;
+}
+
+.bubble-user {
+  background-color: #0b5cd5;
+  border: 3px solid #0c6af6;
+  border-bottom-right-radius: 6px;
+}
+
+.bubble-text {
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.thinking-text {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* 错误消息：红色方框 + 红字（颜色与设置页危险操作一致） */
+.msg-name-error {
+  color: #dc3545;
+}
+
+.bubble-error {
+  background-color: rgba(220, 53, 69, 0.12);
+  border: 3px solid rgba(220, 53, 69, 0.3);
+  border-bottom-left-radius: 6px;
+}
+
+.error-text {
+  color: #dc3545;
+}
+
+/* 欢迎语：纯文本，无框，屏幕正中偏上（屏高 480） */
+.welcome-text {
+  position: absolute;
+  top: 185px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 0 36px;
+  lines: 2;
+}
+
+/* 底部输入条 */
+.input-bar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 84px;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.bar-line {
+  flex: 1;
+  height: 60px;
+  border-radius: 100px;
+  background-color: #262626;
+  border: 3px solid rgba(255, 255, 255, 0.06);
+  justify-content: center;
+  align-items: center;
+}
+
+.bar-text {
+  font-size: 28px;
+  color: #ffffff;
+  lines: 1;
+  padding: 0 20px;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.send-btn {
+  width: 60px;
+  height: 60px;
+  margin-left: 10px;
+}
+
+@media (device-type: band) and (shape: rect) {
+  .box {
+    margin-top: 92px;
+    width: 83%;
+  }
+}
+
+@media (device-type: watch) and (shape: rect) {
+  .box {
+    margin-top: 102px;
+    width: 90%;
+  }
+}
+</style>

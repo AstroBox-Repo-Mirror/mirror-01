@@ -1,0 +1,210 @@
+<template>
+  <div class="list-page">
+    <text class="time">{{ time }}</text>
+    <text class="title">历史</text>
+    <img class="top leftButton" src="/common/left.png" @click="routeBack" />
+    <img class="top rightButton" src="/common/more_rect.png" @click="routeSetting" />
+    <div class="box">
+      <scroll scroll-y="true" bounces="true">
+        <text if="{{ conversations.length === 0 }}" class="empty-text">暂无对话</text>
+        <div for="{{ conversations }}">
+          <div class="conv-card">
+            <div class="card-info" @click="open($item.id)">
+              <text class="conv-name">{{ $item.title }}</text>
+              <!-- 将被自动清理的对话：第二行显示红色倒计时，替换时间/回合 -->
+              <text if="{{ $item.cleanText }}" class="conv-meta conv-danger">{{ $item.cleanText }}</text>
+              <text else class="conv-meta">{{ $item.time }} · {{ $item.turns }}回合</text>
+            </div>
+            <img class="conv-del" src="/common/del_rect.png" @click="remove($item.id)" />
+          </div>
+        </div>
+      </scroll>
+    </div>
+    <img class="bottom rightButton" src="/common/add_rect.png" @click="newChat" />
+  </div>
+</template>
+
+<script>
+import router from "@system.router"
+import {showToast} from "@system.prompt"
+import * as settings from "../../common/settings.js"
+import * as store from "../../common/store.js"
+
+export default {
+  private: {
+    time: "",
+    conversations: []
+  },
+
+  async onShow() {
+    this.time = global.getTime()
+    // 自动清理：超过天数 + 超过回合数（同时满足）的对话直接删除
+    const s = await settings.load()
+    await store.autoClean({
+      enabled: s.autoCleanEnabled,
+      days: s.autoCleanDays,
+      turns: s.autoCleanTurns
+    })
+    const list = await store.list()
+    const that = this
+    const cleanOpts = {enabled: s.autoCleanEnabled, days: s.autoCleanDays, turns: s.autoCleanTurns}
+    this.conversations = list.map(function (m) {
+      const item = { id: m.id, title: m.title, time: that.fmtTime(m.updatedAt), turns: m.turns, cleanText: "" }
+      // 满足清理条件（超回合数）的对话显示倒计时
+      const d = store.daysToClean(m, cleanOpts)
+      if (d >= 0) item.cleanText = "此对话将在 " + d + " 天后被删除"
+      return item
+    })
+  },
+
+  // 时间格式：今天 "HH:mm"，昨天 "昨天 HH:mm"，更早 "M月D日"
+  fmtTime(ts) {
+    const d = new Date(ts)
+    const hm = ("0" + d.getHours()).slice(-2) + ":" + ("0" + d.getMinutes()).slice(-2)
+    const now = new Date()
+    const todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime()
+    if (ts >= todayStart) return hm
+    if (ts >= todayStart - 86400000) return "昨天 " + hm
+    return (d.getMonth() + 1) + "月" + d.getDate() + "日"
+  },
+
+  open(id) {
+    router.replace({
+      uri: "/pages/chat",
+      params: {conversationId: id}
+    })
+  },
+
+  newChat() {
+    router.replace({uri: "/pages/chat"})
+  },
+
+  async remove(id) {
+    await store.remove(id)
+    this.conversations = this.conversations.filter(function (c) {
+      return c.id !== id
+    })
+    showToast({message: "对话已删除", duration: 1200})
+  },
+
+  routeSetting() {
+    router.push({uri: "/pages/setting"})
+  },
+
+  routeBack() {
+    router.back()
+  }
+}
+</script>
+
+<style>
+@import "../../common/app.css";
+
+.list-page {
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  background-color: black;
+}
+
+.box {
+  position: relative;
+  flex: 1;
+  width: 90%;
+  margin-bottom: 86px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+scroll {
+  flex: 1;
+  width: 100%;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.conv-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 66px;
+  border-radius: 14px;
+  margin-bottom: 8px;
+  padding: 0 10px;
+  background-color: #262626;
+  border: 3px solid rgba(255, 255, 255, 0.06);
+}
+
+.card-info {
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.conv-name {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;
+  lines: 1;
+  text-overflow: ellipsis;
+}
+
+.conv-meta {
+  margin-top: 2px;
+  font-size: 18px;
+  color: #999999;
+  lines: 1;
+}
+
+/* 清理倒计时：红色警示 */
+.conv-danger {
+  color: #dc3545;
+}
+
+.conv-del {
+  width: 44px;
+  height: 44px;
+  margin-left: 8px;
+}
+
+/* 空列表提示 */
+.empty-text {
+  width: 100%;
+  margin-top: 60px;
+  text-align: center;
+  font-size: 24px;
+  color: #999999;
+}
+
+@media (device-type: band) and (shape: rect) {
+  .conv-card {
+    height: 78px;
+    margin-bottom: 10px;
+  }
+
+  .box {
+    margin-top: 92px;
+    margin-bottom: 16px;
+    width: 83%;
+  }
+}
+
+@media (device-type: watch) and (shape: rect) {
+  .conv-card {
+    height: 78px;
+    margin-bottom: 10px;
+  }
+
+  .conv-name {
+    font-size: 26px;
+  }
+
+  .box {
+    margin-top: 102px;
+    margin-bottom: 32px;
+    width: 75%;
+  }
+}
+</style>

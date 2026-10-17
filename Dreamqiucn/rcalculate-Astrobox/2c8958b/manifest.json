@@ -1,0 +1,31 @@
+{
+  "item": {
+    "name": "经验回归方程计算",
+    "description": "帮助您完成繁琐的经验回归方程计算",
+    "preview": [
+      "preview1.png",
+      "preview2.png",
+      "preview3.png",
+      "preview4.png",
+      "preview5.png"
+    ],
+    "icon": "logo.png",
+    "source_url": "",
+    "author": [
+      {
+        "name": "Dreamqiu",
+        "author_url": "https://github.com/Dreamqiucn"
+      },
+      {
+        "name": "芝士雪豹（柚子厨蒸鹅心）",
+        "author_url": "https://github.com/easejun"
+      }
+    ]
+  },
+  "downloads": {
+    "n67": {
+      "version": "1.0.0",
+      "file_name": "com.Dreamqiu.Rcalculate.release.1.0.0.rpk"
+    }
+  }
+}

@@ -1,0 +1,92 @@
+<template>
+  <div class="list-page">
+    <text class="time">{{ time }}</text>
+    <text class="title">赞赏</text>
+    <img class="top leftButton" src="/common/back_rect.png" @click="routeBack" />
+    <div class="box">
+      <scroll scroll-y="true" bounces="true">
+        <div class="grid">
+          <img class="qr" src="/common/money/1.jpg" />
+          <img class="qr" src="/common/money/2.jpg" />
+          <img class="qr" src="/common/money/3.jpg" />
+          <img class="qr" src="/common/money/4.jpg" />
+        </div>
+      </scroll>
+    </div>
+  </div>
+</template>
+
+<script>
+import router from "@system.router"
+
+export default {
+  private: {
+    time: ""
+  },
+
+  onShow() {
+    this.time = global.getTime()
+  },
+
+  routeBack() {
+    router.back()
+  }
+}
+</script>
+
+<style>
+@import "../../common/app.css";
+
+.list-page {
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  background-color: black;
+}
+
+.box {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  margin-top: 92px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+scroll {
+  flex: 1;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+
+.grid {
+  width: 300px;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* object-fit: contain 保证整张收款码完整显示，不被裁剪 */
+.qr {
+  width: 280px;
+  margin: 8px 0;
+  border-radius: 30px;
+  object-fit: contain;
+}
+
+@media (device-type: band) and (shape: rect) {
+  .box {
+    margin-top: 100px;
+    width: 83%;
+  }
+}
+
+@media (device-type: watch) and (shape: rect) {
+  .box {
+    margin-top: 110px;
+    width: 75%;
+  }
+}
+</style>

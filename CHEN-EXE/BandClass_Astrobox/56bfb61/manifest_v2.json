@@ -1,0 +1,89 @@
+{
+  "item": {
+    "id": "com.naoh.bandclass.classschedule",
+    "restype": "quick_app",
+    "name": "BandClass",
+    "description": "# BandClass\n## 课表、倒计时，\n一个快应用就够了\nBandClass V2\n支持多课表管理、考试模式和个性化表盘\n完全免费\n\n## 课程表编辑器\nhttps://bandclass.netlify.app/editor/\n\n\n\n已知适配设备\n小米手环9Pro,Redmi Watch 6,Readmi Watch5,小米手环10Pro\n其他小米手环穿戴产品可尝试在米坛社区（点击【官方网站】-【下载】）下载rpk安装运行，若手环死机请反复插拔充电器 10 次强制重启。\n\n功能介绍\n该课程表支持【课程倒计时】，【倒计时伪表盘】，【在线伪表盘商城】，【考试模式】，【多视图】，【课程表管理】，【课程管理】，【一键调课】，【自定义课程】。以及【场景】功能（适应学校规则或铃声规则），【计时器误差调整】，【X分钟等候上课】，另外提供更多个性化功能。\n\n该版本已支持同步器功能，可安装同步器进行配置\n\n\n\n更多穿戴设备持续兼容中。",
+    "preview": [
+      "media/容器 68.png",
+      "media/容器 69.png",
+      "media/容器 74.png",
+      "media/容器 70.png",
+      "media/容器 71.png",
+      "media/容器 72.png",
+      "media/容器 73.png"
+    ],
+    "icon": "media/容器 14 (2).png",
+    "cover": "media/幻灯片 4_3 - 2.png",
+    "author": [
+      {
+        "name": "qyhOH",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "官方网站",
+      "url": "https://bandclass.netlify.app/#",
+      "icon": "arrow-circle-right"
+    },
+    {
+      "title": "视频",
+      "url": "https://www.bilibili.com/video/BV1KmhR6mEsU/",
+      "icon": "arrow-circle-up-left"
+    },
+    {
+      "title": "课程表编辑器",
+      "url": "https://bandclass.netlify.app/editor",
+      "icon": "book-open"
+    }
+  ],
+  "downloads": {
+    "xmrw5": {
+      "version": "2.0.0",
+      "file_name": "downloads/com.naoh.bandclass.classschedule.release.2.0.0.rpk",
+      "versionCode": 6,
+      "updatelogs": [
+        {
+          "version": "2.0.0",
+          "content": "本次更新：\n修复了 10Pro，红米手表5/6 课程表存储问题\n解决了 同步器 导入限制\n新增 【考试模式】，可在设置页开启，进入模式后左滑返回。\n倒计时伪表盘支持点击任意处3次常亮\n支持在线表盘商城\n支持课程编辑页面添加【上课地点】\n优化全部页面结构\n首页多视图功能\n首页正在上课/即将上课置顶并支持折叠\n修复了 场景-X分钟候课 功能无效问题\n修复了 时间节点管理页面息屏会自动返回问题\n伪表盘支持更多主题切换\n伪表盘支持时间秒显示\n\n更多功能我不再写出，请自行探索！"
+        }
+      ]
+    },
+    "xmrw6": {
+      "version": "2.0.0",
+      "file_name": "downloads/com.naoh.bandclass.classschedule.release.2.0.0.rpk",
+      "versionCode": 6,
+      "updatelogs": [
+        {
+          "version": "2.0.0",
+          "content": "本次更新：\n修复了 10Pro，红米手表5/6 课程表存储问题\n解决了 同步器 导入限制\n新增 【考试模式】，可在设置页开启，进入模式后左滑返回。\n倒计时伪表盘支持点击任意处3次常亮\n支持在线表盘商城\n支持课程编辑页面添加【上课地点】\n优化全部页面结构\n首页多视图功能\n首页正在上课/即将上课置顶并支持折叠\n修复了 场景-X分钟候课 功能无效问题\n修复了 时间节点管理页面息屏会自动返回问题\n伪表盘支持更多主题切换\n伪表盘支持时间秒显示\n\n更多功能我不再写出，请自行探索！"
+        }
+      ]
+    },
+    "xmb9p": {
+      "version": "2.0.0",
+      "file_name": "downloads/com.naoh.bandclass.classschedule.release.2.0.0.rpk",
+      "versionCode": 6,
+      "updatelogs": [
+        {
+          "version": "2.0.0",
+          "content": "本次更新：\n修复了 10Pro，红米手表5/6 课程表存储问题\n解决了 同步器 导入限制\n新增 【考试模式】，可在设置页开启，进入模式后左滑返回。\n倒计时伪表盘支持点击任意处3次常亮\n支持在线表盘商城\n支持课程编辑页面添加【上课地点】\n优化全部页面结构\n首页多视图功能\n首页正在上课/即将上课置顶并支持折叠\n修复了 场景-X分钟候课 功能无效问题\n修复了 时间节点管理页面息屏会自动返回问题\n伪表盘支持更多主题切换\n伪表盘支持时间秒显示\n\n更多功能我不再写出，请自行探索！"
+        }
+      ]
+    },
+    "xmb10p": {
+      "version": "2.0.0",
+      "file_name": "downloads/com.naoh.bandclass.classschedule.release.2.0.0.rpk",
+      "versionCode": 6,
+      "updatelogs": [
+        {
+          "version": "2.0.0",
+          "content": "本次更新：\n修复了 10Pro，红米手表5/6 课程表存储问题\n解决了 同步器 导入限制\n新增 【考试模式】，可在设置页开启，进入模式后左滑返回。\n倒计时伪表盘支持点击任意处3次常亮\n支持在线表盘商城\n支持课程编辑页面添加【上课地点】\n优化全部页面结构\n首页多视图功能\n首页正在上课/即将上课置顶并支持折叠\n修复了 场景-X分钟候课 功能无效问题\n修复了 时间节点管理页面息屏会自动返回问题\n伪表盘支持更多主题切换\n伪表盘支持时间秒显示\n\n更多功能我不再写出，请自行探索！"
+        }
+      ]
+    }
+  },
+  "ext": {}
+}

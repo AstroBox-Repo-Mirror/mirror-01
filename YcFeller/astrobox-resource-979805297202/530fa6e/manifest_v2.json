@@ -1,0 +1,36 @@
+{
+  "item": {
+    "id": "979805297202",
+    "restype": "watchface",
+    "name": "动态八重神子",
+    "description": "动态八重神子表盘，精美动态效果，支持小米手环9和小米手环10。QQ交流群: 758279876",
+    "preview": [
+      "media/动态八重神子_环10@3x.png",
+      "media/动态八重神子_环10_AOD@3x.png"
+    ],
+    "icon": "media/icon.png",
+    "cover": "media/1080_720动态八重神子@1x.png",
+    "author": [
+      {
+        "name": "ycfeller",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [],
+  "downloads": {
+    "xmb9": {
+      "version": "1",
+      "file_name": "downloads/yae_miko_b9.bin"
+    },
+    "xmb10": {
+      "version": "1",
+      "file_name": "downloads/yae_miko_b10.bin"
+    },
+    "xmb10nfc": {
+      "version": "1",
+      "file_name": "downloads/yae_miko_b10.bin"
+    }
+  },
+  "ext": {}
+}

@@ -1,0 +1,41 @@
+{
+  "item": {
+    "name": "CAPTURE THE MOMENT",
+    "description": "徕卡风格表盘",
+    "preview": [
+      "preview0.png",
+      "preview1.png",
+      "preview2.png",
+      "preview3.png",
+      "preview4.png",
+      "preview5.webp",
+      "preview6.webp"
+    ],
+    "icon": "icon.png",
+    "source_url": "",
+    "author": [
+      {
+        "name": "hrsthrt74",
+        "author_url": "https://www.bandbbs.cn/members/296762/"
+      }
+    ]
+  },
+  "downloads": {
+    "n67": {
+      "version": "v1.0",
+      "file_name": "CAPTURE THE MOMENT v1.0 for 9P by hrsthrt74.bin"
+    },
+    "o65": {
+      "version": "v1.0",
+      "file_name": "CAPTURE THE MOMENT for RW v1.0 by hrsthrt74.bin"
+    },
+    "o65m": {
+      "version": "v1.0",
+      "file_name": "CAPTURE THE MOMENT for RW v1.0 by hrsthrt74.bin"
+    },
+    "p65": {
+      "version": "v1.0",
+      "file_name": "CAPTURE THE MOMENT for RW v1.0 by hrsthrt74.bin"
+    }
+  }
+}

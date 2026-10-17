@@ -1,0 +1,65 @@
+{
+  "item": {
+    "id": "979853048574",
+    "restype": "watchface",
+    "name": "觅光",
+    "description": "觅光 · 把喜欢的风景，留在腕间；\n相册表盘｜多配色｜多组件；\n赞助 1.99￥即可使用 · 长期更新；\n\nQQ交流群：758279876\n官网：wear.xunrix.com",
+    "preview": [
+      "media/宣发图 (1).png",
+      "media/RedMi 56 觅光.png",
+      "media/RedMi 56 觅光 (1).png"
+    ],
+    "icon": "media/miguang-icon.png",
+    "cover": "media/宣发图.png",
+    "author": [
+      {
+        "name": "ycfeller",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "赞助获取地址",
+      "url": "https://wear.xunrix.com/shop",
+      "icon": "shopping-cart"
+    }
+  ],
+  "downloads": {
+    "xmrw5": {
+      "version": "1.0.2",
+      "file_name": "downloads/觅光_YcFeller_V2_正式版.bin",
+      "versionCode": 65538
+    },
+    "xmrw5xring": {
+      "version": "1.0.2",
+      "file_name": "downloads/觅光_YcFeller_V2_正式版.bin",
+      "versionCode": 65538
+    },
+    "xmrw6": {
+      "version": "1.0.2",
+      "file_name": "downloads/觅光_YcFeller_V2_正式版.bin",
+      "versionCode": 65538
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true,
+    "trialDownloads": {
+      "xmrw5": {
+        "version": "Sy-V2",
+        "file_name": "downloads/trial/觅光_YcFeller_V2_试用版.bin",
+        "versionCode": 2
+      },
+      "xmrw5xring": {
+        "version": "Sy-V2",
+        "file_name": "downloads/trial/觅光_YcFeller_V2_试用版.bin",
+        "versionCode": 2
+      },
+      "xmrw6": {
+        "version": "Sy-V2",
+        "file_name": "downloads/trial/觅光_YcFeller_V2_试用版.bin",
+        "versionCode": 2
+      }
+    }
+  }
+}

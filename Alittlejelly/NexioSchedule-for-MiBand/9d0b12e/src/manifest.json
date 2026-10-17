@@ -1,0 +1,31 @@
+{
+  "package": "com.haooz.chedule",
+  "name": "Nexio课程表",
+  "icon": "/common/icon.png",
+  "versionName": "2.0.1-release",
+  "versionCode": 37,
+  "minPlatformVersion": 1200,
+  "simulationVersion": "default",
+  "deviceTypeList": ["watch"],
+  "features": [
+    { "name": "system.router" },
+    { "name": "system.app" },
+    { "name": "system.configuration" },
+    { "name": "system.storage" },
+    { "name": "system.interconnect" },
+    { "name": "system.prompt" },
+    { "name": "system.device" }
+  ],
+  "config": {
+    "logLevel": "log",
+    "designWidth": 336
+  },
+  "router": {
+    "entry": "pages/index",
+    "pages": {
+      "pages/index": {
+        "component": "index"
+      }
+    }
+  }
+}

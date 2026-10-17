@@ -1,0 +1,36 @@
+{
+    "item": {
+        "id": "com.Dreamqiu.feelingdiary",
+        "restype": "quick_app",
+        "name": "心情日记",
+        "description": "记录您每天的心情，为生活留下美好的回忆",
+        "preview": [
+            "preview1.png",
+            "preview2.png",
+            "preview3.png"
+        ],
+        "icon": "logo.png",
+        "cover": "preview1.png",
+        "author": [
+            {
+                "name": "Dreamqiu",
+                "bindABAccount": true
+            }
+        ]
+    },
+    "links": [
+        {
+            "icon": "",
+            "title": "官方网站",
+            "url": "https://dreamqiu.cn"
+        }
+    ],
+    "downloads": {
+
+        "xmb9p": {
+            "version": "1.10.0",
+            "file_name": "com.Dreamqiu.feelingdiary.release.1.1.0.rpk"
+        }
+    },
+    "ext": {}
+}

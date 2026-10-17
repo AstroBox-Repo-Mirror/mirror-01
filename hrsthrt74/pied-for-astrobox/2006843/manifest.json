@@ -1,0 +1,50 @@
+{
+  "item": {
+    "name": "Pied",
+    "description": "Google Pixel 2 默认壁纸 风格表盘",
+    "preview": [
+      "cover.png",
+      "preview0.png",
+      "preview1.png",
+      "preview2.png"
+    ],
+    "icon": "icon.png",
+    "source_url": "",
+    "author": [
+      {
+        "name": "hrsthrt74",
+        "author_url": "https://www.bandbbs.cn/members/296762/"
+      },
+      {
+        "name": "支持我",
+        "author_url": "https://afdian.com/a/hrsthrt74"
+      }
+    ]
+  },
+  "downloads": {
+    "n67": {
+      "version": "1.0",
+      "file_name": "Pied for 9P v1.0 by hrsthrt74.bin"
+    },
+    "o62": {
+      "version": "1.0",
+      "file_name": "Pied for S4 v1.0 by hrsthrt74.bin"
+    },
+    "o62m": {
+      "version": "1.0",
+      "file_name": "Pied for S4 v1.0 by hrsthrt74.bin"
+    },
+    "o65": {
+      "version": "1.0",
+      "file_name": "Pied for RW v1.0 by hrsthrt74.bin"
+    },
+    "o65m": {
+      "version": "1.0",
+      "file_name": "Pied for RW v1.0 by hrsthrt74.bin"
+    },
+    "p65": {
+      "version": "1.0",
+      "file_name": "Pied for RW v1.0 by hrsthrt74.bin"
+    }
+  }
+}

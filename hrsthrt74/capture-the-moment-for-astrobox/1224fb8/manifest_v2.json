@@ -1,0 +1,61 @@
+{
+  "item": {
+    "id": "979800000001",
+    "restype": "watchface",
+    "name": "CAPTURE THE MOMENT",
+    "description": "徕卡风格表盘",
+    "preview": [
+      "preview0.png",
+      "preview1.png",
+      "preview2.png",
+      "preview3.png",
+      "preview4.png",
+      "preview5.webp",
+      "preview6.webp"
+    ],
+    "icon": "icon.png",
+    "cover": "cover.png",
+    "author": [
+      {
+        "name": "hrsthrt74",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "icon": "",
+      "title": "交流群",
+      "url": "https://qun.qq.com/universal-share/share?ac=1&authKey=g6XligIthhyyHK3vdtJERLTHuHcL6FA18DTvcoHFtgBdZ4F3IyuLPtM%2FVoFF9euZ&busi_data=eyJncm91cENvZGUiOiI2MDg4MTE0MDciLCJ0b2tlbiI6ImYrdW1JYnhDU3BxUk1QSnVWdFVjQW9VbUN4dmdnam5MT05XK1gwVHNVUVVEd3J1U1ltNUY5bnphK3Bud0Q0MEgiLCJ1aW4iOiIxOTMwMDA5NjEifQ%3D%3D&data=GeoMiGtLNaqPTer1fWNZqL5-4PXgigAMUJWTgD-AYmWOMTqTd6eCT_PX2aqATThqF-9KaXVPULmjwDyUkSzqKw&svctype=4&tempid=h5_group_info"
+    },
+    {
+      "icon": "",
+      "title": "创作历程",
+      "url": "https://hrsthrt74.github.io/docs/creation/watchface/capturethemoment.html"
+    },
+    {
+      "icon": "",
+      "title": "米坛社区主页",
+      "url": "https://www.bandbbs.cn/members/296762/"
+    }
+  ],
+  "downloads": {
+    "xmb9p": {
+      "version": "1.0",
+      "file_name": "CAPTURE THE MOMENT v1.0 for 9P by hrsthrt74.bin"
+    },
+    "xmrw5": {
+      "version": "1.0",
+      "file_name": "CAPTURE THE MOMENT for RW v1.0 by hrsthrt74.bin"
+    },
+    "xmrw5xring": {
+      "version": "1.0",
+      "file_name": "CAPTURE THE MOMENT for RW v1.0 by hrsthrt74.bin"
+    },
+    "xmrw6": {
+      "version": "1.0",
+      "file_name": "CAPTURE THE MOMENT for RW v1.0 by hrsthrt74.bin"
+    }
+  },
+  "ext": {}
+}

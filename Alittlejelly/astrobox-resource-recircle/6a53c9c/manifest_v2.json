@@ -1,0 +1,102 @@
+{
+  "item": {
+    "id": "recircle",
+    "restype": "res_pack",
+    "name": "重圆",
+    "description": "方方圆圆的圆角矩形分层图标，让你看了赏心悦目。\n重圆资源包回归啦！！！\n此次定价包含后期的长期维护，定价偏贵，感谢理解！\n欢迎加入果冻手环交流群：895849620",
+    "preview": [
+      "media/画板 53.png",
+      "media/xuanfat2.png",
+      "media/画板 132.png",
+      "media/xuanfat3.png"
+    ],
+    "icon": "media/icon.png",
+    "cover": "media/xuanfaTu.png",
+    "author": [
+      {
+        "name": "bandbbs_83349",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "爱发电",
+      "url": "https://afdian.com/item/fc7bbd4ebf1e11f1b0835254001e7c00",
+      "icon": "browser"
+    },
+    {
+      "title": "小米主题版本",
+      "url": "https://zhuti.xiaomi.com/detail/share/0b86fedc-4c8e-43a1-a13f-2c028ef677a2?miref=share&packId=98ba96a4-1bfb-415e-8902-fe4773799674",
+      "icon": "paint-brush-broad"
+    }
+  ],
+  "downloads": {
+    "xmb10p": {
+      "version": "1.1.1",
+      "file_name": "downloads/recircle.crpack",
+      "versionCode": 4,
+      "updatelogs": [
+        {
+          "version": "1.1.1",
+          "content": "1.新增设置首页列表icon适配"
+        },
+        {
+          "version": "1.1.0",
+          "content": "1.新增各项通知图标适配\n2.新增门禁卡卡面重绘"
+        }
+      ]
+    },
+    "xmb11": {
+      "version": "1.1.1",
+      "file_name": "downloads/recircle-xmb11.crpack",
+      "versionCode": 5,
+      "updatelogs": [
+        {
+          "version": "1.1.1",
+          "content": "1.新增设置首页列表icon适配"
+        },
+        {
+          "version": "1.1.0",
+          "content": "1.新增各项通知图标适配\n2.新增门禁卡卡面重绘"
+        }
+      ]
+    },
+    "xmb11nfc": {
+      "version": "1.1.1",
+      "file_name": "downloads/recircle-xmb11.crpack",
+      "versionCode": 5,
+      "updatelogs": [
+        {
+          "version": "1.1.1",
+          "content": "1.新增设置首页列表icon适配"
+        },
+        {
+          "version": "1.1.0",
+          "content": "1.新增各项通知图标适配\n2.新增门禁卡卡面重绘"
+        }
+      ]
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true,
+    "bundledResources": {
+      "required": [
+        {
+          "type": "resource",
+          "id": "canopus_manager"
+        },
+        {
+          "type": "resource",
+          "id": "ng.lst.corona"
+        }
+      ],
+      "recommended": [
+        {
+          "type": "resource",
+          "id": "canopus_corona"
+        }
+      ]
+    }
+  }
+}

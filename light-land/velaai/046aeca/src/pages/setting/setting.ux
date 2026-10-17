@@ -1,0 +1,405 @@
+<template>
+  <div class="list-page">
+    <text class="time">{{ time }}</text>
+    <text class="title">设置</text>
+    <img class="top leftButton" src="/common/back_rect.png" @click="back" />
+    <img class="top rightButton" src="/common/info_rect.png" @click="goInfo" />
+
+    <div class="box">
+      <scroll scroll-y="true" bounces="true">
+        <!-- 基础 -->
+        <text class="set-title">基础</text>
+        <div class="set-group">
+          <div class="set-row" @click="editText('apiKey')">
+            <text class="set-label">API Key</text>
+            <text class="set-value {{ apiKey ? '' : 'danger-label' }}">
+              {{ apiKey ? "已设置" : "未设置" }}
+            </text>
+          </div>
+          <div class="set-row" @click="refreshBalance">
+            <text class="set-label">余额</text>
+            <text if="{{ balanceErr }}" class="set-value danger-label">{{ balance }}</text>
+            <text else class="set-value">{{ balance }}</text>
+          </div>
+          <div class="set-row">
+            <text class="set-label">已用 token</text>
+            <text class="set-value">{{ usedTokensText }}</text>
+          </div>
+          <div class="set-row" @click="editText('username')">
+            <text class="set-label">用户名</text>
+            <text class="set-value">{{ username }}</text>
+          </div>
+          <div class="set-row" @click="openModel">
+            <text class="set-label">模型</text>
+            <text if="{{ modelErr }}" class="set-value danger-label">{{ modelErr }}</text>
+            <text elif="{{ model }}" class="set-value">{{ model }}</text>
+            <text else class="set-value">未设置</text>
+          </div>
+          <div class="set-row" @click="toggle('stripMarkdown')">
+            <text class="set-label">去除 MarkDown</text>
+            <img if="{{ stripMarkdown }}" class="set-img" src="/common/true.png" />
+            <img else class="set-img" src="/common/false.png" />
+          </div>
+        </div>
+
+        <!-- 清理功能 -->
+        <text class="set-title">清理功能（需同时满足）</text>
+        <div class="set-group">
+          <div class="set-row" @click="toggle('autoCleanEnabled')">
+            <text class="set-label">自动清理</text>
+            <img if="{{ autoCleanEnabled }}" class="set-img" src="/common/true.png" />
+            <img else class="set-img" src="/common/false.png" />
+          </div>
+          <div class="set-row" @click="editNumber('autoCleanTurns')">
+            <text class="set-label">清理回合之外</text>
+            <text class="set-value">{{ autoCleanTurns }}回合</text>
+          </div>
+          <div class="set-row" @click="editNumber('autoCleanDays')">
+            <text class="set-label">清理天数以外</text>
+            <text class="set-value">{{ autoCleanDays }}天</text>
+          </div>
+        </div>
+
+        <!-- 其他 -->
+        <text class="set-title">其他</text>
+        <div class="set-group">
+          <div class="set-row" @click="openAdvanced">
+            <text class="set-label">高级设置</text>
+            <text class="set-value">›</text>
+          </div>
+        </div>
+
+        <!-- 危险操作：轻点提示，长按确认执行（不弹确认框） -->
+        <text class="set-title danger-title">危险操作</text>
+        <div class="set-group">
+          <div class="set-row danger-row" @click="hintConfirm" @longpress="clearChats">
+            <text class="set-label danger-label">清空聊天记录</text>
+          </div>
+          <div class="set-row danger-row" @click="hintConfirm" @longpress="clearAll">
+            <text class="set-label danger-label">清空所有数据</text>
+          </div>
+        </div>
+      </scroll>
+    </div>
+  </div>
+</template>
+
+<script>
+import router from "@system.router"
+import {showActionMenu, showToast} from "@system.prompt"
+import vibrator from "@system.vibrator"
+import * as settings from "../../common/settings.js"
+import * as api from "../../common/api.js"
+import * as store from "../../common/store.js"
+
+const NUMBER_FIELDS = ["autoCleanTurns", "autoCleanDays"]
+
+export default {
+  private: {
+    time: "",
+    apiKey: "",
+    balance: "—",
+    balanceErr: false,
+    modelErr: "",
+    usedTokensText: "",
+    username: "用户",
+    model: "",
+    stripMarkdown: true,
+    autoCleanEnabled: true,
+    autoCleanTurns: 30,
+    autoCleanDays: 14
+  },
+
+  async onInit() {
+    await settings.load()
+    this.bindAll()
+  },
+
+  async onShow() {
+    this.time = global.getTime()
+    // 每页可能是独立模块实例，内存缓存不跨页共享：
+    // 从子页（模型选择/textinput）返回时必须从 storage 重载，bindAll 才能拿到最新值
+    await settings.load()
+    this.bindAll()
+    // textinput 用 router.back() 返回，只触发 onShow：消费中转值更新对应字段
+    const field = this._editingField
+    if (field) {
+      this._editingField = ""
+      // 仅当用户点了保存才写入（空值也会写入，用于清空字段）；返回取消则不修改
+      const saved = await settings.getTmpSaved()
+      if (saved) {
+        const value = await settings.getTmp()
+        if (NUMBER_FIELDS.indexOf(field) >= 0) {
+          const n = parseInt(value)
+          if (!isNaN(n) && n > 0) await settings.update({[field]: n})
+        } else {
+          await settings.update({[field]: value})
+        }
+      }
+      this.bindAll()
+    }
+    // 每次进入/返回本页都刷新余额与模型网络状态（含从模型页/textinput 返回）
+    this.refreshBalance()
+    this.probeModel()
+  },
+
+  // 错误文案分类：无网络 / API key 错误（红色突出，与危险操作一致）
+  errText(e) {
+    if (e && e.kind === "network") return "无网络"
+    if (e && e.kind === "apikey") return "API key 错误"
+    return "查询失败"
+  },
+
+  // 查询余额（点击该行可手动刷新）
+  async refreshBalance() {
+    const key = settings.getValue("apiKey")
+    if (!key) {
+      this.balance = "—"
+      this.balanceErr = false
+      return
+    }
+    this.balance = "查询中…"
+    this.balanceErr = false
+    try {
+      this.balance = await api.balance(key)
+    } catch (e) {
+      this.balance = this.errText(e)
+      this.balanceErr = true
+    }
+  },
+
+  // 模型行网络探测：无网 / Key 错误时显示红色错误文本
+  probeModel() {
+    const that = this
+    const key = settings.getValue("apiKey")
+    if (!key) {
+      that.modelErr = ""
+      return
+    }
+    api
+      .listModels(key)
+      .then(function () {
+        that.modelErr = ""
+      })
+      .catch(function (e) {
+        if (e && e.kind === "network") that.modelErr = "无网络"
+        else if (e && e.kind === "apikey") that.modelErr = "API key 错误"
+        else that.modelErr = ""
+      })
+  },
+
+  bindAll() {
+    const s = settings.getAll()
+    this.apiKey = s.apiKey
+    this.username = s.username
+    this.model = s.model
+    this.stripMarkdown = s.stripMarkdown
+    this.autoCleanEnabled = s.autoCleanEnabled
+    this.autoCleanTurns = s.autoCleanTurns
+    this.autoCleanDays = s.autoCleanDays
+    this.usedTokensText = this.fmtTokens(s.usedTokens || 0)
+    console.log("usedTokens read =", s.usedTokens, "->", this.usedTokensText)
+  },
+
+  // 已用 tokens 格式化：<1000 原样；≥1000 用 k；≥100万 用 m；≥10亿 用 b（保留 1 位小数并去掉多余的 .0）
+  fmtTokens(n) {
+    let v = n
+    let unit = ""
+    if (v >= 1e9) {
+      v = v / 1e9
+      unit = "b"
+    } else if (v >= 1e6) {
+      v = v / 1e6
+      unit = "m"
+    } else if (v >= 1e3) {
+      v = v / 1e3
+      unit = "k"
+    }
+    let s = (Math.round(v * 10) / 10).toString()
+    s = s.replace(/\.0$/, "")
+    return s + unit
+  },
+
+  async toggle(field) {
+    await settings.update({[field]: !this[field]})
+    this.bindAll()
+  },
+
+  editText(field) {
+    this._editingField = field
+    const labels = {apiKey: "API Key", username: "用户名"}
+    router.push({
+      uri: "/pages/textinput",
+      params: {
+        title: labels[field] || "输入",
+        field: field,
+        ret: "setting",
+        value: this[field] ? String(this[field]) : ""
+      }
+    })
+  },
+
+  editNumber(field) {
+    this._editingField = field
+    const labels = {autoCleanTurns: "清理回合之外", autoCleanDays: "清理天数以外"}
+    router.push({
+      uri: "/pages/textinput",
+      params: {
+        title: labels[field] || "输入数字",
+        field: field,
+        ret: "setting",
+        value: String(this[field])
+      }
+    })
+  },
+
+  // 模型选择：独立页面用原生 picker 滚动选择
+  openModel() {
+    router.push({uri: "/pages/model"})
+  },
+
+  openAdvanced() {
+    router.push({uri: "/pages/advanced"})
+  },
+
+  goInfo() {
+    router.push({uri: "/pages/about"})
+  },
+
+  back() {
+    router.back()
+  },
+
+  // 危险操作：轻点弹提示，长按才执行
+  hintConfirm() {
+    showToast({message: "长按确认", duration: 1200})
+  },
+
+  clearChats() {
+    vibrator.vibrate({mode: "short"})
+    store.clear().then(function () {
+      showToast({message: "聊天记录已清空", duration: 1200})
+    })
+  },
+
+  clearAll() {
+    const that = this
+    vibrator.vibrate({mode: "short"})
+    store
+      .clear()
+      .then(function () {
+        return settings.clear()
+      })
+      .then(function () {
+        that.bindAll()
+        showToast({message: "所有数据已清空", duration: 1500})
+      })
+  }
+}
+</script>
+
+<style>
+@import "../../common/app.css";
+
+.list-page {
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  background-color: black;
+}
+
+.box {
+  position: relative;
+  flex: 1;
+  width: 90%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+scroll {
+  flex: 1;
+  width: 100%;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+/* 分组小标题 */
+.set-title {
+  font-size: 20px;
+  color: #999999;
+  margin: 14px 10px 2px 10px;
+  lines: 1;
+}
+
+.set-group {
+  width: 100%;
+  flex-direction: column;
+  margin: 4px 0 2px 0;
+}
+
+.set-row {
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 66px;
+  margin-bottom: 8px;
+  padding: 0 16px;
+  border-radius: 14px;
+  background-color: #262626;
+  border: 3px solid rgba(255, 255, 255, 0.06);
+}
+
+.set-label {
+  flex: 1;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.set-value {
+  font-size: 22px;
+  color: #999999;
+  max-width: 55%;
+  lines: 1;
+  text-overflow: ellipsis;
+}
+
+/* 开关值图片 */
+.set-img {
+  height: 36px;
+}
+
+/* 危险操作 */
+.danger-title {
+  color: #999999;
+}
+
+.danger-row {
+  background-color: rgba(220, 53, 69, 0.12);
+  border: 3px solid rgba(220, 53, 69, 0.3);
+}
+
+.danger-label {
+  color: #dc3545;
+}
+
+@media (device-type: band) and (shape: rect) {
+  .box {
+    margin-top: 92px;
+    width: 83%;
+  }
+}
+
+@media (device-type: watch) and (shape: rect) {
+  .box {
+    margin-top: 102px;
+    width: 75%;
+  }
+
+  .set-row {
+    height: 72px;
+  }
+}
+</style>

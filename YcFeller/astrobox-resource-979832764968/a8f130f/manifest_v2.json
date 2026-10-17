@@ -1,0 +1,46 @@
+{
+  "item": {
+    "id": "979832764968",
+    "restype": "watchface",
+    "name": "白笺",
+    "description": "白笺 —— 一纸清影，少女心事\n免费相册表盘，支持自定义背景图片与颜色样式~\n欢迎安装使用！有问题可加QQ群处理！\nQQ群：758279876",
+    "preview": [
+      "media/白笺_一纸清影，少女心事 (2).png",
+      "media/容器 12 (1).png",
+      "media/白笺@2x (1).png",
+      "media/白笺-aod@2x (1).png"
+    ],
+    "icon": "media/容器 17.png",
+    "cover": "media/白笺_一纸清影，少女心事 (2).png",
+    "author": [
+      {
+        "name": "ycfeller",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "寻日官网",
+      "url": "https://wear.xunrix.com/",
+      "icon": "Bell"
+    }
+  ],
+  "downloads": {
+    "xmb10p": {
+      "version": "V4",
+      "file_name": "downloads/白笺_901742910_YcFeller_V4.bin",
+      "versionCode": 4
+    },
+    "xmb9p": {
+      "version": "V4",
+      "file_name": "downloads/白笺_901742910_YcFeller_V4.bin",
+      "versionCode": 4
+    }
+  },
+  "ext": {
+    "wallpaperGenerator": {
+      "configUrl": "https://raw.githubusercontent.com/YcFeller/astrobox-resource-979832764968/main/wallpaper/wallpaper.json"
+    }
+  }
+}

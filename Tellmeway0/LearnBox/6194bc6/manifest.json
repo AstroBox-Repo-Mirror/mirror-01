@@ -1,0 +1,18 @@
+{
+  "item": {
+    "name": "内卷盒子",
+    "description": "内卷盒子是一款轻量级快应用，围绕「倒计时、鸡汤激励、时钟、锁机、学霸笔记」构建，帮助用户在学习与工作中保持专注、持续高效。购买本软件请前往tellmeway.cn的爱发电中查看",
+    "preview": ["cover.png","preview.png"],
+    "icon": "logo.png",
+    "author": [{
+      "name": "Tellmeway",
+      "author_url": "tellmeway.cn"
+    }]
+  },
+  "downloads": {
+    "n67": {
+      "version": "1.4",
+      "file_name": "Tellmewhy.velaapp.learnbox.release.1.4.rpk"
+    }
+  }
+}

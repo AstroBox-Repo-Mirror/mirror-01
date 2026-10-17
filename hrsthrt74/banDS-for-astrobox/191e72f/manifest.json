@@ -1,0 +1,27 @@
+{
+  "item": {
+    "name": "banDS",
+    "description": "Y2K · 复古 · 像素风——Nintendo DS 风格表盘",
+    "preview": [
+      "preview0.png",
+      "preview1.png",
+      "preview2.png",
+      "preview3.png",
+      "preview4.png"
+    ],
+    "icon": "icon.png",
+    "source_url": "",
+    "author": [
+      {
+        "name": "hrsthrt74",
+        "author_url": "https://www.bandbbs.cn/members/296762/"
+      }
+    ]
+  },
+  "downloads": {
+    "n67": {
+      "version": "v1.0",
+      "file_name": "banDS for 9P v1.0 by hrsthrt74.bin"
+    }
+  }
+}

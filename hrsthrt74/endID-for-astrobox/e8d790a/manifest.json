@@ -1,0 +1,67 @@
+{
+  "item": {
+    "name": "endID",
+    "description": "《明日方舟 终末地》风格表盘",
+    "preview": [
+      "preview0.png",
+      "preview1.png",
+      "preview2.png",
+      "preview3.png",
+      "preview4.png"
+    ],
+    "icon": "icon.png",
+    "source_url": "",
+    "author": [
+      {
+        "name": "hrsthrt74",
+        "author_url": "https://www.bandbbs.cn/members/296762/"
+      },
+      {
+        "name": "支持我",
+        "author_url": "https://afdian.com/a/hrsthrt74"
+      }
+    ]
+  },
+  "downloads": {
+    "p65": {
+      "version": "2.4",
+      "file_name": "endID for RW v2.4 by hrsthrt74.bin"
+    },
+    "o65m": {
+      "version": "2.4",
+      "file_name": "endID for RW v2.4 by hrsthrt74.bin"
+    },
+    "o65": {
+      "version": "2.4",
+      "file_name": "endID for RW v2.4 by hrsthrt74.bin"
+    },
+    "o62": {
+      "version": "2.4",
+      "file_name": "endID for S4 v2.4 by hrsthrt74.bin"
+    },
+    "o62m": {
+      "version": "2.4",
+      "file_name": "endID for S4 v2.4 by hrsthrt74.bin"
+    },
+    "n67": {
+      "version": "2.4",
+      "file_name": "endID for 9P v2.4 by hrsthrt74.bin"
+    },
+    "o66": {
+      "version": "2.4",
+      "file_name": "endID for Band10 v2.4 by hrsthrt74.bin"
+    },
+    "o66nfc": {
+      "version": "2.4",
+      "file_name": "endID for Band10 v2.4 by hrsthrt74.bin"
+    },
+    "n66": {
+      "version": "2.0",
+      "file_name": "endID for Band9 v2.0 by hrsthrt74.bin"
+    },
+    "p62": {
+      "version": "2.4",
+      "file_name": "endID for S5 v2.4 by hrsthrt74.bin"
+    }
+  }
+}

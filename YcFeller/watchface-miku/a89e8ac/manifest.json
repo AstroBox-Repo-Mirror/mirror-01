@@ -1,0 +1,27 @@
+{
+  "item": {
+    "name": "初音未来排版表盘",
+    "description": "初音未来排版表盘，清新可爱的初音未来主题。QQ交流群: 758279876",
+    "preview": [
+      "cover.png"
+    ],
+    "icon": "icon.png",
+    "source_url": "https://github.com/YcFeller/watchface-miku",
+    "author": [
+      {
+        "name": "YcFeller",
+        "author_url": "https://wear.xunrix.com/author/1"
+      }
+    ]
+  },
+  "downloads": {
+    "n66": {
+      "version": "v1.0",
+      "file_name": "miku_v1.bin"
+    },
+    "n66nfc": {
+      "version": "v1.0",
+      "file_name": "miku_v1.bin"
+    }
+  }
+}

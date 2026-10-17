@@ -1,0 +1,27 @@
+{
+  "item": {
+    "name": "曦岸极简表盘",
+    "description": "曦岸极简表盘，简约而不简单。QQ交流群: 758279876",
+    "preview": [
+      "cover.png"
+    ],
+    "icon": "cover.png",
+    "source_url": "https://github.com/YcFeller/watchface-xian-minimal",
+    "author": [
+      {
+        "name": "YcFeller",
+        "author_url": "https://wear.xunrix.com/author/1"
+      }
+    ]
+  },
+  "downloads": {
+    "n66": {
+      "version": "v1.0.2",
+      "file_name": "xian_minimal_v1.0.2.bin"
+    },
+    "n66nfc": {
+      "version": "v1.0.2",
+      "file_name": "xian_minimal_v1.0.2.bin"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "item": {
+    "id": "979886134928",
+    "restype": "watchface",
+    "name": "初音未来排版表盘",
+    "description": "初音未来排版表盘，清新可爱的初音未来主题。QQ交流群: 758279876",
+    "preview": [
+      "media/miku2341-预览.png"
+    ],
+    "icon": "media/容器 134.png",
+    "cover": "media/初音未来排版表盘@1x.png",
+    "author": [
+      {
+        "name": "ycfeller",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "官网",
+      "url": "https://wear.xunrix.com/",
+      "icon": "Airplane"
+    }
+  ],
+  "downloads": {
+    "xmb9": {
+      "version": "1.0.1",
+      "file_name": "downloads/miku_v1.bin"
+    }
+  },
+  "ext": {}
+}

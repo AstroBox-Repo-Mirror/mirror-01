@@ -1,0 +1,54 @@
+{
+  "item": {
+    "name": "腕上芙宁娜Pro",
+    "description": "一款养成型快应用小游戏，内含抽卡，战斗，故事，任务等等功能，原版腕上芙宁娜的PRO版本。",
+    "preview": [
+      "preview1.png",
+      "preview2.png",
+      "preview3.png",
+      "preview4.png",
+      "preview5.png",
+      "preview6.png",
+      "preview7.png",
+      "preview8.png",
+      "preview9.png",
+      "preview10.png",
+      "preview11.png",
+      "preview12.png"
+    ],
+    "icon": "logo.png",
+    "source_url": "https://github.com/Dreamqiucn/Furina_of_band_PRO",
+    "author": [
+      {
+        "name": "Dreamqiu",
+        "author_url": "https://github.com/Dreamqiucn"
+      }
+    ]
+  },
+  "downloads": {
+    "n66": {
+      "version": "3.7.1",
+      "file_name": "9_com.Furina.Dreamqiu.mi9.cn.release.3.7.1.rpk"
+    },
+    "n67": {
+      "version": "3.7.1",
+      "file_name": "9p_com.Furina.Dreamqiu.cn.release.3.7.1.rpk"
+    },
+    "o66": {
+      "version": "3.7.1",
+      "file_name": "10_com.Furina.Dreamqiu.cn.release.3.7.1.rpk"
+    },
+    "o66nfc": {
+      "version": "3.7.1",
+      "file_name": "10_com.Furina.Dreamqiu.cn.release.3.7.1.rpk"
+    },
+    "o65": {
+      "version": "3.7.1",
+      "file_name": "rw_com.Furina.Dreamqiu.cn.release.3.7.1.rpk"
+    },
+    "o65m": {
+      "version": "3.7.1",
+      "file_name": "rw_com.Furina.Dreamqiu.cn.release.3.7.1.rpk"
+    }
+  }
+}

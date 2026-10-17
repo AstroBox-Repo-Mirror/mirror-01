@@ -1,0 +1,154 @@
+{
+  "version": 1,
+  "shared": {
+    "redmi-watch-base": {
+      "watchface": {
+        "name": "Redmi Watch",
+        "previewKey": "redmi-watch"
+      },
+      "canvas": {
+        "background": "transparent"
+      },
+      "wallpaperTransform": {
+        "scale": {
+          "default": 1,
+          "min": 1,
+          "max": 4,
+          "step": 0.01
+        },
+        "rotation": {
+          "default": 0,
+          "min": -180,
+          "max": 180,
+          "step": 1
+        }
+      }
+    },
+    "redmi-watch-default": {
+      "extends": "redmi-watch-base",
+      "canvas": {
+        "width": 432,
+        "height": 514
+      },
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "width": 432,
+        "height": 514,
+        "radius": 0
+      },
+      "preview": {
+        "radius": 72
+      },
+      "layers": [
+        {
+          "id": "photo",
+          "name": "壁纸",
+          "type": "wallpaper",
+          "clip": "frame",
+          "opacity": 1,
+          "blur": 0,
+          "blendMode": {
+            "default": "normal",
+            "adjustable": true,
+            "options": [
+              "normal",
+              "multiply",
+              "screen",
+              "overlay",
+              "darken",
+              "lighten",
+              "color-dodge",
+              "color-burn",
+              "hard-light",
+              "soft-light",
+              "difference",
+              "exclusion",
+              "hue",
+              "saturation",
+              "color",
+              "luminosity"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "templates": [
+    {
+      "watchface": {
+        "name": "Redmi Watch",
+        "previewKey": "redmi-watch"
+      },
+      "canvas": {
+        "background": "transparent",
+        "width": 432,
+        "height": 514
+      },
+      "wallpaperTransform": {
+        "scale": {
+          "default": 1,
+          "min": 1,
+          "max": 4,
+          "step": 0.01
+        },
+        "rotation": {
+          "default": 0,
+          "min": -180,
+          "max": 180,
+          "step": 1
+        }
+      },
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "width": 432,
+        "height": 514,
+        "radius": 0
+      },
+      "preview": {
+        "radius": 72
+      },
+      "layers": [
+        {
+          "id": "photo-mtskxe5dzfx",
+          "name": "壁纸层",
+          "type": "wallpaper",
+          "clip": "frame",
+          "blur": {
+            "default": 0,
+            "min": 0,
+            "max": 30,
+            "step": 1,
+            "adjustable": true
+          },
+          "blendMode": {
+            "default": "normal",
+            "adjustable": true,
+            "options": [
+              "normal",
+              "multiply",
+              "screen",
+              "overlay",
+              "darken",
+              "lighten",
+              "color-dodge",
+              "color-burn",
+              "hard-light",
+              "soft-light",
+              "difference",
+              "exclusion",
+              "hue",
+              "saturation",
+              "color",
+              "luminosity"
+            ]
+          }
+        }
+      ],
+      "id": "redmi-watch-default",
+      "deviceKey": "redmi-watch",
+      "aliases": []
+    }
+  ]
+}
