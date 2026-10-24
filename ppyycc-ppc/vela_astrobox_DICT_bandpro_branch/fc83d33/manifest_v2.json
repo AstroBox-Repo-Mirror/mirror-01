@@ -1,0 +1,37 @@
+{
+  "item": {
+    "id": "com.ppyycc.dict",
+    "restype": "quick_app",
+    "name": "DICT英汉词典",
+    "description": "这是一个适用于小米手环的快应用英汉词典，免费，便捷。\n约6W+单词，近千条短语，采用公开词库，迅即搜索和复习板块帮助您更好地背单词。\n\n声明：本项目由deepseek harness协助开发。所使用组件、词库、文章均为非商业用途的公开资源。本项目也将进行开源，感兴趣的开发者可以共同交流，也希望用户能多多提些意见~",
+    "preview": [
+      "media/preview.png",
+      "media/preview 1.png",
+      "media/preview 2.png",
+      "media/preview 3.png"
+    ],
+    "icon": "media/icon.png",
+    "cover": "media/cover.png",
+    "author": [
+      {
+        "name": "ppyycc",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [],
+  "downloads": {
+    "xmb10p": {
+      "version": "1.2.8d",
+      "file_name": "downloads/com.ppyycc.dict.release.1.2.8d.rpk",
+      "versionCode": 12,
+      "updatelogs": [
+        {
+          "version": "1.2.8d",
+          "content": "中等更新：\n1、极大减小占用体积，由原来近50MB到目前仅25MB一下的内存占用\n2、统一了很多全局用法、全局函数，极大减小代码冗余\n3、添加了单词例句，涵盖较常用的单词\n4、优化一部分ui效果"
+        }
+      ]
+    }
+  },
+  "ext": {}
+}

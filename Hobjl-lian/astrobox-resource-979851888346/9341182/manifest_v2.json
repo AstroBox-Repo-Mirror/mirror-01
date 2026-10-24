@@ -1,0 +1,82 @@
+{
+  "item": {
+    "id": "979851888346",
+    "restype": "watchface",
+    "name": "极光效应",
+    "description": "以展示壁纸为主，界面尽量不遮挡画面，侧边栏做了收窄处理但保留跳转功能，共 12 张壁纸。",
+    "preview": [
+      "media/cover.jpg",
+      "media/preview.png"
+    ],
+    "icon": "media/icon.png",
+    "cover": "media/cover.jpg",
+    "author": [
+      {
+        "name": "Hobjl",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "点击此处了解表盘详情",
+      "url": "https://afdian.com/item/9c24fc38692711f0983252540025c377",
+      "icon": "hand-heart"
+    }
+  ],
+  "downloads": {
+    "xmb10": {
+      "version": "1.0.3",
+      "file_name": "downloads/极光效应-band10_11-v1.0.3.bin",
+      "versionCode": 65539
+    },
+    "xmb10nfc": {
+      "version": "1.0.3",
+      "file_name": "downloads/极光效应-band10_11-v1.0.3.bin",
+      "versionCode": 65539
+    },
+    "xmb11": {
+      "version": "1.0.3",
+      "file_name": "downloads/极光效应-band10_11-v1.0.3.bin",
+      "versionCode": 65539
+    },
+    "xmb11nfc": {
+      "version": "1.0.3",
+      "file_name": "downloads/极光效应-band10_11-v1.0.3.bin",
+      "versionCode": 65539
+    },
+    "xmb9": {
+      "version": "1.0.3",
+      "file_name": "downloads/极光效应-band9-v1.0.3.bin",
+      "versionCode": 65539
+    },
+    "xmb9p": {
+      "version": "1.0.2",
+      "file_name": "downloads/极光效应-band9pro_10pro-v1.0.2.bin",
+      "versionCode": 65538
+    },
+    "xmb10p": {
+      "version": "1.0.2",
+      "file_name": "downloads/极光效应-band9pro_10pro-v1.0.2.bin",
+      "versionCode": 65538
+    },
+    "xmrw5": {
+      "version": "1.0.1",
+      "file_name": "downloads/极光效应-rw5-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmrw5xring": {
+      "version": "1.0.1",
+      "file_name": "downloads/极光效应-rw5-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmrw6": {
+      "version": "1.0.1",
+      "file_name": "downloads/极光效应-rw5-v1.0.1.bin",
+      "versionCode": 65537
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

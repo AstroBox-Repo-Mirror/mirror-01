@@ -1,0 +1,114 @@
+{
+  "item": {
+    "id": "979881091817",
+    "restype": "watchface",
+    "name": "复古倾斜数字",
+    "description": "在1983年，日本的手表品牌seiko 精工和汽车界非常有名的工业设计师Giorgetto Giugiaro，联合推出了一款腕表。这款表把表盘倾斜了45度，方便在机车驾驶时，阅读时间。这款表在千禧年也再度复产，限量发行。\n但我在日常使用小米手环的时候，我发现还没有这样设计的表盘出现，要么是正着的表盘，要么是全横过来的，因此我就自己设计了一个。\n\n表盘的字体采用abduction2002，一款非常复古的CRT显示器风格的字体。整体时间倾斜了25度，方便日常阅读，我自己测试下来，差不多就是两只手在键盘打字时，手表的角度。并且字体经过了专门的校准对齐，保证阅读流畅。字体经过特殊处理，周围制造了一些光晕和暗角的效果，来小小模仿CRT屏幕的荧光感。\n\n表盘根据左右手佩戴，提供了两种样式可选。\n全新的版本更新，带来了 3 个全新的颜色，并且对原版本的绿色进行了修改。现在表盘一共有 6 种配色了。\n复古橘 荧光绿  VFD蓝  霓虹黄 暗夜红 灯箱白\n\n目前支持：小米手环 11/10/9   小米手环 10Pro/9Pro",
+    "preview": [
+      "media/资源 2.png",
+      "media/IMG_2142.jpg",
+      "media/_A056753.jpg",
+      "media/_3045044.jpg",
+      "media/_3045049.jpg",
+      "media/_A056719.jpg",
+      "media/_A056721.jpg",
+      "media/_A056727.jpg",
+      "media/_A056730.jpg",
+      "media/_A056735.jpg",
+      "media/_3045056.jpg",
+      "media/_3045024.jpg"
+    ],
+    "icon": "media/画板 1.png",
+    "cover": "media/封面.jpg",
+    "author": [
+      {
+        "name": "Cannyworks",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "小红书",
+      "url": "https://www.xiaohongshu.com/user/profile/654afda900000000300325dc",
+      "icon": "Notebook"
+    }
+  ],
+  "downloads": {
+    "xmb10": {
+      "version": "2.0.0",
+      "file_name": "downloads/环 10-复古倾斜数字 .bin",
+      "versionCode": 131072
+    },
+    "xmb10nfc": {
+      "version": "2.0.0",
+      "file_name": "downloads/环 10-复古倾斜数字 .bin",
+      "versionCode": 131072
+    },
+    "xmb10p": {
+      "version": "2.0.0",
+      "file_name": "downloads/环 10P-复古倾斜数字.bin",
+      "versionCode": 131072
+    },
+    "xmb11": {
+      "version": "2.0.0",
+      "file_name": "downloads/环 11-复古倾斜数字 .bin",
+      "versionCode": 131072
+    },
+    "xmb11nfc": {
+      "version": "2.0.0",
+      "file_name": "downloads/环 11-复古倾斜数字 .bin",
+      "versionCode": 131072
+    },
+    "xmb9": {
+      "version": "2.0.0",
+      "file_name": "downloads/环 9- 复古倾斜数字 .bin",
+      "versionCode": 131072
+    },
+    "xmb9p": {
+      "version": "2.0.1",
+      "file_name": "downloads/环 9P-复古倾斜数字3.bin",
+      "versionCode": 131073
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true,
+    "trialDownloads": {
+      "xmb10": {
+        "version": "2.0.0",
+        "file_name": "downloads/trial/环 10-复古倾斜数字 .bin",
+        "versionCode": 131072
+      },
+      "xmb10nfc": {
+        "version": "2.0.0",
+        "file_name": "downloads/trial/环 10-复古倾斜数字 .bin",
+        "versionCode": 131072
+      },
+      "xmb10p": {
+        "version": "2.0.0",
+        "file_name": "downloads/trial/环 10P-复古倾斜数字.bin",
+        "versionCode": 131072
+      },
+      "xmb11": {
+        "version": "2.0.0",
+        "file_name": "downloads/trial/环 11-复古倾斜数字 .bin",
+        "versionCode": 131072
+      },
+      "xmb11nfc": {
+        "version": "2.0.0",
+        "file_name": "downloads/trial/环 11-复古倾斜数字 .bin",
+        "versionCode": 131072
+      },
+      "xmb9": {
+        "version": "2.0.0",
+        "file_name": "downloads/trial/环 9- 复古倾斜数字 .bin",
+        "versionCode": 131072
+      },
+      "xmb9p": {
+        "version": "2.0.1",
+        "file_name": "downloads/trial/环 9P-复古倾斜数字3.bin",
+        "versionCode": 131073
+      }
+    }
+  }
+}

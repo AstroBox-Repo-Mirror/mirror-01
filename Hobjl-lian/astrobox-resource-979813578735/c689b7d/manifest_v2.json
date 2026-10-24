@@ -1,0 +1,82 @@
+{
+  "item": {
+    "id": "979813578735",
+    "restype": "watchface",
+    "name": "SnapUI-鸣潮",
+    "description": "采用鸣潮官方壁纸配合 SnapUI 的排版，3 种时钟样式可切换，UI 也支持替换为自己的图片。",
+    "preview": [
+      "media/cover.jpg",
+      "media/preview.png"
+    ],
+    "icon": "media/icon.png",
+    "cover": "media/cover.jpg",
+    "author": [
+      {
+        "name": "Hobjl",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "点击此处了解表盘详情",
+      "url": "https://afdian.com/item/31403452065f11f1905052540025c377",
+      "icon": "hand-heart"
+    }
+  ],
+  "downloads": {
+    "xmb10": {
+      "version": "1.0.1",
+      "file_name": "downloads/SnapUI-鸣潮-band10_11-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmb10nfc": {
+      "version": "1.0.1",
+      "file_name": "downloads/SnapUI-鸣潮-band10_11-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmb11": {
+      "version": "1.0.1",
+      "file_name": "downloads/SnapUI-鸣潮-band10_11-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmb11nfc": {
+      "version": "1.0.1",
+      "file_name": "downloads/SnapUI-鸣潮-band10_11-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmb9": {
+      "version": "1.0.1",
+      "file_name": "downloads/SnapUI-鸣潮-band9-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmb9p": {
+      "version": "1.0.2",
+      "file_name": "downloads/SnapUI-鸣潮-band9pro_10pro-v1.0.2.bin",
+      "versionCode": 65538
+    },
+    "xmb10p": {
+      "version": "1.0.2",
+      "file_name": "downloads/SnapUI-鸣潮-band9pro_10pro-v1.0.2.bin",
+      "versionCode": 65538
+    },
+    "xmrw5": {
+      "version": "1.0.5",
+      "file_name": "downloads/SnapUI-鸣潮-rw5-v1.0.5.bin",
+      "versionCode": 65541
+    },
+    "xmrw5xring": {
+      "version": "1.0.5",
+      "file_name": "downloads/SnapUI-鸣潮-rw5-v1.0.5.bin",
+      "versionCode": 65541
+    },
+    "xmrw6": {
+      "version": "1.0.5",
+      "file_name": "downloads/SnapUI-鸣潮-rw5-v1.0.5.bin",
+      "versionCode": 65541
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "甜蜜女友2导入器",
+  "icon": "icon.png",
+  "version": "2.2.0",
+  "description": "把《甜蜜女友2》的章节图片同步到手环，并管理存档与阅读统计",
+  "author": "其核",
+  "website": "https://miband.qihe0507.top/",
+  "entry": "amakano2_import.wasm",
+  "wasi_version": 2,
+  "api_level": 2,
+  "permissions": [
+    "device",
+    "ui",
+    "interconnect",
+    "register_interconnect_recv",
+    "thirdpartyapp"
+  ],
+  "additional_files": [
+    "packs/p00.pack",
+    "packs/p01.pack",
+    "packs/p02.pack",
+    "packs/p03.pack",
+    "packs/p04.pack",
+    "packs/p05.pack",
+    "packs/index.json"
+  ]
+}

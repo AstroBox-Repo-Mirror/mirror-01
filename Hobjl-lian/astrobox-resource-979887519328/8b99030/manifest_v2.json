@@ -1,0 +1,42 @@
+{
+  "item": {
+    "id": "979887519328",
+    "restype": "watchface",
+    "name": "耐克PRO（样式2）",
+    "description": "把耐克的设计语言拆解重做，20 个样式整合在同一款表盘里，配色可切换，步数、心率、天气等信息一屏可见。",
+    "preview": [
+      "media/cover.png",
+      "media/preview.png"
+    ],
+    "icon": "media/icon.png",
+    "cover": "media/cover.png",
+    "author": [
+      {
+        "name": "Hobjl",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "点击此处了解表盘详情",
+      "url": "https://afdian.com/item/a4dc38f0d43e11f0902f52540025c377",
+      "icon": "hand-heart"
+    }
+  ],
+  "downloads": {
+    "xmb9p": {
+      "version": "1.0.9",
+      "file_name": "downloads/耐克PRO-band9pro_10pro-v1.0.9.bin",
+      "versionCode": 65545
+    },
+    "xmb10p": {
+      "version": "1.0.9",
+      "file_name": "downloads/耐克PRO-band9pro_10pro-v1.0.9.bin",
+      "versionCode": 65545
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

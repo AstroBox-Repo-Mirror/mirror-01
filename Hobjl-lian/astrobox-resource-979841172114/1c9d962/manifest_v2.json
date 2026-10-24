@@ -1,0 +1,45 @@
+{
+  "item": {
+    "id": "979841172114",
+    "restype": "watchface",
+    "name": "极简光痕",
+    "description": "复刻自vivowatch GT，有多个配色可选择，并支持光效亮屏效果",
+    "preview": [
+      "media/极简光痕.png",
+      "media/末尾图.png"
+    ],
+    "icon": "media/容器 587.png",
+    "cover": "media/极简光痕.png",
+    "author": [
+      {
+        "name": "Hobjl",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "点此了解更多表盘",
+      "url": "https://afdian.com/a/Hobjl?utm_source=copylink&utm_medium=link",
+      "icon": "arrow-bend-double-up-right"
+    }
+  ],
+  "downloads": {
+    "xmrw5": {
+      "version": "1.0.3",
+      "file_name": "downloads/极简光痕3.0.bin",
+      "versionCode": 65539
+    },
+    "xmrw5xring": {
+      "version": "1.0.3",
+      "file_name": "downloads/极简光痕3.0.bin",
+      "versionCode": 65539
+    },
+    "xmrw6": {
+      "version": "1.0.3",
+      "file_name": "downloads/极简光痕3.0.bin",
+      "versionCode": 65539
+    }
+  },
+  "ext": {}
+}

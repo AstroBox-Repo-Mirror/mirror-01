@@ -1,0 +1,71 @@
+{
+  "item": {
+    "id": "979850337126",
+    "restype": "watchface",
+    "name": "玻璃点阵渐变",
+    "description": "当你观察大块的玻璃时，四周会有一圈黑色的点阵渐变，尤其是汽车、公交车上。这个点阵纹路，本意是为了应对温差带来的玻璃应力，让玻璃周围一同升温，以避免玻璃碎裂。\n我把这个有意思的设计，做到了这个手环上。四周有一圈阴影，给表盘带来了一些独特的立体感。\n做了三种不同的配色～欢迎大家试用。",
+    "preview": [
+      "media/dfuns 2026-09-28 085838172C55F02F53.jpg",
+      "media/_2134591.jpg",
+      "media/_2134599.jpg",
+      "media/_2144735.jpg",
+      "media/_2134621.jpg",
+      "media/_2134625.jpg",
+      "media/_2134630.jpg",
+      "media/_2144728.jpg"
+    ],
+    "icon": "media/4 副本q.png",
+    "cover": "media/封面.png",
+    "author": [
+      {
+        "name": "Cannyworks",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "小红书",
+      "url": "https://www.xiaohongshu.com/user/profile/654afda900000000300325dc",
+      "icon": "Notebook"
+    }
+  ],
+  "downloads": {
+    "xmb9p": {
+      "version": "1.0.0",
+      "file_name": "downloads/9pro-玻璃点阵渐变.bin",
+      "versionCode": 1
+    },
+    "xmb10p": {
+      "version": "1.0.0",
+      "file_name": "downloads/10pro-玻璃点阵渐变.bin",
+      "versionCode": 1
+    },
+    "xmb11": {
+      "version": "1.0.0",
+      "file_name": "downloads/环 11-玻璃点阵渐变2.0.bin",
+      "versionCode": 1
+    },
+    "xmb11nfc": {
+      "version": "1.0.0",
+      "file_name": "downloads/环 11-玻璃点阵渐变2.0.bin",
+      "versionCode": 1
+    },
+    "xmb9": {
+      "version": "1.0.0",
+      "file_name": "downloads/环 9-玻璃点阵渐变.bin",
+      "versionCode": 1
+    },
+    "xmb10nfc": {
+      "version": "1.0.0",
+      "file_name": "downloads/环 10-玻璃点阵渐变2.0.bin",
+      "versionCode": 1
+    },
+    "xmb10": {
+      "version": "1.0.0",
+      "file_name": "downloads/环 10-玻璃点阵渐变2.0.bin",
+      "versionCode": 1
+    }
+  },
+  "ext": {}
+}

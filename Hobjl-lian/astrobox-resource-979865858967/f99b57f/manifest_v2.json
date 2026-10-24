@@ -1,0 +1,74 @@
+{
+  "item": {
+    "id": "979865858967",
+    "restype": "watchface",
+    "name": "SnapUI-照片表盘-2【安装我】",
+    "description": "SnapUI-照片表盘的第二个样式。详情可点击上方爱发电链接查看",
+    "preview": [
+      "media/Ab2.jpg",
+      "media/Ab头图2（浅色）.jpg"
+    ],
+    "icon": "media/icons.png",
+    "cover": "media/Ab头图1.jpg",
+    "author": [
+      {
+        "name": "Hobjl",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "点击此处跳转爱发电",
+      "url": "https://afdian.com/item/aacfe164985411f1aef45254001e7c00?utm_source=copylink&utm_medium=link",
+      "icon": "arrow-circle-up-right"
+    }
+  ],
+  "downloads": {
+    "xmrw5": {
+      "version": "1.0.0",
+      "file_name": "downloads/SnapUI-2-RW5RW6.bin"
+    },
+    "xmrw5xring": {
+      "version": "1.0.0",
+      "file_name": "downloads/SnapUI-2-RW5RW6.bin"
+    },
+    "xmrw6": {
+      "version": "1.0.0",
+      "file_name": "downloads/SnapUI-2-RW5RW6.bin"
+    },
+    "xmb10": {
+      "version": "1.0.0",
+      "file_name": "downloads/SnapUI-2-10.bin"
+    },
+    "xmb10nfc": {
+      "version": "1.0.0",
+      "file_name": "downloads/SnapUI-2-10.bin"
+    },
+    "xmb10p": {
+      "version": "1.0.0",
+      "file_name": "downloads/SnapUI-2-9P10P.bin"
+    },
+    "xmb9": {
+      "version": "1.0.0",
+      "file_name": "downloads/SnapUI-2-9.bin"
+    },
+    "xmb9p": {
+      "version": "1.0.0",
+      "file_name": "downloads/SnapUI-2-9P10P.bin"
+    },
+    "xmb11": {
+      "version": "1.0.0",
+      "file_name": "downloads/SnapUI-2-1011-xmb11.bin",
+      "versionCode": 65536
+    },
+    "xmb11nfc": {
+      "version": "1.0.0",
+      "file_name": "downloads/SnapUI-2-1011-xmb11nfc.bin",
+      "versionCode": 65536
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "item": {
+    "id": "com.kevin.en",
+    "restype": "quick_app",
+    "name": "腕上单词",
+    "description": "腕上单词-使用艾宾浩森算法的单词学习与测试软件，帮助您更好的学习英语单词\n联系作者：QQ2731796844 邮箱azumachiaki@azki.ai",
+    "preview": [
+      "media/Vela_Virtual_Device-2026-07-06-21-25-26.png",
+      "media/Vela_Virtual_Device-2026-07-06-21-25-45.png",
+      "media/Vela_Virtual_Device9p-2026-07-06-21-25-31.png",
+      "media/Vela_Virtual_Device9p-2026-07-06-21-25-50.png",
+      "media/Vela_Virtual_Device9p-2026-07-06-22-18-15.png",
+      "media/Vela_Virtual_Device9p-2026-07-06-22-21-33.png",
+      "media/Vela_Virtual_Devicerw-2026-07-06-21-25-34.png",
+      "media/Vela_Virtual_Devicerw-2026-07-06-21-25-56.png",
+      "media/Vela_Virtual_Devicerw-2026-07-06-22-18-19.png",
+      "media/Vela_Virtual_Devicerw-2026-07-06-22-18-33.png",
+      "media/Vela_Virtual_Devicerw-2026-07-06-22-18-55.png",
+      "media/Vela_Virtual_Devicerw-2026-07-06-22-21-41.png"
+    ],
+    "icon": "media/logo.png",
+    "cover": "media/1F875E8E852367FCD000EF12817375C6.jpg",
+    "author": [
+      {
+        "name": "AzumaChiaki",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [],
+  "downloads": {
+    "xmrw5": {
+      "version": "26.7.6",
+      "file_name": "downloads/com.kevin.en.release.26.7.6.rpk"
+    },
+    "xmrw5xring": {
+      "version": "26.7.6",
+      "file_name": "downloads/com.kevin.en.release.26.7.6.rpk"
+    },
+    "xmrw6": {
+      "version": "26.7.6",
+      "file_name": "downloads/com.kevin.en.release.26.7.6.rpk"
+    },
+    "xmb10": {
+      "version": "26.7.6",
+      "file_name": "downloads/com.kevin.en.release.26.7.6.rpk"
+    },
+    "xmb10nfc": {
+      "version": "26.7.6",
+      "file_name": "downloads/com.kevin.en.release.26.7.6.rpk"
+    },
+    "xmb9": {
+      "version": "26.7.6",
+      "file_name": "downloads/com.kevin.en.release.26.7.6.rpk"
+    },
+    "xmb10p": {
+      "version": "26.7.6",
+      "file_name": "downloads/com.kevin.en.release.26.7.6.rpk"
+    },
+    "xmb9p": {
+      "version": "26.7.6",
+      "file_name": "downloads/com.kevin.en.release.26.7.6.rpk"
+    },
+    "xmb11": {
+      "version": "26.7.6",
+      "file_name": "downloads/com.kevin.en.release.26.7.6.rpk"
+    },
+    "xmb11nfc": {
+      "version": "26.7.6",
+      "file_name": "downloads/com.kevin.en.release.26.7.6.rpk"
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "item": {
+    "id": "979877068253",
+    "restype": "watchface",
+    "name": "美式漫画-照片表盘【安装我】",
+    "description": "已在爱发电购买的用户请先绑定爱发电账号后来这里安装哦，未购买的用户可以点击上方爱发电链接了解表盘详情~",
+    "preview": [
+      "media/Ab头图1.jpg",
+      "media/Ab头图2（深色）.jpg"
+    ],
+    "icon": "media/icons.png",
+    "cover": "media/Ab头图1.jpg",
+    "author": [
+      {
+        "name": "Hobjl",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "点击此处了解详情",
+      "url": "https://www.ifdian.net/item/e711e44c922d11f1ac625254001e7c00?utm_source=copylink&utm_medium=link",
+      "icon": ""
+    }
+  ],
+  "downloads": {
+    "xmrw5": {
+      "version": "1.0.0",
+      "file_name": "downloads/UScartorn-RW56.bin"
+    },
+    "xmrw5xring": {
+      "version": "1.0.0",
+      "file_name": "downloads/UScartorn-RW56.bin"
+    },
+    "xmrw6": {
+      "version": "1.0.0",
+      "file_name": "downloads/UScartorn-RW56.bin"
+    },
+    "xmb10": {
+      "version": "1.0.0",
+      "file_name": "downloads/UScartorn-10.bin"
+    },
+    "xmb10nfc": {
+      "version": "1.0.0",
+      "file_name": "downloads/UScartorn-10.bin"
+    },
+    "xmb10p": {
+      "version": "1.0.0",
+      "file_name": "downloads/UScartorn-9P10P.bin"
+    },
+    "xmb9": {
+      "version": "1.0.0",
+      "file_name": "downloads/美式卡通-照片表盘-9.bin"
+    },
+    "xmb9p": {
+      "version": "1.0.0",
+      "file_name": "downloads/UScartorn-9P10P.bin"
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

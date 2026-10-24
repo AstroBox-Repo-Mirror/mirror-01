@@ -1,0 +1,57 @@
+{
+  "item": {
+    "id": "979804500196",
+    "restype": "watchface",
+    "name": "电子拍立得（样式2）",
+    "description": "复古拍立得风格，24 张壁纸可自由切换，底部快捷跳转支持改成自己常用的项。",
+    "preview": [
+      "media/cover.jpg",
+      "media/preview.png"
+    ],
+    "icon": "media/icon.png",
+    "cover": "media/cover.jpg",
+    "author": [
+      {
+        "name": "Hobjl",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "点击此处了解表盘详情",
+      "url": "https://afdian.com/item/bc2850fa49ad11f0bc8352540025c377",
+      "icon": "hand-heart"
+    }
+  ],
+  "downloads": {
+    "xmb9p": {
+      "version": "1.0.2",
+      "file_name": "downloads/电子拍立得-band9pro_10pro-v1.0.2.bin",
+      "versionCode": 65538
+    },
+    "xmb10p": {
+      "version": "1.0.2",
+      "file_name": "downloads/电子拍立得-band9pro_10pro-v1.0.2.bin",
+      "versionCode": 65538
+    },
+    "xmrw5": {
+      "version": "1.1.2",
+      "file_name": "downloads/电子拍立得-rw5-v1.1.2.bin",
+      "versionCode": 65794
+    },
+    "xmrw5xring": {
+      "version": "1.1.2",
+      "file_name": "downloads/电子拍立得-rw5-v1.1.2.bin",
+      "versionCode": 65794
+    },
+    "xmrw6": {
+      "version": "1.1.2",
+      "file_name": "downloads/电子拍立得-rw5-v1.1.2.bin",
+      "versionCode": 65794
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

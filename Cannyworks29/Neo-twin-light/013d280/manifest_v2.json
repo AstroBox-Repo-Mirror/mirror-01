@@ -1,0 +1,40 @@
+{
+  "item": {
+    "id": "979813340786",
+    "restype": "watchface",
+    "name": "霓虹双指针「DEMO」",
+    "description": "欢迎来到肯尼的 CannyWorks 罐头厂研发室～\n这里有制作的 各种Demo小样～欢迎随意尝试～\n更欢迎在评论区留言，比较受欢迎的表盘会优先量产～～🍻\n-\n这是圆饼三指针系列的衍生，想做一个有些复古、霓虹感觉的表盘，微微发光。\n因此挑选了这个粉紫色做优先测试。\n大家喜欢什么颜色？",
+    "preview": [
+      "media/_7266520.jpg",
+      "media/_7266522.jpg",
+      "media/_7266517.jpg",
+      "media/_7266518-2.jpg"
+    ],
+    "icon": "media/_7266517-2.jpg",
+    "cover": "media/_7266518-2.jpg",
+    "author": [
+      {
+        "name": "Cannyworks",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "小红书",
+      "url": "https://www.xiaohongshu.com/user/profile/654afda900000000300325dc",
+      "icon": ""
+    }
+  ],
+  "downloads": {
+    "xmb10nfc": {
+      "version": "1.0.0",
+      "file_name": "downloads/霓虹双指针 环 10.bin"
+    },
+    "xmb10": {
+      "version": "1.0.0",
+      "file_name": "downloads/霓虹双指针 环 10.bin"
+    }
+  },
+  "ext": {}
+}

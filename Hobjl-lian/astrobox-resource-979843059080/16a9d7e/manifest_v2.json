@@ -1,0 +1,142 @@
+{
+  "item": {
+    "id": "979843059080",
+    "restype": "watchface",
+    "name": "OS27模块表盘",
+    "description": "高度复刻 Apple Watch 设计语言，从界面到交互，原汁原味。\n\n多种时间样式、多套组件自由切换、模块化布局、自定义壁纸\n\n你的下一台Apple Watch，何必是Apple Watch。",
+    "preview": [
+      "media/Ab头图2（深色）.png"
+    ],
+    "icon": "media/Frame 16.png",
+    "cover": "media/Ab头图1.png",
+    "author": [
+      {
+        "name": "Hobjl",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "点此了解详细",
+      "url": "https://afdian.com/item/d367300eb99311f191a95254001e7c00?utm_source=copylink&utm_medium=link",
+      "icon": "arrow-bend-double-up-right"
+    }
+  ],
+  "downloads": {
+    "xmrw5": {
+      "version": "1.2.8",
+      "file_name": "downloads/OS27模块-RW5RW6-V3-xmrw5.bin",
+      "versionCode": 66056,
+      "updatelogs": [
+        {
+          "version": "1.2.7",
+          "content": "修复日期显示错误的问题\n组件支持隐藏"
+        },
+        {
+          "version": "1.2.8",
+          "content": "修复时钟偏移的问题"
+        }
+      ]
+    },
+    "xmrw5xring": {
+      "version": "1.2.8",
+      "file_name": "downloads/OS27模块-RW5RW6-V3-xmrw5xring.bin",
+      "versionCode": 66056,
+      "updatelogs": [
+        {
+          "version": "1.2.7",
+          "content": "修复日期显示错误的问题\n组件支持隐藏"
+        },
+        {
+          "version": "1.2.8",
+          "content": "修复时钟偏移的问题"
+        }
+      ]
+    },
+    "xmrw6": {
+      "version": "1.2.8",
+      "file_name": "downloads/OS27模块-RW5RW6-V3-xmrw6.bin",
+      "versionCode": 66056,
+      "updatelogs": [
+        {
+          "version": "1.2.7",
+          "content": "修复日期显示错误的问题\n组件支持隐藏"
+        },
+        {
+          "version": "1.2.8",
+          "content": "修复时钟偏移的问题"
+        }
+      ]
+    },
+    "xmb10": {
+      "version": "1.1.0",
+      "file_name": "downloads/OS27模块-m10m11-V2-xmb10.bin",
+      "versionCode": 65792,
+      "updatelogs": [
+        {
+          "version": "1.1.0",
+          "content": "修复日期显示错误的问题\n组件支持隐藏"
+        }
+      ]
+    },
+    "xmb10nfc": {
+      "version": "1.1.0",
+      "file_name": "downloads/OS27模块-m10m11-V2-xmb10nfc.bin",
+      "versionCode": 65792,
+      "updatelogs": [
+        {
+          "version": "1.1.0",
+          "content": "修复日期显示错误的问题\n组件支持隐藏"
+        }
+      ]
+    },
+    "xmb10p": {
+      "version": "1.1.7",
+      "file_name": "downloads/OS27模块-9P10P-V2-xmb10p.bin",
+      "versionCode": 65799,
+      "updatelogs": [
+        {
+          "version": "1.1.7",
+          "content": "修复日期显示错误的问题\n组件支持隐藏"
+        }
+      ]
+    },
+    "xmb11": {
+      "version": "1.1.0",
+      "file_name": "downloads/OS27模块-m10m11-V2-xmb11.bin",
+      "versionCode": 65792,
+      "updatelogs": [
+        {
+          "version": "1.1.0",
+          "content": "修复日期显示错误的问题\n组件支持隐藏"
+        }
+      ]
+    },
+    "xmb11nfc": {
+      "version": "1.1.0",
+      "file_name": "downloads/OS27模块-m10m11-V2-xmb11nfc.bin",
+      "versionCode": 65792,
+      "updatelogs": [
+        {
+          "version": "1.1.0",
+          "content": "修复日期显示错误的问题\n组件支持隐藏"
+        }
+      ]
+    },
+    "xmb9p": {
+      "version": "1.1.7",
+      "file_name": "downloads/OS27模块-9P10P-V2-xmb9p.bin",
+      "versionCode": 65799,
+      "updatelogs": [
+        {
+          "version": "1.1.7",
+          "content": "修复日期显示错误的问题\n组件支持隐藏"
+        }
+      ]
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

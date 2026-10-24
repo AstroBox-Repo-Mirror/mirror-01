@@ -1,0 +1,57 @@
+{
+  "item": {
+    "id": "979835460857",
+    "restype": "watchface",
+    "name": "雾中旅行",
+    "description": "10 张来自 Unsplash 的自然风光壁纸，底部数据栏可以调整为日常关注的指标。",
+    "preview": [
+      "media/cover.png",
+      "media/preview.png"
+    ],
+    "icon": "media/icon.png",
+    "cover": "media/cover.png",
+    "author": [
+      {
+        "name": "Hobjl",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "点击此处了解表盘详情",
+      "url": "https://afdian.com/item/4a6f4e3c737e11f0ad8052540025c377",
+      "icon": "hand-heart"
+    }
+  ],
+  "downloads": {
+    "xmb9p": {
+      "version": "1.1.4",
+      "file_name": "downloads/雾中旅行-band9pro_10pro-v1.1.4.bin",
+      "versionCode": 65796
+    },
+    "xmb10p": {
+      "version": "1.1.4",
+      "file_name": "downloads/雾中旅行-band9pro_10pro-v1.1.4.bin",
+      "versionCode": 65796
+    },
+    "xmrw5": {
+      "version": "1.1.3",
+      "file_name": "downloads/雾中旅行-rw5-v1.1.3.bin",
+      "versionCode": 65795
+    },
+    "xmrw5xring": {
+      "version": "1.1.3",
+      "file_name": "downloads/雾中旅行-rw5-v1.1.3.bin",
+      "versionCode": 65795
+    },
+    "xmrw6": {
+      "version": "1.1.3",
+      "file_name": "downloads/雾中旅行-rw5-v1.1.3.bin",
+      "versionCode": 65795
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "item": {
+    "id": "979897603460",
+    "restype": "watchface",
+    "name": "EdgeUI",
+    "description": "仿照微软的界面风格，侧边栏跳转项支持自定义，壁纸均为搭配好的方案，无需自行配置。",
+    "preview": [
+      "media/cover.jpg",
+      "media/preview.png"
+    ],
+    "icon": "media/icon.png",
+    "cover": "media/cover.jpg",
+    "author": [
+      {
+        "name": "Hobjl",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "点击此处了解表盘详情",
+      "url": "https://afdian.com/item/3430684cb52c11ef91bc52540025c377",
+      "icon": "hand-heart"
+    }
+  ],
+  "downloads": {
+    "xmb10": {
+      "version": "1.0.1",
+      "file_name": "downloads/EdgeUI-band10_11-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmb10nfc": {
+      "version": "1.0.1",
+      "file_name": "downloads/EdgeUI-band10_11-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmb11": {
+      "version": "1.0.1",
+      "file_name": "downloads/EdgeUI-band10_11-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmb11nfc": {
+      "version": "1.0.1",
+      "file_name": "downloads/EdgeUI-band10_11-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmb9": {
+      "version": "1.0.2",
+      "file_name": "downloads/EdgeUI-band9-v1.0.2.bin",
+      "versionCode": 65538
+    },
+    "xmb9p": {
+      "version": "1.0.2",
+      "file_name": "downloads/EdgeUI-band9pro_10pro-v1.0.2.bin",
+      "versionCode": 65538
+    },
+    "xmb10p": {
+      "version": "1.0.2",
+      "file_name": "downloads/EdgeUI-band9pro_10pro-v1.0.2.bin",
+      "versionCode": 65538
+    },
+    "xmrw5": {
+      "version": "1.0.1",
+      "file_name": "downloads/EdgeUI-rw5-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmrw5xring": {
+      "version": "1.0.1",
+      "file_name": "downloads/EdgeUI-rw5-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmrw6": {
+      "version": "1.0.1",
+      "file_name": "downloads/EdgeUI-rw5-v1.0.1.bin",
+      "versionCode": 65537
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

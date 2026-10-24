@@ -1,0 +1,61 @@
+{
+  "item": {
+    "id": "979873297503",
+    "restype": "watchface",
+    "name": "透视表盘",
+    "description": "这个表盘的灵感，来自我在看小米手环拆解图时，对内部结构产生的兴趣。\n那些平时被外壳遮蔽的元器件，其实本身就很有秩序和美感，只是很少被真正看见。把内部结构以一种更装饰化、设计化的方式呈现出来，让“功能本身”成为视觉语言。\n在这个表盘中，元器件并非对真实电路的一比一复刻，而是经过重新整理、优化与组合，形成一种新的秩序感和平衡感。我希望在加入更多功能信息的同时，让它们自然融入整体画面，最终形成一套完整、统一、彼此呼应的表盘叙事。\n\n表盘提供3种配色、2种信息显示可以随意切换。\n\n左侧进度条，可自定义显示「步数目标完成度」或「卡路里目标完成度」，每一实心圆，代表10%的完成度，黄色圆环不参与计数。\n右侧显示「电池电量」，每一格代表10%的剩余电量，红色小方块不参与计数。\n时间 上方显示当天是 「星期」 ，例如：两个实心圆，这代表今天是周二。\n时间 右下方显示当天「月份」、「日期」。",
+    "preview": [
+      "media/画板 6.png",
+      "media/_3115124.jpg",
+      "media/_3115103.jpg",
+      "media/画板 1.png",
+      "media/画板 5.png",
+      "media/_3115115.jpg",
+      "media/_3115148.jpg",
+      "media/_3115100.jpg",
+      "media/_1194534.jpg",
+      "media/_3115106.jpg",
+      "media/_3115121.jpg",
+      "media/_3115139.jpg",
+      "media/_1194511_副本.jpg"
+    ],
+    "icon": "media/资源 11.png",
+    "cover": "media/_1194511_cover.png",
+    "author": [
+      {
+        "name": "Cannyworks",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "小红书",
+      "url": "https://www.xiaohongshu.com/user/profile/654afda900000000300325dc",
+      "icon": "Notebook"
+    }
+  ],
+  "downloads": {
+    "xmb10": {
+      "version": "1.0.8",
+      "file_name": "downloads/环 10-透视表盘.bin",
+      "versionCode": 65544
+    },
+    "xmb11": {
+      "version": "1.0.8",
+      "file_name": "downloads/环 11-透视表盘.bin",
+      "versionCode": 65544
+    },
+    "xmb11nfc": {
+      "version": "1.0.8",
+      "file_name": "downloads/环 11-透视表盘.bin",
+      "versionCode": 65544
+    },
+    "xmb10nfc": {
+      "version": "1.0.8",
+      "file_name": "downloads/环 10-透视表盘.bin",
+      "versionCode": 65544
+    }
+  },
+  "ext": {}
+}

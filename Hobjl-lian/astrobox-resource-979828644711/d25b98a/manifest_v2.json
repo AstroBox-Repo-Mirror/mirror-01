@@ -1,0 +1,45 @@
+{
+  "item": {
+    "id": "979828644711",
+    "restype": "watchface",
+    "name": "安卓简约",
+    "description": "安卓风格的表盘",
+    "preview": [
+      "media/安卓简约.png",
+      "media/末尾图.png"
+    ],
+    "icon": "media/容器 589.png",
+    "cover": "media/安卓简约.png",
+    "author": [
+      {
+        "name": "Hobjl",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "点此了解更多表盘",
+      "url": "https://afdian.com/a/Hobjl?utm_source=copylink&utm_medium=linkz",
+      "icon": "arrow-bend-double-up-right"
+    }
+  ],
+  "downloads": {
+    "xmrw5": {
+      "version": "1.0.2",
+      "file_name": "downloads/【RW5-6】安卓简约.bin",
+      "versionCode": 65538
+    },
+    "xmrw5xring": {
+      "version": "1.0.2",
+      "file_name": "downloads/【RW5-6】安卓简约.bin",
+      "versionCode": 65538
+    },
+    "xmrw6": {
+      "version": "1.0.2",
+      "file_name": "downloads/【RW5-6】安卓简约.bin",
+      "versionCode": 65538
+    }
+  },
+  "ext": {}
+}

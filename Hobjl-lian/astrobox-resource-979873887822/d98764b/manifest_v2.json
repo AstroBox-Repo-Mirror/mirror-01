@@ -1,0 +1,82 @@
+{
+  "item": {
+    "id": "979873887822",
+    "restype": "watchface",
+    "name": "未来",
+    "description": "支持多模式与多组件编辑，明暗两套主题可全局切换，侧边栏与应用跳转配置较完整。",
+    "preview": [
+      "media/cover.png",
+      "media/preview.png"
+    ],
+    "icon": "media/icon.png",
+    "cover": "media/cover.png",
+    "author": [
+      {
+        "name": "Hobjl",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "点击此处了解表盘详情",
+      "url": "https://afdian.com/item/61b45024269e11f0a22c5254001e7c00",
+      "icon": "hand-heart"
+    }
+  ],
+  "downloads": {
+    "xmb10": {
+      "version": "1.0.3",
+      "file_name": "downloads/未来-band10_11-v1.0.3.bin",
+      "versionCode": 65539
+    },
+    "xmb10nfc": {
+      "version": "1.0.3",
+      "file_name": "downloads/未来-band10_11-v1.0.3.bin",
+      "versionCode": 65539
+    },
+    "xmb11": {
+      "version": "1.0.3",
+      "file_name": "downloads/未来-band10_11-v1.0.3.bin",
+      "versionCode": 65539
+    },
+    "xmb11nfc": {
+      "version": "1.0.3",
+      "file_name": "downloads/未来-band10_11-v1.0.3.bin",
+      "versionCode": 65539
+    },
+    "xmb9": {
+      "version": "2.1.2",
+      "file_name": "downloads/未来-band9-v2.1.2.bin",
+      "versionCode": 131330
+    },
+    "xmb9p": {
+      "version": "1.0.6",
+      "file_name": "downloads/未来-band9pro_10pro-v1.0.6.bin",
+      "versionCode": 65542
+    },
+    "xmb10p": {
+      "version": "1.0.6",
+      "file_name": "downloads/未来-band9pro_10pro-v1.0.6.bin",
+      "versionCode": 65542
+    },
+    "xmrw5": {
+      "version": "1.0.2",
+      "file_name": "downloads/未来-rw5-v1.0.2.bin",
+      "versionCode": 65538
+    },
+    "xmrw5xring": {
+      "version": "1.0.2",
+      "file_name": "downloads/未来-rw5-v1.0.2.bin",
+      "versionCode": 65538
+    },
+    "xmrw6": {
+      "version": "1.0.2",
+      "file_name": "downloads/未来-rw5-v1.0.2.bin",
+      "versionCode": 65538
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

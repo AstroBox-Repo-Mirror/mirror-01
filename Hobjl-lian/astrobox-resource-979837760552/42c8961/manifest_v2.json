@@ -1,0 +1,45 @@
+{
+  "item": {
+    "id": "979837760552",
+    "restype": "watchface",
+    "name": "轻简液态",
+    "description": "复刻自VIVO watch GT，支持缓慢动效亮屏",
+    "preview": [
+      "media/轻简液态.png",
+      "media/末尾图.png"
+    ],
+    "icon": "media/容器 588.png",
+    "cover": "media/轻简液态.png",
+    "author": [
+      {
+        "name": "Hobjl",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "点此了解更多表盘",
+      "url": "https://afdian.com/a/Hobjl?utm_source=copylink&utm_medium=link",
+      "icon": "arrow-bend-double-up-right"
+    }
+  ],
+  "downloads": {
+    "xmrw5": {
+      "version": "1.0.7",
+      "file_name": "downloads/【RW5-6】轻简液态v1.0.4.bin",
+      "versionCode": 65543
+    },
+    "xmrw5xring": {
+      "version": "1.0.7",
+      "file_name": "downloads/【RW5-6】轻简液态v1.0.4.bin",
+      "versionCode": 65543
+    },
+    "xmrw6": {
+      "version": "1.0.7",
+      "file_name": "downloads/【RW5-6】轻简液态v1.0.4.bin",
+      "versionCode": 65543
+    }
+  },
+  "ext": {}
+}

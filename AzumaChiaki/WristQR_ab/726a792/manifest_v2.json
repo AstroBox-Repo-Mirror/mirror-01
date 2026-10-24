@@ -1,0 +1,57 @@
+{
+  "item": {
+    "id": "com.azuma.wristqr",
+    "restype": "quick_app",
+    "name": "WristQR-将任意二维码便捷的保存在手表上",
+    "description": "你可以使用该应用快速便捷的扫描复制并保存任何二维码到手表，包括收款码，卡券码，门票码，会员码或者自定义内容二维码，安卓客户端请前往官网https://azumachiaki.com 下载中心下载，如需联系作者请加QQ2731796844 验证消息填写wq",
+    "preview": [
+      "media/Vela_Virtual_Device9-2026-07-27-15-46-05.png",
+      "media/Vela_Virtual_Device9-2026-07-27-15-46-19.png",
+      "media/Vela_Virtual_Device10p-2026-07-27-15-45-07.png",
+      "media/Vela_Virtual_Device10p-2026-07-27-15-45-15.png",
+      "media/Vela_Virtual_Device10p-2026-07-27-15-45-32.png"
+    ],
+    "icon": "media/logo.png",
+    "cover": "media/wristqr-poster-3x2.png",
+    "author": [
+      {
+        "name": "AzumaChiaki",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [],
+  "downloads": {
+    "xmb10": {
+      "version": "1.0.0",
+      "file_name": "downloads/com.azuma.wristqr.release.1.0.0.rpk"
+    },
+    "xmb10nfc": {
+      "version": "1.0.0",
+      "file_name": "downloads/com.azuma.wristqr.release.1.0.0.rpk"
+    },
+    "xmb10p": {
+      "version": "1.0.0",
+      "file_name": "downloads/com.azuma.wristqr.release.1.0.0.rpk"
+    },
+    "xmb9": {
+      "version": "1.0.0",
+      "file_name": "downloads/com.azuma.wristqr.release.1.0.0.rpk"
+    },
+    "xmb9p": {
+      "version": "1.0.0",
+      "file_name": "downloads/com.azuma.wristqr.release.1.0.0.rpk"
+    },
+    "xmb11": {
+      "version": "1.0.0",
+      "file_name": "downloads/com.azuma.wristqr.release.1.0.0.rpk"
+    },
+    "xmb11nfc": {
+      "version": "1.0.0",
+      "file_name": "downloads/com.azuma.wristqr.release.1.0.0.rpk"
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "item": {
+    "id": "com.azuma.dic",
+    "restype": "quick_app",
+    "name": "英汉词典-五万词库中英互译",
+    "description": "英汉词典的AstroBox专版\n可以跨设备激活，无需多次购买\n更好的性能优化，让查找更顺畅\n干净·简洁·不臃肿，最纯粹的词典，只为最纯粹的中英翻译而生\n功能说明：\nPFS查找：中英互译查找，可以在50000+词库中进行中英互查\n查找变形：输入英文单词，通过专门优化的英文变形索引查找单词的原型和变形\n收藏夹：将单词收藏保存备忘\n问题反馈：作者QQ：2731796844 （验证消息写英汉词典）\n26.8.11更新：优化应用稳定性，新增查找历史列表\n26.7.22更新：减小安装后的空间占用，提高检索效率，提升查找稳定性\n26.10.2更新：优化显示效果，新增双击删除历史记录",
+    "preview": [
+      "media/Vela_Virtual_Device9p-2026-07-03-19-28-28.png",
+      "media/Vela_Virtual_Device9p-2026-07-03-19-35-11.png",
+      "media/Vela_Virtual_Device9p-2026-07-03-19-51-27.png",
+      "media/Vela_Virtual_Device10-2026-07-03-19-28-25.png",
+      "media/Vela_Virtual_Device10-2026-07-03-19-35-37.png",
+      "media/Vela_Virtual_Device10-2026-07-03-19-51-06.png",
+      "media/Vela_Virtual_Devicerw-2026-07-03-19-28-22.png",
+      "media/Vela_Virtual_Devicerw-2026-07-03-19-35-56.png",
+      "media/Vela_Virtual_Devicerw-2026-07-03-19-49-53.png"
+    ],
+    "icon": "media/logo.png",
+    "cover": "media/6c618b7e0f5a7c3081d1a1631c9525d9_720.png",
+    "author": [
+      {
+        "name": "AzumaChiaki",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [],
+  "downloads": {
+    "xmrw5": {
+      "version": "26.10.2",
+      "file_name": "downloads/com.azuma.dic.release.26.10.2.rpk",
+      "versionCode": 11
+    },
+    "xmrw5xring": {
+      "version": "26.10.2",
+      "file_name": "downloads/com.azuma.dic.release.26.10.2.rpk",
+      "versionCode": 11
+    },
+    "xmrw6": {
+      "version": "26.10.2",
+      "file_name": "downloads/com.azuma.dic.release.26.10.2.rpk",
+      "versionCode": 11
+    },
+    "xmb10nfc": {
+      "version": "26.10.2",
+      "file_name": "downloads/com.azuma.dic.release.26.10.2.rpk",
+      "versionCode": 11
+    },
+    "xmb10": {
+      "version": "26.10.2",
+      "file_name": "downloads/com.azuma.dic.release.26.10.2.rpk",
+      "versionCode": 11
+    },
+    "xmb10p": {
+      "version": "26.10.2",
+      "file_name": "downloads/com.azuma.dic.release.26.10.2.rpk",
+      "versionCode": 11
+    },
+    "xmb9": {
+      "version": "26.10.2",
+      "file_name": "downloads/com.azuma.dic.release.26.10.2.rpk",
+      "versionCode": 11
+    },
+    "xmb9p": {
+      "version": "26.10.2",
+      "file_name": "downloads/com.azuma.dic.release.26.10.2.rpk",
+      "versionCode": 11
+    },
+    "xmb11": {
+      "version": "26.10.2",
+      "file_name": "downloads/com.azuma.dic.release.26.10.2.rpk",
+      "versionCode": 11
+    },
+    "xmb11nfc": {
+      "version": "26.10.2",
+      "file_name": "downloads/com.azuma.dic.release.26.10.2.rpk",
+      "versionCode": 11
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

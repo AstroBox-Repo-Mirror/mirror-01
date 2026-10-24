@@ -1,0 +1,90 @@
+{
+  "item": {
+    "id": "com.azuma.syclass",
+    "restype": "quick_app",
+    "name": "Var课程表",
+    "description": "能够在表盘上显示组件的vela课程表，同时支持通过安卓客户端/astrobox组件导入，在安卓客户端上还可以使用ai导入实现课程\n安卓客户端请移步https://azumachiaki.com 下载中心下载\n*表盘显示课程组件需要自行导入组件或者使用第三方适配表盘实现",
+    "preview": [
+      "media/pre0.png",
+      "media/pre1.png",
+      "media/pre2.png",
+      "media/pre3.png",
+      "media/pre4.png",
+      "media/pre5.png",
+      "media/pre6.png",
+      "media/pre7.png"
+    ],
+    "icon": "media/icon.png",
+    "cover": "media/cover.png",
+    "author": [
+      {
+        "name": "AzumaChiaki",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "官方网站",
+      "url": "https://azumachiaki.com",
+      "icon": ""
+    }
+  ],
+  "downloads": {
+    "xmrw5": {
+      "version": "1.6.0",
+      "file_name": "downloads/com.azuma.syclass.release.1.6.0-r3-bf.rpk"
+    },
+    "xmrw5xring": {
+      "version": "1.6.0",
+      "file_name": "downloads/com.azuma.syclass.release.1.6.0-r3-bf.rpk"
+    },
+    "xmrw6": {
+      "version": "1.6.0",
+      "file_name": "downloads/com.azuma.syclass.release.1.6.0-r3-bf.rpk"
+    },
+    "xmb10": {
+      "version": "1.6.0",
+      "file_name": "downloads/com.azuma.syclass.release.1.6.0-r3-bf.rpk"
+    },
+    "xmb10nfc": {
+      "version": "1.6.0",
+      "file_name": "downloads/com.azuma.syclass.release.1.6.0-r3-bf.rpk"
+    },
+    "xmb9": {
+      "version": "1.6.0",
+      "file_name": "downloads/com.azuma.syclass.release.1.6.0-r3-bf.rpk"
+    },
+    "xmb10p": {
+      "version": "1.6.0",
+      "file_name": "downloads/com.azuma.syclass.release.1.6.0-r3-bf.rpk"
+    },
+    "xmb9p": {
+      "version": "1.6.0",
+      "file_name": "downloads/com.azuma.syclass.release.1.6.0-r3-bf.rpk"
+    },
+    "xmws3": {
+      "version": "1.6.0",
+      "file_name": "downloads/com.azuma.syclass.release.1.6.0-r3-bf.rpk"
+    },
+    "xmws4xring": {
+      "version": "1.6.0",
+      "file_name": "downloads/com.azuma.syclass.release.1.6.0-r3-bf.rpk"
+    },
+    "xmws441": {
+      "version": "1.6.0",
+      "file_name": "downloads/com.azuma.syclass.release.1.6.0-r3-bf.rpk"
+    },
+    "xmws4": {
+      "version": "1.6.0",
+      "file_name": "downloads/com.azuma.syclass.release.1.6.0-r3-bf.rpk"
+    },
+    "xmws5": {
+      "version": "1.6.0",
+      "file_name": "downloads/com.azuma.syclass.release.1.6.0-r3-bf.rpk"
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

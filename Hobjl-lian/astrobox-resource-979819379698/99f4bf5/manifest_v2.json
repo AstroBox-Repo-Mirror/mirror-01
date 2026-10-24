@@ -1,0 +1,82 @@
+{
+  "item": {
+    "id": "979819379698",
+    "restype": "watchface",
+    "name": "碧蓝航线",
+    "description": "第一弹与第二弹共 24 张壁纸已全部打包，一次购买即可获得全部内容；想自己搭配壁纸可以选择创作版。",
+    "preview": [
+      "media/封面图a-3.png",
+      "media/preview.png"
+    ],
+    "icon": "media/icon.png",
+    "cover": "media/封面图a-3.png",
+    "author": [
+      {
+        "name": "Hobjl",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "点击此处了解表盘详情",
+      "url": "https://afdian.com/item/4684880eb97011f09c4152540025c377",
+      "icon": "hand-heart"
+    }
+  ],
+  "downloads": {
+    "xmb10": {
+      "version": "1.0.5",
+      "file_name": "downloads/碧蓝航线-band10_11-v1.0.5.bin",
+      "versionCode": 65541
+    },
+    "xmb10nfc": {
+      "version": "1.0.5",
+      "file_name": "downloads/碧蓝航线-band10_11-v1.0.5.bin",
+      "versionCode": 65541
+    },
+    "xmb11": {
+      "version": "1.0.5",
+      "file_name": "downloads/碧蓝航线-band10_11-v1.0.5.bin",
+      "versionCode": 65541
+    },
+    "xmb11nfc": {
+      "version": "1.0.5",
+      "file_name": "downloads/碧蓝航线-band10_11-v1.0.5.bin",
+      "versionCode": 65541
+    },
+    "xmb9": {
+      "version": "1.0.6",
+      "file_name": "downloads/碧蓝航线-band9-v1.0.6.bin",
+      "versionCode": 65542
+    },
+    "xmb9p": {
+      "version": "1.0.6",
+      "file_name": "downloads/碧蓝航线-band9pro_10pro-v1.0.6.bin",
+      "versionCode": 65542
+    },
+    "xmb10p": {
+      "version": "1.0.6",
+      "file_name": "downloads/碧蓝航线-band9pro_10pro-v1.0.6.bin",
+      "versionCode": 65542
+    },
+    "xmrw5": {
+      "version": "1.0.5",
+      "file_name": "downloads/碧蓝航线-rw5-v1.0.5.bin",
+      "versionCode": 65541
+    },
+    "xmrw5xring": {
+      "version": "1.0.5",
+      "file_name": "downloads/碧蓝航线-rw5-v1.0.5.bin",
+      "versionCode": 65541
+    },
+    "xmrw6": {
+      "version": "1.0.5",
+      "file_name": "downloads/碧蓝航线-rw5-v1.0.5.bin",
+      "versionCode": 65541
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

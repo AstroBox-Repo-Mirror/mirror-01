@@ -1,0 +1,71 @@
+{
+  "item": {
+    "id": "979860829677",
+    "restype": "watchface",
+    "name": "体块时间",
+    "description": "当时间数字填满整个屏幕，“体块时间”便由此诞生。如同被精心开槽与分割的雕塑砌块，时间在这里拥有了沉甸甸的实体感，而加粗的撞色描边又赋予了它灵动与层次。\n\n表盘使用的是法国设计师 Raoul Audouin 创作的开源字体 Outward，它摒弃了传统字体的“呼吸感”，极致挤压负空间，以如建筑砌块与实心网格般的强烈体量，诠释硬朗纯粹的工业雕塑美学。\n\n表盘时间信息：\n在 小米手环9Pro /10Pro 上显示小时/分钟\n在 小米手环11 /10 上显示小时/分钟/英文星期/日期",
+    "preview": [
+      "media/_A036699.jpg",
+      "media/_A036700.jpg",
+      "media/_A036701.jpg",
+      "media/_A036702.jpg",
+      "media/_A036705.jpg",
+      "media/_A036707.jpg",
+      "media/_A036708.jpg",
+      "media/_A036712.jpg",
+      "media/_A036714.jpg",
+      "media/_A036715.jpg",
+      "media/_A036716.jpg"
+    ],
+    "icon": "media/底色 副本 5.png",
+    "cover": "media/_A036699-2.jpg",
+    "author": [
+      {
+        "name": "Cannyworks",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "小红书",
+      "url": "https://www.xiaohongshu.com/user/profile/654afda900000000300325dc",
+      "icon": "Notebook"
+    }
+  ],
+  "downloads": {
+    "xmb10": {
+      "version": "1.0.1",
+      "file_name": "downloads/环 10-体块时间.bin",
+      "versionCode": 1
+    },
+    "xmb10nfc": {
+      "version": "1.0.1",
+      "file_name": "downloads/环 10-体块时间.bin",
+      "versionCode": 1
+    },
+    "xmb10p": {
+      "version": "1.0.1",
+      "file_name": "downloads/10Pro-体块时间.bin",
+      "versionCode": 1
+    },
+    "xmb11": {
+      "version": "1.0.1",
+      "file_name": "downloads/环 11-体块时间.bin",
+      "versionCode": 1
+    },
+    "xmb11nfc": {
+      "version": "1.0.1",
+      "file_name": "downloads/环 11-体块时间.bin",
+      "versionCode": 1
+    },
+    "xmb9p": {
+      "version": "1.0.1",
+      "file_name": "downloads/9Pro-体块时间.bin",
+      "versionCode": 1
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

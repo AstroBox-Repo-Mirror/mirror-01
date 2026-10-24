@@ -1,0 +1,42 @@
+{
+  "item": {
+    "id": "979810067295",
+    "restype": "watchface",
+    "name": "逐梦效应",
+    "description": "针对大屏设计，采用液态玻璃质感，图标表现更完整，10 张壁纸配 10 个自定义跳转位。",
+    "preview": [
+      "media/cover.png",
+      "media/preview.png"
+    ],
+    "icon": "media/icon.png",
+    "cover": "media/cover.png",
+    "author": [
+      {
+        "name": "Hobjl",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "点击此处了解表盘详情",
+      "url": "https://afdian.com/item/1c5b1d2c692a11f08dcb52540025c377",
+      "icon": "hand-heart"
+    }
+  ],
+  "downloads": {
+    "xmb9p": {
+      "version": "1.0.1",
+      "file_name": "downloads/逐梦效应-band9pro_10pro-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmb10p": {
+      "version": "1.0.1",
+      "file_name": "downloads/逐梦效应-band9pro_10pro-v1.0.1.bin",
+      "versionCode": 65537
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

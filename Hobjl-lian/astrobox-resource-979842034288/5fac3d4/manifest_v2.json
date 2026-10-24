@@ -1,0 +1,77 @@
+{
+  "item": {
+    "id": "979842034288",
+    "restype": "watchface",
+    "name": "光感液态（样式2）",
+    "description": "iOS 26 的液态玻璃质感移植到了手环上，3 种时钟样式配 4 张壁纸，可随时切换，后续还会继续补充壁纸。",
+    "preview": [
+      "media/cover.jpg",
+      "media/preview.png"
+    ],
+    "icon": "media/icon.png",
+    "cover": "media/cover.jpg",
+    "author": [
+      {
+        "name": "Hobjl",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "点击此处了解表盘详情",
+      "url": "https://afdian.com/item/91a2f6025f2611f1b1d252540025c377",
+      "icon": "hand-heart"
+    }
+  ],
+  "downloads": {
+    "xmb10": {
+      "version": "1.0.2",
+      "file_name": "downloads/光感液态-band10_11-v1.0.2.bin",
+      "versionCode": 65538
+    },
+    "xmb10nfc": {
+      "version": "1.0.2",
+      "file_name": "downloads/光感液态-band10_11-v1.0.2.bin",
+      "versionCode": 65538
+    },
+    "xmb11": {
+      "version": "1.0.2",
+      "file_name": "downloads/光感液态-band10_11-v1.0.2.bin",
+      "versionCode": 65538
+    },
+    "xmb11nfc": {
+      "version": "1.0.2",
+      "file_name": "downloads/光感液态-band10_11-v1.0.2.bin",
+      "versionCode": 65538
+    },
+    "xmb9p": {
+      "version": "1.0.1",
+      "file_name": "downloads/光感液态-band9pro_10pro-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmb10p": {
+      "version": "1.0.1",
+      "file_name": "downloads/光感液态-band9pro_10pro-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmrw5": {
+      "version": "1.0.2",
+      "file_name": "downloads/光感液态-rw5-v1.0.2.bin",
+      "versionCode": 65538
+    },
+    "xmrw5xring": {
+      "version": "1.0.2",
+      "file_name": "downloads/光感液态-rw5-v1.0.2.bin",
+      "versionCode": 65538
+    },
+    "xmrw6": {
+      "version": "1.0.2",
+      "file_name": "downloads/光感液态-rw5-v1.0.2.bin",
+      "versionCode": 65538
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

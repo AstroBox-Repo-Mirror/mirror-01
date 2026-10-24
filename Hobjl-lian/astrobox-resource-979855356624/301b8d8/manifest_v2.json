@@ -1,0 +1,79 @@
+{
+  "item": {
+    "id": "979855356624",
+    "restype": "watchface",
+    "name": "AWOS-照片表盘【安装我】",
+    "description": "把回忆戴在手腕上。Apple Watch 同款照片表盘，来到你的小米穿戴设备。\n\n已在爱发电购买的用户请先绑定爱发电账号后来这里安装哦，未购买的用户可以点击上方爱发电链接了解表盘详情~",
+    "preview": [
+      "media/0.png",
+      "media/1.png",
+      "media/2.png",
+      "media/3.png",
+      "media/4.png",
+      "media/5.png",
+      "media/6.png"
+    ],
+    "icon": "media/ICON.png",
+    "cover": "media/Ab头图1.png",
+    "author": [
+      {
+        "name": "Hobjl",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "点击此处了解详情",
+      "url": "https://www.ifdian.net/item/aacfe164985411f1aef45254001e7c00?utm_source=copylink&utm_medium=link",
+      "icon": "arrow-bend-right-up"
+    }
+  ],
+  "downloads": {
+    "xmrw5": {
+      "version": "1.0.2",
+      "file_name": "downloads/AWOS-RW5RW6-v3.bin"
+    },
+    "xmrw5xring": {
+      "version": "1.0.2",
+      "file_name": "downloads/AWOS-RW5RW6-v3.bin"
+    },
+    "xmrw6": {
+      "version": "1.0.2",
+      "file_name": "downloads/AWOS-RW5RW6-v3.bin"
+    },
+    "xmb10": {
+      "version": "1.0.2",
+      "file_name": "downloads/AWOS-10-v3.bin"
+    },
+    "xmb10nfc": {
+      "version": "1.0.2",
+      "file_name": "downloads/AWOS-10-v3.bin"
+    },
+    "xmb10p": {
+      "version": "1.0.2",
+      "file_name": "downloads/AWOS-9P10P-v3.bin"
+    },
+    "xmb9": {
+      "version": "1.0.2",
+      "file_name": "downloads/AWOS-9-v3.bin"
+    },
+    "xmb9p": {
+      "version": "1.0.2",
+      "file_name": "downloads/AWOS-9P10P-v3.bin"
+    },
+    "xmb11": {
+      "version": "1.0.4",
+      "file_name": "downloads/AWOS-1011-v3-xmb11.bin",
+      "versionCode": 65540
+    },
+    "xmb11nfc": {
+      "version": "1.0.4",
+      "file_name": "downloads/AWOS-1011-v3-xmb11nfc.bin",
+      "versionCode": 65540
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

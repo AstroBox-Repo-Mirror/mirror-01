@@ -1,0 +1,82 @@
+{
+  "item": {
+    "id": "979814087238",
+    "restype": "watchface",
+    "name": "惊鸿",
+    "description": "103 个组件可自由排布，光是版式设计就花了一个多月，可玩的空间比较大。",
+    "preview": [
+      "media/cover.png",
+      "media/preview.png"
+    ],
+    "icon": "media/icon.png",
+    "cover": "media/cover.png",
+    "author": [
+      {
+        "name": "Hobjl",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "点击此处了解表盘详情",
+      "url": "https://afdian.com/item/e69d2d38149111f1bfd852540025c377",
+      "icon": "hand-heart"
+    }
+  ],
+  "downloads": {
+    "xmb10": {
+      "version": "1.0.2",
+      "file_name": "downloads/惊鸿-band10_11-v1.0.2.bin",
+      "versionCode": 65538
+    },
+    "xmb10nfc": {
+      "version": "1.0.2",
+      "file_name": "downloads/惊鸿-band10_11-v1.0.2.bin",
+      "versionCode": 65538
+    },
+    "xmb11": {
+      "version": "1.0.2",
+      "file_name": "downloads/惊鸿-band10_11-v1.0.2.bin",
+      "versionCode": 65538
+    },
+    "xmb11nfc": {
+      "version": "1.0.2",
+      "file_name": "downloads/惊鸿-band10_11-v1.0.2.bin",
+      "versionCode": 65538
+    },
+    "xmb9": {
+      "version": "1.0.3",
+      "file_name": "downloads/惊鸿-band9-v1.0.3.bin",
+      "versionCode": 65539
+    },
+    "xmb9p": {
+      "version": "1.1.1",
+      "file_name": "downloads/惊鸿-band9pro_10pro-v1.1.1.bin",
+      "versionCode": 65793
+    },
+    "xmb10p": {
+      "version": "1.1.1",
+      "file_name": "downloads/惊鸿-band9pro_10pro-v1.1.1.bin",
+      "versionCode": 65793
+    },
+    "xmrw5": {
+      "version": "1.0.6",
+      "file_name": "downloads/惊鸿-rw5-v1.0.6.bin",
+      "versionCode": 65542
+    },
+    "xmrw5xring": {
+      "version": "1.0.6",
+      "file_name": "downloads/惊鸿-rw5-v1.0.6.bin",
+      "versionCode": 65542
+    },
+    "xmrw6": {
+      "version": "1.0.6",
+      "file_name": "downloads/惊鸿-rw5-v1.0.6.bin",
+      "versionCode": 65542
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

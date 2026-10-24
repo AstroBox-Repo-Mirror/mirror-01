@@ -1,0 +1,82 @@
+{
+  "item": {
+    "id": "979859555300",
+    "restype": "watchface",
+    "name": "黑白秩光",
+    "description": "主打黑白之间的层次感，侧边栏与息屏显示经过重新调整，暗光环境下不会过于刺眼。",
+    "preview": [
+      "media/cover.png",
+      "media/preview.png"
+    ],
+    "icon": "media/icon.png",
+    "cover": "media/cover.png",
+    "author": [
+      {
+        "name": "Hobjl",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "点击此处了解表盘详情",
+      "url": "https://afdian.com/item/8bbfd1de4ecc11f194cb52540025c377",
+      "icon": "hand-heart"
+    }
+  ],
+  "downloads": {
+    "xmb10": {
+      "version": "1.0.1",
+      "file_name": "downloads/黑白秩光-band10_11-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmb10nfc": {
+      "version": "1.0.1",
+      "file_name": "downloads/黑白秩光-band10_11-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmb11": {
+      "version": "1.0.1",
+      "file_name": "downloads/黑白秩光-band10_11-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmb11nfc": {
+      "version": "1.0.1",
+      "file_name": "downloads/黑白秩光-band10_11-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmb9": {
+      "version": "1.0.1",
+      "file_name": "downloads/黑白秩光-band9-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmb9p": {
+      "version": "1.0.3",
+      "file_name": "downloads/黑白秩光-band9pro_10pro-v1.0.3.bin",
+      "versionCode": 65539
+    },
+    "xmb10p": {
+      "version": "1.0.3",
+      "file_name": "downloads/黑白秩光-band9pro_10pro-v1.0.3.bin",
+      "versionCode": 65539
+    },
+    "xmrw5": {
+      "version": "1.0.1",
+      "file_name": "downloads/黑白秩光-rw5-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmrw5xring": {
+      "version": "1.0.1",
+      "file_name": "downloads/黑白秩光-rw5-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmrw6": {
+      "version": "1.0.1",
+      "file_name": "downloads/黑白秩光-rw5-v1.0.1.bin",
+      "versionCode": 65537
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

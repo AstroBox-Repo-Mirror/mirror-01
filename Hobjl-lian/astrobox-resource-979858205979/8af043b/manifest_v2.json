@@ -1,0 +1,82 @@
+{
+  "item": {
+    "id": "979858205979",
+    "restype": "watchface",
+    "name": "MirrorUI",
+    "description": "专辑封面以动态方式旋转，帧率约 60 帧，搭配古典风格壁纸与翻页时钟，息屏显示同步适配。",
+    "preview": [
+      "media/cover.png",
+      "media/preview.png"
+    ],
+    "icon": "media/icon.png",
+    "cover": "media/cover.png",
+    "author": [
+      {
+        "name": "Hobjl",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "点击此处了解表盘详情",
+      "url": "https://afdian.com/item/4be54ade5b9e11f0a80852540025c377",
+      "icon": "hand-heart"
+    }
+  ],
+  "downloads": {
+    "xmb10": {
+      "version": "1.0.1",
+      "file_name": "downloads/MirrorUI-band10_11-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmb10nfc": {
+      "version": "1.0.1",
+      "file_name": "downloads/MirrorUI-band10_11-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmb11": {
+      "version": "1.0.1",
+      "file_name": "downloads/MirrorUI-band10_11-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmb11nfc": {
+      "version": "1.0.1",
+      "file_name": "downloads/MirrorUI-band10_11-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmb9": {
+      "version": "1.0.5",
+      "file_name": "downloads/MirrorUI-band9-v1.0.5.bin",
+      "versionCode": 65541
+    },
+    "xmb9p": {
+      "version": "1.0.2",
+      "file_name": "downloads/MirrorUI-band9pro_10pro-v1.0.2.bin",
+      "versionCode": 65538
+    },
+    "xmb10p": {
+      "version": "1.0.2",
+      "file_name": "downloads/MirrorUI-band9pro_10pro-v1.0.2.bin",
+      "versionCode": 65538
+    },
+    "xmrw5": {
+      "version": "1.0.1",
+      "file_name": "downloads/MirrorUI-rw5-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmrw5xring": {
+      "version": "1.0.1",
+      "file_name": "downloads/MirrorUI-rw5-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmrw6": {
+      "version": "1.0.1",
+      "file_name": "downloads/MirrorUI-rw5-v1.0.1.bin",
+      "versionCode": 65537
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

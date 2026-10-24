@@ -1,0 +1,57 @@
+{
+  "item": {
+    "id": "979838046796",
+    "restype": "watchface",
+    "name": "幻境",
+    "description": "小组件数据与跳转均支持自定义，12 张壁纸可切换，后续版本会继续补充。",
+    "preview": [
+      "media/cover.jpg",
+      "media/preview.png"
+    ],
+    "icon": "media/icon.png",
+    "cover": "media/cover.jpg",
+    "author": [
+      {
+        "name": "Hobjl",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "点击此处了解表盘详情",
+      "url": "https://afdian.com/item/b9dd519866b211f087aa52540025c377",
+      "icon": "hand-heart"
+    }
+  ],
+  "downloads": {
+    "xmb9p": {
+      "version": "1.0.5",
+      "file_name": "downloads/幻境-band9pro_10pro-v1.0.5.bin",
+      "versionCode": 65541
+    },
+    "xmb10p": {
+      "version": "1.0.5",
+      "file_name": "downloads/幻境-band9pro_10pro-v1.0.5.bin",
+      "versionCode": 65541
+    },
+    "xmrw5": {
+      "version": "1.0.1",
+      "file_name": "downloads/幻境-rw5-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmrw5xring": {
+      "version": "1.0.1",
+      "file_name": "downloads/幻境-rw5-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmrw6": {
+      "version": "1.0.1",
+      "file_name": "downloads/幻境-rw5-v1.0.1.bin",
+      "versionCode": 65537
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

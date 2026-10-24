@@ -1,0 +1,77 @@
+{
+  "item": {
+    "id": "979826465020",
+    "restype": "watchface",
+    "name": "绝区零",
+    "description": "绝区零主题作品，配色与排版参照原作设定，风格偏硬朗。",
+    "preview": [
+      "media/cover.png",
+      "media/preview.png"
+    ],
+    "icon": "media/icon.png",
+    "cover": "media/cover.png",
+    "author": [
+      {
+        "name": "Hobjl",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "点击此处了解表盘详情",
+      "url": "https://afdian.com/item/8fe037746fe011f1857852540025c377",
+      "icon": "hand-heart"
+    }
+  ],
+  "downloads": {
+    "xmb10": {
+      "version": "1.0.2",
+      "file_name": "downloads/绝区零-band10_11-v1.0.2.bin",
+      "versionCode": 65538
+    },
+    "xmb10nfc": {
+      "version": "1.0.2",
+      "file_name": "downloads/绝区零-band10_11-v1.0.2.bin",
+      "versionCode": 65538
+    },
+    "xmb11": {
+      "version": "1.0.2",
+      "file_name": "downloads/绝区零-band10_11-v1.0.2.bin",
+      "versionCode": 65538
+    },
+    "xmb11nfc": {
+      "version": "1.0.2",
+      "file_name": "downloads/绝区零-band10_11-v1.0.2.bin",
+      "versionCode": 65538
+    },
+    "xmb9p": {
+      "version": "1.0.3",
+      "file_name": "downloads/绝区零-band9pro_10pro-v1.0.3.bin",
+      "versionCode": 65539
+    },
+    "xmb10p": {
+      "version": "1.0.3",
+      "file_name": "downloads/绝区零-band9pro_10pro-v1.0.3.bin",
+      "versionCode": 65539
+    },
+    "xmrw5": {
+      "version": "1.0.3",
+      "file_name": "downloads/绝区零-rw5-v1.0.3.bin",
+      "versionCode": 65539
+    },
+    "xmrw5xring": {
+      "version": "1.0.3",
+      "file_name": "downloads/绝区零-rw5-v1.0.3.bin",
+      "versionCode": 65539
+    },
+    "xmrw6": {
+      "version": "1.0.3",
+      "file_name": "downloads/绝区零-rw5-v1.0.3.bin",
+      "versionCode": 65539
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

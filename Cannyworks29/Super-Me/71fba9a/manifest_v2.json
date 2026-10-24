@@ -1,0 +1,50 @@
+{
+  "item": {
+    "id": "979844845179",
+    "restype": "watchface",
+    "name": "做自己的超人- Super Me",
+    "description": "有那么一个美国的潮流品牌，叫 Supreme。是那种这个 logo 出现在一块砖上都可以被炒到几千人民币的顶流潮牌。因此我想着，为什么不能有一款潮品一样的小米手环表盘呢～只不过，这次我们不做至高无上的（Supreme），而是做超级的自己（Super me），做自己的超人。\n希望这个表盘能让你会心一笑～哈哈哈\n\n如果你是做装饰，你可以打开手环的设置-佩戴模式-项链模式。\n对应颜色的息屏显示已经尽可能还原表盘设计～\n\n【注意～！】\n样式一的息屏显示有小概率会导致烧屏现象。\n样式一的息屏显示有小概率会导致烧屏现象。\n样式一的息屏显示有小概率会导致烧屏现象。\n为了superme 的字体显示效果，我用了一种特殊技巧让息屏能固定显示如此鲜艳的字母色彩。烧屏的原理就是长时间显示同一种颜色而导致的像素老化。理论上系统会有轻微的图像位移来轮替像素，但无法保证一定不会出现烧屏现象。\n所以请日常使用的时候，不要长时间使用此息屏显示，可以经常轮换别的样式或别的表盘。\n感谢你的理解～～\n当前这个表盘仅支持小米手环 10和小米手环 9\n独家上架 Astrobox～～\n暂时没有上架官方的计划，因为这个表盘肯定无法通过审核。\n祝大家玩得开心～～",
+    "preview": [
+      "media/PF_20260724_010208_01.JPG",
+      "media/PF_20260724_010208_03.JPG",
+      "media/PF_20260724_010208_06.JPG",
+      "media/PF_20260724_010208_07.JPG",
+      "media/PF_20260724_010208_02.JPG",
+      "media/PF_20260724_010208_05.JPG",
+      "media/PF_20260724_010208_04.JPG",
+      "media/PF_20260724_010208_09.JPG",
+      "media/PF_20260724_010208_08.JPG",
+      "media/IMG_9340_副本.jpg"
+    ],
+    "icon": "media/背景 副本 6.png",
+    "cover": "media/IMG_9340_副本.jpg",
+    "author": [
+      {
+        "name": "Cannyworks",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "小红书",
+      "url": "https://www.xiaohongshu.com/user/profile/654afda900000000300325dc",
+      "icon": ""
+    }
+  ],
+  "downloads": {
+    "xmb10nfc": {
+      "version": "1.0.0",
+      "file_name": "downloads/superme 超级的我-环 10.bin"
+    },
+    "xmb10": {
+      "version": "1.0.0",
+      "file_name": "downloads/superme 超级的我-环 10.bin"
+    },
+    "xmb9": {
+      "version": "1.0.0",
+      "file_name": "downloads/superme 超级的我-环 9.bin"
+    }
+  },
+  "ext": {}
+}

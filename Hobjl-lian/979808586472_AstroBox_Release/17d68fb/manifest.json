@@ -1,0 +1,45 @@
+{
+  "item": {
+    "id": "979808586472",
+    "name": "时序（shixu）",
+    "description": "“你的人生大约只有 4,320 周。\n把每一周用在重要的事上。”\n\t\n于是，我复刻了Life Calendar。\n\t\n转动手腕时，不是先看到闹钟，也不是日程待办，而是今年已经走到哪里了；今天是不是值得被记住；不是为了营造紧迫感，而是为了给回忆赋予印记。\n\t\n把抽象时间变成一眼可见的点阵地图，让你今天就做更好的选择，而不是一直等“以后再说”。\n\t\n也许是因为这个表盘有特殊的意义，我打消了付费订阅的想法，所以，这是一个免费的表盘，希望大家能喜欢。\n\t\n“无论是否发电，希望你开心。”",
+    "preview": [
+      "Ad0.png",
+      "Ad1.png",
+      "Ad2.png",
+      "Ad3.png",
+      "Ad4.png"
+    ],
+    "icon": "icon.png",
+    "cover": "Ab.png",
+    "source_url": "https://github.com/Hobjl-lian/979808586472_AstroBox_Release",
+    "author": [
+      {
+        "name": "Hobjl",
+        "author_url": "https://github.com/Hobjl-lian"
+      }
+    ]
+  },
+  "downloads": {
+    "n67": {
+      "version": "1.0.0",
+      "file_name": "resource/shixu-9P10P.bin"
+    },
+    "o66": {
+      "version": "1.0.0",
+      "file_name": "resource/shixu-10.bin"
+    },
+    "o65": {
+      "version": "1.0.0",
+      "file_name": "resource/shixu-RW56.bin"
+    },
+    "p65": {
+      "version": "1.0.0",
+      "file_name": "resource/shixu-RW56.bin"
+    },
+    "p67": {
+      "version": "1.0.0",
+      "file_name": "resource/shixu-9P10P.bin"
+    }
+  }
+}

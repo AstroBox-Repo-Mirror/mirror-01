@@ -1,0 +1,82 @@
+{
+  "item": {
+    "id": "979826588457",
+    "restype": "watchface",
+    "name": "FlowUI-原神",
+    "description": "包含 12 张原神壁纸，时钟样式可自定义，息屏与亮屏之间的过渡经过调整，衔接比较自然；后续角色可以私信提出。",
+    "preview": [
+      "media/cover.jpg",
+      "media/preview.png"
+    ],
+    "icon": "media/icon.png",
+    "cover": "media/cover.jpg",
+    "author": [
+      {
+        "name": "Hobjl",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "点击此处了解表盘详情",
+      "url": "https://afdian.com/item/35d32950f85b11f0b72b52540025c377",
+      "icon": "hand-heart"
+    }
+  ],
+  "downloads": {
+    "xmb10": {
+      "version": "1.0.1",
+      "file_name": "downloads/FlowUI-原神-band10_11-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmb10nfc": {
+      "version": "1.0.1",
+      "file_name": "downloads/FlowUI-原神-band10_11-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmb11": {
+      "version": "1.0.1",
+      "file_name": "downloads/FlowUI-原神-band10_11-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmb11nfc": {
+      "version": "1.0.1",
+      "file_name": "downloads/FlowUI-原神-band10_11-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmb9": {
+      "version": "1.0.1",
+      "file_name": "downloads/FlowUI-原神-band9-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmb9p": {
+      "version": "1.0.1",
+      "file_name": "downloads/FlowUI-原神-band9pro_10pro-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmb10p": {
+      "version": "1.0.1",
+      "file_name": "downloads/FlowUI-原神-band9pro_10pro-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmrw5": {
+      "version": "1.0.1",
+      "file_name": "downloads/FlowUI-原神-rw5-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmrw5xring": {
+      "version": "1.0.1",
+      "file_name": "downloads/FlowUI-原神-rw5-v1.0.1.bin",
+      "versionCode": 65537
+    },
+    "xmrw6": {
+      "version": "1.0.1",
+      "file_name": "downloads/FlowUI-原神-rw5-v1.0.1.bin",
+      "versionCode": 65537
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

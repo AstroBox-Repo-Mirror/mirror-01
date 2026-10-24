@@ -1,0 +1,77 @@
+{
+  "item": {
+    "id": "979820627644",
+    "restype": "watchface",
+    "name": "SnapUI-照片表盘【安装我】",
+    "description": "2025年6月11日首次发布。\n\nPS：已在爱发电购买的用户请先绑定爱发电账号后来这里安装哦，未购买的用户可以点击上方爱发电链接了解表盘详情~",
+    "preview": [
+      "media/Ab头图1.jpg",
+      "media/Ab1.jpg",
+      "media/Ab2.jpg",
+      "media/Ab3.jpg",
+      "media/Ab头图2（浅色）.jpg"
+    ],
+    "icon": "media/icons.png",
+    "cover": "media/Ab头图1.jpg",
+    "author": [
+      {
+        "name": "Hobjl",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "点击此处预览表盘",
+      "url": "https://www.ifdian.net/item/d8cc1b1e93e511f1b5895254001e7c00?utm_source=copylink&utm_medium=link",
+      "icon": "arrow-bend-right-up"
+    }
+  ],
+  "downloads": {
+    "xmrw5": {
+      "version": "1.0.0",
+      "file_name": "downloads/SnapUI-照片表盘-RW5RW6.bin"
+    },
+    "xmrw5xring": {
+      "version": "1.0.0",
+      "file_name": "downloads/SnapUI-照片表盘-RW5RW6.bin"
+    },
+    "xmrw6": {
+      "version": "1.0.0",
+      "file_name": "downloads/SnapUI-照片表盘-RW5RW6.bin"
+    },
+    "xmb10": {
+      "version": "1.0.0",
+      "file_name": "downloads/SnapUI-照片表盘-10.bin"
+    },
+    "xmb10nfc": {
+      "version": "1.0.0",
+      "file_name": "downloads/SnapUI-照片表盘-10.bin"
+    },
+    "xmb10p": {
+      "version": "1.0.0",
+      "file_name": "downloads/SnapUI-照片表盘-9P10P.bin"
+    },
+    "xmb9": {
+      "version": "1.0.0",
+      "file_name": "downloads/SnapUI-照片表盘-9.bin"
+    },
+    "xmb9p": {
+      "version": "1.0.0",
+      "file_name": "downloads/SnapUI-照片表盘-9P10P.bin"
+    },
+    "xmb11": {
+      "version": "1.0.2",
+      "file_name": "downloads/SnapUI-照片表盘-1011-xmb11.bin",
+      "versionCode": 65538
+    },
+    "xmb11nfc": {
+      "version": "1.0.2",
+      "file_name": "downloads/SnapUI-照片表盘-1011-xmb11nfc.bin",
+      "versionCode": 65538
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}
