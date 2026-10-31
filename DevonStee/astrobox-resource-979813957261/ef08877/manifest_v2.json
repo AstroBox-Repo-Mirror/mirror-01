@@ -1,0 +1,122 @@
+{
+  "item": {
+    "id": "979813957261",
+    "restype": "watchface",
+    "name": "Modular",
+    "description": "MODULAR_橘色模块栅格表盘_CMF_重制\n原创_材质和节奏让抽象的时间可感知 时间总是抽象的，...\n上面是一根根橘色的竖条, 数着小时, 左下是密密的灰色细纹, 数着分钟, 右下角立着一组橘色的点阵数字; 到了息屏, 只剩一点暗橘色的点阵还亮着。CMF Modular 的重制。\n目前支持小米手环 9 / 10 / 11 / 9 Pro / 10 Pro / REDMI Watch 6\n更新：加了 REDMI Watch 6 版\n由于 AstroBox 平台限制, 无法上传动态照片, 想看亮屏和 AOD 动画, 以及具体怎么使用的详细说明, 可以移步小红书 @叫我Brin就好",
+    "preview": [
+      "media/00-预览-RW6-Pro.webp",
+      "media/00-预览-Pro适配.webp",
+      "media/03-预览-模块海报.png",
+      "media/04-预览-浅灰产品.png"
+    ],
+    "icon": "media/01-图标-1比1.png",
+    "cover": "media/02-封面-3比2-三机.webp",
+    "author": [
+      {
+        "name": "brin",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "小红书中的介绍",
+      "url": "https://xhslink.cn/o/6cSGqWtYpEa",
+      "icon": "article"
+    }
+  ],
+  "downloads": {
+    "xmrw6": {
+      "version": "0.0.0",
+      "file_name": "downloads/Modular RW6.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增 REDMI Watch 6 支持"
+        }
+      ]
+    },
+    "xmb9p": {
+      "version": "0.0.0",
+      "file_name": "downloads/Modular Pro.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增小米手环 9 Pro / 10 Pro 支持（方屏专用包）"
+        }
+      ]
+    },
+    "xmb10p": {
+      "version": "0.0.0",
+      "file_name": "downloads/Modular Pro.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增小米手环 9 Pro / 10 Pro 支持（方屏专用包）"
+        }
+      ]
+    },
+    "xmb10": {
+      "version": "0.0.1",
+      "file_name": "downloads/Modular.bin",
+      "versionCode": 1,
+      "updatelogs": [
+        {
+          "version": "0.0.1",
+          "content": "新增小米手环 9 支持"
+        }
+      ]
+    },
+    "xmb10nfc": {
+      "version": "0.0.1",
+      "file_name": "downloads/Modular.bin",
+      "versionCode": 1,
+      "updatelogs": [
+        {
+          "version": "0.0.1",
+          "content": "新增小米手环 9 支持"
+        }
+      ]
+    },
+    "xmb11": {
+      "version": "0.0.1",
+      "file_name": "downloads/Modular.bin",
+      "versionCode": 1,
+      "updatelogs": [
+        {
+          "version": "0.0.1",
+          "content": "新增小米手环 9 支持"
+        }
+      ]
+    },
+    "xmb11nfc": {
+      "version": "0.0.1",
+      "file_name": "downloads/Modular.bin",
+      "versionCode": 1,
+      "updatelogs": [
+        {
+          "version": "0.0.1",
+          "content": "新增小米手环 9 支持"
+        }
+      ]
+    },
+    "xmb9": {
+      "version": "0.0.1",
+      "file_name": "downloads/Modular-xmb9.bin",
+      "versionCode": 1,
+      "updatelogs": [
+        {
+          "version": "0.0.1",
+          "content": "新增小米手环 9 支持（专用包，已实机测试）"
+        }
+      ]
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

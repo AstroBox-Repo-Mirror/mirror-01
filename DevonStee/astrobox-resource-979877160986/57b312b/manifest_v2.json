@@ -1,0 +1,53 @@
+{
+  "item": {
+    "id": "979877160986",
+    "restype": "watchface",
+    "name": "MATERIAL YOU",
+    "description": "MATERIAL YOU_蓝色小组件_圆角卡片\n蓝色小组件放了时分秒、步数和电量, 大字看时间, 自取.\n目前支持小米手环 10 / 11，后续支持 Pro\n想看动态效果、AOD 和使用方法, 可以移步小红书 @叫我Brin就好",
+    "preview": [
+      "media/03-预览-功能状态.png",
+      "media/04-预览-功能状态.png",
+      "media/05-预览-亮屏与息屏.png"
+    ],
+    "icon": "media/01-图标-1比1.png",
+    "cover": "media/02-封面-3比2.png",
+    "author": [
+      {
+        "name": "brin",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "在小红书查看动态表盘",
+      "url": "https://xhslink.cn/o/8ierYJqmfrs",
+      "icon": "link"
+    }
+  ],
+  "downloads": {
+    "xmb10": {
+      "version": "0.0.0",
+      "file_name": "downloads/Material You.face",
+      "versionCode": 0
+    },
+    "xmb10nfc": {
+      "version": "0.0.0",
+      "file_name": "downloads/Material You.face",
+      "versionCode": 0
+    },
+    "xmb11": {
+      "version": "0.0.0",
+      "file_name": "downloads/Material You.face",
+      "versionCode": 0
+    },
+    "xmb11nfc": {
+      "version": "0.0.0",
+      "file_name": "downloads/Material You.face",
+      "versionCode": 0
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

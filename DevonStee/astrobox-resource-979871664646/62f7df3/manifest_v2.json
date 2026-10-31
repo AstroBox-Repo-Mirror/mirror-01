@@ -1,0 +1,53 @@
+{
+  "item": {
+    "id": "979871664646",
+    "restype": "watchface",
+    "name": "EVA UNIT-01",
+    "description": "EVA UNIT-01_初号机_紫绿配色\n初号机的紫绿配色, 同步率那格其实是电量, 顺带心率步数, 自取.\n目前支持小米手环 10 / 11\n想看动态效果、AOD 和使用方法, 可以移步小红书 @叫我Brin就好",
+    "preview": [
+      "media/03-预览-同步率心率步数.png",
+      "media/04-预览-亮屏动画.png",
+      "media/05-预览-亮屏与息屏.png"
+    ],
+    "icon": "media/01-图标-1比1.png",
+    "cover": "media/02-封面-3比2.png",
+    "author": [
+      {
+        "name": "brin",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "在小红书查看动态表盘",
+      "url": "https://xhslink.cn/o/8ierYJqmfrs",
+      "icon": "link"
+    }
+  ],
+  "downloads": {
+    "xmb10": {
+      "version": "0.0.0",
+      "file_name": "downloads/EVA Unit-01.face",
+      "versionCode": 0
+    },
+    "xmb10nfc": {
+      "version": "0.0.0",
+      "file_name": "downloads/EVA Unit-01.face",
+      "versionCode": 0
+    },
+    "xmb11": {
+      "version": "0.0.0",
+      "file_name": "downloads/EVA Unit-01.face",
+      "versionCode": 0
+    },
+    "xmb11nfc": {
+      "version": "0.0.0",
+      "file_name": "downloads/EVA Unit-01.face",
+      "versionCode": 0
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

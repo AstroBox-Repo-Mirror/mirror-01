@@ -1,0 +1,87 @@
+{
+  "item": {
+    "id": "979894295773",
+    "restype": "watchface",
+    "name": "EIFFEL STREAK",
+    "description": "EIFFEL STREAK_铁塔夜景_手抖拖影\n\nv0.0.1 更新了AOD的动画, 现在在AOD情况下也可以看到没有开灯的铁塔\n\n铁塔的橙色灯光拖成一道道光, 时间用稀疏的白色光点实现.\n\n塔顶灯塔约每 4 秒朝你闪一次, 拖影里的星星跟着闪; 铁塔亮度跟着电量变, 电量低于 30% 时灯暗下来, 不再转; 息屏只留点阵时间\n目前支持小米手环 10 / 11/nfc / 9 Pro / 10 Pro / REDMI Watch 6\n更新：加了 REDMI Watch 6 版\n由于 AstroBox 平台限制, 无法上传动态照片, 想看亮屏和 AOD 动画, 以及具体怎么使用的详细说明, 可以移步小红书 @叫我Brin就好",
+    "preview": [
+      "media/00-预览-RW6-Pro.webp",
+      "media/00-预览-Pro适配.webp",
+      "media/03-预览-亮屏与息屏.png",
+      "media/04-预览-电量灯光.png"
+    ],
+    "icon": "media/01-图标-1比1.png",
+    "cover": "media/02-封面-3比2-概念.png",
+    "author": [
+      {
+        "name": "brin",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "在小红书查看动态表盘",
+      "url": "https://xhslink.cn/o/8ierYJqmfrs",
+      "icon": "link"
+    }
+  ],
+  "downloads": {
+    "xmb9p": {
+      "version": "0.0.0",
+      "file_name": "downloads/Eiffel Streak Pro.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增小米手环 9 Pro / 10 Pro 支持（方屏专用包）"
+        }
+      ]
+    },
+    "xmb10p": {
+      "version": "0.0.0",
+      "file_name": "downloads/Eiffel Streak Pro.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增小米手环 9 Pro / 10 Pro 支持（方屏专用包）"
+        }
+      ]
+    },
+    "xmb10": {
+      "version": "0.0.1",
+      "file_name": "downloads/Eiffel Streak.face",
+      "versionCode": 1
+    },
+    "xmb10nfc": {
+      "version": "0.0.1",
+      "file_name": "downloads/Eiffel Streak.face",
+      "versionCode": 1
+    },
+    "xmb11": {
+      "version": "0.0.1",
+      "file_name": "downloads/Eiffel Streak.face",
+      "versionCode": 1
+    },
+    "xmb11nfc": {
+      "version": "0.0.1",
+      "file_name": "downloads/Eiffel Streak.face",
+      "versionCode": 1
+    },
+    "xmrw6": {
+      "version": "0.0.0",
+      "file_name": "downloads/Eiffel Streak RW6.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增 REDMI Watch 6 支持"
+        }
+      ]
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

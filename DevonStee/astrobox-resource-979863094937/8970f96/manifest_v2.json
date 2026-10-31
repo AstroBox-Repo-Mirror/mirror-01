@@ -1,0 +1,88 @@
+{
+  "item": {
+    "id": "979863094937",
+    "restype": "watchface",
+    "name": "BUBBLE SQUEEZE",
+    "description": "BUBBLE SQUEEZE_软糖泡泡表盘_彩色_AOD\n洗澡的时候看着身上一堆彩色的泡沫, 想着要是每个泡泡都有自己确定的颜色就好了, 后来就有了这个表盘\n一整屏软糖泡泡挤在一起, 互相压出平平的边, 奶白的、棕的、黄的、粉的、绿的挨着; 小时装在最大的那颗珊瑚红泡泡里, 分钟在下面那颗蓝泡泡里, 角落一颗小绿泡泡写着日期\n息屏的时候泡泡只剩一圈一圈彩色的空心轮廓, 数字还留在原来的位置, 红和蓝都暗下来一点\n目前支持小米手环 10 / 11 / 9 Pro / 10 Pro / REDMI Watch 6\n更新：加了 REDMI Watch 6 版\n由于 AstroBox 平台限制, 无法上传动态照片, 想看亮屏和 AOD 动画, 以及具体怎么使用的详细说明, 可以移步小红书 @叫我Brin就好",
+    "preview": [
+      "media/00-预览-RW6-Pro.webp",
+      "media/00-预览-Pro适配.webp",
+      "media/03-预览-软糖泡泡.png",
+      "media/04-预览-亮屏与AOD.png",
+      "media/05-预览-时间布局.png"
+    ],
+    "icon": "media/01-图标-1比1.png",
+    "cover": "media/02-封面-3比2-三机.webp",
+    "author": [
+      {
+        "name": "brin",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "打开小红书主页，查看动态表盘实际效果",
+      "url": "https://xhslink.cn/o/8ierYJqmfrs",
+      "icon": "link"
+    }
+  ],
+  "downloads": {
+    "xmrw6": {
+      "version": "0.0.0",
+      "file_name": "downloads/Bubble Squeeze RW6.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增 REDMI Watch 6 支持"
+        }
+      ]
+    },
+    "xmb9p": {
+      "version": "0.0.0",
+      "file_name": "downloads/Bubble Squeeze Pro.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增小米手环 9 Pro / 10 Pro 支持（方屏专用包）"
+        }
+      ]
+    },
+    "xmb10p": {
+      "version": "0.0.0",
+      "file_name": "downloads/Bubble Squeeze Pro.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增小米手环 9 Pro / 10 Pro 支持（方屏专用包）"
+        }
+      ]
+    },
+    "xmb10": {
+      "version": "0.0.0",
+      "file_name": "downloads/Bubble Squeeze.bin",
+      "versionCode": 0
+    },
+    "xmb10nfc": {
+      "version": "0.0.0",
+      "file_name": "downloads/Bubble Squeeze.bin",
+      "versionCode": 0
+    },
+    "xmb11": {
+      "version": "0.0.0",
+      "file_name": "downloads/Bubble Squeeze.bin",
+      "versionCode": 0
+    },
+    "xmb11nfc": {
+      "version": "0.0.0",
+      "file_name": "downloads/Bubble Squeeze.bin",
+      "versionCode": 0
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

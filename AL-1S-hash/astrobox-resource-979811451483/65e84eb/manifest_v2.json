@@ -1,0 +1,56 @@
+{
+  "item": {
+    "id": "979811451483",
+    "restype": "watchface",
+    "name": "「忆」UI焕新版-相册表盘",
+    "description": "生来万相",
+    "preview": [
+      "media/1000034113.png",
+      "media/1000034119.png"
+    ],
+    "icon": "media/1000034131.png",
+    "cover": "media/1000034113.png",
+    "author": [
+      {
+        "name": "sees",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "底图处理工具",
+      "url": "https://evoa.top/album",
+      "icon": "images"
+    }
+  ],
+  "downloads": {
+    "xmb10p": {
+      "version": "1.0",
+      "file_name": "downloads/「忆」-相册表盘10p.bin"
+    },
+    "xmrw6": {
+      "version": "1.0",
+      "file_name": "downloads/「忆」-相册表盘rw6.bin"
+    },
+    "xmb9": {
+      "version": "1.0",
+      "file_name": "downloads/「忆」-相册表盘9.bin"
+    },
+    "xmb10nfc": {
+      "version": "1.0",
+      "file_name": "downloads/「忆」-相册表盘10.bin"
+    },
+    "xmb10": {
+      "version": "1.0",
+      "file_name": "downloads/「忆」-相册表盘10.bin"
+    },
+    "xmb9p": {
+      "version": "1.0",
+      "file_name": "downloads/「忆」-相册表盘9p.bin"
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

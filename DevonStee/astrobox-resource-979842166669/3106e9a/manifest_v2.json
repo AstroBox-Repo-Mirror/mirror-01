@@ -1,0 +1,86 @@
+{
+  "item": {
+    "id": "979842166669",
+    "restype": "watchface",
+    "name": "MD EDGE ROLL",
+    "description": "MD EDGE ROLL_沿边滚动_粉紫青\n小时在中间, 边上的小轮子写着分钟, 绕一圈是一小时, 自取.\n目前支持小米手环 10 / 11 / 9 Pro / 10 Pro / REDMI Watch 6\n更新：做了手环 9 Pro / 10 Pro 版，也加了 REDMI Watch 6 版\n想看动态效果、AOD 和使用方法, 可以移步小红书 @叫我Brin就好",
+    "preview": [
+      "media/00-预览-RW6-Pro.webp",
+      "media/03-预览-功能状态.png",
+      "media/04-预览-功能状态.png"
+    ],
+    "icon": "media/01-图标-1比1.png",
+    "cover": "media/02-封面-3比2-三机.webp",
+    "author": [
+      {
+        "name": "brin",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "在小红书查看动态表盘",
+      "url": "https://xhslink.cn/o/8ierYJqmfrs",
+      "icon": "link"
+    }
+  ],
+  "downloads": {
+    "xmb9p": {
+      "version": "0.0.0",
+      "file_name": "downloads/MD Edge Roll Pro.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增手环 9 Pro / 10 Pro 支持"
+        }
+      ]
+    },
+    "xmb10p": {
+      "version": "0.0.0",
+      "file_name": "downloads/MD Edge Roll Pro.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增手环 9 Pro / 10 Pro 支持"
+        }
+      ]
+    },
+    "xmrw6": {
+      "version": "0.0.0",
+      "file_name": "downloads/MD Edge Roll RW6.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增 REDMI Watch 6 支持"
+        }
+      ]
+    },
+    "xmb10": {
+      "version": "0.0.0",
+      "file_name": "downloads/MD Edge Roll.face",
+      "versionCode": 0
+    },
+    "xmb10nfc": {
+      "version": "0.0.0",
+      "file_name": "downloads/MD Edge Roll.face",
+      "versionCode": 0
+    },
+    "xmb11": {
+      "version": "0.0.0",
+      "file_name": "downloads/MD Edge Roll.face",
+      "versionCode": 0
+    },
+    "xmb11nfc": {
+      "version": "0.0.0",
+      "file_name": "downloads/MD Edge Roll.face",
+      "versionCode": 0
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

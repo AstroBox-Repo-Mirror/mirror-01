@@ -1,0 +1,77 @@
+{
+  "item": {
+    "id": "979872911720",
+    "restype": "watchface",
+    "name": "BATTERY DRIVE",
+    "description": "BATTERY DRIVE_电池驱动_橙黑警示\n橙黑数码管的电池控制台, 拿来看时间, 顺带电量心率, 自取.\n目前支持小米手环 10 / 11\n想看动态效果、AOD 和使用方法, 可以移步小红书 @叫我Brin就好",
+    "preview": [
+      "media/03-预览-电量心率蓝牙.png",
+      "media/04-预览-亮屏动画.png",
+      "media/05-预览-亮屏与息屏.png"
+    ],
+    "icon": "media/01-图标-1比1.png",
+    "cover": "media/02-封面-3比2.png",
+    "author": [
+      {
+        "name": "brin",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "在小红书查看动态表盘",
+      "url": "https://xhslink.cn/o/8ierYJqmfrs",
+      "icon": "link"
+    }
+  ],
+  "downloads": {
+    "xmb10": {
+      "version": "0.0.1",
+      "file_name": "downloads/EVA Battery.face",
+      "versionCode": 1,
+      "updatelogs": [
+        {
+          "version": "0.0.1",
+          "content": "改变了一些样式"
+        }
+      ]
+    },
+    "xmb10nfc": {
+      "version": "0.0.1",
+      "file_name": "downloads/EVA Battery.face",
+      "versionCode": 1,
+      "updatelogs": [
+        {
+          "version": "0.0.1",
+          "content": "改变了一些样式"
+        }
+      ]
+    },
+    "xmb11": {
+      "version": "0.0.1",
+      "file_name": "downloads/EVA Battery.face",
+      "versionCode": 1,
+      "updatelogs": [
+        {
+          "version": "0.0.1",
+          "content": "改变了一些样式"
+        }
+      ]
+    },
+    "xmb11nfc": {
+      "version": "0.0.1",
+      "file_name": "downloads/EVA Battery.face",
+      "versionCode": 1,
+      "updatelogs": [
+        {
+          "version": "0.0.1",
+          "content": "改变了一些样式"
+        }
+      ]
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

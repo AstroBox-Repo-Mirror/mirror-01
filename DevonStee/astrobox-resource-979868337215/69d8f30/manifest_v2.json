@@ -1,0 +1,53 @@
+{
+  "item": {
+    "id": "979868337215",
+    "restype": "watchface",
+    "name": "SIGNAL LAMPS",
+    "description": "SIGNAL LAMPS_三灯信号头_LED点阵\n红灯是小时, 黄灯是分钟, 绿灯是秒, 亮屏先看一眼电量, 自取.\n目前支持小米手环 10 / 11\n想看动态效果和 AOD, 可以移步小红书 @叫我Brin就好",
+    "preview": [
+      "media/03-预览-亮屏电量.png",
+      "media/04-预览-早晨.png",
+      "media/05-预览-亮屏与息屏.png"
+    ],
+    "icon": "media/01-图标-1比1.png",
+    "cover": "media/02-封面-3比2.png",
+    "author": [
+      {
+        "name": "brin",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "在小红书查看动态表盘",
+      "url": "https://xhslink.cn/o/8ierYJqmfrs",
+      "icon": "link"
+    }
+  ],
+  "downloads": {
+    "xmb10": {
+      "version": "0.0.0",
+      "file_name": "downloads/Signal Lamps.face",
+      "versionCode": 0
+    },
+    "xmb10nfc": {
+      "version": "0.0.0",
+      "file_name": "downloads/Signal Lamps.face",
+      "versionCode": 0
+    },
+    "xmb11": {
+      "version": "0.0.0",
+      "file_name": "downloads/Signal Lamps.face",
+      "versionCode": 0
+    },
+    "xmb11nfc": {
+      "version": "0.0.0",
+      "file_name": "downloads/Signal Lamps.face",
+      "versionCode": 0
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

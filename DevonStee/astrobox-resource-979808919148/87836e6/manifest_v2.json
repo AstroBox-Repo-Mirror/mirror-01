@@ -1,0 +1,87 @@
+{
+  "item": {
+    "id": "979808919148",
+    "restype": "watchface",
+    "name": "BUBBLE LINE",
+    "description": "BUBBLE LINE_一根线串起的彩色泡泡_橙黄蓝\n\n小时分钟和上下午各占一颗泡泡, 秒数是边上那颗小蓝泡泡, 简简单单, 自取.\n是pubbel表盘的复刻版本\n\n目前支持小米手环 10 / 11 / 9 Pro / 10 Pro / REDMI Watch 6\n更新：做了手环 9 Pro / 10 Pro 版，也加了 REDMI Watch 6 版\n\n由于 AstroBox 平台限制, 无法上传动态照片, 想看亮屏和 AOD 动画, 以及具体怎么使用的详细说明, 可以移步小红书 @叫我Brin就好",
+    "preview": [
+      "media/00-预览-RW6-Pro.webp",
+      "media/03-预览-亮屏关键帧.png",
+      "media/04-预览-peach产品.png",
+      "media/05-预览-charcoal产品.png"
+    ],
+    "icon": "media/01-图标-1比1.png",
+    "cover": "media/02-封面-3比2-三机.webp",
+    "author": [
+      {
+        "name": "brin",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "在小红书查看动态表盘",
+      "url": "https://xhslink.cn/o/8ierYJqmfrs",
+      "icon": "link"
+    }
+  ],
+  "downloads": {
+    "xmb9p": {
+      "version": "0.0.0",
+      "file_name": "downloads/Bubble Line PRO.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增小米手环 9 Pro / 10 Pro 支持"
+        }
+      ]
+    },
+    "xmb10p": {
+      "version": "0.0.0",
+      "file_name": "downloads/Bubble Line PRO.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增小米手环 9 Pro / 10 Pro 支持"
+        }
+      ]
+    },
+    "xmrw6": {
+      "version": "0.0.0",
+      "file_name": "downloads/Bubble Line RW6.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增 REDMI Watch 6 支持"
+        }
+      ]
+    },
+    "xmb10": {
+      "version": "0.0.0",
+      "file_name": "downloads/Bubble Line.face",
+      "versionCode": 0
+    },
+    "xmb10nfc": {
+      "version": "0.0.0",
+      "file_name": "downloads/Bubble Line.face",
+      "versionCode": 0
+    },
+    "xmb11": {
+      "version": "0.0.0",
+      "file_name": "downloads/Bubble Line.face",
+      "versionCode": 0
+    },
+    "xmb11nfc": {
+      "version": "0.0.0",
+      "file_name": "downloads/Bubble Line.face",
+      "versionCode": 0
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

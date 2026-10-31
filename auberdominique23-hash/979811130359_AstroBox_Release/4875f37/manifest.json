@@ -1,0 +1,34 @@
+{
+  "item": {
+    "id": "979811130359",
+    "name": "天归 - 天容万象 星途终归",
+    "description": "一款非常精美的的且能支持课程表功能的表盘！\n#此处上传的为明日方舟课程表版，其他可前往购买链接了解！\n购买链接:https://www.ifdian.net/item/072cb75051fd11f188c752540025c377?utm_source=copylink&utm_medium=link",
+    "preview": [
+      "1DEB1CE7B66AE408507100BB830774B0.jpg",
+      "28F7FC4A1B275B0360FF4C98865B382F.jpg",
+      "34FA95C01025CB2FEFC5925019EF753E.jpg",
+      "50C48D490517043ABAA78CB764A9AD8C.jpg",
+      "78F7271D82D2B84634B64FFAA9095519.jpg",
+      "971A72507BFDCA389C37AD4B8C0D77DC.jpg"
+    ],
+    "icon": "矩形 1.png",
+    "cover": "MasterGo 封面 16_9 - 2.png",
+    "source_url": "https://github.com/auberdominique23-hash/979811130359_AstroBox_Release",
+    "author": [
+      {
+        "name": "auberdominique",
+        "author_url": "https://github.com/auberdominique23-hash"
+      }
+    ]
+  },
+  "downloads": {
+    "n67": {
+      "version": "1.0.0",
+      "file_name": "天归-明日方舟「课程表」(1).bin"
+    },
+    "p67": {
+      "version": "1.0.0",
+      "file_name": "三月二次打包10p天归课程表明日.bin"
+    }
+  }
+}

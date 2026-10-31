@@ -1,0 +1,96 @@
+{
+  "item": {
+    "id": "979873680166",
+    "restype": "watchface",
+    "name": "GAUDI",
+    "description": "GAUDI_高迪碎瓷马赛克表盘_拼贴数字\n\n原创_高迪的碎瓷拼进小米手环 一直很喜欢高迪建筑里的... \n\n蓝白碎瓷拼贴, 马赛克骨形数字, 圆章里放星期和日期, 亮屏时阳光掠过瓷面, 息屏只留暗色马赛克时间\n欢迎在小红书关注我 @叫我Brin就好, 我会主要在 astrobox 平台更新资源\n本资源使用与astrobox联动的爱发电平台, 为付费表盘的资源\n目前支持小米手环 10 / 11 / 9 Pro / 10 Pro / REDMI Watch 6\n更新：加了 REDMI Watch 6 版",
+    "preview": [
+      "media/00-预览-RW6-Pro.webp",
+      "media/00-预览-Pro适配.webp",
+      "media/03-预览-碎瓷长椅.png",
+      "media/04-预览-浅色产品.png",
+      "media/05-预览-海边日落.png"
+    ],
+    "icon": "media/01-图标-1比1.png",
+    "cover": "media/02-封面-3比2-三机.webp",
+    "author": [
+      {
+        "name": "brin",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "在小红书的文案介绍",
+      "url": "https://xhslink.cn/o/9NN28CUJYSO",
+      "icon": "article"
+    }
+  ],
+  "downloads": {
+    "xmrw6": {
+      "version": "0.0.0",
+      "file_name": "downloads/Gaudi RW6.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增 REDMI Watch 6 支持"
+        }
+      ]
+    },
+    "xmb9p": {
+      "version": "0.0.1",
+      "file_name": "downloads/Gaudi Pro.face",
+      "versionCode": 1,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增小米手环 9 Pro / 10 Pro 支持（方屏专用包）"
+        },
+        {
+          "version": "0.0.1",
+          "content": "新增小米手环 9 Pro / 10 Pro 支持（方屏专用包）"
+        }
+      ]
+    },
+    "xmb10p": {
+      "version": "0.0.1",
+      "file_name": "downloads/Gaudi Pro.face",
+      "versionCode": 1,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增小米手环 9 Pro / 10 Pro 支持（方屏专用包）"
+        },
+        {
+          "version": "0.0.1",
+          "content": "新增小米手环 9 Pro / 10 Pro 支持（方屏专用包）"
+        }
+      ]
+    },
+    "xmb10": {
+      "version": "0.0.0",
+      "file_name": "downloads/Gaudi.bin",
+      "versionCode": 0
+    },
+    "xmb10nfc": {
+      "version": "0.0.0",
+      "file_name": "downloads/Gaudi.bin",
+      "versionCode": 0
+    },
+    "xmb11": {
+      "version": "0.0.0",
+      "file_name": "downloads/Gaudi.bin",
+      "versionCode": 0
+    },
+    "xmb11nfc": {
+      "version": "0.0.0",
+      "file_name": "downloads/Gaudi.bin",
+      "versionCode": 0
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

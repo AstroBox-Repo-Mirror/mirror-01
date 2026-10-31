@@ -1,0 +1,168 @@
+{
+  "item": {
+    "id": "979890935902",
+    "restype": "watchface",
+    "name": "VZOR",
+    "description": "VZOR_地球舷窗表盘_东方一号\n屏幕是一扇朝下看的舷窗, 只看得到地球右上角一截弧形地平线, 上面是黑色太空, 下面是普鲁士蓝的海和赭黄色的陆地; 地球挂在分针上, 每分钟转 6°, 一小时里依次滑过欧洲、北极、北美、南美和非洲\n窗玻璃上刻着瞄准分划, 晃手腕时分划会跟着轻轻摆; 时间写在太空的空白里, 息屏时只剩暗蓝色的时间和一道地平线\n目前支持小米手环 10 / 11 nfc / 9 Pro / 10 Pro / REDMI Watch 6\n更新：加了 REDMI Watch 6 版，也换了重建的 Pro 版包\n由于 AstroBox 平台限制, 无法上传动态照片, 想看亮屏和 AOD 动画, 以及具体怎么使用的详细说明, 可以移步小红书 @叫我Brin就好\n后续会通过与astrobox内嵌的爱发电平台更新付费表盘的资源",
+    "preview": [
+      "media/00-预览-RW6-Pro.webp",
+      "media/00-预览-Pro适配.webp",
+      "media/03-预览-舷窗海报.png",
+      "media/04-预览-动态关键帧.png",
+      "media/05-预览-产品.png"
+    ],
+    "icon": "media/01-图标-1比1.png",
+    "cover": "media/02-封面-3比2-三机.webp",
+    "author": [
+      {
+        "name": "brin",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "在小红书查看动态效果",
+      "url": "https://xhslink.cn/o/8ierYJqmfrs",
+      "icon": "link"
+    }
+  ],
+  "downloads": {
+    "xmb9p": {
+      "version": "0.0.3",
+      "file_name": "downloads/Vzor Pro.face",
+      "versionCode": 3,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增小米手环 9 Pro / 10 Pro 支持（方屏专用包）"
+        },
+        {
+          "version": "0.0.1",
+          "content": "表盘图片换成新固件直接支持的格式，修复首次亮屏卡顿，画面和功能不变"
+        },
+        {
+          "version": "0.0.2",
+          "content": "修复长按切换表盘时预览图超出边框"
+        },
+        {
+          "version": "0.0.3",
+          "content": "重新适配 Pro 版布局"
+        }
+      ]
+    },
+    "xmb10p": {
+      "version": "0.0.3",
+      "file_name": "downloads/Vzor Pro.face",
+      "versionCode": 3,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增小米手环 9 Pro / 10 Pro 支持（方屏专用包）"
+        },
+        {
+          "version": "0.0.1",
+          "content": "表盘图片换成新固件直接支持的格式，修复首次亮屏卡顿，画面和功能不变"
+        },
+        {
+          "version": "0.0.2",
+          "content": "修复长按切换表盘时预览图超出边框"
+        },
+        {
+          "version": "0.0.3",
+          "content": "重新适配 Pro 版布局"
+        }
+      ]
+    },
+    "xmrw6": {
+      "version": "0.0.0",
+      "file_name": "downloads/Vzor RW6.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增 REDMI Watch 6 支持"
+        }
+      ]
+    },
+    "xmb10": {
+      "version": "0.0.3",
+      "file_name": "downloads/Vzor.face",
+      "versionCode": 3,
+      "updatelogs": [
+        {
+          "version": "0.0.1",
+          "content": "表盘图片换成新固件直接支持的格式，修复首次亮屏卡顿，画面和功能不变"
+        },
+        {
+          "version": "0.0.2",
+          "content": "修复长按切换表盘时预览图超出边框"
+        },
+        {
+          "version": "0.0.3",
+          "content": "表盘图片换成不压缩的新固件格式：修复部分手环 11 黑屏，保留首次亮屏不卡"
+        }
+      ]
+    },
+    "xmb10nfc": {
+      "version": "0.0.3",
+      "file_name": "downloads/Vzor.face",
+      "versionCode": 3,
+      "updatelogs": [
+        {
+          "version": "0.0.1",
+          "content": "表盘图片换成新固件直接支持的格式，修复首次亮屏卡顿，画面和功能不变"
+        },
+        {
+          "version": "0.0.2",
+          "content": "修复长按切换表盘时预览图超出边框"
+        },
+        {
+          "version": "0.0.3",
+          "content": "表盘图片换成不压缩的新固件格式：修复部分手环 11 黑屏，保留首次亮屏不卡"
+        }
+      ]
+    },
+    "xmb11": {
+      "version": "0.0.3",
+      "file_name": "downloads/Vzor.face",
+      "versionCode": 3,
+      "updatelogs": [
+        {
+          "version": "0.0.1",
+          "content": "表盘图片换成新固件直接支持的格式，修复首次亮屏卡顿，画面和功能不变"
+        },
+        {
+          "version": "0.0.2",
+          "content": "修复长按切换表盘时预览图超出边框"
+        },
+        {
+          "version": "0.0.3",
+          "content": "表盘图片换成不压缩的新固件格式：修复部分手环 11 黑屏，保留首次亮屏不卡"
+        }
+      ]
+    },
+    "xmb11nfc": {
+      "version": "0.0.3",
+      "file_name": "downloads/Vzor.face",
+      "versionCode": 3,
+      "updatelogs": [
+        {
+          "version": "0.0.1",
+          "content": "表盘图片换成新固件直接支持的格式，修复首次亮屏卡顿，画面和功能不变"
+        },
+        {
+          "version": "0.0.2",
+          "content": "修复长按切换表盘时预览图超出边框"
+        },
+        {
+          "version": "0.0.3",
+          "content": "表盘图片换成不压缩的新固件格式：修复部分手环 11 黑屏，保留首次亮屏不卡"
+        }
+      ]
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

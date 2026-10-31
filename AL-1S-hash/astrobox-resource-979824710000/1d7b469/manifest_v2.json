@@ -1,0 +1,38 @@
+{
+  "item": {
+    "id": "979824710000",
+    "restype": "watchface",
+    "name": "24/7",
+    "description": "「此处为预览版」「表盘特点」「12样式」「精美UI」「极简设计」「轻拟物风格」「支持lua缓慢亮屏」「支持10p,9p」",
+    "preview": [
+      "media/Frame 7.png",
+      "media/Frame 17.png"
+    ],
+    "icon": "media/Group 68.png",
+    "cover": "media/Frame 8.png",
+    "author": [
+      {
+        "name": "sees",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "资源购买(3.5CNY)",
+      "url": "https://ifdian.net/item/a4ca0706833011f1a91d52540025c377",
+      "icon": "shopping-cart-simple"
+    }
+  ],
+  "downloads": {
+    "xmb9p": {
+      "version": "1.0",
+      "file_name": "downloads/resource.bin"
+    },
+    "xmb10p": {
+      "version": "1.0",
+      "file_name": "downloads/resource.bin"
+    }
+  },
+  "ext": {}
+}

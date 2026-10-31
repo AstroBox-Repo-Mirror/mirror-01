@@ -1,0 +1,109 @@
+{
+  "item": {
+    "id": "979842683750",
+    "restype": "watchface",
+    "name": "NIXIE TUBE",
+    "description": "[注意⚠️]: 从astrobox APP(无论什么端)的入口跳转进入, 不要打开爱发电平台直接购买.\n\n[同时注意⚠️]: astrobox和爱发电为两个独立的平台, astrobox要关联爱发电哦~这样购买后兑换码会自动关联的~\n\n四组叠层金属网显示时间, 亮屏点火与进位余辉, 底部引脚显示电量\n\nrebuild_闪烁的辉光管_手环表盘 NIXIE TUBE_辉光管表... \n\n欢迎在小红书关注我 @叫我Brin就好, 我会主要在 astrobox 平台更新资源",
+    "preview": [
+      "media/03-预览-辉光管海报.png",
+      "media/05-预览-01-cafe佩戴.png",
+      "media/04-预览-copper产品.png"
+    ],
+    "icon": "media/01-图标-1比1.png",
+    "cover": "media/02-封面-3比2.png",
+    "author": [
+      {
+        "name": "brin",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "在小红书的详细介绍",
+      "url": "https://xhslink.cn/o/5nnzZYXr4f7",
+      "icon": "article"
+    }
+  ],
+  "downloads": {
+    "xmb10": {
+      "version": "0.0.3",
+      "file_name": "downloads/Nixie Tube.bin",
+      "versionCode": 3,
+      "updatelogs": [
+        {
+          "version": "0.0.1",
+          "content": "表盘图片换成新固件直接支持的格式，修复首次亮屏卡顿，画面和功能不变"
+        },
+        {
+          "version": "0.0.2",
+          "content": "回退到上一版：上次更新在部分手环 11 上黑屏，先恢复原来的包"
+        },
+        {
+          "version": "0.0.3",
+          "content": "表盘图片换成不压缩的新固件格式：修复首次亮屏卡顿，手环 11 不再黑屏"
+        }
+      ]
+    },
+    "xmb10nfc": {
+      "version": "0.0.3",
+      "file_name": "downloads/Nixie Tube.bin",
+      "versionCode": 3,
+      "updatelogs": [
+        {
+          "version": "0.0.1",
+          "content": "表盘图片换成新固件直接支持的格式，修复首次亮屏卡顿，画面和功能不变"
+        },
+        {
+          "version": "0.0.2",
+          "content": "回退到上一版：上次更新在部分手环 11 上黑屏，先恢复原来的包"
+        },
+        {
+          "version": "0.0.3",
+          "content": "表盘图片换成不压缩的新固件格式：修复首次亮屏卡顿，手环 11 不再黑屏"
+        }
+      ]
+    },
+    "xmb11": {
+      "version": "0.0.3",
+      "file_name": "downloads/Nixie Tube.bin",
+      "versionCode": 3,
+      "updatelogs": [
+        {
+          "version": "0.0.1",
+          "content": "表盘图片换成新固件直接支持的格式，修复首次亮屏卡顿，画面和功能不变"
+        },
+        {
+          "version": "0.0.2",
+          "content": "回退到上一版：上次更新在部分手环 11 上黑屏，先恢复原来的包"
+        },
+        {
+          "version": "0.0.3",
+          "content": "表盘图片换成不压缩的新固件格式：修复首次亮屏卡顿，手环 11 不再黑屏"
+        }
+      ]
+    },
+    "xmb11nfc": {
+      "version": "0.0.3",
+      "file_name": "downloads/Nixie Tube.bin",
+      "versionCode": 3,
+      "updatelogs": [
+        {
+          "version": "0.0.1",
+          "content": "表盘图片换成新固件直接支持的格式，修复首次亮屏卡顿，画面和功能不变"
+        },
+        {
+          "version": "0.0.2",
+          "content": "回退到上一版：上次更新在部分手环 11 上黑屏，先恢复原来的包"
+        },
+        {
+          "version": "0.0.3",
+          "content": "表盘图片换成不压缩的新固件格式：修复首次亮屏卡顿，手环 11 不再黑屏"
+        }
+      ]
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

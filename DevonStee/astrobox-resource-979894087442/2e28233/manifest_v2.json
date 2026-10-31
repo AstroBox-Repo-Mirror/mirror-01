@@ -1,0 +1,88 @@
+{
+  "item": {
+    "id": "979894087442",
+    "restype": "watchface",
+    "name": "ASCII LEDGER",
+    "description": "ASCII LEDGER_字符画账本表盘_琥珀数字\n等宽字符拼成大数字, 账本式日期步数心率温度电量读数, 高亮行每10秒下移\n欢迎在小红书关注我 @叫我Brin就好, 我会主要在 astrobox 平台更新资源\n后续会通过与astrobox内嵌的爱发电平台更新付费表盘的资源\n目前支持小米手环 10 / 11 / 9 Pro / 10 Pro / REDMI Watch 6\n更新：加了 REDMI Watch 6 版",
+    "preview": [
+      "media/00-预览-RW6-Pro.webp",
+      "media/00-预览-Pro适配.webp",
+      "media/03-预览-打印纸海报.png",
+      "media/04-预览-炭黑产品.png",
+      "media/05-预览-夜景佩戴.png"
+    ],
+    "icon": "media/01-图标-1比1.png",
+    "cover": "media/02-封面-3比2-三机.webp",
+    "author": [
+      {
+        "name": "brin",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "在小红书查看动态表盘",
+      "url": "https://www.xiaohongshu.com/user/profile/6a7371fc0000000013002800",
+      "icon": "link"
+    }
+  ],
+  "downloads": {
+    "xmrw6": {
+      "version": "0.0.0",
+      "file_name": "downloads/ASCII Ledger RW6.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增 REDMI Watch 6 支持"
+        }
+      ]
+    },
+    "xmb9p": {
+      "version": "0.0.0",
+      "file_name": "downloads/ASCII Ledger Pro.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增小米手环 9 Pro / 10 Pro 支持（方屏专用包）"
+        }
+      ]
+    },
+    "xmb10p": {
+      "version": "0.0.0",
+      "file_name": "downloads/ASCII Ledger Pro.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增小米手环 9 Pro / 10 Pro 支持（方屏专用包）"
+        }
+      ]
+    },
+    "xmb10": {
+      "version": "0.0.0",
+      "file_name": "downloads/ASCII Ledger.face",
+      "versionCode": 0
+    },
+    "xmb10nfc": {
+      "version": "0.0.0",
+      "file_name": "downloads/ASCII Ledger.face",
+      "versionCode": 0
+    },
+    "xmb11": {
+      "version": "0.0.0",
+      "file_name": "downloads/ASCII Ledger.face",
+      "versionCode": 0
+    },
+    "xmb11nfc": {
+      "version": "0.0.0",
+      "file_name": "downloads/ASCII Ledger.face",
+      "versionCode": 0
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

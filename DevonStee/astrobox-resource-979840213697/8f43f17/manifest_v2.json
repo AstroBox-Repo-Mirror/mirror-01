@@ -1,0 +1,88 @@
+{
+  "item": {
+    "id": "979840213697",
+    "restype": "watchface",
+    "name": "LUME RADAR",
+    "description": "LUME RADAR_绿色雷达表盘_CRT横条数字\n屏幕底部的圆头里是一台雷达的圆心, 大部分刻度和距离环都在屏幕外面, 扫描扇区连着方位刻度每分钟转 6°, 一小时转一圈; 带余晖的扫描线是秒针, 一分钟扫过整块屏幕\n时间是一排排圆头横条拼成的绿色数字, 下面三个光点标着心率、电量和步数, 顶上是星期和日期; 息屏时只剩暗绿色的横条时间\n目前支持小米手环 10 / 11 / 9 Pro / 10 Pro / REDMI Watch 6\n更新：加了 REDMI Watch 6 版\n由于 AstroBox 平台限制, 无法上传动态照片, 想看亮屏和 AOD 动画, 以及具体怎么使用的详细说明, 可以移步小红书 @叫我Brin就好\n后续会通过与astrobox内嵌的爱发电平台更新付费表盘的资源",
+    "preview": [
+      "media/00-预览-RW6-Pro.webp",
+      "media/00-预览-Pro适配.webp",
+      "media/03-预览-雷达海报.png",
+      "media/04-预览-扇区每分钟转动.png",
+      "media/05-预览-扫描线与息屏.png"
+    ],
+    "icon": "media/01-图标-1比1.png",
+    "cover": "media/02-封面-3比2-三机.webp",
+    "author": [
+      {
+        "name": "brin",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "打开小红书主页，查看动态表盘实际效果",
+      "url": "https://xhslink.cn/o/8ierYJqmfrs",
+      "icon": "link"
+    }
+  ],
+  "downloads": {
+    "xmrw6": {
+      "version": "0.0.0",
+      "file_name": "downloads/Lume Radar RW6.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增 REDMI Watch 6 支持"
+        }
+      ]
+    },
+    "xmb9p": {
+      "version": "0.0.0",
+      "file_name": "downloads/Lume Radar Pro.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增小米手环 9 Pro / 10 Pro 支持（方屏专用包）"
+        }
+      ]
+    },
+    "xmb10p": {
+      "version": "0.0.0",
+      "file_name": "downloads/Lume Radar Pro.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增小米手环 9 Pro / 10 Pro 支持（方屏专用包）"
+        }
+      ]
+    },
+    "xmb11": {
+      "version": "0.0.0",
+      "file_name": "downloads/Lume Radar.face",
+      "versionCode": 0
+    },
+    "xmb10": {
+      "version": "0.0.0",
+      "file_name": "downloads/Lume Radar.face",
+      "versionCode": 0
+    },
+    "xmb11nfc": {
+      "version": "0.0.0",
+      "file_name": "downloads/Lume Radar.face",
+      "versionCode": 0
+    },
+    "xmb10nfc": {
+      "version": "0.0.0",
+      "file_name": "downloads/Lume Radar.face",
+      "versionCode": 0
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

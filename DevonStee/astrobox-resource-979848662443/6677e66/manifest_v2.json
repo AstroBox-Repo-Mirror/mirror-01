@@ -1,0 +1,127 @@
+{
+  "item": {
+    "id": "979848662443",
+    "restype": "watchface",
+    "name": "CRT BULGE",
+    "description": "CRT BULGE_弧面荧光屏_绿色终端\n参考的是开源终端 cool-retro-term 的弧面屏, 我把它的弯曲推到了很夸张的程度, 时间就从屏幕中间鼓出来.\n亮屏先闪一下雪花.\n之后四个数字会一直流动, 每个数字动的方式都不一样.\n目前支持小米手环 10 / 11 / 9 Pro / 10 Pro / REDMI Watch 6\n更新：做了手环 9 Pro / 10 Pro 版，也加了 REDMI Watch 6 版\n由于 AstroBox 平台限制, 无法上传动态照片, 想看亮屏和 AOD 动画, 以及具体怎么使用的详细说明, 可以移步小红书 @叫我Brin就好\n后续会通过与astrobox内嵌的爱发电平台更新付费表盘的资源",
+    "preview": [
+      "media/00-预览-RW6-Pro.webp",
+      "media/03-预览-雪花流动息屏.png",
+      "media/04-预览-各自流动.png",
+      "media/05-预览-弧面玻璃.png"
+    ],
+    "icon": "media/01-图标-1比1.png",
+    "cover": "media/02-封面-3比2-三机.webp",
+    "author": [
+      {
+        "name": "brin",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "在小红书查看动态表盘",
+      "url": "https://xhslink.cn/o/8ierYJqmfrs",
+      "icon": "link"
+    }
+  ],
+  "downloads": {
+    "xmb9p": {
+      "version": "0.0.0",
+      "file_name": "downloads/CRT Bulge PRO.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增小米手环 9 Pro / 10 Pro 支持"
+        }
+      ]
+    },
+    "xmb10p": {
+      "version": "0.0.0",
+      "file_name": "downloads/CRT Bulge PRO.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增小米手环 9 Pro / 10 Pro 支持"
+        }
+      ]
+    },
+    "xmrw6": {
+      "version": "0.0.0",
+      "file_name": "downloads/CRT Bulge RW6.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增 REDMI Watch 6 支持"
+        }
+      ]
+    },
+    "xmb10": {
+      "version": "0.0.2",
+      "file_name": "downloads/CRT Bulge.face",
+      "versionCode": 2,
+      "updatelogs": [
+        {
+          "version": "0.0.1",
+          "content": "表盘图片换成新固件直接支持的格式，修复首次亮屏卡顿，画面和功能不变"
+        },
+        {
+          "version": "0.0.2",
+          "content": "表盘图片换成不压缩的新固件格式：修复部分手环 11 黑屏，保留首次亮屏不卡"
+        }
+      ]
+    },
+    "xmb10nfc": {
+      "version": "0.0.2",
+      "file_name": "downloads/CRT Bulge.face",
+      "versionCode": 2,
+      "updatelogs": [
+        {
+          "version": "0.0.1",
+          "content": "表盘图片换成新固件直接支持的格式，修复首次亮屏卡顿，画面和功能不变"
+        },
+        {
+          "version": "0.0.2",
+          "content": "表盘图片换成不压缩的新固件格式：修复部分手环 11 黑屏，保留首次亮屏不卡"
+        }
+      ]
+    },
+    "xmb11": {
+      "version": "0.0.2",
+      "file_name": "downloads/CRT Bulge.face",
+      "versionCode": 2,
+      "updatelogs": [
+        {
+          "version": "0.0.1",
+          "content": "表盘图片换成新固件直接支持的格式，修复首次亮屏卡顿，画面和功能不变"
+        },
+        {
+          "version": "0.0.2",
+          "content": "表盘图片换成不压缩的新固件格式：修复部分手环 11 黑屏，保留首次亮屏不卡"
+        }
+      ]
+    },
+    "xmb11nfc": {
+      "version": "0.0.2",
+      "file_name": "downloads/CRT Bulge.face",
+      "versionCode": 2,
+      "updatelogs": [
+        {
+          "version": "0.0.1",
+          "content": "表盘图片换成新固件直接支持的格式，修复首次亮屏卡顿，画面和功能不变"
+        },
+        {
+          "version": "0.0.2",
+          "content": "表盘图片换成不压缩的新固件格式：修复部分手环 11 黑屏，保留首次亮屏不卡"
+        }
+      ]
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

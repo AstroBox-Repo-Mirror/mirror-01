@@ -1,0 +1,49 @@
+{
+  "item": {
+    "id": "com.qianse.band",
+    "restype": "quick_app",
+    "name": "茜色",
+    "description": "小米手环非官方移植的《茜色》，现免费提供给大家游玩，欢迎大家的游玩，有bug请及时指出。\n\n>故事梗概：黄昏的客车上，「我」被身旁的声音叫醒——宁桐雨正靠在肩上睡得迷迷糊糊。 从这次归途开始，分班、年级大会、图书馆与傍晚的校园，一段从黄昏开始、又在黄昏结束的夏日物语慢慢展开。\n\n**源代码（除素材外）可任由大家使用，引擎完全开源，感谢大家支持**",
+    "preview": [
+      "media/index.png",
+      "media/game_01.png",
+      "media/game_02.png",
+      "media/cg_grid.png",
+      "media/cg_view.png",
+      "media/menu.png"
+    ],
+    "icon": "media/icon.png",
+    "cover": "media/主界面_封面+标题_3x2_2400x1600.jpg",
+    "author": [
+      {
+        "name": "MC",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "Github源码",
+      "url": "https://github.com/mcpotato1123/qianse-band",
+      "icon": "github-logo"
+    },
+    {
+      "title": "QQ交流群",
+      "url": "https://qm.qq.com/q/yRUThjoYjC",
+      "icon": "chat"
+    },
+    {
+      "title": "项目主页",
+      "url": "https://band.nekogirlpotato.top/",
+      "icon": "globe"
+    }
+  ],
+  "downloads": {
+    "xmb9p": {
+      "version": "1.0",
+      "file_name": "downloads/com.qianse.band.release.1.0.rpk",
+      "versionCode": 1
+    }
+  },
+  "ext": {}
+}

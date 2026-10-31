@@ -1,0 +1,123 @@
+{
+  "item": {
+    "id": "979812217215",
+    "restype": "watchface",
+    "name": "DOT MATRIX",
+    "description": "DOT MATRIX_点状数字波纹表盘_CMF_重制\n\nv1.0.3 更新亮屏时候的电量显示, 不可关闭, 介意的话, 不要更新哦\n100-70显示为绿色, 70-20为黄色, 20-0为红色, mi band 9无更新\n\n\n整块屏幕铺满了小圆点, 大部分只是暗暗地待着, 亮起来的那些刚好拼出时间, 星期和日期小小地挂在上面; 抬手的时候, 会有一圈水波纹从点阵里荡开, 荡到边上就没了。CMF 点阵表盘的重制。\n支持小米手环 9 / 10 / 11 / 9 Pro / 10 Pro / REDMI Watch 6\n更新：加了 REDMI Watch 6 版\n由于 AstroBox 平台限制, 无法上传动态照片, 想看亮屏和 AOD 动画, 以及具体怎么使用的详细说明, 可以移步小红书 @叫我Brin就好",
+    "preview": [
+      "media/00-预览-RW6-Pro.webp",
+      "media/00-预览-Pro适配.webp",
+      "media/04-预览-奶油白产品.png",
+      "media/03-预览-点阵海报.png",
+      "media/05-预览-咖啡馆佩戴.png"
+    ],
+    "icon": "media/Screenshot 2026-10-05 at 1.40.59 AM.png",
+    "cover": "media/02-封面-3比2-三机.webp",
+    "author": [
+      {
+        "name": "brin",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "小红书连接",
+      "url": "https://xhslink.cn/o/3V9Ehd5GIPQ",
+      "icon": "book"
+    }
+  ],
+  "downloads": {
+    "xmrw6": {
+      "version": "0.0.0",
+      "file_name": "downloads/Dot Matrix RW6.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增 REDMI Watch 6 支持"
+        }
+      ]
+    },
+    "xmb9p": {
+      "version": "0.0.0",
+      "file_name": "downloads/Dot Matrix Pro.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增小米手环 9 Pro / 10 Pro 支持（方屏专用包）"
+        }
+      ]
+    },
+    "xmb10p": {
+      "version": "0.0.0",
+      "file_name": "downloads/Dot Matrix Pro.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增小米手环 9 Pro / 10 Pro 支持（方屏专用包）"
+        }
+      ]
+    },
+    "xmb10": {
+      "version": "1.0.3",
+      "file_name": "downloads/Dot Matrix.face",
+      "versionCode": 65539,
+      "updatelogs": [
+        {
+          "version": "1.0.2",
+          "content": "新增小米手环 9 支持"
+        }
+      ]
+    },
+    "xmb10nfc": {
+      "version": "1.0.3",
+      "file_name": "downloads/Dot Matrix.face",
+      "versionCode": 65539,
+      "updatelogs": [
+        {
+          "version": "1.0.2",
+          "content": "新增小米手环 9 支持"
+        }
+      ]
+    },
+    "xmb11": {
+      "version": "1.0.3",
+      "file_name": "downloads/Dot Matrix.face",
+      "versionCode": 65539,
+      "updatelogs": [
+        {
+          "version": "1.0.2",
+          "content": "新增小米手环 9 支持"
+        }
+      ]
+    },
+    "xmb11nfc": {
+      "version": "1.0.3",
+      "file_name": "downloads/Dot Matrix.face",
+      "versionCode": 65539,
+      "updatelogs": [
+        {
+          "version": "1.0.2",
+          "content": "新增小米手环 9 支持"
+        }
+      ]
+    },
+    "xmb9": {
+      "version": "0.0.0",
+      "file_name": "downloads/Dot Matrix-xmb9.bin",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增小米手环 9 支持（专用包，已实机测试）"
+        }
+      ]
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

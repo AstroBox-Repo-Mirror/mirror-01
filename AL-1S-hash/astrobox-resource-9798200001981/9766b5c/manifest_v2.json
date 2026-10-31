@@ -1,0 +1,53 @@
+{
+  "item": {
+    "id": "9798200001981",
+    "restype": "watchface",
+    "name": "「迷幻」",
+    "description": "psychedelic",
+    "preview": [
+      "media/1000034202.png",
+      "media/1000034201.png",
+      "media/1000034205.png",
+      "media/1000034203.png",
+      "media/1000034204.png"
+    ],
+    "icon": "media/1000034208.png",
+    "cover": "media/1000034207.png",
+    "author": [
+      {
+        "name": "sees",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [],
+  "downloads": {
+    "xmb9": {
+      "version": "1.1111112211.0",
+      "file_name": "downloads/resource9.bin"
+    },
+    "xmrw6": {
+      "version": "1.0",
+      "file_name": "downloads/resource6.bin"
+    },
+    "xmb10p": {
+      "version": "1.0",
+      "file_name": "downloads/resource10p.bin"
+    },
+    "xmb9p": {
+      "version": "1.0",
+      "file_name": "downloads/resource9p.bin"
+    },
+    "xmb10nfc": {
+      "version": "1.0",
+      "file_name": "downloads/resource10.bin"
+    },
+    "xmb10": {
+      "version": "1.0",
+      "file_name": "downloads/resource10.bin"
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}
