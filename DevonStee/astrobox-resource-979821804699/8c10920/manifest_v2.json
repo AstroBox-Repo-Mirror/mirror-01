@@ -1,0 +1,123 @@
+{
+  "item": {
+    "id": "979821804699",
+    "restype": "watchface",
+    "name": "LIME STACK",
+    "description": "LIME STACK_荧光绿像素方块表盘_条纹数字\n复刻_来自大家的设计想法_Lime_小米表盘 Lime Stack ...\n黑底上的荧光绿, 方块数字一上一下叠在一起, 凑近看里面有细细的电光纹, 边上还有一道玻璃似的亮边; 亮屏时三颗小光点在中间两条轨道之间来回跳, 一下碰上面, 一下碰下面, 身后拖着一点很短的余光, 数字倒是一直稳稳的。息屏以后只剩下暗暗的绿。\n目前支持小米手环 9 / 10 / 11 / 9 Pro / 10 Pro / REDMI Watch 6\n更新：加了 REDMI Watch 6 版\n由于 AstroBox 平台限制, 无法上传动态照片, 想看亮屏和 AOD 动画, 以及具体怎么使用的详细说明, 可以移步小红书 @叫我Brin就好",
+    "preview": [
+      "media/00-预览-RW6-Pro.webp",
+      "media/00-预览-Pro适配.webp",
+      "media/03-预览-荧光轨道.png",
+      "media/04-预览-浅色产品.png",
+      "media/05-预览-雨天佩戴.png"
+    ],
+    "icon": "media/01-图标-1比1.png",
+    "cover": "media/02-封面-3比2-三机.webp",
+    "author": [
+      {
+        "name": "brin",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "在小红书中的详细介绍",
+      "url": "https://xhslink.cn/o/ArX19MVZcxH",
+      "icon": "article"
+    }
+  ],
+  "downloads": {
+    "xmrw6": {
+      "version": "0.0.0",
+      "file_name": "downloads/Lime Stack RW6.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增 REDMI Watch 6 支持"
+        }
+      ]
+    },
+    "xmb9p": {
+      "version": "0.0.0",
+      "file_name": "downloads/Lime Stack Pro.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增小米手环 9 Pro / 10 Pro 支持（方屏专用包）"
+        }
+      ]
+    },
+    "xmb10p": {
+      "version": "0.0.0",
+      "file_name": "downloads/Lime Stack Pro.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增小米手环 9 Pro / 10 Pro 支持（方屏专用包）"
+        }
+      ]
+    },
+    "xmb10": {
+      "version": "0.0.1",
+      "file_name": "downloads/Lime Stack.bin",
+      "versionCode": 1,
+      "updatelogs": [
+        {
+          "version": "0.0.1",
+          "content": "新增小米手环 9 支持"
+        }
+      ]
+    },
+    "xmb10nfc": {
+      "version": "0.0.1",
+      "file_name": "downloads/Lime Stack.bin",
+      "versionCode": 1,
+      "updatelogs": [
+        {
+          "version": "0.0.1",
+          "content": "新增小米手环 9 支持"
+        }
+      ]
+    },
+    "xmb11": {
+      "version": "0.0.1",
+      "file_name": "downloads/Lime Stack.bin",
+      "versionCode": 1,
+      "updatelogs": [
+        {
+          "version": "0.0.1",
+          "content": "新增小米手环 9 支持"
+        }
+      ]
+    },
+    "xmb11nfc": {
+      "version": "0.0.1",
+      "file_name": "downloads/Lime Stack.bin",
+      "versionCode": 1,
+      "updatelogs": [
+        {
+          "version": "0.0.1",
+          "content": "新增小米手环 9 支持"
+        }
+      ]
+    },
+    "xmb9": {
+      "version": "0.0.1",
+      "file_name": "downloads/Lime Stack-xmb9.bin",
+      "versionCode": 1,
+      "updatelogs": [
+        {
+          "version": "0.0.1",
+          "content": "新增小米手环 9 支持（专用包，已实机测试）"
+        }
+      ]
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "item": {
+    "id": "979842555965",
+    "restype": "watchface",
+    "name": "SEXTANT M3 SHAPES",
+    "description": "原创_MD block_小米手环11/10表盘 遵循 Material Design ... \n欢迎在小红书关注我 @叫我Brin就好, 我会主要在 astrobox 平台更新资源\n后续会通过与astrobox内嵌的爱发电平台更新付费表盘的资源\n支持小米手环 9 Pro / 10 Pro",
+    "preview": [
+      "media/00-预览-Pro适配.webp",
+      "media/03-预览-紫色形状海报.png",
+      "media/04-预览-浅紫产品.png",
+      "media/05-预览-户外佩戴.png"
+    ],
+    "icon": "media/01-图标-1比1.png",
+    "cover": "media/02-封面-3比2-双机.webp",
+    "author": [
+      {
+        "name": "brin",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "详细设计介绍在小红书",
+      "url": "https://xhslink.cn/o/SjnIT8kE4e",
+      "icon": "article"
+    }
+  ],
+  "downloads": {
+    "xmb9p": {
+      "version": "0.0.0",
+      "file_name": "downloads/Sextant M3 Shapes Pro.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增小米手环 9 Pro / 10 Pro 支持（方屏专用包）"
+        }
+      ]
+    },
+    "xmb10p": {
+      "version": "0.0.0",
+      "file_name": "downloads/Sextant M3 Shapes Pro.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增小米手环 9 Pro / 10 Pro 支持（方屏专用包）"
+        }
+      ]
+    },
+    "xmb10": {
+      "version": "0.0.0",
+      "file_name": "downloads/Sextant M3 Shapes.bin",
+      "versionCode": 0
+    },
+    "xmb10nfc": {
+      "version": "0.0.0",
+      "file_name": "downloads/Sextant M3 Shapes.bin",
+      "versionCode": 0
+    },
+    "xmb11": {
+      "version": "0.0.0",
+      "file_name": "downloads/Sextant M3 Shapes.bin",
+      "versionCode": 0
+    },
+    "xmb11nfc": {
+      "version": "0.0.0",
+      "file_name": "downloads/Sextant M3 Shapes.bin",
+      "versionCode": 0
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

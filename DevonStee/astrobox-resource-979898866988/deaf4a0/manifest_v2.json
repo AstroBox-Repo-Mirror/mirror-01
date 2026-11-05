@@ -1,0 +1,160 @@
+{
+  "item": {
+    "id": "979898866988",
+    "restype": "watchface",
+    "name": "PEBBLE REELS",
+    "description": "PEBBLE REELS_机械数字带表盘_像素数字\n复刻_pebble_reels_手环动态表盘 感觉是一个挺有趣的...\n四列数字带在红色窗口显示时间, 亮屏滚动与分钟进位动画, AOD\n欢迎在小红书关注我 @叫我Brin就好, 我会主要在 astrobox 平台更新资源\n后续会通过与astrobox内嵌的爱发电平台更新付费表盘的资源\n目前支持小米手环 10 / 11 / 9 Pro / 10 Pro / REDMI Watch 6\n更新：加了 REDMI Watch 6 版",
+    "preview": [
+      "media/00-预览-RW6-Pro.webp",
+      "media/00-预览-Pro适配.webp",
+      "media/03-预览-机械数字带海报.png",
+      "media/04-预览-charcoal产品.png",
+      "media/05-预览-02-commute-metro佩戴.png"
+    ],
+    "icon": "media/01-图标-1比1.png",
+    "cover": "media/02-封面-3比2-三机.webp",
+    "author": [
+      {
+        "name": "brin",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "小红书上的详细介绍",
+      "url": "https://xhslink.cn/o/3PjMLh2b9yn",
+      "icon": "article"
+    }
+  ],
+  "downloads": {
+    "xmrw6": {
+      "version": "0.0.0",
+      "file_name": "downloads/Pebble Reels RW6.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增 REDMI Watch 6 支持"
+        }
+      ]
+    },
+    "xmb10": {
+      "version": "0.0.4",
+      "file_name": "downloads/Pebble Reels.bin",
+      "versionCode": 4,
+      "updatelogs": [
+        {
+          "version": "0.0.2",
+          "content": "表盘图片换成新固件直接支持的格式，修复首次亮屏卡顿，画面和功能不变"
+        },
+        {
+          "version": "0.0.3",
+          "content": "表盘图片换成新固件直接支持的格式，修复首次亮屏卡顿，画面和功能不变；修复长按切换表盘时预览图超出边框"
+        },
+        {
+          "version": "0.0.4",
+          "content": "表盘图片换成不压缩的新固件格式：修复部分手环 11 黑屏，保留首次亮屏不卡"
+        }
+      ]
+    },
+    "xmb10nfc": {
+      "version": "0.0.4",
+      "file_name": "downloads/Pebble Reels.bin",
+      "versionCode": 4,
+      "updatelogs": [
+        {
+          "version": "0.0.2",
+          "content": "表盘图片换成新固件直接支持的格式，修复首次亮屏卡顿，画面和功能不变"
+        },
+        {
+          "version": "0.0.3",
+          "content": "表盘图片换成新固件直接支持的格式，修复首次亮屏卡顿，画面和功能不变；修复长按切换表盘时预览图超出边框"
+        },
+        {
+          "version": "0.0.4",
+          "content": "表盘图片换成不压缩的新固件格式：修复部分手环 11 黑屏，保留首次亮屏不卡"
+        }
+      ]
+    },
+    "xmb11": {
+      "version": "0.0.4",
+      "file_name": "downloads/Pebble Reels.bin",
+      "versionCode": 4,
+      "updatelogs": [
+        {
+          "version": "0.0.2",
+          "content": "表盘图片换成新固件直接支持的格式，修复首次亮屏卡顿，画面和功能不变"
+        },
+        {
+          "version": "0.0.3",
+          "content": "表盘图片换成新固件直接支持的格式，修复首次亮屏卡顿，画面和功能不变；修复长按切换表盘时预览图超出边框"
+        },
+        {
+          "version": "0.0.4",
+          "content": "表盘图片换成不压缩的新固件格式：修复部分手环 11 黑屏，保留首次亮屏不卡"
+        }
+      ]
+    },
+    "xmb11nfc": {
+      "version": "0.0.4",
+      "file_name": "downloads/Pebble Reels.bin",
+      "versionCode": 4,
+      "updatelogs": [
+        {
+          "version": "0.0.2",
+          "content": "表盘图片换成新固件直接支持的格式，修复首次亮屏卡顿，画面和功能不变"
+        },
+        {
+          "version": "0.0.3",
+          "content": "表盘图片换成新固件直接支持的格式，修复首次亮屏卡顿，画面和功能不变；修复长按切换表盘时预览图超出边框"
+        },
+        {
+          "version": "0.0.4",
+          "content": "表盘图片换成不压缩的新固件格式：修复部分手环 11 黑屏，保留首次亮屏不卡"
+        }
+      ]
+    },
+    "xmb10p": {
+      "version": "0.0.2",
+      "file_name": "downloads/Pebble Reels Pro.face",
+      "versionCode": 2,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增小米手环 9 Pro / 10 Pro 支持（方屏专用包）"
+        },
+        {
+          "version": "0.0.1",
+          "content": "表盘图片换成新固件直接支持的格式，修复首次亮屏卡顿，画面和功能不变"
+        },
+        {
+          "version": "0.0.2",
+          "content": "表盘图片换成新固件直接支持的格式，修复首次亮屏卡顿；修复小米手环 9 Pro 上开机后反复重启的问题；修复长按切换表盘时预览图超出边框"
+        }
+      ]
+    },
+    "xmb9p": {
+      "version": "0.0.2",
+      "file_name": "downloads/Pebble Reels Pro.face",
+      "versionCode": 2,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增小米手环 9 Pro / 10 Pro 支持（方屏专用包）"
+        },
+        {
+          "version": "0.0.1",
+          "content": "表盘图片换成新固件直接支持的格式，修复首次亮屏卡顿，画面和功能不变"
+        },
+        {
+          "version": "0.0.2",
+          "content": "表盘图片换成新固件直接支持的格式，修复首次亮屏卡顿；修复小米手环 9 Pro 上开机后反复重启的问题；修复长按切换表盘时预览图超出边框"
+        }
+      ]
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

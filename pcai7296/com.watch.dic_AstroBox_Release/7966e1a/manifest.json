@@ -1,0 +1,29 @@
+{
+  "item": {
+    "name": "腕上词典",
+    "description": "腕上词典（免费） - 小米手环上的离线英汉词典，支持模糊搜索、单词本、查词历史等功能",
+    "preview": [
+      "preview/xiaomi_band-2026-08-18-11-04-42.png",
+      "preview/xiaomi_band_pro-2026-08-18-10-51-27.png",
+      "preview/redmi_watch-2026-08-18-10-56-38.png",
+      "preview/xiaomi_watch-2026-08-18-10-59-05.png"
+    ],
+    "icon": "icon.png",
+    "source_url": "https://github.com/pcai7296/wrist-dictionary",
+    "author": [
+      {
+        "name": "睡不着的鸿鹄"
+      }
+    ]
+  },
+  "downloads": {
+    "o66": {
+      "version": "3.0.0",
+      "file_name": "com.watch.dic.w212.release.3.0.0.rpk"
+    },
+    "o66nfc": {
+      "version": "3.0.0",
+      "file_name": "com.watch.dic.w212.release.3.0.0.rpk"
+    }
+  }
+}

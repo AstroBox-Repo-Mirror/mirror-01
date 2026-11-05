@@ -1,0 +1,128 @@
+{
+  "item": {
+    "id": "979848633475",
+    "restype": "watchface",
+    "name": "Dot Ring",
+    "description": "DOT RING_黑白断环点阵_圆点数字\n复刻 CMF dot, 白色断环包住圆点时间, 简约设计, 免费自取\n目前支持小米手环 10 / 11 / 9 Pro / 10 Pro / REDMI Watch 6\n更新：加了 REDMI Watch 6 版\n欢迎在小红书关注我 @叫我Brin就好, 我会主要在 astrobox 平台更新资源\n\n更新日志\n10.27 Pro 版: 息屏的时间和日期整体挪到屏幕正中间了, 之前偏下\n10.26 Pro 版: 时间挪到正中间了, 之前有点偏左; 右下角的 Steps 换成了心率, 步数后面加了个 st\n10.18 新增小米手环 9 Pro / 10 Pro, 方屏单独排版",
+    "preview": [
+      "media/00-预览-RW6-Pro.webp",
+      "media/00-预览-Pro适配.webp",
+      "media/03-预览-断环海报.png",
+      "media/04-预览-浅灰产品.png",
+      "media/05-预览-办公室佩戴.png"
+    ],
+    "icon": "media/01-图标-1比1.png",
+    "cover": "media/02-封面-3比2-三机.webp",
+    "author": [
+      {
+        "name": "brin",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "小红书介绍链接",
+      "url": "https://xhslink.cn/o/91Mx03I6u84",
+      "icon": "book-bookmark"
+    }
+  ],
+  "downloads": {
+    "xmrw6": {
+      "version": "0.0.0",
+      "file_name": "downloads/Dot Ring RW6.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增 REDMI Watch 6 支持"
+        }
+      ]
+    },
+    "xmb9p": {
+      "version": "0.0.2",
+      "file_name": "downloads/Dot Ring Pro.face",
+      "versionCode": 2,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增小米手环 9 Pro / 10 Pro 支持（方屏专用包）"
+        },
+        {
+          "version": "0.0.1",
+          "content": "Pro 版更新：时间居中，加了心率，步数后加 st"
+        },
+        {
+          "version": "0.0.2",
+          "content": "Pro 版更新：息屏的时间和日期整体上下居中，之前偏下"
+        }
+      ]
+    },
+    "xmb10p": {
+      "version": "0.0.2",
+      "file_name": "downloads/Dot Ring Pro.face",
+      "versionCode": 2,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增小米手环 9 Pro / 10 Pro 支持（方屏专用包）"
+        },
+        {
+          "version": "0.0.1",
+          "content": "Pro 版更新：时间居中，加了心率，步数后加 st"
+        },
+        {
+          "version": "0.0.2",
+          "content": "Pro 版更新：息屏的时间和日期整体上下居中，之前偏下"
+        }
+      ]
+    },
+    "xmb11": {
+      "version": "0.0.1",
+      "file_name": "downloads/Dot Ring.face",
+      "versionCode": 1,
+      "updatelogs": [
+        {
+          "version": "0.0.1",
+          "content": "原版包改为加密发放（内容不变）"
+        }
+      ]
+    },
+    "xmb11nfc": {
+      "version": "0.0.1",
+      "file_name": "downloads/Dot Ring.face",
+      "versionCode": 1,
+      "updatelogs": [
+        {
+          "version": "0.0.1",
+          "content": "原版包改为加密发放（内容不变）"
+        }
+      ]
+    },
+    "xmb10nfc": {
+      "version": "0.0.1",
+      "file_name": "downloads/Dot Ring.face",
+      "versionCode": 1,
+      "updatelogs": [
+        {
+          "version": "0.0.1",
+          "content": "原版包改为加密发放（内容不变）"
+        }
+      ]
+    },
+    "xmb10": {
+      "version": "0.0.1",
+      "file_name": "downloads/Dot Ring.face",
+      "versionCode": 1,
+      "updatelogs": [
+        {
+          "version": "0.0.1",
+          "content": "原版包改为加密发放（内容不变）"
+        }
+      ]
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

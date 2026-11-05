@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#161316">
+<title>甜蜜女友2 · 导入器</title>
+<link rel="icon" href="assets/icon.png">
+<link rel="stylesheet" href="assets/fonts/Regular/MiSans-Regular.min.css">
+<link rel="stylesheet" href="assets/fonts/Medium/MiSans-Medium.min.css">
+<link rel="stylesheet" href="assets/fonts/Semibold/MiSans-Semibold.min.css">
+<style>
+:root{
+  --bg:#161316; --surface:#211C20; --soft:#2C2529; --strong:#3A3136;
+  --line:rgba(255,255,255,.07); --line-soft:rgba(255,255,255,.045);
+  --text:#F5F0F2; --sub:#B8ACB2; --dim:#9A8D94;
+  --accent:#E59BB4; --accent-deep:#BE4E77;
+  --ok:#8FBC9B; --warn:#D8AE6A; --bad:#D98A7C;
+  --track:rgba(255,255,255,.08);
+  --pad:16px; --nav-h:60px;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{height:100%}
+body{
+  background:var(--bg);color:var(--text);
+  font:400 14px/1.6 MiSans,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif;
+  -webkit-font-smoothing:antialiased;overscroll-behavior-y:none;
+}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer;touch-action:manipulation}
+input,textarea{font:inherit;color:inherit;border:0;outline:none}
+::-webkit-scrollbar{display:none}
+.num{font-variant-numeric:tabular-nums}
+.ic{display:inline-flex;flex-shrink:0;vertical-align:middle}
+.ic svg{width:100%;height:100%;stroke-width:1.6}
+
+/* ---------- 外壳 ---------- */
+#app{max-width:520px;margin:0 auto;min-height:100%;display:flex;flex-direction:column}
+#topbar{display:flex;align-items:center;gap:10px;padding:14px var(--pad) 12px}
+#topbar .mark{width:30px;height:30px;border-radius:8px;flex-shrink:0}
+#topbar .name{font-size:16px;font-weight:600;letter-spacing:.2px}
+#topbar .dev{margin-left:auto;display:flex;align-items:center;gap:6px;font-size:12px;color:var(--sub)}
+#topbar .dev .dot{width:5px;height:5px;border-radius:50%;background:var(--ok)}
+#topbar .dev.off .dot{background:var(--bad)}
+
+/* 传输状态区：外壳，切页不重建、不动画 */
+#transfer{margin:0 var(--pad) 4px;min-height:30px}
+#transfer .idle{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--dim);padding:6px 2px 10px}
+#transfer .idle .ic{width:14px;height:14px}
+#transfer .box{background:var(--surface);border-radius:14px;padding:13px 15px}
+#transfer .t-row{display:flex;align-items:center;gap:8px}
+#transfer .t-name{font-size:14px;font-weight:500;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#transfer .t-pct{font-size:16px;font-weight:500;color:var(--accent)}
+#transfer.held .t-pct{color:var(--warn)}
+#transfer .bar{height:4px;background:var(--track);border-radius:2px;margin:11px 0 8px;overflow:hidden}
+#transfer .bar>i{display:block;height:100%;background:var(--accent);border-radius:2px;transition:width .3s linear}
+#transfer.held .bar>i{background:var(--warn)}
+#transfer .t-meta{display:flex;justify-content:space-between;font-size:12px;color:var(--dim)}
+#transfer .t-ops{display:flex;gap:8px;margin-top:11px}
+
+#view{flex:1;padding:6px var(--pad) calc(var(--nav-h) + 24px + env(safe-area-inset-bottom))}
+
+/* 底栏：实心，无模糊，选中靠颜色 */
+#navbar{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:520px;display:flex;background:#1A1619;border-top:1px solid var(--line);padding:6px 4px calc(6px + env(safe-area-inset-bottom));z-index:20}
+#navbar button{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;padding:7px 0 5px;color:var(--dim)}
+#navbar button.on{color:var(--accent)}
+#navbar button .ic{width:21px;height:21px}
+#navbar button .lb{font-size:10.5px;letter-spacing:.5px}
+#navbar .wrap{position:relative;display:flex;flex-direction:column;align-items:center;gap:4px}
+#navbar .nb{position:absolute;top:-3px;right:-10px;min-width:13px;height:13px;padding:0 3px;background:var(--accent-deep);color:#fff;font-size:9px;border-radius:7px;display:grid;place-items:center;font-weight:600}
+
+/* ---------- 动效 ---------- */
+/* 缓出曲线：起步快、收尾长，接近 iOS 的自然感，不回弹 */
+:root{--ease:cubic-bezier(.22,1,.36,1);--press:cubic-bezier(.3,.7,.4,1)}
+
+/* 内容区入场：整页淡入 + 各块错落上浮（只作用内容区，传输卡/外壳不参与） */
+.page{animation:pageIn .3s var(--ease) both}
+.page>*{animation:rise .42s var(--ease) both;animation-delay:calc(var(--i,0)*45ms)}
+@keyframes pageIn{from{opacity:0}to{opacity:1}}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+
+/* 按下即时反馈：pointer-down 就缩放，不等 click */
+.btn{transition:transform .12s var(--press),opacity .12s,background .18s}
+.btn:active{transform:scale(.95);opacity:.85}
+.ibtn{transition:transform .12s var(--press),background .15s}
+.ibtn:active{transform:scale(.85)}
+.chip{transition:background .2s,color .2s,transform .12s var(--press)}
+.chip:active{transform:scale(.93)}
+.seg button{transition:background .2s,color .2s}
+#navbar button{transition:color .2s}
+#navbar button .ic{transition:transform .25s var(--ease)}
+#navbar button.on .ic{transform:translateY(-1px)}
+#navbar button:active .ic{transform:scale(.85)}
+
+/* 统计条形图：入场时从 0 长到真实值 */
+.day .b>i{transform-origin:left;animation:growX .55s var(--ease) both;animation-delay:calc(.15s + var(--i,0)*45ms)}
+@keyframes growX{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+/* 大数字入场：轻微上浮即可，不滚动计数（读数类不需要表演） */
+.stat-lead .v{animation:rise .45s var(--ease) both}
+
+@media (prefers-reduced-motion:reduce){
+  .page,.page>*,.day .b>i,.stat-lead .v{animation:none!important}
+  .btn:active,.ibtn:active,.chip:active{transform:none}
+}
+
+/* ---------- 通用 ---------- */
+.sec{font-size:13px;color:var(--dim);margin:24px 2px 9px;display:flex;align-items:center;justify-content:space-between}
+.sec:first-child{margin-top:4px}
+.sec .lk{font-size:12.5px;color:var(--sub)}
+.panel{background:var(--surface);border-radius:14px;padding:2px 15px}
+.kv{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px 0;border-bottom:1px solid var(--line-soft);font-size:14px}
+.kv:last-child{border:0}
+.kv .k{color:var(--sub)}
+.kv .v{font-weight:500}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;height:36px;padding:0 16px;border-radius:9px;font-size:13px;font-weight:500;background:var(--accent-deep);color:#fff;transition:opacity .12s}
+.btn:active{opacity:.7}
+.btn.ghost{background:var(--soft);color:var(--sub)}
+.btn.text{background:none;color:var(--sub);padding:0 6px}
+.btn.sm{height:31px;padding:0 13px;font-size:12.5px;border-radius:8px}
+.btn.block{width:100%;height:45px;border-radius:12px;font-size:14px}
+.btn:disabled{opacity:.35;pointer-events:none}
+.btn .ic{width:15px;height:15px}
+
+.tag{display:inline-block;font-size:11px;font-weight:500;padding:2px 7px;border-radius:6px;line-height:1.5;white-space:nowrap;background:var(--soft);color:var(--sub)}
+.tag.ok{color:var(--ok)} .tag.warn{color:var(--warn)} .tag.acc{color:var(--accent)} .tag.bad{color:var(--bad)}
+.foot-note{font-size:12px;color:var(--dim);line-height:1.85;margin-top:18px;text-align:center;letter-spacing:.01em}
+.empty{padding:30px 0;text-align:center;color:var(--dim);font-size:13px}
+
+/* ---------- 推送 ---------- */
+.filters{display:flex;gap:8px;overflow-x:auto;padding:2px 0 4px;margin:0 calc(var(--pad)*-1);padding-left:var(--pad);padding-right:var(--pad)}
+.chip{flex-shrink:0;font-size:13px;padding:7px 15px;border-radius:9px;color:var(--dim);background:var(--surface)}
+.chip.on{color:var(--accent);background:var(--soft)}
+.chap{padding:14px 0;border-bottom:1px solid var(--line-soft)}
+.chap:last-child{border-bottom:0}
+.chap .l1{display:flex;align-items:center;gap:8px}
+.chap .t{font-size:15px;font-weight:500;flex:1;min-width:0}
+.chap .l2{display:flex;align-items:center;gap:12px;margin-top:6px}
+.chap .meta{font-size:12px;color:var(--dim);flex:1;letter-spacing:.01em}
+.chap .ops{display:flex;gap:8px;flex-shrink:0}
+.chap .prog{height:3px;background:var(--track);border-radius:2px;margin-top:10px;overflow:hidden}
+.chap .prog>i{display:block;height:100%;background:var(--accent)}
+
+/* ---------- 存档 ---------- */
+.saves-ops{display:flex;gap:10px;margin-top:4px}
+.saves-ops .btn{flex:1;height:41px;border-radius:11px;font-size:13px}
+.save-row{display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid var(--line-soft)}
+.save-row:last-child{border:0}
+.save-row .info{flex:1;min-width:0}
+.save-row .t{font-size:15px;font-weight:500;display:flex;align-items:center;gap:7px;flex-wrap:wrap}
+.save-row .m{font-size:12px;color:var(--dim);margin-top:4px;letter-spacing:.01em}
+.save-row .ops{display:flex;gap:2px}
+.ibtn{width:36px;height:36px;display:grid;place-items:center;border-radius:9px;color:var(--sub)}
+.ibtn:active{background:var(--soft)}
+.ibtn .ic{width:16px;height:16px}
+.ibtn.warn{color:var(--bad)}
+
+/* ---------- 统计 ---------- */
+.stat-lead{padding:14px 2px 4px}
+.stat-lead .v{font-size:30px;font-weight:500;letter-spacing:-.02em;line-height:1.15}
+.stat-lead .v small{font-size:14px;font-weight:400;color:var(--sub);margin-left:3px;letter-spacing:0}
+.stat-lead .k{font-size:12px;color:var(--dim);margin-top:5px;letter-spacing:.01em}
+.day{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--line-soft)}
+.day:last-child{border:0}
+.day .d{font-size:12.5px;color:var(--sub);width:48px;flex-shrink:0}
+.day .b{flex:1;height:4px;background:var(--track);border-radius:2px;overflow:hidden}
+.day .b>i{display:block;height:100%;background:var(--accent);border-radius:2px}
+.day .v{font-size:12px;color:var(--dim);width:48px;text-align:right;flex-shrink:0}
+
+/* ---------- 账号 ---------- */
+.acct-head{display:flex;align-items:center;gap:14px;padding:18px 15px;background:var(--surface);border-radius:14px}
+.acct-head .avatar{width:52px;height:52px;border-radius:50%;background:var(--soft);flex-shrink:0;display:grid;place-items:center;color:var(--dim);overflow:hidden;border:2px solid rgba(229,155,180,.35)}
+.acct-head .avatar .ic{width:24px;height:24px}
+.acct-head .avatar img{width:100%;height:100%;object-fit:cover}
+.acct-head .who{flex:1;min-width:0}
+.acct-head .nm{font-size:16px;font-weight:600}
+.acct-head .sub{font-size:12px;color:var(--dim);margin-top:3px}
+.bind-code{display:flex;gap:8px;margin-top:12px}
+.code-display{display:flex;align-items:center;gap:12px;margin-top:14px;background:var(--bg);border:1px dashed var(--line);border-radius:11px;padding:14px 16px}
+.code-text{flex:1;font-size:24px;font-weight:600;letter-spacing:3px;color:var(--accent)}
+.copy-btn{display:flex;flex-direction:column;align-items:center;gap:3px;padding:8px 12px;border-radius:9px;background:var(--soft);color:var(--sub);transition:transform .12s var(--press),background .15s}
+.copy-btn:active{transform:scale(.9);background:var(--strong)}
+.copy-btn .ic{width:17px;height:17px}
+.copy-btn span{font-size:11px}
+.bind-foot{display:flex;align-items:center;justify-content:space-between;margin-top:12px}
+.bind-expire{font-size:12px;color:var(--warn)}
+.bind-code input{flex:1;background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:11px 14px;font-size:16px;letter-spacing:4px;text-align:center;font-weight:500}
+.bind-code input::placeholder{color:var(--dim);letter-spacing:2px;font-size:13px;font-weight:400}
+.bind-code .btn{height:auto;padding:0 18px}
+
+/* ---------- 设置 ---------- */
+.set-row{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 0;border-bottom:1px solid var(--line-soft)}
+.set-row:last-child{border:0}
+.set-row .l{flex:1;min-width:0}
+.set-row .t{font-size:14px}
+.set-row .d{font-size:12px;color:var(--dim);margin-top:4px;line-height:1.65;letter-spacing:.01em}
+.seg{display:flex;background:var(--soft);border-radius:9px;padding:3px;gap:2px;flex-shrink:0}
+.seg button{font-size:12.5px;padding:6px 15px;border-radius:7px;color:var(--dim)}
+.seg button.on{background:var(--accent-deep);color:#fff}
+.sw{width:42px;height:25px;border-radius:13px;background:var(--strong);position:relative;transition:background .2s;flex-shrink:0}
+.sw::after{content:"";position:absolute;top:3px;left:3px;width:19px;height:19px;border-radius:50%;background:#fff;transition:transform .2s}
+.sw.on{background:var(--accent-deep)}
+.sw.on::after{transform:translateX(17px)}
+.log{font-size:11.5px;color:var(--dim);padding:7px 0;border-bottom:1px solid var(--line-soft);line-height:1.65;word-break:break-all;letter-spacing:.01em}
+.log:last-child{border:0}
+.log .w{color:var(--warn)} .log .e{color:var(--bad)}
+.about{display:flex;justify-content:space-between;font-size:13px;padding:9px 0;color:var(--sub);border-bottom:1px solid var(--line-soft)}
+.about:last-child{border:0}
+.about span:last-child{color:var(--dim)}
+
+/* ---------- 弹层 ---------- */
+#mask{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:40;opacity:0;pointer-events:none;transition:opacity .2s}
+#mask.show{opacity:1;pointer-events:auto}
+#sheet{position:fixed;bottom:0;left:50%;transform:translate(-50%,100%);width:100%;max-width:520px;background:var(--surface);border-radius:16px 16px 0 0;padding:20px 20px calc(20px + env(safe-area-inset-bottom));z-index:41;transition:transform .25s cubic-bezier(.3,.7,.3,1)}
+#sheet.show{transform:translate(-50%,0)}
+#sheet h3{font-size:16px;font-weight:600;margin-bottom:10px}
+#sheet p{font-size:13px;color:var(--sub);line-height:1.85;margin-bottom:18px}
+#sheet .ops{display:flex;gap:10px}
+#sheet .ops .btn{flex:1;height:43px;border-radius:11px}
+#sheet textarea{width:100%;height:130px;background:var(--bg);border:1px solid var(--line);border-radius:10px;font-size:11.5px;padding:11px;resize:none;line-height:1.6;font-family:ui-monospace,monospace}
+@media (prefers-reduced-motion:reduce){#sheet{transition:opacity .2s;transform:translate(-50%,0)!important;opacity:0}#sheet.show{opacity:1}}
+
+#toast{position:fixed;top:64px;left:50%;transform:translate(-50%,-10px);z-index:50;background:var(--strong);color:var(--text);font-size:13px;padding:11px 20px;border-radius:11px;opacity:0;pointer-events:none;transition:all .22s;max-width:86%;text-align:center}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="topbar">
+    <img class="mark" src="assets/icon.png" alt="">
+    <h1 class="name">甜蜜女友2</h1>
+    <span class="dev" id="dev"><i class="dot"></i><span id="dev-name">小米手环 10 Pro</span></span>
+  </div>
+  <div id="transfer"></div>
+  <div id="view"></div>
+  <nav id="navbar"></nav>
+</div>
+<div id="mask" onclick="closeSheet()"></div>
+<div id="sheet"></div>
+<div id="toast"></div>
+
+<script>
+const ICON_PATHS={
+  'book-open':'<path d="M12 5v16"/><path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z"/>',
+  'archive':'<rect width="20" height="5" x="2" y="3" rx="1"/><path d="M4 8v11a2 2 0 002 2h12a2 2 0 002-2V8"/><path d="M10 12h4"/>',
+  'bar-chart-3':'<path d="M3 3v16a2 2 0 002 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/>',
+  'settings':'<path d="M12.22 2h-.44a2 2 0 00-2 2v.18a2 2 0 01-1 1.73l-.43.25a2 2 0 01-2 0l-.15-.08a2 2 0 00-2.73.73l-.22.38a2 2 0 00.73 2.73l.15.1a2 2 0 011 1.72v.51a2 2 0 01-1 1.74l-.15.09a2 2 0 00-.73 2.73l.22.38a2 2 0 002.73.73l.15-.08a2 2 0 012 0l.43.25a2 2 0 011 1.73V20a2 2 0 002 2h.44a2 2 0 002-2v-.18a2 2 0 011-1.73l.43-.25a2 2 0 012 0l.15.08a2 2 0 002.73-.73l.22-.39a2 2 0 00-.73-2.73l-.15-.08a2 2 0 01-1-1.74v-.5a2 2 0 011-1.74l.15-.09a2 2 0 00.73-2.73l-.22-.38a2 2 0 00-2.73-.73l-.15.08a2 2 0 01-2 0l-.43-.25a2 2 0 01-1-1.73V4a2 2 0 00-2-2z"/><circle cx="12" cy="12" r="3"/>',
+  'user':'<path d="M19 21v-2a4 4 0 00-4-4H9a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>',
+  'download':'<path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/>',
+  'upload':'<path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" x2="12" y1="3" y2="15"/>',
+  'trash-2':'<path d="M3 6h18"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6"/><path d="M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2"/><line x1="10" x2="10" y1="11" y2="17"/><line x1="14" x2="14" y1="11" y2="17"/>',
+  'play':'<polygon points="6 3 20 12 6 21 6 3"/>',
+  'pause':'<rect x="14" y="4" width="4" height="16" rx="1"/><rect x="6" y="4" width="4" height="16" rx="1"/>',
+  'check':'<path d="M20 6 9 17l-5-5"/>',
+  'refresh-cw':'<path d="M3 12a9 9 0 019-9 9.75 9.75 0 016.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 01-9 9 9.75 9.75 0 01-6.74-2.74L3 16"/><path d="M8 16H3v5"/>',
+  'cloud':'<path d="M17.5 19H9a7 7 0 116.71-9h1.79a4.5 4.5 0 110 9Z"/>',
+  'link':'<path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/>',
+  'link-off':'<path d="m18.84 12.25 1.72-1.71a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="m5.17 11.75-1.72 1.71a5 5 0 007.07 7.07l1.72-1.71"/><path d="M8 2v3"/><path d="M2 8h3"/><path d="m16 19-3 3"/><path d="M19 16h3"/><path d="m2 2 20 20"/>',
+  'log-in':'<path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" x2="3" y1="12" y2="12"/>',
+  'log-out':'<path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" x2="9" y1="12" y2="12"/>',
+  'copy':'<rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>',
+  'shield':'<path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 01-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 011-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 011.52 0C14.51 3.81 17 5 19 5a1 1 0 011 1z"/>',
+};
+function icon(n,c){return `<span class="ic ${c||''}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">${ICON_PATHS[n]||''}</svg></span>`}
+
+/* ============ 数据（模拟；接入时 store←轮询 /api/state，act←POST /api/action） ============ */
+const PACKS=[
+  {file:'p00',title:'公共资源',bytes:5369366,minutes:0,kind:'resource'},
+  {file:'p01',title:'共通线 · 第1-5章',bytes:404880,minutes:338,line:'共通线'},
+  {file:'p02',title:'千岁线 · 第6-8章',bytes:2142298,minutes:709,line:'千岁线'},
+  {file:'p03',title:'玲线 · 第9-11章',bytes:2680393,minutes:751,line:'玲线'},
+  {file:'p04',title:'结灯线 · 第12-14章',bytes:2939960,minutes:799,line:'结灯线'},
+  {file:'p05',title:'番外 · 第15章',bytes:224344,minutes:52,line:'番外'},
+];
+const store={
+  tab:'push',filter:'全部',connected:true,
+  transfer:{pack:'p03',pct:62,speed:41.2,eta:'1 分 12 秒',state:'run',queue:['p04']},
+  installed:{p00:true,p01:true,p02:true},partial:{},
+  settings:{mode:'steady',autoResume:true,keepCache:true},
+  saves:[
+    {slot:'自动',title:'玲线 · 第9章',scene:'sc09_021',at:'10-30 22:41',auto:true},
+    {slot:'1',title:'千岁线 · 第7章',scene:'sc07_104',at:'10-28 21:05'},
+    {slot:'2',title:'共通线 · 第3章',scene:'sc03_067',at:'10-25 23:18'},
+  ],
+  stats:{days:12,totalMin:1864,todayMin:47,bestDayMin:213,
+    recent:[['10-30',47],['10-29',96],['10-28',132],['10-27',0],['10-26',64],['10-25',213],['10-24',88]]},
+  account:{signedIn:true,name:'其核',username:'qihe114514',avatar:null,
+    phase:'synced',           // signed-out | unbound | syncing | synced | offline | failed
+    lastSync:'今天 13:48',boundDevice:'小米手环 10 Pro',cloudSlots:5,cloudChapter:'玲线 · 第9章',
+    bindCode:null,bindExpire:null},   // 生成的一次性绑定码与到期时刻
+  logs:[
+    ['i','14:02:11','p03.pack 分片 812/1290 已确认'],
+    ['i','14:02:09','窗口 6 → 8（连续 32 片无 gap）'],
+    ['w','14:01:58','第 803 片超时 1 次，已重发'],
+    ['i','14:01:40','手环能力协商 syncProtocol=3 stats=1'],
+    ['i','14:01:36','已连接 小米手环 10 Pro'],
+  ],
+};
+const $=s=>document.querySelector(s);
+const fmtSize=b=>b>=1048576?(b/1048576).toFixed(1)+' MB':Math.round(b/1024)+' KB';
+const fmtMin=m=>m>=60?Math.floor(m/60)+' 小时'+(m%60?' '+(m%60)+' 分':''):m+' 分钟';
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let tt;
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(tt);tt=setTimeout(()=>t.classList.remove('show'),2200)}
+function openSheet(h){$('#sheet').innerHTML=h;$('#sheet').classList.add('show');$('#mask').classList.add('show')}
+function closeSheet(){$('#sheet').classList.remove('show');$('#mask').classList.remove('show')}
+const packOf=f=>PACKS.find(p=>p.file===f);
+function fallbackCopy(text,done){
+  const ta=document.createElement('textarea');ta.value=text;ta.style.cssText='position:fixed;opacity:0;top:0;left:0';
+  document.body.appendChild(ta);ta.focus();ta.select();
+  try{document.execCommand('copy');done()}catch(e){toast('复制失败，请手动长按复制')}
+  document.body.removeChild(ta);
+}
+function addLog(lv,m){const d=new Date(),ts=[d.getHours(),d.getMinutes(),d.getSeconds()].map(n=>String(n).padStart(2,'0')).join(':');store.logs.unshift([lv,ts,m]);if(store.logs.length>60)store.logs.pop()}
+
+setInterval(()=>{
+  const t=store.transfer;if(!t||t.state!=='run')return;
+  t.pct=Math.min(100,+(t.pct+0.35).toFixed(2));t.speed=+(38+Math.random()*8).toFixed(1);
+  if(t.pct>=100){
+    store.installed[t.pack]=true;delete store.partial[t.pack];
+    addLog('i',t.pack+'.pack 同步完成');toast(packOf(t.pack).title+' 同步完成');
+    if(t.queue.length){const n=t.queue.shift();store.transfer={pack:n,pct:store.partial[n]||0,speed:t.speed,eta:'计算中',state:'run',queue:t.queue}}
+    else store.transfer=null;
+    render();return;
+  }
+  renderTransfer();
+},400);
+
+/* ============ 动作 ============ */
+function act(name,arg){
+  const a=store.account;
+  switch(name){
+    case 'tab': store.tab=arg;closeSheet();render();break;
+    case 'filter': store.filter=arg;render();break;
+    case 'sync':{
+      if(store.transfer){store.transfer.queue.push(arg);toast('已加入队列');render();return}
+      if(!store.installed.p00&&arg!=='p00'){toast('请先同步公共资源');return}
+      store.transfer={pack:arg,pct:store.partial[arg]||0,speed:0,eta:'计算中',state:'run',queue:[]};
+      addLog('i','开始同步 '+arg+'.pack');render();break;
+    }
+    case 'sync-all':{
+      const rest=PACKS.filter(p=>!store.installed[p.file]&&p.file!=='p00');
+      if(!rest.length){toast('全部章节已安装');return}
+      if(store.transfer){toast('已有传输任务');return}
+      const[f,...q]=rest.map(p=>p.file);
+      store.transfer={pack:f,pct:store.partial[f]||0,speed:0,eta:'计算中',state:'run',queue:q};
+      toast('已排队 '+rest.length+' 章');render();break;
+    }
+    case 'pause': if(store.transfer){store.transfer.state='held';store.partial[store.transfer.pack]=Math.floor(store.transfer.pct);render()}break;
+    case 'resume': if(store.transfer){store.transfer.state='run';delete store.partial[store.transfer.pack];render()}break;
+    case 'cancel': store.transfer=null;toast('传输已取消');render();break;
+    case 'uninstall':{
+      const p=packOf(arg);
+      openSheet(`<h3>删除「${esc(p.title)}」？</h3><p>从手环删除该章节（${fmtSize(p.bytes)}），删除后需重新同步才能阅读。不影响存档。</p>
+        <div class="ops"><button class="btn ghost" onclick="closeSheet()">取消</button>
+        <button class="btn" style="background:var(--bad)" onclick="act('uninstall-yes','${arg}')">删除</button></div>`);break;
+    }
+    case 'uninstall-yes': delete store.installed[arg];closeSheet();toast('已删除');addLog('i','手环删除 '+arg);render();break;
+    case 'export-saves':
+      openSheet(`<h3>导出存档</h3><p>已复制 ${store.saves.length} 个存档。粘贴到备忘录或任意文本文件保存，建议文件名 amakano2-saves-2026-10-31.json。</p>
+        <textarea readonly>${esc(JSON.stringify({format:'amakano2-saves',save_version:1,saves:store.saves},null,2))}</textarea>
+        <div class="ops" style="margin-top:14px"><button class="btn block" onclick="closeSheet();toast('已复制到剪贴板')">复制</button></div>`);break;
+    case 'import-saves':
+      openSheet(`<h3>从剪贴板导入</h3><p>粘贴之前导出的存档 JSON（整段），按 savedAt 并入手环，重复自动跳过。</p>
+        <textarea placeholder='{"format":"amakano2-saves", …}'></textarea>
+        <div class="ops" style="margin-top:14px"><button class="btn ghost" onclick="closeSheet()">取消</button>
+        <button class="btn" onclick="closeSheet();toast('导入 2 个存档，跳过 1 个重复')">导入</button></div>`);break;
+    case 'load-save': toast('已设为继续阅读：'+arg);break;
+    case 'del-save':
+      openSheet(`<h3>删除存档？</h3><p>删除手环上「${esc(arg)}」这条存档，不可恢复。</p>
+        <div class="ops"><button class="btn ghost" onclick="closeSheet()">取消</button>
+        <button class="btn" style="background:var(--bad)" onclick="store.saves=store.saves.filter(s=>s.title!=='${esc(arg)}');closeSheet();render();toast('存档已删除')">删除</button></div>`);break;
+    case 'mode': store.settings.mode=arg;toast(arg==='turbo'?'激进档：窗口 12 片起':'正常档：稳定优先');render();break;
+    case 'toggle': store.settings[arg]=!store.settings[arg];render();break;
+    case 'clear-logs': store.logs=[];render();break;
+    case 'device':
+      openSheet(`<h3>设备与连接</h3><p>小米手环 10 Pro · 已连接<br>syncProtocol v3 · 统计 v1<br>《甜蜜女友2》v3.0.7 已安装</p>
+        <div class="ops"><button class="btn ghost block" onclick="closeSheet();toast('正在重新读取手环状态')">刷新状态</button></div>`);break;
+    /* ---- 账号 ---- */
+    case 'login': a.signedIn=true;a.phase='unbound';render();toast('已登录 AstroBox');break;
+    case 'logout':
+      openSheet(`<h3>退出登录？</h3><p>退出后本机不再自动同步云存档，云端已保存的存档保留。</p>
+        <div class="ops"><button class="btn ghost" onclick="closeSheet()">取消</button>
+        <button class="btn" style="background:var(--bad)" onclick="store.account.signedIn=false;store.account.phase='signed-out';closeSheet();render()">退出</button></div>`);break;
+    case 'gen-code':{
+      // 生成一次性绑定码（真实：POST /account/binding-code），10 分钟有效
+      a.bindCode=String(Math.floor(100000+Math.random()*900000));
+      a.bindExpire=Date.now()+10*60*1000;
+      render(false);break;
+    }
+    case 'copy-bind':{
+      const cmd='绑定'+a.bindCode;   // 完整命令，无空格，粘贴到 QQ 群即可发送
+      const done=()=>{toast('已复制「'+cmd+'」，去 QQ 群粘贴发送')};
+      if(navigator.clipboard&&navigator.clipboard.writeText){
+        navigator.clipboard.writeText(cmd).then(done).catch(()=>fallbackCopy(cmd,done));
+      }else fallbackCopy(cmd,done);
+      break;
+    }
+    case 'check-bind':
+      // 真实：轮询 /account/session 看 QQ 是否已绑定；这里模拟发完命令后绑定成功
+      a.phase='syncing';render();
+      setTimeout(()=>{a.phase='synced';a.boundDevice='小米手环 10 Pro';a.lastSync='刚刚';a.bindCode=null;a.bindExpire=null;render(false);toast('绑定成功，已开始同步')},900);
+      break;
+    case 'unbind':
+      openSheet(`<h3>解绑手环？</h3><p>解绑后这台手环的存档不再上传到云端，云端已有存档保留。</p>
+        <div class="ops"><button class="btn ghost" onclick="closeSheet()">取消</button>
+        <button class="btn" style="background:var(--bad)" onclick="store.account.phase='unbound';store.account.boundDevice=null;closeSheet();render();toast('已解绑')">解绑</button></div>`);break;
+    case 'sync-now':
+      a.phase='syncing';render();
+      setTimeout(()=>{a.phase='synced';a.lastSync='刚刚';render();toast('云存档已同步')},1100);break;
+  }
+}
+
+/* ============ 渲染 ============ */
+const TABS=[['push','book-open','推送'],['saves','archive','存档'],['stats','bar-chart-3','统计'],['account','user','账号'],['settings','settings','设置']];
+function renderNav(){
+  $('#navbar').innerHTML=TABS.map(([id,ic,lb])=>
+    `<button class="${store.tab===id?'on':''}" onclick="act('tab','${id}')" aria-label="${lb}">
+      <span class="wrap">${icon(ic)}<span class="lb">${lb}</span>${id==='push'&&store.transfer?'<span class="nb">1</span>':''}</span>
+    </button>`).join('');
+}
+function renderTransfer(){
+  const t=store.transfer,el=$('#transfer');
+  el.classList.toggle('held',!!(t&&t.state==='held'));
+  if(!t){
+    const hk=Object.keys(store.partial)[0];
+    if(hk){const p=packOf(hk);
+      el.innerHTML=`<div class="box"><div class="t-row"><span class="t-name">断点待续 · ${esc(p.title)}</span><span class="t-pct num">${store.partial[hk]}%</span></div>
+        <div class="bar"><i style="width:${store.partial[hk]}%"></i></div>
+        <div class="t-ops"><button class="btn sm" onclick="act('sync','${hk}')">${icon('play')}继续传输</button></div></div>`;
+    }else el.innerHTML=`<div class="idle">${icon('check')}<span>手环已连接，没有传输任务</span></div>`;
+    return;
+  }
+  const p=packOf(t.pack),held=t.state==='held';
+  el.innerHTML=`<div class="box">
+    <div class="t-row"><span class="t-name">${esc(p.title)}${t.queue.length?` <span class="tag">队列 +${t.queue.length}</span>`:''}</span><span class="t-pct num">${Math.floor(t.pct)}%</span></div>
+    <div class="bar"><i style="width:${t.pct}%"></i></div>
+    <div class="t-meta"><span class="num">${t.speed.toFixed(1)} KB/s · 剩余 ${t.eta}</span><span class="num">${fmtSize(p.bytes*t.pct/100)} / ${fmtSize(p.bytes)}</span></div>
+    <div class="t-ops">${held?`<button class="btn sm" onclick="act('resume')">${icon('play')}继续</button>`:`<button class="btn sm ghost" onclick="act('pause')">${icon('pause')}暂停</button>`}<button class="btn sm ghost" onclick="act('cancel')">取消</button></div>
+  </div>`;
+}
+
+function pushHTML(){
+  const lines=['全部','共通线','千岁线','玲线','结灯线','番外'];
+  const list=PACKS.filter(p=>store.filter==='全部'||p.line===store.filter||(store.filter==='共通线'&&p.kind==='resource'));
+  const rest=PACKS.filter(p=>!store.installed[p.file]&&p.file!=='p00').length;
+  return `
+  <div class="filters">${lines.map(l=>`<button class="chip ${store.filter===l?'on':''}" onclick="act('filter','${l}')">${l}</button>`).join('')}</div>
+  <div class="panel" style="margin-top:10px">
+  ${list.map(p=>{
+    const done=!!store.installed[p.file],cur=store.transfer&&store.transfer.pack===p.file,part=store.partial[p.file];
+    return `<div class="chap">
+      <div class="l1"><span class="t">${esc(p.title)}${p.kind==='resource'?' <span class="tag">先同步</span>':''}</span>
+        ${done?`<span class="tag ok">已安装</span>`:part?`<span class="tag warn">待续传</span>`:cur?`<span class="tag acc">传输中</span>`:''}</div>
+      <div class="l2"><span class="meta num">${fmtSize(p.bytes)}${p.minutes?' · 约 '+fmtMin(p.minutes):' · 跨章共享场景图'}</span>
+        <span class="ops">${done
+          ?`<button class="btn sm ghost" onclick="act('sync','${p.file}')">重传</button><button class="btn sm text" style="color:var(--bad)" onclick="act('uninstall','${p.file}')">删除</button>`
+          :`<button class="btn sm" onclick="act('sync','${p.file}')">${part?'继续':'同步'}</button>`}</span></div>
+      ${cur?`<div class="prog"><i style="width:${store.transfer.pct}%"></i></div>`:''}
+    </div>`;
+  }).join('')}
+  </div>
+  <button class="btn block" style="margin-top:14px" onclick="act('sync-all')" ${rest?'':'disabled'}>同步剩余 ${rest} 章</button>
+  <p class="foot-note">剧情文本随手环应用安装，插件只推送图片。<br>旧版本章节重传即可覆盖更新。</p>`;
+}
+
+function savesHTML(){
+  return `
+  <div class="saves-ops">
+    <button class="btn ghost" onclick="act('export-saves')">${icon('upload')}导出到剪贴板</button>
+    <button class="btn ghost" onclick="act('import-saves')">${icon('download')}从剪贴板导入</button>
+  </div>
+  <div class="sec">手环上的存档<span class="num">${store.saves.length} / 20</span></div>
+  <div class="panel">
+  ${store.saves.length?store.saves.map(s=>`
+    <div class="save-row"><div class="info">
+        <div class="t">${esc(s.title)}${s.auto?'<span class="tag">自动</span>':`<span class="tag">槽 ${esc(s.slot)}</span>`}</div>
+        <div class="m num">${esc(s.scene)} · ${esc(s.at)}</div></div>
+      <div class="ops">
+        <button class="ibtn" aria-label="读档" onclick="act('load-save','${esc(s.title)}')">${icon('play')}</button>
+        <button class="ibtn warn" aria-label="删除" onclick="act('del-save','${esc(s.title)}')">${icon('trash-2')}</button>
+      </div></div>`).join(''):'<div class="empty">手环上还没有存档</div>'}
+  </div>
+  <p class="foot-note">读档即设为「继续阅读」，下次打开手环应用从该场景继续。<br>存档保存在手环上，换机请先导出。</p>`;
+}
+
+function statsHTML(){
+  const s=store.stats,max=Math.max(...s.recent.map(r=>r[1]),1);
+  return `
+  <div class="stat-lead"><div class="v num">${Math.floor(s.totalMin/60)}<small>小时</small> ${s.totalMin%60}<small>分</small></div><div class="k">总阅读时长</div></div>
+  <div class="panel" style="margin-top:16px">
+    <div class="kv"><span class="k">累计阅读天数</span><span class="v num">${s.days} 天</span></div>
+    <div class="kv"><span class="k">今日阅读</span><span class="v num">${s.todayMin} 分钟</span></div>
+    <div class="kv"><span class="k">单日最长</span><span class="v num">${fmtMin(s.bestDayMin)}</span></div>
+    <div class="kv"><span class="k">日均阅读</span><span class="v num">${Math.round(s.totalMin/s.days)} 分钟</span></div>
+  </div>
+  <div class="sec">最近 7 天</div>
+  <div class="panel" style="padding-top:4px;padding-bottom:4px">
+    ${s.recent.map(([d,m])=>`<div class="day"><span class="d num">${d}</span><div class="b"><i style="width:${m/max*100}%"></i></div><span class="v num">${m?m+' 分':'—'}</span></div>`).join('')}
+  </div>
+  <p class="foot-note">统计由手环侧计算后下发，两端始终一致。</p>`;
+}
+
+function accountHTML(){
+  const a=store.account;
+  if(!a.signedIn){
+    return `
+    <div class="acct-head"><div class="avatar">${icon('user')}</div>
+      <div class="who"><div class="nm">未登录</div><div class="sub">登录 AstroBox 后开启云存档</div></div></div>
+    <button class="btn block" style="margin-top:16px" onclick="act('login')">${icon('log-in')}登录 AstroBox</button>
+    <p class="foot-note">使用 AstroBox 账号登录，插件不接触你的密码。<br>登录后存档自动上传到云端，换手机也能找回。</p>`;
+  }
+  const bound=a.phase!=='unbound';
+  const phaseTag={synced:'<span class="tag ok">已同步</span>',syncing:'<span class="tag acc">同步中…</span>',offline:'<span class="tag warn">离线</span>',failed:'<span class="tag bad">同步失败</span>',unbound:'<span class="tag">未绑定</span>'}[a.phase]||'';
+  return `
+  <div class="acct-head">
+    <div class="avatar">${a.avatar?`<img src="${a.avatar}" alt="">`:icon('user')}</div>
+    <div class="who"><div class="nm">${esc(a.name)}</div><div class="sub">@${esc(a.username)} · AstroBox</div></div>
+    <button class="ibtn" aria-label="退出登录" onclick="act('logout')">${icon('log-out')}</button>
+  </div>
+
+  <div class="sec">云同步${phaseTag}</div>
+  <div class="panel">
+    <div class="kv"><span class="k">上次同步</span><span class="v">${esc(a.lastSync||'—')}</span></div>
+    <div class="kv"><span class="k">云端存档</span><span class="v num">${a.cloudSlots} 个槽位</span></div>
+    <div class="kv"><span class="k">最近章节</span><span class="v">${esc(a.cloudChapter)}</span></div>
+  </div>
+  ${bound?`<button class="btn ghost block" style="margin-top:12px" onclick="act('sync-now')" ${a.phase==='syncing'?'disabled':''}>${icon('refresh-cw')}${a.phase==='syncing'?'正在同步':'立即同步'}</button>`:''}
+
+  <div class="sec">手环绑定</div>
+  <div class="panel" style="padding:14px 15px">
+    ${bound?`
+      <div style="display:flex;align-items:center;gap:12px">
+        <span style="color:var(--ok);width:20px;height:20px;flex-shrink:0">${icon('link')}</span>
+        <div style="flex:1;min-width:0"><div style="font-size:14px;font-weight:500">${esc(a.boundDevice)}</div>
+          <div style="font-size:12px;color:var(--dim);margin-top:3px">存档自动上传到云端</div></div>
+        <button class="btn sm text" style="color:var(--bad);flex-shrink:0" onclick="act('unbind')">解绑</button>
+      </div>`
+    :a.bindCode?`
+      <div style="font-size:13px;color:var(--sub);line-height:1.8">复制下面这条命令，到 QQ 群 <b style="color:var(--text)">1105166284</b> 粘贴发送，然后点「检查绑定」。</div>
+      <div class="code-display">
+        <span class="code-text num">绑定${a.bindCode}</span>
+        <button class="copy-btn" onclick="act('copy-bind')" aria-label="复制绑定命令">${icon('copy')}<span>复制</span></button>
+      </div>
+      <div class="bind-foot"><span class="bind-expire" id="bind-expire">10 分钟内有效</span>
+        <button class="btn sm" onclick="act('check-bind')">检查绑定</button></div>`
+    :`
+      <div style="font-size:13px;color:var(--sub);line-height:1.8">生成一个一次性绑定码，到 QQ 群发送即可完成绑定，把这台手环的存档关联到你的账号。</div>
+      <button class="btn ghost block" style="margin-top:12px" onclick="act('gen-code')">${icon('link')}生成绑定码</button>`}
+  </div>
+  <p class="foot-note">云端只存存档，不存阅读记录以外的个人信息。<br>换机后登录同一账号即可恢复存档。</p>`;
+}
+
+function settingsHTML(){
+  const st=store.settings;
+  return `
+  <div class="sec">传输</div>
+  <div class="panel">
+    <div class="set-row"><div class="l"><div class="t">分片档位</div><div class="d">正常档窗口 6–10 片；激进档 12 片起，近距离更快</div></div>
+      <div class="seg"><button class="${st.mode==='steady'?'on':''}" onclick="act('mode','steady')">正常</button><button class="${st.mode==='turbo'?'on':''}" onclick="act('mode','turbo')">激进</button></div></div>
+    <div class="set-row"><div class="l"><div class="t">断线自动续传</div><div class="d">重连后自动接上，同一章最多 3 次</div></div>
+      <div class="sw ${st.autoResume?'on':''}" onclick="act('toggle','autoResume')"></div></div>
+    <div class="set-row"><div class="l"><div class="t">保留未完成缓存</div><div class="d">插件重启后仍可手动继续断点</div></div>
+      <div class="sw ${st.keepCache?'on':''}" onclick="act('toggle','keepCache')"></div></div>
+  </div>
+  <div class="sec">设备</div>
+  <div class="panel">
+    <div class="set-row"><div class="l"><div class="t">小米手环 10 Pro</div><div class="d">syncProtocol v3 · 统计 v1 · 应用 v3.0.7</div></div>
+      <button class="btn sm ghost" onclick="act('device')">详情</button></div>
+  </div>
+  <div class="sec">运行日志<button class="lk" onclick="act('clear-logs')">清空</button></div>
+  <div class="panel" style="max-height:210px;overflow-y:auto">
+    ${store.logs.length?store.logs.map(([lv,ts,m])=>`<div class="log"><span class="${lv==='w'?'w':lv==='e'?'e':''}">[${ts}]</span> ${esc(m)}</div>`).join(''):'<div class="empty" style="padding:14px">暂无日志</div>'}
+  </div>
+  <div class="sec">关于</div>
+  <div class="panel">
+    <div class="about"><span>插件版本</span><span>4.0.0-html（原型）</span></div>
+    <div class="about"><span>渲染方式</span><span>HTML · http-server + browser</span></div>
+    <div class="about"><span>界面字体</span><span>MiSans</span></div>
+    <div class="about"><span>作者</span><span>其核</span></div>
+  </div>`;
+}
+
+function render(animate){
+  renderNav();renderTransfer();
+  // 切页才播入场动画；同页的状态更新（筛选/开关/暂停等）直接替换，不重放动画
+  const cls=animate===false?'page no-anim':'page';
+  $('#view').innerHTML=`<div class="${cls}">${{push:pushHTML,saves:savesHTML,stats:statsHTML,account:accountHTML,settings:settingsHTML}[store.tab]()}</div>`;
+  $('#view').querySelectorAll('.page>*').forEach((el,i)=>el.style.setProperty('--i',i));
+  $('#view').querySelectorAll('.day').forEach((el,i)=>el.style.setProperty('--i',i));
+  updateBindExpire();
+}
+
+/* 绑定码倒计时：剩余 mm:ss，过期后提示重新生成 */
+function updateBindExpire(){
+  const el=$('#bind-expire');if(!el)return;
+  const a=store.account;
+  if(!a.bindExpire){el.textContent='10 分钟内有效';return}
+  const left=Math.max(0,a.bindExpire-Date.now()),m=Math.floor(left/60000),s=Math.floor(left%60000/1000);
+  if(left<=0){el.textContent='已过期，请重新生成';el.style.color='var(--bad)'}
+  else{el.textContent=`${m}:${String(s).padStart(2,'0')} 后过期`;el.style.color='var(--warn)'}
+}
+setInterval(updateBindExpire,1000);
+render();
+</script>
+</body>
+</html>

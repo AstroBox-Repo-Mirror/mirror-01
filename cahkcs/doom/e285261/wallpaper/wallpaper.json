@@ -1,0 +1,450 @@
+{
+  "version": 1,
+  "shared": {
+    "band-pro-base": {
+      "watchface": {
+        "name": "手环 Pro",
+        "previewKey": "-pro"
+      },
+      "canvas": {
+        "background": "transparent"
+      },
+      "wallpaperTransform": {
+        "scale": {
+          "default": 1,
+          "min": 1,
+          "max": 4,
+          "step": 0.01
+        },
+        "rotation": {
+          "default": 0,
+          "min": -180,
+          "max": 180,
+          "step": 1
+        }
+      }
+    },
+    "band-pro-default": {
+      "extends": "band-pro-base",
+      "canvas": {
+        "width": 336,
+        "height": 480
+      },
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "width": 336,
+        "height": 480,
+        "radius": 0
+      },
+      "preview": {
+        "radius": 56
+      },
+      "layers": [
+        {
+          "id": "photo",
+          "name": "壁纸",
+          "type": "wallpaper",
+          "clip": "frame",
+          "opacity": 1,
+          "blur": 0,
+          "blendMode": {
+            "default": "normal",
+            "adjustable": true,
+            "options": [
+              "normal",
+              "multiply",
+              "screen",
+              "overlay",
+              "darken",
+              "lighten",
+              "color-dodge",
+              "color-burn",
+              "hard-light",
+              "soft-light",
+              "difference",
+              "exclusion",
+              "hue",
+              "saturation",
+              "color",
+              "luminosity"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "templates": [
+    {
+      "watchface": {
+        "name": "手环 Pro",
+        "previewKey": "-pro"
+      },
+      "canvas": {
+        "background": "transparent",
+        "width": 336,
+        "height": 480
+      },
+      "wallpaperTransform": {
+        "scale": {
+          "default": 1,
+          "min": 1,
+          "max": 4,
+          "step": 0.01
+        },
+        "rotation": {
+          "default": 0,
+          "min": -180,
+          "max": 180,
+          "step": 1
+        }
+      },
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "width": 336,
+        "height": 480,
+        "radius": 7
+      },
+      "preview": {
+        "radius": 56
+      },
+      "layers": [
+        {
+          "id": "photo",
+          "name": "壁纸",
+          "type": "wallpaper",
+          "clip": "frame",
+          "opacity": 1,
+          "blur": 0,
+          "blendMode": {
+            "default": "normal",
+            "adjustable": true,
+            "options": [
+              "normal",
+              "multiply",
+              "screen",
+              "overlay",
+              "darken",
+              "lighten",
+              "color-dodge",
+              "color-burn",
+              "hard-light",
+              "soft-light",
+              "difference",
+              "exclusion",
+              "hue",
+              "saturation",
+              "color",
+              "luminosity"
+            ]
+          }
+        },
+        {
+          "id": "text-muinz5cm1lv",
+          "name": "文字",
+          "type": "text",
+          "clip": "frame",
+          "opacity": {
+            "default": 1,
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "adjustable": true
+          },
+          "blendMode": {
+            "default": "normal",
+            "adjustable": true,
+            "options": [
+              "normal",
+              "multiply",
+              "screen",
+              "overlay",
+              "darken",
+              "lighten",
+              "color-dodge",
+              "color-burn",
+              "hard-light",
+              "soft-light",
+              "difference",
+              "exclusion",
+              "hue",
+              "saturation",
+              "color",
+              "luminosity"
+            ]
+          },
+          "content": {
+            "default": "DOOM",
+            "adjustable": true
+          },
+          "maxLength": 20,
+          "textBox": {
+            "x": 101,
+            "y": 221,
+            "width": 135,
+            "height": 39
+          },
+          "font": {
+            "default": "sans-serif",
+            "adjustable": true,
+            "options": [
+              {
+                "id": "sans-serif",
+                "name": "默认字体",
+                "family": "sans-serif"
+              }
+            ]
+          },
+          "fontSize": {
+            "default": 32,
+            "min": 8,
+            "max": 120,
+            "step": 1,
+            "adjustable": true
+          },
+          "fontWeight": {
+            "default": 400,
+            "min": 400,
+            "max": 400,
+            "step": 1,
+            "adjustable": false
+          },
+          "color": {
+            "default": "#ffffff",
+            "adjustable": true,
+            "allowCustom": true
+          },
+          "textAlign": {
+            "default": "center",
+            "adjustable": true,
+            "options": [
+              "left",
+              "center",
+              "right"
+            ]
+          },
+          "verticalAlign": {
+            "default": "middle",
+            "adjustable": true,
+            "options": [
+              "top",
+              "middle",
+              "bottom"
+            ]
+          },
+          "letterSpacing": {
+            "default": 0,
+            "min": -4,
+            "max": 20,
+            "step": 1,
+            "adjustable": true
+          },
+          "lineHeight": {
+            "default": 1.2,
+            "min": 0.5,
+            "max": 3,
+            "step": 0.05,
+            "adjustable": true
+          },
+          "transform": {
+            "x": -6.222208658854186,
+            "y": -150.22220865885419,
+            "scale": 1,
+            "rotation": 0
+          }
+        },
+        {
+          "id": "glass-muinzmlb7e5",
+          "name": "玻璃",
+          "type": "glass",
+          "clip": "frame",
+          "opacity": {
+            "default": 1,
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "adjustable": true
+          },
+          "blendMode": {
+            "default": "normal",
+            "adjustable": true,
+            "options": [
+              "normal",
+              "multiply",
+              "screen",
+              "overlay",
+              "darken",
+              "lighten",
+              "color-dodge",
+              "color-burn",
+              "hard-light",
+              "soft-light",
+              "difference",
+              "exclusion",
+              "hue",
+              "saturation",
+              "color",
+              "luminosity"
+            ]
+          },
+          "visible": true,
+          "transform": {
+            "x": 75.55554199218751,
+            "y": 37.333333333333314,
+            "scaleX": 1,
+            "scaleY": 1,
+            "rotation": 0
+          },
+          "geometry": {
+            "type": "rounded-rect",
+            "width": 168,
+            "height": 240,
+            "radius": 42
+          },
+          "material": {
+            "blur": 52,
+            "refraction": 0.7,
+            "thickness": 30,
+            "dispersion": 0.2,
+            "saturation": 1,
+            "contrast": 1,
+            "highlight": 0.25,
+            "shadow": 0.45,
+            "highlightBlendMode": "linear-dodge",
+            "shadowBlendMode": "linear-burn",
+            "lightAngle": 243,
+            "tint": "#1a1a1a",
+            "tintOpacity": 0.7,
+            "bezelWidth": 0,
+            "ior": 1.45,
+            "opticalScale": 0.6,
+            "surfaceProfile": "apple",
+            "refractionSign": -1
+          },
+          "syncAcrossDevices": false
+        },
+        {
+          "id": "text-muinzteu4sb",
+          "name": "文字",
+          "type": "text",
+          "clip": "frame",
+          "opacity": {
+            "default": 1,
+            "min": 0,
+            "max": 1,
+            "step": 0.01,
+            "adjustable": true
+          },
+          "blendMode": {
+            "default": "normal",
+            "adjustable": true,
+            "options": [
+              "normal",
+              "multiply",
+              "screen",
+              "overlay",
+              "darken",
+              "lighten",
+              "color-dodge",
+              "color-burn",
+              "hard-light",
+              "soft-light",
+              "difference",
+              "exclusion",
+              "hue",
+              "saturation",
+              "color",
+              "luminosity"
+            ]
+          },
+          "content": {
+            "default": "2026/9/2",
+            "adjustable": true
+          },
+          "maxLength": 20,
+          "textBox": {
+            "x": 101,
+            "y": 221,
+            "width": 135,
+            "height": 39
+          },
+          "font": {
+            "default": "sans-serif",
+            "adjustable": true,
+            "options": [
+              {
+                "id": "sans-serif",
+                "name": "默认字体",
+                "family": "sans-serif"
+              }
+            ]
+          },
+          "fontSize": {
+            "default": 32,
+            "min": 8,
+            "max": 120,
+            "step": 1,
+            "adjustable": true
+          },
+          "fontWeight": {
+            "default": 400,
+            "min": 400,
+            "max": 400,
+            "step": 1,
+            "adjustable": false
+          },
+          "color": {
+            "default": "#ffffff",
+            "adjustable": true,
+            "allowCustom": true
+          },
+          "textAlign": {
+            "default": "center",
+            "adjustable": true,
+            "options": [
+              "left",
+              "center",
+              "right"
+            ]
+          },
+          "verticalAlign": {
+            "default": "middle",
+            "adjustable": true,
+            "options": [
+              "top",
+              "middle",
+              "bottom"
+            ]
+          },
+          "letterSpacing": {
+            "default": 0,
+            "min": -4,
+            "max": 20,
+            "step": 1,
+            "adjustable": true
+          },
+          "lineHeight": {
+            "default": 1.2,
+            "min": 0.5,
+            "max": 3,
+            "step": 0.05,
+            "adjustable": true
+          },
+          "transform": {
+            "x": -1.8290499173677972,
+            "y": 1.9999796549479356,
+            "scale": 2.1054134531917734,
+            "rotation": 0
+          }
+        }
+      ],
+      "id": "xmb9-muinyz03",
+      "deviceKey": "xmb9",
+      "aliases": [
+        "M2345B1",
+        "M2346B1"
+      ]
+    }
+  ]
+}

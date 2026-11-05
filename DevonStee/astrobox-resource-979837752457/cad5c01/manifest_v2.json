@@ -1,0 +1,52 @@
+{
+  "item": {
+    "id": "979837752457",
+    "restype": "watchface",
+    "name": "COLOR CARDS",
+    "description": "COLOR CARDS_彩色数据卡_四色切换\n上半部分是日历、步数、心率和电量，都可以直接点击打开对应的手环内的APP\n\n下面, 我用一个比较大的很清晰的字体显示时间\n\n这款表盘的设计思路来自于小红书社区, 是一个医务工作者，然后ta在当时的凌晨3点多给我回复说，希望能够读取到一些信息，然后同时呢，是比较简明的，可以看到一些消息的, 我一直不知道怎么做, 那么我想不如做一些直接, 自然的排列, \n\n在表盘上提供多种信息但是不杂乱真的的一个设计难题, 难在提供信息和提供一个简明的画面是一个相搏的思路, 大而全是简单的堆砌, 我不想这样, 这是我很早期的表盘(大概是26年9月的时候),现在公布出来给需要的朋友, \n\n我设置了一个爱发电最低的价格, 1元, 我们互相交换尊重. 另外暂时只支持小米手环10、小米手环11和数字和NFC系列的表盘。如果嗯对于Pro系列的表盘有需求的话，我会继续更新.\n\n另外, 这款表盘在11月份和12月份的收入, 我会通过腾讯公益捐出, 届时, 会在我的爱发电主页公布\n\nOne More Thing, 此款应该是2026年12月份的免费赠送款, 可以提前加入我的小红书群(@叫我brin就好)等待新的活动hh.\n\n谢谢大家的点击进入和阅读, 社区的支持和反馈留言是制作的动力",
+    "preview": [
+      "media/03-colors.png",
+      "media/04-aod.png"
+    ],
+    "icon": "media/01-icon.png",
+    "cover": "media/02-cover.png",
+    "author": [
+      {
+        "name": "brin",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "在小红书查看动态表盘",
+      "url": "https://xhslink.cn/o/8ierYJqmfrs",
+      "icon": "link"
+    }
+  ],
+  "downloads": {
+    "xmb10": {
+      "version": "1.0.0",
+      "file_name": "downloads/COLOR CARDS.face",
+      "versionCode": 65536
+    },
+    "xmb10nfc": {
+      "version": "1.0.0",
+      "file_name": "downloads/COLOR CARDS.face",
+      "versionCode": 65536
+    },
+    "xmb11": {
+      "version": "1.0.0",
+      "file_name": "downloads/COLOR CARDS.face",
+      "versionCode": 65536
+    },
+    "xmb11nfc": {
+      "version": "1.0.0",
+      "file_name": "downloads/COLOR CARDS.face",
+      "versionCode": 65536
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

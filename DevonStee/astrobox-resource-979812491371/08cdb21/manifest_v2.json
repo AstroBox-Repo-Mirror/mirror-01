@@ -1,0 +1,53 @@
+{
+  "item": {
+    "id": "979812491371",
+    "restype": "watchface",
+    "name": "EPICYCLE CLOCK",
+    "description": "EPICYCLE CLOCK_周转圆画数字_黑白橙\n谁说数学没有设计感? 数字动画其实都可以用像素点来描述运动, 怎么观察它们, 怎么让它有机械走时的质感? 用 4 个变量的贝塞尔曲线就能描述非常多的运动, 停顿, 流光, 这是我的想法.\n目前支持小米手环 10 / 11（含 NFC）\n这里不能上传动态照片，动画和息屏效果可以去小红书 @叫我Brin就好 看。",
+    "preview": [
+      "media/03-product-v2.png",
+      "media/04-keyframes-v2.png",
+      "media/05-aod-v2.png"
+    ],
+    "icon": "media/01-icon.png",
+    "cover": "media/02-cover-v3.png",
+    "author": [
+      {
+        "name": "brin",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "在小红书查看动态表盘",
+      "url": "https://xhslink.cn/o/8ierYJqmfrs",
+      "icon": "link"
+    }
+  ],
+  "downloads": {
+    "xmb10": {
+      "version": "0.0.0",
+      "file_name": "downloads/Epicycle Clock.bin",
+      "versionCode": 0
+    },
+    "xmb10nfc": {
+      "version": "0.0.0",
+      "file_name": "downloads/Epicycle Clock.bin",
+      "versionCode": 0
+    },
+    "xmb11": {
+      "version": "0.0.0",
+      "file_name": "downloads/Epicycle Clock.bin",
+      "versionCode": 0
+    },
+    "xmb11nfc": {
+      "version": "0.0.0",
+      "file_name": "downloads/Epicycle Clock.bin",
+      "versionCode": 0
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

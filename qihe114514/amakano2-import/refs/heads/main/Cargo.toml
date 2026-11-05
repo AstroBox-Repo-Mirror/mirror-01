@@ -1,0 +1,37 @@
+[package]
+name = "amakano2-import"
+version = "4.5.0"
+edition = "2024"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+amakano2-ui = { path = "ui-core" }
+# 自己生成 `psys-world-v4-http` 的绑定（wit/ 目录，含 http-server / browser / http 导出），
+# 不再用 astrobox-ng-wit —— 那个 crate 的 world 是 psys-world-v4，没有 http 导出，
+# 起不了内建 HTTP 服务器。接口类型同源，只是 world 多了 http。
+# 需要 `async-spawn`：`browser::open` 可能等用户授权，必须丢到后台 guest 任务，
+# 绝不能放在 `on_load` / `on_event` 的等待链上（项目文档 7.2 的 Dialog 教训）。
+wit-bindgen = { version = "0.57.1", features = ["async-spawn"] }
+base64 = "0.22"
+getrandom = "0.3.4"
+# 存档信封（`src/saves.rs`）要 derive Serialize/Deserialize：字段名必须逐字固定，
+# 手写 JSON 拼装迟早会跟 `parse_save_file` 漂开。
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tracing = "0.1"
+zip = { version = "2.2", default-features = false, features = ["deflate"] }
+
+# 只在 wasm 宿主侧用（`host/logger.rs`）。**必须按 target 收窄**：宿主机上跑
+# `cargo test -p amakano2-import` 时，它是唯一把 `windows-sys` 拉进来的依赖，
+# 而 GNU 工具链的 dlltool 在本机建不出它的导入库，宿主测试整个编不过。
+# 插件本体是 wasm 组件，宿主 target 上那段代码本来就 `#[cfg]` 掉了，收窄没有行为影响。
+[target.'cfg(target_arch = "wasm32")'.dependencies]
+tracing-subscriber = "0.3"
+wstd = "0.6.8"
+
+# ui-core 是不含宿主的纯界面树，单独成成员后可以在宿主机上跑 `cargo test -p amakano2-ui`
+# （插件本体是 wasm 组件，宿主机上编不过）。
+[workspace]
+members = ["ui-core"]

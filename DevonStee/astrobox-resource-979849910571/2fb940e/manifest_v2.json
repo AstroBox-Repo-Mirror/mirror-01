@@ -1,0 +1,53 @@
+{
+  "item": {
+    "id": "979849910571",
+    "restype": "watchface",
+    "name": "SPLIT SCRIPT",
+    "description": "SPLIT SCRIPT_切开的数字_双色文字\n\n让时间被“切开”hhh, 一个很奇怪的尝试\n\n数字(一半的显示)与中文数字错落拼读，颜色利落分界, 一点点海报的感jio\n\nReference: 受到bbb海报的启发\n\n\n目前支持小米手环 10 / 11（含 NFC）\nDevice Support: Currently supports Mi Band 10 / 11 (with NFC)\n欢迎在小红书关注我 @叫我Brin就好。",
+    "preview": [
+      "media/03-preview-photo-v3.png",
+      "media/04-preview-v2.png",
+      "media/05-preview-v2.png"
+    ],
+    "icon": "media/01-icon.png",
+    "cover": "media/02-cover-v2.png",
+    "author": [
+      {
+        "name": "brin",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "在小红书查看动态表盘",
+      "url": "https://xhslink.cn/o/8ierYJqmfrs",
+      "icon": "link"
+    }
+  ],
+  "downloads": {
+    "xmb10": {
+      "version": "0.0.0",
+      "file_name": "downloads/Split Script.bin",
+      "versionCode": 0
+    },
+    "xmb10nfc": {
+      "version": "0.0.0",
+      "file_name": "downloads/Split Script.bin",
+      "versionCode": 0
+    },
+    "xmb11": {
+      "version": "0.0.0",
+      "file_name": "downloads/Split Script.bin",
+      "versionCode": 0
+    },
+    "xmb11nfc": {
+      "version": "0.0.0",
+      "file_name": "downloads/Split Script.bin",
+      "versionCode": 0
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

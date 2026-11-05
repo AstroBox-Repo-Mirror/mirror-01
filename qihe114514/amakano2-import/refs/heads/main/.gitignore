@@ -1,0 +1,10 @@
+target/
+dist/*.abp
+dist/*.zip
+.yanagent/
+.mimosa/
+# 原型预览是生成物（`node ui-v3-proto/build.mjs` 生成），不进版本库。
+ui-v3-proto/out/
+# `build_dist.py` 会把 manifest 的 `additional_files` 同步进 `dist/`（含 6 MB 字体），
+# 那是打包中间产物，源头在 `web/fonts/`，别提交第二份。
+dist/web/

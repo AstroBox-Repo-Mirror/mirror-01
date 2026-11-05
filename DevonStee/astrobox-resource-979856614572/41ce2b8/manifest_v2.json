@@ -1,0 +1,68 @@
+{
+  "item": {
+    "id": "979856614572",
+    "restype": "watchface",
+    "name": "CAT COURT&设计师合作款",
+    "description": "CAT COURT_猫猫卡牌_手绘猫咪宫廷牌\n十只手绘猫猫轮流当数字, 四张牌叠着看时间, 抬腕会翻牌, 可爱为主\n支持小米手环 10 / 11 / 9 Pro / 10 Pro, REDMI Watch 6\n由于 AstroBox 平台限制, 无法上传动态照片, 想看亮屏和 AOD 动画, 以及具体怎么使用的详细说明, 可以移步小红书 @叫我Brin就好\n\n和之前的塔罗翻牌表盘 TAROT ARCANA 共用购买链接, 买过塔罗的不需要重复购买\n\n画师是小红书@鱼丸不是丸, 已授权合作, 私心最喜欢的一款",
+    "preview": [
+      "media/03-预览-三种设备.webp",
+      "media/04-预览-翻牌关键帧.webp",
+      "media/05-预览-十只猫.webp"
+    ],
+    "icon": "media/01-图标-1比1.png",
+    "cover": "media/02-封面-3比2.webp",
+    "author": [
+      {
+        "name": "brin",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "在小红书查看动态表盘",
+      "url": "https://xhslink.cn/o/8ierYJqmfrs",
+      "icon": "link"
+    }
+  ],
+  "downloads": {
+    "xmb10": {
+      "version": "0.0.0",
+      "file_name": "downloads/Cat Court.face",
+      "versionCode": 0
+    },
+    "xmb10nfc": {
+      "version": "0.0.0",
+      "file_name": "downloads/Cat Court.face",
+      "versionCode": 0
+    },
+    "xmb11": {
+      "version": "0.0.0",
+      "file_name": "downloads/Cat Court.face",
+      "versionCode": 0
+    },
+    "xmb11nfc": {
+      "version": "0.0.0",
+      "file_name": "downloads/Cat Court.face",
+      "versionCode": 0
+    },
+    "xmb10p": {
+      "version": "0.0.0",
+      "file_name": "downloads/Cat Court Pro.face",
+      "versionCode": 0
+    },
+    "xmb9p": {
+      "version": "0.0.0",
+      "file_name": "downloads/Cat Court Pro.face",
+      "versionCode": 0
+    },
+    "xmrw6": {
+      "version": "0.0.0",
+      "file_name": "downloads/Cat Court RW6.face",
+      "versionCode": 0
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

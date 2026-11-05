@@ -1,0 +1,53 @@
+{
+  "item": {
+    "id": "979894777520",
+    "restype": "watchface",
+    "name": "WRIST ANATOMY",
+    "description": "WRIST ANATOMY_手腕的X光片_血管数字\n手环底下那块手腕照出来了, 动脉是小时, 静脉是分钟, \n玩耍一下想法为主, 自取.\n注意流速for电池\n目前支持小米手环 10 / 11（含 NFC）\n欢迎在小红书关注我 @叫我Brin就好。",
+    "preview": [
+      "media/03-preview-product.png",
+      "media/04-preview-wake.png",
+      "media/05-preview-aod.png"
+    ],
+    "icon": "media/01-icon.png",
+    "cover": "media/02-cover.png",
+    "author": [
+      {
+        "name": "brin",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "在小红书查看动态表盘",
+      "url": "https://xhslink.cn/o/8ierYJqmfrs",
+      "icon": "link"
+    }
+  ],
+  "downloads": {
+    "xmb10": {
+      "version": "0.0.0",
+      "file_name": "downloads/Wrist Anatomy.bin",
+      "versionCode": 0
+    },
+    "xmb10nfc": {
+      "version": "0.0.0",
+      "file_name": "downloads/Wrist Anatomy.bin",
+      "versionCode": 0
+    },
+    "xmb11": {
+      "version": "0.0.0",
+      "file_name": "downloads/Wrist Anatomy.bin",
+      "versionCode": 0
+    },
+    "xmb11nfc": {
+      "version": "0.0.0",
+      "file_name": "downloads/Wrist Anatomy.bin",
+      "versionCode": 0
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

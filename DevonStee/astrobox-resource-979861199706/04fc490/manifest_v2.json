@@ -1,0 +1,87 @@
+{
+  "item": {
+    "id": "979861199706",
+    "restype": "watchface",
+    "name": "ANT GUTTERS",
+    "description": "ANT GUTTERS_蓝色栅格缝表盘_Ant Design\n整块屏幕铺满深深浅浅的蓝色卡片遵循ant design UI, \n\n数字的每一笔都连接到屏幕边沿, 跟手环的黑边接在一起; 被数字围起来的小格子的下一行小字写着星期和日期;\n\n尝试想用一种有巧思的方法，让屏幕边缘无法去除的黑边加入数字时间语言的描述\n\n息屏的时候暗下, 数字留下轮廓\n\n目前支持小米手环 10 / 11 / 9 Pro / 10 Pro / REDMI Watch 6, 未来会提供更加多的支持. \n更新：加了 REDMI Watch 6 版\n\n由于 AstroBox 平台限制, 无法上传动态照片, 想看亮屏和 AOD 动画, 以及具体怎么使用的详细说明, 可以移步小红书 @叫我Brin就好",
+    "preview": [
+      "media/00-预览-RW6-Pro.webp",
+      "media/00-预览-Pro适配.webp",
+      "media/03-预览-三种状态.png",
+      "media/04-预览-peach产品.png"
+    ],
+    "icon": "media/01-图标-1比1.png",
+    "cover": "media/02-封面-3比2-三机.webp",
+    "author": [
+      {
+        "name": "brin",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "打开小红书主页，查看动态表盘实际效果",
+      "url": "https://xhslink.cn/o/8ierYJqmfrs",
+      "icon": "link"
+    }
+  ],
+  "downloads": {
+    "xmrw6": {
+      "version": "0.0.0",
+      "file_name": "downloads/Ant Gutters RW6.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增 REDMI Watch 6 支持"
+        }
+      ]
+    },
+    "xmb9p": {
+      "version": "0.0.0",
+      "file_name": "downloads/Ant Gutters Pro.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增小米手环 9 Pro / 10 Pro 支持（方屏专用包）"
+        }
+      ]
+    },
+    "xmb10p": {
+      "version": "0.0.0",
+      "file_name": "downloads/Ant Gutters Pro.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增小米手环 9 Pro / 10 Pro 支持（方屏专用包）"
+        }
+      ]
+    },
+    "xmb10": {
+      "version": "0.0.0",
+      "file_name": "downloads/Ant Gutters.bin",
+      "versionCode": 0
+    },
+    "xmb10nfc": {
+      "version": "0.0.0",
+      "file_name": "downloads/Ant Gutters.bin",
+      "versionCode": 0
+    },
+    "xmb11": {
+      "version": "0.0.0",
+      "file_name": "downloads/Ant Gutters.bin",
+      "versionCode": 0
+    },
+    "xmb11nfc": {
+      "version": "0.0.0",
+      "file_name": "downloads/Ant Gutters.bin",
+      "versionCode": 0
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

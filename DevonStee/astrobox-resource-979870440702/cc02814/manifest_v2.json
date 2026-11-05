@@ -1,0 +1,87 @@
+{
+  "item": {
+    "id": "979870440702",
+    "restype": "watchface",
+    "name": "MD VOLUME",
+    "description": "MD VOLUME_音量条读时_粉与蓝\n两根滑杆读时分, 带日期电量, 点滑杆能打开自己选的应用, 自取.\n目前支持小米手环 10 / 11 / 9 Pro / 10 Pro / REDMI Watch 6\n更新：做了手环 9 Pro / 10 Pro 版，也加了 REDMI Watch 6 版\n想看动态效果、AOD 和使用方法, 可以移步小红书 @叫我Brin就好",
+    "preview": [
+      "media/00-预览-RW6-Pro.webp",
+      "media/03-预览-功能状态.png",
+      "media/04-预览-功能状态.png",
+      "media/05-预览-亮屏与息屏.png"
+    ],
+    "icon": "media/01-图标-1比1.png",
+    "cover": "media/02-封面-3比2-三机.webp",
+    "author": [
+      {
+        "name": "brin",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "在小红书查看动态表盘",
+      "url": "https://xhslink.cn/o/8ierYJqmfrs",
+      "icon": "link"
+    }
+  ],
+  "downloads": {
+    "xmb9p": {
+      "version": "1.0.0",
+      "file_name": "downloads/MD Volume Pro.face",
+      "versionCode": 65536,
+      "updatelogs": [
+        {
+          "version": "1.0.0",
+          "content": "新增手环 9 Pro / 10 Pro 支持"
+        }
+      ]
+    },
+    "xmb10p": {
+      "version": "1.0.0",
+      "file_name": "downloads/MD Volume Pro.face",
+      "versionCode": 65536,
+      "updatelogs": [
+        {
+          "version": "1.0.0",
+          "content": "新增手环 9 Pro / 10 Pro 支持"
+        }
+      ]
+    },
+    "xmrw6": {
+      "version": "1.0.0",
+      "file_name": "downloads/MD Volume RW6.face",
+      "versionCode": 65536,
+      "updatelogs": [
+        {
+          "version": "1.0.0",
+          "content": "新增 REDMI Watch 6 支持"
+        }
+      ]
+    },
+    "xmb10": {
+      "version": "1.0.0",
+      "file_name": "downloads/MD Volume.face",
+      "versionCode": 65536
+    },
+    "xmb10nfc": {
+      "version": "1.0.0",
+      "file_name": "downloads/MD Volume.face",
+      "versionCode": 65536
+    },
+    "xmb11": {
+      "version": "1.0.0",
+      "file_name": "downloads/MD Volume.face",
+      "versionCode": 65536
+    },
+    "xmb11nfc": {
+      "version": "1.0.0",
+      "file_name": "downloads/MD Volume.face",
+      "versionCode": 65536
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

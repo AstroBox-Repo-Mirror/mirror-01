@@ -1,0 +1,127 @@
+{
+  "item": {
+    "id": "979857819130",
+    "restype": "watchface",
+    "name": "MD LIQUID",
+    "description": "MD LIQUID_浮在水上的时间_蓝粉黄\n时和分浮在水面上, 电量看水位, 蓝粉黄配色.\n目前支持小米手环 10 / 11 / 9 Pro / 10 Pro / REDMI Watch 6\n\n\n更新：转腕的时候不卡了, 晃动的幅度也调大了点, 快速转的话水会直接冲过去、荡一下再稳住\n\nREDMI Watch 6 暂时不支持晃动感应\n\n想看动态效果、AOD 和使用方法, 可以移步小红书 @叫我Brin就好",
+    "preview": [
+      "media/00-预览-RW6-Pro.webp",
+      "media/03-预览-功能状态.png",
+      "media/04-预览-功能状态.png",
+      "media/05-预览-亮屏与息屏.png"
+    ],
+    "icon": "media/01-图标-1比1.png",
+    "cover": "media/02-封面-3比2-三机.webp",
+    "author": [
+      {
+        "name": "brin",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "在小红书查看动态表盘",
+      "url": "https://xhslink.cn/o/8ierYJqmfrs",
+      "icon": "link"
+    }
+  ],
+  "downloads": {
+    "xmrw6": {
+      "version": "0.0.2",
+      "file_name": "downloads/MD Liquid RW6.face",
+      "versionCode": 2,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增 REDMI Watch 6 支持"
+        },
+        {
+          "version": "0.0.1",
+          "content": "修复卡顿, 水面晃起来更大更灵动"
+        },
+        {
+          "version": "0.0.2",
+          "content": "RW6 去掉转腕, 水位仍然随电量变, 画面更稳"
+        }
+      ]
+    },
+    "xmb10": {
+      "version": "0.0.1",
+      "file_name": "downloads/MD Liquid.face",
+      "versionCode": 1,
+      "updatelogs": [
+        {
+          "version": "0.0.1",
+          "content": "修复卡顿, 水面晃起来更大更灵动"
+        }
+      ]
+    },
+    "xmb10nfc": {
+      "version": "0.0.1",
+      "file_name": "downloads/MD Liquid.face",
+      "versionCode": 1,
+      "updatelogs": [
+        {
+          "version": "0.0.1",
+          "content": "修复卡顿, 水面晃起来更大更灵动"
+        }
+      ]
+    },
+    "xmb11": {
+      "version": "0.0.1",
+      "file_name": "downloads/MD Liquid.face",
+      "versionCode": 1,
+      "updatelogs": [
+        {
+          "version": "0.0.1",
+          "content": "修复卡顿, 水面晃起来更大更灵动"
+        }
+      ]
+    },
+    "xmb11nfc": {
+      "version": "0.0.1",
+      "file_name": "downloads/MD Liquid.face",
+      "versionCode": 1,
+      "updatelogs": [
+        {
+          "version": "0.0.1",
+          "content": "修复卡顿, 水面晃起来更大更灵动"
+        }
+      ]
+    },
+    "xmb9p": {
+      "version": "0.0.1",
+      "file_name": "downloads/MD Liquid Pro.face",
+      "versionCode": 1,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增手环 9 Pro / 10 Pro 支持"
+        },
+        {
+          "version": "0.0.1",
+          "content": "修复卡顿, 水面晃起来更大更灵动"
+        }
+      ]
+    },
+    "xmb10p": {
+      "version": "0.0.1",
+      "file_name": "downloads/MD Liquid Pro.face",
+      "versionCode": 1,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增手环 9 Pro / 10 Pro 支持"
+        },
+        {
+          "version": "0.0.1",
+          "content": "修复卡顿, 水面晃起来更大更灵动"
+        }
+      ]
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

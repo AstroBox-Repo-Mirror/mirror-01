@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>甜蜜女友2 · 导入器</title>
+<link rel="stylesheet" href="../web/app.css">
+<style>
+/* 预览专用：字体分片不在这个目录，退回系统黑体，避免整页空白。 */
+body{font-family:-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}
+</style>
+</head>
+<body>
+<div id="app">
+  <div id="topbar">
+    <img class="mark" src="../web/icon.png" alt="">
+    <h1 class="name">甜蜜女友2</h1>
+    <span class="dev" id="dev"><i class="dot"></i><span id="dev-name">未连接</span></span>
+  </div>
+  <div id="transfer"></div>
+  <div id="view"></div>
+  <nav id="navbar"></nav>
+</div>
+<div id="mask" onclick="closeSheet()"></div>
+<div id="sheet"></div>
+<div id="toast"></div>
+<script>
+/* 预览垫片：把后端的 `/api/state` 轮询换成这里推来的假快照。
+   其余渲染走的仍是生产用的 app.js，一行没改。
+   `app.js` 里 `let S` / `let tab` 都在全局词法环境里，同一文档的后续脚本能直接读写。 */
+let mockState = {};
+window.fetch = (url) => {
+  const isState = String(url).includes('/api/state');
+  const body = isState ? JSON.stringify(mockState) : '{"ok":true}';
+  return Promise.resolve({ ok:true, status:200, json:()=>Promise.resolve(JSON.parse(body)), text:()=>Promise.resolve(body) });
+};
+window.addEventListener('message', (e) => {
+  if (!e.data?.state) return;
+  mockState = e.data.state;
+  // 直接写进 app.js 的状态并重画，不必等 700ms 那一轮轮询。
+  S = mockState;
+  tab = e.data.tab || 'account';
+  lastSig = '';
+  render(true);
+});
+</script>
+<script>
+/* 无头截图用：`frame.html?scenario=bound&tab=account` 直接把假快照塞进去。
+   没有这个入口时页面停在「正在连接插件…」，截图看不出排版。 */
+const SCENARIOS = {
+  bound: { accountAuth:'authorized', cloudQq:'3576325016', cloudQqName:'其核(StatTrak™) | 崭新出厂',
+           cloudAccountName:'其核', cloudPhase:'idle', cloudDetail:'QQ 主账号已绑定，连接手环后自动同步',
+           device:{name:'Xiaomi Smart Band 10 Pro',connected:true}, devices:[], library:[], installed:[], saveSlots:[], saveAuto:null },
+  binding: { accountAuth:'authorized', cloudCode:'绑定 560356', cloudExpiresAt:new Date(Date.now()+120000).toISOString(),
+             cloudAccountName:'其核', cloudPhase:'waiting-binding', cloudDetail:'到指定 QQ 群发送这条命令；绑定码 3 分钟内有效且只能使用一次',
+             device:{name:'Xiaomi Smart Band 10 Pro',connected:true}, devices:[], library:[], installed:[], saveSlots:[], saveAuto:null },
+  unbound: { accountAuth:'authorized', cloudAccountName:'其核', cloudPhase:'unbound',
+             cloudDetail:'AstroBox 账号已授权；请绑定一个 QQ 作为主账号',
+             device:{name:'Xiaomi Smart Band 10 Pro',connected:true}, devices:[], library:[], installed:[], saveSlots:[], saveAuto:null },
+  signedout: { accountAuth:'idle', cloudPhase:'signed-out', cloudDetail:'授权 AstroBox 账号后，绑定一个 QQ 作为主账号',
+               device:{name:'Xiaomi Smart Band 10 Pro',connected:true}, devices:[], library:[], installed:[], saveSlots:[], saveAuto:null },
+  push: { accountAuth:'authorized', cloudQq:'3576325016', cloudQqName:'其核(StatTrak™) | 崭新出厂', cloudAccountName:'其核', cloudPhase:'idle',
+          cloudDetail:'QQ 主账号已绑定，连接手环后自动同步',
+          device:{name:'Xiaomi Smart Band 10 Pro',connected:true}, devices:[],
+          library:[{number:0,id:'公共资源',title:'公共资源（先同步）',bytes:5306747,minutes:0,line:'资源',installed:true,active:false,queued:false},
+                   {number:1,id:'共通线',title:'共通线 · 第1-5章',bytes:404880,minutes:338,line:'共通线',installed:true,active:false,queued:false},
+                   {number:2,id:'千岁线',title:'千岁线 · 第6-8章',bytes:2142298,minutes:709,line:'千岁线',installed:true,active:false,queued:false},
+                   {number:3,id:'玲线',title:'玲线 · 第9-11章',bytes:2680393,minutes:751,line:'玲线',installed:false,active:false,queued:false}],
+          installed:[{id:'公共资源'},{id:'共通线'},{id:'千岁线'}], saveSlots:[], saveAuto:null },
+  saves: { accountAuth:'authorized', cloudQq:'3576325016', cloudQqName:'其核', cloudAccountName:'其核', cloudPhase:'synced',
+           cloudDetail:'云端与手环已同步', saveProtocol:1, device:{name:'Xiaomi Smart Band 10 Pro',connected:true}, devices:[],
+           library:[], installed:[{id:'共通线'}],
+           saveAuto:{packId:'共通线',chapterTitle:'共通线 · 第3章',currentScene:42,savedAt:1761900000000},
+           saveSlots:[{packId:'共通线',chapterTitle:'共通线 · 第1章',currentScene:12,savedAt:1761800000000},
+                      {packId:'玲线',chapterTitle:'玲线 · 第10章',currentScene:8,savedAt:1761700000000}] },
+  stats: { accountAuth:'authorized', cloudQq:'3576325016', cloudQqName:'其核', cloudAccountName:'其核', cloudPhase:'idle',
+           cloudDetail:'QQ 主账号已绑定，连接手环后自动同步', statsSupported:true,
+           device:{name:'Xiaomi Smart Band 10 Pro',connected:true}, devices:[], library:[], installed:[], saveSlots:[], saveAuto:null,
+           stats:{totalLabel:'12 小时 34 分',readingDaysLabel:'9 天',todayLabel:'48 分钟',longestLabel:'3 小时 12 分',totalDaysLabel:'14 天',
+                  recent:[{date:'10-31',label:'48 分钟',seconds:2880},{date:'10-30',label:'1 小时 20 分',seconds:4800},{date:'10-29',label:'22 分钟',seconds:1320}]} },
+  settings: { accountAuth:'authorized', cloudQq:'3576325016', cloudQqName:'其核', cloudAccountName:'其核', cloudPhase:'idle',
+              cloudDetail:'QQ 主账号已绑定，连接手环后自动同步', version:'4.2.0', transferMode:'steady', autoLaunch:true,
+              bandVersion:'3.2.1', saveProtocol:1, cacheBytes:1048576, cacheFiles:3, logFilter:'all',
+              logs:[{level:'i',text:'INFO band capability reported version=3.2.1'},{level:'w',text:'WARN heartbeat missed misses=1'}],
+              device:{name:'Xiaomi Smart Band 10 Pro',connected:true}, devices:[], library:[], installed:[], saveSlots:[], saveAuto:null },
+};
+const params = new URLSearchParams(location.search);
+const scenario = params.get('scenario');
+// 轮询会把 mockState 盖回 `{}`，所以拦截点放在 fetch 的返回值上：
+// 让它永远吐这份假快照，页面就不会在 700ms 后掉回空壳。
+mockState = SCENARIOS[scenario] || {};
+</script>
+<script src="../web/app.js"></script>
+<script>
+if (scenario && SCENARIOS[scenario]) {
+  tab = params.get('tab') || 'account';
+  lastSig = '';
+  fetchState();
+}
+/* 溢出诊断：把「谁比视口宽」打出来（无头截图取 console 用）。 */
+window.addEventListener('load', () => {
+  const wide = [...document.querySelectorAll('body *')]
+    .filter(el => el.scrollWidth > document.documentElement.clientWidth + 1)
+    .slice(0, 8)
+    .map(el => `${el.tagName.toLowerCase()}.${el.className||''} sw=${el.scrollWidth} cw=${el.clientWidth}`);
+  console.log('viewport=' + document.documentElement.clientWidth
+    + ' docScroll=' + document.documentElement.scrollWidth
+    + ' bodyScroll=' + document.body.scrollWidth);
+  console.log('overflowing:', wide.join(' | ') || '(none)');
+});
+</script>
+</body>
+</html>

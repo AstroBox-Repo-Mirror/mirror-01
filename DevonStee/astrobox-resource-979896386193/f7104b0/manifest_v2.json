@@ -1,0 +1,123 @@
+{
+  "item": {
+    "id": "979896386193",
+    "restype": "watchface",
+    "name": "LADDER",
+    "description": "LADDER_橙红渐变台阶表盘_CMF_重制\n从最上面的橘红往下, 一层比一层沉, 一直沉到底下的深棕, 一共八层, 白色的小时和橙色的分钟搁在里面; 亮屏时颜色从上往下一层层亮过去, 再慢慢退回原来的样子。CMF Ladder 的重制。\n目前支持小米手环 9 / 10 / 11 / 9 Pro / 10 Pro / REDMI Watch 6\n更新：加了 REDMI Watch 6 版\n由于 AstroBox 平台限制, 无法上传动态照片, 想看亮屏和 AOD 动画, 以及具体怎么使用的详细说明, 可以移步小红书 @叫我Brin就好",
+    "preview": [
+      "media/00-预览-RW6-Pro.webp",
+      "media/00-预览-Pro适配.webp",
+      "media/03-预览-台阶海报.png",
+      "media/04-预览-浅色产品.png",
+      "media/05-预览-瑜伽佩戴.png"
+    ],
+    "icon": "media/01-图标-1比1.png",
+    "cover": "media/02-封面-3比2-三机.webp",
+    "author": [
+      {
+        "name": "brin",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "小红书链接",
+      "url": "https://xhslink.cn/o/5nHMtYcKGgk",
+      "icon": "book-bookmark"
+    }
+  ],
+  "downloads": {
+    "xmrw6": {
+      "version": "0.0.0",
+      "file_name": "downloads/Ladder RW6.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增 REDMI Watch 6 支持"
+        }
+      ]
+    },
+    "xmb9p": {
+      "version": "0.0.0",
+      "file_name": "downloads/Ladder Pro.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增小米手环 9 Pro / 10 Pro 支持（方屏专用包）"
+        }
+      ]
+    },
+    "xmb10p": {
+      "version": "0.0.0",
+      "file_name": "downloads/Ladder Pro.face",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增小米手环 9 Pro / 10 Pro 支持（方屏专用包）"
+        }
+      ]
+    },
+    "xmb10": {
+      "version": "0.0.2",
+      "file_name": "downloads/Ladder.bin",
+      "versionCode": 2,
+      "updatelogs": [
+        {
+          "version": "0.0.2",
+          "content": "新增小米手环 9 支持"
+        }
+      ]
+    },
+    "xmb10nfc": {
+      "version": "0.0.2",
+      "file_name": "downloads/Ladder.bin",
+      "versionCode": 2,
+      "updatelogs": [
+        {
+          "version": "0.0.2",
+          "content": "新增小米手环 9 支持"
+        }
+      ]
+    },
+    "xmb11": {
+      "version": "0.0.2",
+      "file_name": "downloads/Ladder.bin",
+      "versionCode": 2,
+      "updatelogs": [
+        {
+          "version": "0.0.2",
+          "content": "新增小米手环 9 支持"
+        }
+      ]
+    },
+    "xmb11nfc": {
+      "version": "0.0.2",
+      "file_name": "downloads/Ladder.bin",
+      "versionCode": 2,
+      "updatelogs": [
+        {
+          "version": "0.0.2",
+          "content": "新增小米手环 9 支持"
+        }
+      ]
+    },
+    "xmb9": {
+      "version": "0.0.0",
+      "file_name": "downloads/Ladder-xmb9.bin",
+      "versionCode": 0,
+      "updatelogs": [
+        {
+          "version": "0.0.0",
+          "content": "新增小米手环 9 支持（专用包，已实机测试）"
+        }
+      ]
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}

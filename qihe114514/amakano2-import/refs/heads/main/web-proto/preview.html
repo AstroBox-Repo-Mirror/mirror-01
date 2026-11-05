@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>甜蜜女友2 · 界面预览</title>
+<style>
+  html,body{margin:0;background:#0d0b0d;font-family:system-ui,sans-serif}
+  h2{color:#B8ACB2;font-size:13px;font-weight:500;margin:14px 0 6px 6px;letter-spacing:.4px}
+  .row{display:flex;gap:14px;padding:0 10px 24px;flex-wrap:wrap}
+  /* 真机 browser 窗口是 420×860；iframe 里就是精确的 420 CSS px，排版问题才复现得出来。 */
+  iframe{width:320px;height:860px;border:1px solid #333;border-radius:10px;background:#161316;flex-shrink:0}
+</style>
+</head>
+<body>
+<div class="row" id="row"></div>
+<script>
+const q = new URLSearchParams(location.search);
+const list = (q.get('s') || 'bound,binding,unbound,signedout').split(',');
+const tab = q.get('tab') || 'account';
+const row = document.getElementById('row');
+for (const name of list) {
+  const box = document.createElement('div');
+  box.innerHTML = `<h2>${name} · ${tab}</h2>`;
+  const f = document.createElement('iframe');
+  f.src = `frame.html?scenario=${encodeURIComponent(name)}&tab=${tab}`;
+  box.appendChild(f);
+  row.appendChild(box);
+}
+</script>
+</body>
+</html>

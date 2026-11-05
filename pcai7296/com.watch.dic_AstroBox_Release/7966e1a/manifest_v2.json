@@ -1,0 +1,77 @@
+{
+  "item": {
+    "id": "com.watch.dic",
+    "restype": "quick_app",
+    "name": "腕上词典",
+    "description": "免费的小米手环上的离线英汉词典，支持模糊搜索、变形查词、收藏、搜索历史等功能。约15k英文词条 + 128k中文词组，全程离线。",
+    "preview": [
+      "media/redmi_watch-2026-08-18-10-56-22.png",
+      "media/redmi_watch-2026-08-18-10-56-38.png",
+      "media/xiaomi_band_pro-2026-08-18-10-51-27.png",
+      "media/xiaomi_band_pro-2026-08-18-10-51-57.png",
+      "media/xiaomi_band_pro-2026-08-18-10-54-36.png",
+      "media/xiaomi_band_pro-2026-08-18-10-54-43.png",
+      "media/xiaomi_band-2026-08-18-11-04-42.png",
+      "media/xiaomi_band-2026-08-18-11-04-49.png",
+      "media/xiaomi_band-2026-08-18-11-05-05.png",
+      "media/xiaomi_band-2026-08-18-11-05-08.png",
+      "media/xiaomi_watch-2026-08-18-10-59-05.png",
+      "media/xiaomi_watch-2026-08-18-10-59-21.png",
+      "media/xiaomi_watch-2026-08-18-10-59-30.png"
+    ],
+    "icon": "media/logo.png",
+    "cover": "cover.png",
+    "author": [
+      {
+        "name": "bandbbs_2602757",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "开源地址",
+      "url": "https://github.com/pcai7296/com.watch.dic",
+      "icon": "github-logo"
+    }
+  ],
+  "downloads": {
+    "xmb10": {
+      "version": "3.1.0",
+      "file_name": "downloads/com.watch.dic.w212.release.3.1.0.rpk"
+    },
+    "xmb10nfc": {
+      "version": "3.1.0",
+      "file_name": "downloads/com.watch.dic.w212.release.3.1.0.rpk"
+    },
+    "xmb9": {
+      "version": "3.1.0",
+      "file_name": "downloads/com.watch.dic.w192.release.3.1.0.rpk"
+    },
+    "xmb9p": {
+      "version": "3.1.0",
+      "file_name": "downloads/com.watch.dic.w336.release.3.1.0.rpk"
+    },
+    "xmws4": {
+      "version": "3.1.0",
+      "file_name": "downloads/com.watch.dic.w466.release.3.1.0.rpk"
+    },
+    "xmrw5": {
+      "version": "3.1.0",
+      "file_name": "downloads/com.watch.dic.w432.release.3.1.0.rpk"
+    },
+    "xmrw5xring": {
+      "version": "3.1.0",
+      "file_name": "downloads/com.watch.dic.w432.release.3.1.0.rpk"
+    },
+    "xmrw6": {
+      "version": "3.1.0",
+      "file_name": "downloads/com.watch.dic.w432.release.3.1.0.rpk"
+    },
+    "xmb10p": {
+      "version": "3.1.0",
+      "file_name": "downloads/com.watch.dic.w336.release.3.1.0.rpk"
+    }
+  },
+  "ext": {}
+}

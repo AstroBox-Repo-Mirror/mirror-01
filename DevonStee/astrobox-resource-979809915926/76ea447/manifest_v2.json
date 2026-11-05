@@ -1,0 +1,101 @@
+{
+  "item": {
+    "id": "979809915926",
+    "restype": "watchface",
+    "name": "DICE CLOCK",
+    "description": "DICE CLOCK_骰子时钟_摇一摇开骰\n用骰子点数读时间, 摇一摇还能当骰子用, 聚会喝酒都能玩.\n目前支持小米手环 10 / 11 / 9 Pro / 10 Pro（10 / 11 含 NFC）\n更新：加了日期和电量，也做了手环 9 Pro / 10 Pro 版\n由于 AstroBox 平台限制, 无法上传动态照片, 想看实际效果以及具体怎么使用的详细说明, 可以移步小红书 @叫我Brin就好",
+    "preview": [
+      "media/00-预览-Pro-Band10.png",
+      "media/03-预览-读时间-v2.png",
+      "media/04-预览-选颗数-v2.png",
+      "media/05-预览-摇一摇-v2.png",
+      "media/06-预览-开骰-v2.png"
+    ],
+    "icon": "media/01-图标-1比1.png",
+    "cover": "media/02-封面-3比2.png",
+    "author": [
+      {
+        "name": "brin",
+        "bindABAccount": true
+      }
+    ]
+  },
+  "links": [
+    {
+      "title": "在小红书查看动态表盘",
+      "url": "https://xhslink.cn/o/8ierYJqmfrs",
+      "icon": "link"
+    }
+  ],
+  "downloads": {
+    "xmb10": {
+      "version": "1.0.1",
+      "file_name": "downloads/Dice Clock.face",
+      "versionCode": 65537,
+      "updatelogs": [
+        {
+          "version": "1.0.1",
+          "content": "加了日期和电量"
+        }
+      ]
+    },
+    "xmb10nfc": {
+      "version": "1.0.1",
+      "file_name": "downloads/Dice Clock.face",
+      "versionCode": 65537,
+      "updatelogs": [
+        {
+          "version": "1.0.1",
+          "content": "加了日期和电量"
+        }
+      ]
+    },
+    "xmb11": {
+      "version": "1.0.1",
+      "file_name": "downloads/Dice Clock.face",
+      "versionCode": 65537,
+      "updatelogs": [
+        {
+          "version": "1.0.1",
+          "content": "加了日期和电量"
+        }
+      ]
+    },
+    "xmb11nfc": {
+      "version": "1.0.1",
+      "file_name": "downloads/Dice Clock.face",
+      "versionCode": 65537,
+      "updatelogs": [
+        {
+          "version": "1.0.1",
+          "content": "加了日期和电量"
+        }
+      ]
+    },
+    "xmb9p": {
+      "version": "1.0.0",
+      "file_name": "downloads/Dice Clock Pro.face",
+      "versionCode": 65536,
+      "updatelogs": [
+        {
+          "version": "1.0.0",
+          "content": "新增手环 9 Pro / 10 Pro 版"
+        }
+      ]
+    },
+    "xmb10p": {
+      "version": "1.0.0",
+      "file_name": "downloads/Dice Clock Pro.face",
+      "versionCode": 65536,
+      "updatelogs": [
+        {
+          "version": "1.0.0",
+          "content": "新增手环 9 Pro / 10 Pro 版"
+        }
+      ]
+    }
+  },
+  "ext": {
+    "enableAstroBoxCreatorFeatures": true
+  }
+}
